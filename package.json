@@ -6,6 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "scrape": "curl -s http://localhost:3000/api/scrape | python3 -m json.tool",
+    "scrape:sj": "node src/scripts/scrape-sj-permits.mjs",
+    "merge:sj": "node src/scripts/merge-sj-permits.mjs",
+    "scrape:sj:full": "node src/scripts/scrape-sj-permits.mjs && node src/scripts/merge-sj-permits.mjs",
     "start": "next start"
   },
   "dependencies": {
@@ -13,5 +16,8 @@
     "next": "^14.2.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1"
   }
 }

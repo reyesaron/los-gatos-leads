@@ -1,0 +1,40 @@
+name: Scrape San Jose SFR Permits
+
+on:
+  schedule:
+    - cron: "0 15 * * 1" # Every Monday at 8am PT (15:00 UTC)
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Scrape SJ permits
+        run: node src/scripts/scrape-sj-permits.mjs
+
+      - name: Merge SJ permits
+        run: node src/scripts/merge-sj-permits.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/sanjose-scraped.json src/data/sanjose-merged.json
+          if git diff --cached --quiet; then
+            echo "No changes to San Jose permit data"
+          else
+            git commit -m "chore: update San Jose SFR permit data $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
