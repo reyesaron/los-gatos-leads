@@ -20,7 +20,13 @@ export const dynamic = "force-dynamic";
 export default async function Home() {
   const scraped = await getScrapedData();
 
-  const projects = scraped?.projects || PROJECTS;
+  // Non-LG projects (Saratoga etc.) always come from hardcoded data
+  const nonLGProjects = PROJECTS.filter(p => p.city && p.city !== "Los Gatos");
+
+  // LG projects come from scraper when available, otherwise hardcoded
+  const lgProjects = scraped?.projects || PROJECTS.filter(p => !p.city || p.city === "Los Gatos");
+
+  const projects = [...lgProjects, ...nonLGProjects];
   const scrapedLetters = scraped?.scrapedLetters || SCRAPED_LETTERS;
   const scrapedAt = scraped?.scrapedAt || null;
 

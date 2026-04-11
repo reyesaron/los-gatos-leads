@@ -54,7 +54,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
           <select value={minScore} onChange={e=>setMinScore(+e.target.value)} style={{...iS,cursor:"pointer"}}><option value={0}>Min: Any</option><option value={4}>Min: 4+</option><option value={7}>Min: 7+</option></select>
         </div>
       </div>
-      <div style={{maxWidth:980,margin:"0 auto",padding:"14px 20px 0"}}>
+      {(cityFilter === "All" || cityFilter === "Los Gatos") && <div style={{maxWidth:980,margin:"0 auto",padding:"14px 20px 0"}}>
         <div style={{background:"#141c2e",borderRadius:10,padding:"10px 14px",border:"1px solid #1e293b"}}>
           <div style={{fontSize:11,color:"#475569",marginBottom:6,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.05em"}}>Browse All Streets — LosGatosCA.gov</div>
           <div style={{display:"flex",gap:3,flexWrap:"wrap"}}>
@@ -62,7 +62,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
           </div>
           <div style={{fontSize:10,color:"#334155",marginTop:5}}>Highlighted = data loaded into this tool</div>
         </div>
-      </div>
+      </div>}
       <div style={{maxWidth:980,margin:"0 auto",padding:"10px 20px 40px"}}>
         {filtered.length===0&&<div style={{textAlign:"center",padding:40,color:"#475569"}}>No projects match your filters.</div>}
         {filtered.map((p,i)=>{const open=expanded===i;const cc=catC[p.category]||{bg:"#1e293b",fg:"#94a3b8"};return(
