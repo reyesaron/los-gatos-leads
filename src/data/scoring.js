@@ -1,7 +1,5 @@
 function extractUnitCount(p) {
   const text = `${p.scope} ${p.description} ${p.overview}`;
-  // Match all patterns: "25 units", "13 New Homes", "25 Custom Homes",
-  // "12 lots", "138-unit", "64-unit", "25-unit", "12 residences", etc.
   const patterns = [
     /(\d+)[\s-]*units?\b/gi,
     /(\d+)\s*(?:new\s+|custom\s+)?(?:homes?|residences?|dwellings?)\b/gi,
@@ -19,22 +17,11 @@ function extractUnitCount(p) {
   return maxCount;
 }
 
-function isTooLarge(p, unitCount) {
-  if (unitCount > 5) return true;
-  // Catch projects that slip past unit regex — large acreage subdivisions,
-  // "major" multi-phase, hotel, etc.
-  const text = `${p.scope} ${p.description} ${p.overview}`.toLowerCase();
-  if (/\b\d{2,}\s*acres?\b/.test(text)) return true; // 10+ acres
-  if (text.includes("hotel")) return true;
-  if (text.includes("shopping center") || text.includes("commercial complex")) return true;
-  return false;
-}
-
 export function getLeadScore(p) {
   let s = 0, r = [];
 
   // -------------------------------------------------------
-  // PRIORITY 1: Permit proximity — recently issued or close to issuing
+  // PERMIT PROXIMITY — recently issued or close to issuing
   // -------------------------------------------------------
   const status = p.status || "";
   if (status.includes("Intent to approve") || status.includes("Approved")) {
@@ -53,7 +40,7 @@ export function getLeadScore(p) {
     s += 1; r.push("Ministerial");
   }
 
-  // Recency bonus — recently filed = actively moving
+  // Recency bonus
   if (p.dateFiled) {
     const mo = (Date.now() - new Date(p.dateFiled)) / (1000 * 60 * 60 * 24 * 30);
     if (mo < 3) { s += 2; r.push("Filed < 3 mo"); }
@@ -61,50 +48,97 @@ export function getLeadScore(p) {
   }
 
   // -------------------------------------------------------
-  // PRIORITY 2: New construction, ≤5 units — our sweet spot
+  // PROJECT TYPE — single-family residential is our bread and butter
   // -------------------------------------------------------
   const unitCount = extractUnitCount(p);
-  const tooLarge = isTooLarge(p, unitCount);
+  const text = `${p.scope} ${p.description} ${p.overview}`.toLowerCase();
 
   if (p.category === "New Construction") {
-    if (tooLarge) {
-      s -= 2; r.push(unitCount > 5 ? `${unitCount}-unit (too large)` : "Project too large");
-    } else if (unitCount >= 2 && unitCount <= 5) {
-      s += 3; r.push(`${unitCount}-unit new construction`);
-    } else if (p.scope.includes("Demo + New") || p.scope.includes("Demo +") || p.scope.match(/\(Demo/)) {
-      s += 3; r.push("Full demo/rebuild");
-    } else if (p.scope.includes("Vacant") || p.existingSF === 0) {
-      s += 3; r.push("Ground-up build");
-    } else if (p.scope.includes("Two-Family")) {
-      s += 3; r.push("Two-family build");
-    } else if (p.scope.includes("Two-Unit")) {
-      s += 2; r.push("SB 9 two-unit");
-    } else if (p.scope.includes("Custom Home")) {
+    // --- Large multi-family (50+ units) → commercial GCs, not us ---
+    if (unitCount >= 50) {
+      s -= 2; r.push(`${unitCount}-unit (commercial scale)`);
+    }
+    // --- Mid multi-family (13-49 units) → usually not our scale ---
+    else if (unitCount >= 13) {
+      s -= 1; r.push(`${unitCount}-unit (large for us)`);
+    }
+    // --- Small multi-unit (6-12) → possible but not ideal ---
+    else if (unitCount >= 6 && unitCount <= 12) {
+      s += 1; r.push(`${unitCount}-unit (borderline)`);
+    }
+    // --- Sweet spot: custom homes, demo/rebuild, SFR ---
+    else if (p.scope.includes("Demo + New") || p.scope.includes("Demo +") || p.scope.match(/\(Demo/) || text.includes("demolish") && text.includes("construct")) {
+      s += 3; r.push("Custom home (demo/rebuild)");
+    }
+    else if (p.scope.includes("Custom Home")) {
       s += 3; r.push("Custom home");
-    } else if (p.scope.includes("Builder's Remedy")) {
+    }
+    else if (p.scope.includes("Vacant") || p.existingSF === 0) {
+      s += 3; r.push("Ground-up SFR");
+    }
+    else if (unitCount >= 2 && unitCount <= 5) {
+      s += 2; r.push(`${unitCount}-unit small residential`);
+    }
+    else if (p.scope.includes("Two-Family")) {
+      s += 2; r.push("Two-family build");
+    }
+    else if (p.scope.includes("Two-Unit")) {
+      s += 2; r.push("SB 9 two-unit");
+    }
+    else if (p.scope.includes("Builder's Remedy")) {
       s += 1; r.push("Builder's Remedy (details TBD)");
-    } else if (p.scope.includes("Gymnasium") || p.scope.includes("Institutional") || p.scope.includes("Mixed-Use")) {
+    }
+    else if (text.includes("hotel") || p.scope.includes("Gymnasium") || p.scope.includes("Institutional") || p.scope.includes("Mixed-Use")) {
       s -= 1; r.push("Non-residential");
-    } else {
+    }
+    else {
       s += 2; r.push("New construction");
     }
-  } else if (p.category === "Addition") {
-    if (p.scope.includes(">1,000 SF")) { s += 1; r.push("Large accessory >1,000 SF"); }
-    else if (p.scope.includes("Second-Story") || p.scope.includes("Hillside Addition")) { s += 1; r.push("Addition"); }
-    else if (p.scope.includes(">450 SF")) { s += 1; r.push("Accessory >450 SF"); }
-    else if (p.scope.includes("CUP")) { s += 0; r.push("Permit only"); }
-    else { s += 1; r.push("Addition"); }
-  } else if (p.category === "Subdivision") {
-    s += 0; r.push("Subdivision only");
+  }
+
+  // --- Additions — second-story and accessory are solid residential work ---
+  else if (p.category === "Addition") {
+    if (p.scope.includes("Second-Story") || p.scope.includes("Hillside Addition")) {
+      s += 3; r.push("Second-story addition");
+    }
+    else if (p.scope.includes(">1,000 SF")) {
+      s += 2; r.push("Large accessory >1,000 SF");
+    }
+    else if (p.scope.includes(">450 SF") || p.scope.includes("Accessory")) {
+      s += 2; r.push("Accessory structure");
+    }
+    else if (p.scope.includes("Exterior") || p.scope.includes("Historic")) {
+      s += 2; r.push("Exterior/historic renovation");
+    }
+    else if (p.scope.includes("CUP")) {
+      s += 0; r.push("Permit only");
+    }
+    else {
+      s += 2; r.push("Residential addition");
+    }
+  }
+
+  // --- Subdivisions — small ones (<12 lots) mean future SFR builds ---
+  else if (p.category === "Subdivision") {
+    if (unitCount > 0 && unitCount < 12) {
+      s += 2; r.push(`${unitCount}-lot subdivision`);
+    } else if (unitCount >= 12) {
+      s += 0; r.push(`${unitCount}-lot (large subdivision)`);
+    } else if (p.scope.includes("Lot Split") || p.scope.includes("Urban Lot Split")) {
+      s += 1; r.push("Lot split");
+    } else {
+      s += 1; r.push("Subdivision");
+    }
   }
 
   // -------------------------------------------------------
-  // PRIORITY 3: Square footage tiebreaker — only for qualifying leads
-  // (new construction, not too large)
+  // SQUARE FOOTAGE TIEBREAKER — for residential-scale projects
   // -------------------------------------------------------
-  const isQualified = p.category === "New Construction" && !tooLarge;
+  const isResidentialScale = (p.category === "New Construction" && unitCount < 13)
+    || p.category === "Addition"
+    || (p.category === "Subdivision" && unitCount < 12);
 
-  if (isQualified) {
+  if (isResidentialScale) {
     if (p.proposedSF !== null && p.existingSF !== null) {
       const netNew = p.proposedSF - p.existingSF;
       if (netNew >= 5000) { s += 3; r.push(`${netNew.toLocaleString()} net new SF`); }
