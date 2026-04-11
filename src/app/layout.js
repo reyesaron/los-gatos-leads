@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Construction Leads — Los Gatos & Saratoga',
-  description: 'Pending planning projects — Los Gatos & Saratoga',
+  title: 'Apex Design Build — Construction Leads',
+  description: 'Construction leads for Los Gatos & Saratoga — Apex Design Build',
 };
 
 export default function RootLayout({ children }) {
