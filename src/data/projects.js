@@ -314,6 +314,105 @@ export const PROJECTS = [
       { name: "Consulting Architect Review", url: "https://www.losgatosca.gov/DocumentCenter/View/44035" },
     ],
   },
+  // === K ===
+  {
+    address: "15315 Kennedy Road", appNumber: "ULS24-005", appType: "Urban Lot Split",
+    description: "Urban lot split of one lot into two lots on property zoned HR-2½. Ministerial approval — no public hearing required.",
+    overview: "Lot split on hillside property — future development may follow.",
+    existingSF: null, proposedSF: null, sfNote: "Lot split — no construction proposed yet",
+    dateFiled: "2024-06-01", status: "Ministerial (SB 9)", planner: "Ryan Safty",
+    category: "Subdivision", scope: "Urban Lot Split (SB 9)", zoning: "HR-2½", apn: "537-21-004",
+    pageUrl: "https://www.losgatosca.gov/2377/K",
+    docs: [
+      { name: "Project Description", url: "https://www.losgatosca.gov/DocumentCenter/View/38550" },
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/38551" },
+    ],
+  },
+  {
+    address: "16170 Kennedy Road", appNumber: "ULS26-002", appType: "Urban Lot Split",
+    description: "SB 9 urban lot split on property zoned HR-1. Ministerial approval — no public hearing required.",
+    overview: "Lot split on hillside property — recently filed.",
+    existingSF: null, proposedSF: null, sfNote: "Lot split — no construction proposed yet",
+    dateFiled: "2026-03-19", status: "Ministerial (SB 9)", planner: "Suray Nathan",
+    category: "Subdivision", scope: "Urban Lot Split (SB 9)", zoning: "HR-1", apn: "532-19-032",
+    pageUrl: "https://www.losgatosca.gov/2377/K",
+    docs: [{ name: "Plan Set", url: "https://www.losgatosca.gov/DocumentCenter/View/45212" }],
+  },
+  {
+    address: "16484 S. Kennedy Road", appNumber: "M-26-001", appType: "Lot Line Adjustment",
+    description: "Lot line adjustment between two adjacent lots on property zoned HR-1. Administrative subdivision action.",
+    overview: "Lot line adjustment — precursor to new construction on parcels.",
+    existingSF: null, proposedSF: null, sfNote: "Lot line adjustment — no construction in this app",
+    dateFiled: "2026-02-10", status: "Pending", planner: "Samina Merchant",
+    category: "Subdivision", scope: "Lot Line Adjustment", zoning: "HR-1", apn: "532-20-012",
+    pageUrl: "https://www.losgatosca.gov/2377/K",
+    docs: [
+      { name: "Photos", url: "https://www.losgatosca.gov/DocumentCenter/View/44480" },
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/44481" },
+    ],
+  },
+  {
+    address: "16484 S. Kennedy Road (Parcel 1)", appNumber: "S-26-002", appType: "Architecture and Site",
+    description: "Demolition of existing single-family residence and construction of a new single-family residence with site improvements on property zoned HR-1.",
+    overview: "Custom home — full demo + new build on hillside parcel. Paired with Parcel 2.",
+    existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — check plans for proposed SF",
+    dateFiled: "2026-02-10", status: "Pending", planner: "Samina Merchant",
+    category: "New Construction", scope: "Custom Home (Demo + New Build)", zoning: "HR-1", apn: "532-20-012",
+    pageUrl: "https://www.losgatosca.gov/2377/K",
+    docs: [
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/44485" },
+      { name: "Letter of Justification", url: "https://www.losgatosca.gov/DocumentCenter/View/44483" },
+    ],
+  },
+  {
+    address: "16484 S. Kennedy Road (Parcel 2)", appNumber: "S-26-003", appType: "Architecture and Site",
+    description: "Demolition of existing single-family residence and construction of a new single-family residence with site improvements on property zoned HR-1.",
+    overview: "Custom home — full demo + new build on hillside parcel. Paired with Parcel 1.",
+    existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — check plans for proposed SF",
+    dateFiled: "2026-02-10", status: "Pending", planner: "Samina Merchant",
+    category: "New Construction", scope: "Custom Home (Demo + New Build)", zoning: "HR-1", apn: "532-20-012",
+    pageUrl: "https://www.losgatosca.gov/2377/K",
+    docs: [
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/44489" },
+      { name: "Letter of Justification", url: "https://www.losgatosca.gov/DocumentCenter/View/44487" },
+    ],
+  },
+  {
+    address: "16680 Kennedy Road", appNumber: "S-25-047", appType: "Architecture and Site",
+    description: "Demolition of existing single-family residence and construction of a new two-story single-family residence with site work on property zoned R-1:8. Heading to DRC 4/14/2026.",
+    overview: "Custom home — demo + new two-story build. Approaching DRC hearing.",
+    existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — check plans for proposed SF",
+    dateFiled: "2025-10-15", status: "DRC - 4/14/2026", planner: "Suray Nathan",
+    category: "New Construction", scope: "Custom Home (Demo + New Build)", zoning: "R-1:8", apn: "532-33-069",
+    pageUrl: "https://www.losgatosca.gov/2377/K",
+    docs: [
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/43684" },
+      { name: "Draft Conditions of Approval", url: "https://www.losgatosca.gov/DocumentCenter/View/45347" },
+    ],
+  },
+  {
+    address: "16880 Kennedy Road", appNumber: "TUD26-002", appType: "Two-Unit Housing Development",
+    description: "SB 9 Two-Unit Housing Development with two new units on property zoned R-1:8. Ministerial approval.",
+    overview: "Two new units under SB 9 — ministerial project.",
+    existingSF: null, proposedSF: null, sfNote: "Two new residential units",
+    dateFiled: "2026-02-25", status: "Ministerial (SB 9)", planner: "Samina Merchant",
+    category: "New Construction", scope: "Two-Unit Development (SB 9)", zoning: "R-1:8", apn: "532-35-067",
+    pageUrl: "https://www.losgatosca.gov/2377/K",
+    docs: [{ name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/44596" }],
+  },
+  {
+    address: "16837 Kennedy Road", appNumber: "ULS25-006", appType: "Urban Lot Split",
+    description: "SB 9 urban lot split of one lot into two lots on property zoned R-1:8. Ministerial approval.",
+    overview: "Lot split — watch for future development on new parcels.",
+    existingSF: null, proposedSF: null, sfNote: "Lot split — no construction proposed yet",
+    dateFiled: "2025-07-22", status: "Ministerial (SB 9)", planner: "Maria Chavarin",
+    category: "Subdivision", scope: "Urban Lot Split (SB 9)", zoning: "R-1:8", apn: "532-07-083",
+    pageUrl: "https://www.losgatosca.gov/2377/K",
+    docs: [
+      { name: "Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/42964" },
+      { name: "Project Description", url: "https://www.losgatosca.gov/DocumentCenter/View/43544" },
+    ],
+  },
   // === L ===
   {
     address: "230 La Terra Court", appNumber: "S-25-053", appType: "Architecture and Site",
@@ -394,6 +493,126 @@ export const PROJECTS = [
       { name: "Color & Materials Board", url: "https://www.losgatosca.gov/DocumentCenter/View/44555" },
     ],
   },
+  // === O ===
+  {
+    address: "235 Oak Meadow Drive", appNumber: "PD-25-003", appType: "Architecture and Site",
+    description: "Modification of Planned Development Ordinance 2371 to allow construction of a 12-unit multi-family residential development on property zoned O:PD. CEQA review pending.",
+    overview: "Multi-family 12-unit development via PD modification. Mid-density residential opportunity.",
+    existingSF: null, proposedSF: null, sfNote: "12 residential units — review conceptual plans",
+    dateFiled: "2025-06-01", status: "Pending", planner: "Sean Mullin",
+    category: "New Construction", scope: "Multi-Family (12 Units)", zoning: "O:PD", apn: "529-10-132",
+    pageUrl: "https://www.losgatosca.gov/2388/O",
+    docs: [
+      { name: "Conceptual Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/42849" },
+      { name: "Letter of Justification", url: "https://www.losgatosca.gov/DocumentCenter/View/42850" },
+    ],
+  },
+  {
+    address: "14789 Oka Road", appNumber: "S-24-052, M-24-017", appType: "Arch & Site / Subdivision",
+    description: "Construction of 138-unit multi-family residential development with condo vesting tentative map, tree removal, grading permit, and site improvements under SB 330. CEQA initial study and mitigated negative declaration under review. One of the largest pending projects in Los Gatos.",
+    overview: "MAJOR: 138-unit multi-family on vacant land. Largest unit count after Capri Drive. Full environmental review in progress.",
+    existingSF: 0, proposedSF: null, sfNote: "138 residential units on vacant parcels — massive scale",
+    dateFiled: "2024-09-23", status: "CEQA review (MND public comment period)", planner: "Erin Walters",
+    category: "New Construction", scope: "Multi-Family (138 Units)", zoning: "R-1:8:HEOZ / R-1:8", apn: "424-08-074, 424-08-035",
+    pageUrl: "https://www.losgatosca.gov/2388/O",
+    docs: [
+      { name: "Revised Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/39820" },
+      { name: "Consulting Architect Report", url: "https://www.losgatosca.gov/DocumentCenter/View/41181" },
+    ],
+  },
+  // === P ===
+  {
+    address: "16951 Placer Oaks Road", appNumber: "MR-23-003", appType: "Minor Residential",
+    description: "Construction of a second-story addition to an existing single-family residence on property zoned R-1:8. Categorically exempt under CEQA Section 15303.",
+    overview: "Second-story addition — long-pending (filed 2023). May be stalled.",
+    existingSF: null, proposedSF: null, sfNote: "Second-story addition — check plans for scope",
+    dateFiled: "2023-05-16", status: "Pending", planner: "Suray Nathan",
+    category: "Addition", scope: "Second-Story Addition", zoning: "R-1:8", apn: "529-14-009",
+    pageUrl: "https://www.losgatosca.gov/2381/P",
+    docs: [
+      { name: "Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/36175" },
+      { name: "Consulting Architect Report", url: "https://www.losgatosca.gov/DocumentCenter/View/36176" },
+    ],
+  },
+  {
+    address: "34 Pleasant Street", appNumber: "MR-25-003", appType: "Minor Residential",
+    description: "Construction of a new second-story and exterior alterations to an existing pre-1941 single-family residence, and an accessory structure greater than 450 SF on property zoned R-1D. Historic property with HPC review.",
+    overview: "Historic home renovation — new second story + exterior + large accessory structure. Complex scope.",
+    existingSF: null, proposedSF: null, sfNote: "Second-story + exterior + accessory >450 SF on pre-1941 home",
+    dateFiled: "2025-04-24", status: "Pending", planner: "Ryan Safty",
+    category: "Addition", scope: "Second-Story + Exterior + Accessory (Historic)", zoning: "R-1D", apn: "529-26-018",
+    pageUrl: "https://www.losgatosca.gov/2381/P",
+    docs: [
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/42149" },
+      { name: "Project Description", url: "https://www.losgatosca.gov/DocumentCenter/View/42148" },
+    ],
+  },
+  // === R ===
+  {
+    address: "10, 30, 50, 70 Reservoir Road", appNumber: "S-22-049, M-25-003", appType: "Arch & Site / Subdivision",
+    description: "Lot merger of four parcels into two parcels, demolition of two accessory dwelling units, and construction of a new single-family residence on property zoned R-1:20.",
+    overview: "Multi-parcel lot merger + demo + new custom home on large R-1:20 lots. Complex land assembly.",
+    existingSF: null, proposedSF: null, sfNote: "Lot merger (4→2 parcels) + new SFR — see plans for sizing",
+    dateFiled: "2022-12-05", status: "Pending", planner: "Erin Walters",
+    category: "New Construction", scope: "Custom Home (Lot Merger + Demo)", zoning: "R-1:20", apn: "529-29-063 thru -066",
+    pageUrl: "https://www.losgatosca.gov/2382/R",
+    docs: [
+      { name: "Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/42713" },
+      { name: "Letter of Justification", url: "https://www.losgatosca.gov/DocumentCenter/View/42715" },
+    ],
+  },
+  {
+    address: "39 Reservoir Road", appNumber: "S-24-010", appType: "Architecture and Site",
+    description: "Demolition of an existing two-family residential development and construction of a new two-story two-family residential development with retention of an existing ADU on property zoned R-1D.",
+    overview: "Demo + rebuild of two-family residence. Retaining existing ADU. Downtown zone.",
+    existingSF: null, proposedSF: null, sfNote: "Two-family demo/rebuild + ADU retention — check plans",
+    dateFiled: "2024-07-29", status: "Pending", planner: "Ryan Safty",
+    category: "New Construction", scope: "Two-Family Residence (Demo + New Build)", zoning: "R-1D", apn: "529-33-022",
+    pageUrl: "https://www.losgatosca.gov/2382/R",
+    docs: [
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/39426" },
+      { name: "Consulting Architect Report", url: "https://www.losgatosca.gov/DocumentCenter/View/43933" },
+    ],
+  },
+  {
+    address: "16973–16975 Roberts Road", appNumber: "M-26-002", appType: "Subdivision",
+    description: "Subdivision of one lot into two lots on property zoned R-M:5-12. Recently filed March 2026.",
+    overview: "Multi-family zoned lot split — future multi-unit development potential.",
+    existingSF: null, proposedSF: null, sfNote: "Subdivision on multi-family zoned lot — watch for future dev",
+    dateFiled: "2026-03-09", status: "Pending", planner: "Ryan Safty",
+    category: "Subdivision", scope: "Lot Split (Multi-Family Zone)", zoning: "R-M:5-12", apn: "529-16-077",
+    pageUrl: "https://www.losgatosca.gov/2382/R",
+    docs: [
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/44865" },
+      { name: "Project Description", url: "https://www.losgatosca.gov/DocumentCenter/View/44864" },
+    ],
+  },
+  {
+    address: "235 Rosalie Court", appNumber: "MR-24-002", appType: "Minor Residential",
+    description: "Construction of a two-story addition to an existing single-family residence on property zoned R-1:10.",
+    overview: "Two-story addition — consulting architect reviewed.",
+    existingSF: null, proposedSF: null, sfNote: "Two-story addition — check plans for scope",
+    dateFiled: "2024-10-28", status: "Pending", planner: "Suray Nathan",
+    category: "Addition", scope: "Second-Story Addition", zoning: "R-1:10", apn: "532-10-028",
+    pageUrl: "https://www.losgatosca.gov/2382/R",
+    docs: [
+      { name: "Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/40360" },
+      { name: "Consulting Architect Report", url: "https://www.losgatosca.gov/DocumentCenter/View/40492" },
+    ],
+  },
+  {
+    address: "15880 Rose Avenue", appNumber: "S-25-051", appType: "Architecture and Site",
+    description: "Demolition of existing single-family residence and construction of a new single-family residence with site improvements on property zoned R-1:8.",
+    overview: "Custom home — demo + new build. Consulting arborist and architect reports on file.",
+    existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — check plans for proposed SF",
+    dateFiled: "2025-11-18", status: "Pending", planner: "Samina Merchant",
+    category: "New Construction", scope: "Custom Home (Demo + New Build)", zoning: "R-1:8", apn: "410-19-036",
+    pageUrl: "https://www.losgatosca.gov/2382/R",
+    docs: [
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/43960" },
+      { name: "Consulting Architect Report", url: "https://www.losgatosca.gov/DocumentCenter/View/45310" },
+    ],
+  },
   // === S ===
   {
     address: "647 N. Santa Cruz Avenue", appNumber: "S-24-060, U-24-018, M-24-020", appType: "Arch & Site / CUP / Subdivision",
@@ -454,6 +673,101 @@ export const PROJECTS = [
     pageUrl: "https://www.losgatosca.gov/2383/S",
     docs: [{ name: "Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/44676" }],
   },
+  // === T ===
+  {
+    address: "310 Tait Avenue", appNumber: "MR-25-016", appType: "Minor Residential",
+    description: "Construction of a new second-story to an existing pre-1941 single-family residence on property zoned R-1D:LHP. CEQA exempt under Section 15301.",
+    overview: "Historic home second-story addition in Landmark Historic Preservation zone.",
+    existingSF: null, proposedSF: null, sfNote: "New second-story on pre-1941 home — check plans",
+    dateFiled: "2025-12-11", status: "Pending", planner: "Erin Walters",
+    category: "Addition", scope: "Second-Story Addition (Historic)", zoning: "R-1D:LHP", apn: "510-14-058",
+    pageUrl: "https://www.losgatosca.gov/2390/T",
+    docs: [
+      { name: "Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/44434" },
+      { name: "Project Description", url: "https://www.losgatosca.gov/DocumentCenter/View/44437" },
+    ],
+  },
+  {
+    address: "178 Twin Oaks Drive", appNumber: "S-24-023 thru -032, M-24-013", appType: "Arch & Site / Subdivision",
+    description: "Appeal of incompleteness determination for SB 330 application requesting subdivision of one lot into twelve lots, construction of a new single-family residence on each lot, grading permit, and removal of large protected trees. Continued from Special Planning Commission 12/17/2025.",
+    overview: "MAJOR: 12-lot subdivision with 12 new custom homes under SB 330 appeal. Complex regulatory path.",
+    existingSF: null, proposedSF: null, sfNote: "12 new SFR builds — substantial total SF. Review individual lot plans.",
+    dateFiled: "2024-06-13", status: "Continued (date uncertain) — Planning Commission appeal", planner: "Erin Walters",
+    category: "New Construction", scope: "Subdivision — 12 New Homes (SB 330)", zoning: "RC", apn: "532-16-006",
+    pageUrl: "https://www.losgatosca.gov/2390/T",
+    docs: [
+      { name: "Revised Overall Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/41054" },
+      { name: "Project Description & Justification", url: "https://www.losgatosca.gov/DocumentCenter/View/43835" },
+    ],
+  },
+  // === U ===
+  {
+    address: "15521 Union Avenue", appNumber: "U-26-005", appType: "Conditional Use Permit",
+    description: "Conditional use permit application for a bank on property zoned C-1. Categorically exempt under CEQA Section 15301.",
+    overview: "Commercial — bank CUP. Not a construction lead but tracks C-1 zone activity.",
+    existingSF: null, proposedSF: null, sfNote: "Bank tenant improvement — likely interior only",
+    dateFiled: "2026-03-31", status: "Pending", planner: "Erin Walters",
+    category: "Addition", scope: "Commercial CUP (Bank)", zoning: "C-1", apn: "523-41-035",
+    pageUrl: "https://www.losgatosca.gov/2391/U",
+    docs: [
+      { name: "Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/45241" },
+      { name: "Letter of Justification", url: "https://www.losgatosca.gov/DocumentCenter/View/45242" },
+    ],
+  },
+  {
+    address: "575 University Avenue", appNumber: "U-24-003", appType: "Conditional Use Permit Modification",
+    description: "Modification to existing CUP for expanded alcohol service at existing restaurant (Los Gatos Meat & Smoke House) on property zoned LM.",
+    overview: "Restaurant CUP modification — minimal construction scope.",
+    existingSF: null, proposedSF: null, sfNote: "CUP modification only — likely no construction",
+    dateFiled: "2024-03-01", status: "Pending", planner: "Suray Nathan",
+    category: "Addition", scope: "Commercial CUP Modification", zoning: "LM", apn: "529-07-074",
+    pageUrl: "https://www.losgatosca.gov/2391/U",
+    docs: [
+      { name: "Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/38117" },
+      { name: "Letter of Justification", url: "https://www.losgatosca.gov/DocumentCenter/View/38118" },
+    ],
+  },
+  {
+    address: "980 University Avenue", appNumber: "S-24-053, M-24-019", appType: "Arch & Site / Subdivision",
+    description: "Demolition of existing commercial structure and construction of 68-unit multi-family residential development with condo vesting tentative map, grading permit, and tree removal under SB 330 on property zoned CM.",
+    overview: "MAJOR: 68-unit multi-family residential. Demo commercial + full new construction under SB 330.",
+    existingSF: null, proposedSF: null, sfNote: "68 residential units — large-scale multi-family",
+    dateFiled: "2024-09-23", status: "Pending", planner: "Sean Mullin",
+    category: "New Construction", scope: "Multi-Family (68 Units)", zoning: "CM", apn: "424-31-027, 424-31-028",
+    pageUrl: "https://www.losgatosca.gov/2391/U",
+    docs: [
+      { name: "Revised Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/41253" },
+      { name: "Project Description", url: "https://www.losgatosca.gov/DocumentCenter/View/39892" },
+    ],
+  },
+  // === V ===
+  {
+    address: "116 Vallecitos Way", appNumber: "S-25-046", appType: "Architecture and Site",
+    description: "Demolition of existing single-family residence and construction of a new two-story single-family residence with site improvements and grading permit on vacant property zoned R-1:10. CEQA exempt under Section 15303.",
+    overview: "Custom home — demo + new build on vacant lot with grading. Consulting architect reviewed.",
+    existingSF: 0, proposedSF: null, sfNote: "Vacant lot — all new construction",
+    dateFiled: "2025-10-27", status: "Pending", planner: "Ryan Safty",
+    category: "New Construction", scope: "Custom Home (Demo + New Build)", zoning: "R-1:10", apn: "407-13-018",
+    pageUrl: "https://www.losgatosca.gov/2392/V",
+    docs: [
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/43819" },
+      { name: "Consulting Architect Review", url: "https://www.losgatosca.gov/DocumentCenter/View/43917" },
+    ],
+  },
+  // === W ===
+  {
+    address: "141 Wheeler Avenue", appNumber: "M-24-018", appType: "Subdivision",
+    description: "Subdivision of one lot into two lots on property zoned R-1:8. Categorically exempt under CEQA Section 15315 (Minor Land Divisions).",
+    overview: "Lot split — future development potential on two new parcels.",
+    existingSF: null, proposedSF: null, sfNote: "Subdivision only — no construction proposed yet",
+    dateFiled: "2024-10-03", status: "Pending", planner: "Ryan Safty",
+    category: "Subdivision", scope: "Lot Split", zoning: "R-1:8", apn: "532-36-016",
+    pageUrl: "https://www.losgatosca.gov/2393/W",
+    docs: [
+      { name: "Project Description & Justification", url: "https://www.losgatosca.gov/DocumentCenter/View/40072" },
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/40073" },
+    ],
+  },
 ];
 
 export const LETTER_PAGES = {
@@ -473,4 +787,4 @@ export const LETTER_PAGES = {
   Y: "https://www.losgatosca.gov/2394/Y", Z: "https://www.losgatosca.gov/2396/Z",
 };
 
-export const SCRAPED_LETTERS = ["A","B","C","E","F","G","H","L","M","S"];
+export const SCRAPED_LETTERS = ["A","B","C","E","F","G","H","K","L","M","O","P","R","S","T","U","V","W"];
