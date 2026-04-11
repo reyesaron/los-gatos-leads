@@ -1,28 +1,53 @@
 export function getLeadScore(p) {
   let s = 0, r = [];
 
-  // Scope scoring
-  if (p.scope.includes("119 Units")) { s += 5; r.push("Large multi-family"); }
-  else if (p.scope.includes("63 Units") || p.scope.includes("58 Units")) { s += 5; r.push("Large multi-family"); }
-  else if (p.scope.includes("13 New") || p.scope.includes("9 Lots")) { s += 5; r.push("Major subdivision"); }
-  else if (p.scope.includes("11 Units")) { s += 4; r.push("Multi-family"); }
-  else if (p.scope.includes("Gymnasium") || p.scope.includes("Institutional")) { s += 4; r.push("Institutional"); }
-  else if (p.scope.includes("Demo + New") || p.scope.includes("Vacant")) { s += 4; r.push("Custom home"); }
-  else if (p.scope.includes("Mixed-Use")) { s += 4; r.push("Mixed-use"); }
-  else if (p.scope.includes("Two-Unit")) { s += 3; r.push("SB 9 multi-unit"); }
-  else if (p.scope.includes(">1,000 SF")) { s += 3; r.push("Large accessory"); }
-  else if (p.scope.includes("Exterior") || p.scope.includes("Grading")) { s += 3; r.push("Complex scope"); }
-  else if (p.scope.includes("Second-Story")) { s += 2; r.push("Addition"); }
-  else if (p.scope.includes(">450 SF")) { s += 2; r.push("Accessory"); }
-  else if (p.scope.includes("Lot Split") || p.scope.includes("3 Lots")) { s += 1; r.push("Subdivision"); }
-  else { s += 2; r.push("General"); }
+  // --- Category base score: new construction is king ---
+  if (p.category === "New Construction") {
+    s += 3;
+    r.push("New construction");
+  } else if (p.category === "Addition") {
+    s += 1;
+    r.push("Addition");
+  } else if (p.category === "Subdivision") {
+    s += 0;
+    r.push("Subdivision only");
+  }
 
-  // Recency scoring
-  const mo = (new Date("2026-04-10") - new Date(p.dateFiled)) / (1000 * 60 * 60 * 24 * 30);
+  // --- Scale scoring: custom homes & small residential prioritized ---
+  const unitMatch = p.scope.match(/(\d+)\s*Units?/i) || p.scope.match(/(\d+)\s*New\s*Homes?/i);
+  const unitCount = unitMatch ? parseInt(unitMatch[1]) : 0;
+
+  if (unitCount > 5) { s -= 2; r.push(`${unitCount}-unit (too large)`); }
+  else if (unitCount >= 2 && unitCount <= 5) { s += 2; r.push(`${unitCount}-unit small residential`); }
+  else if (p.scope.includes("Demo + New") || p.scope.includes("Demo +") || p.scope.match(/\(Demo/)) { s += 3; r.push("Full demo/rebuild"); }
+  else if (p.scope.includes("Vacant")) { s += 3; r.push("Ground-up on vacant lot"); }
+  else if (p.scope.includes("Two-Family")) { s += 2; r.push("Two-family build"); }
+  else if (p.scope.includes("Two-Unit")) { s += 2; r.push("SB 9 two-unit"); }
+  else if (p.scope.includes("Gymnasium") || p.scope.includes("Institutional") || p.scope.includes("Mixed-Use")) { s -= 1; r.push("Non-residential"); }
+  else if (p.scope.includes(">1,000 SF")) { s += 1; r.push("Large accessory >1,000 SF"); }
+  else if (p.scope.includes("Second-Story") || p.scope.includes("Hillside Addition")) { s += 1; r.push("Addition scope"); }
+  else if (p.scope.includes(">450 SF")) { s += 1; r.push("Accessory >450 SF"); }
+  else if (p.scope.includes("Lot Split") || p.scope.includes("Lot Line") || p.scope.includes("Lot Merger")) { s += 0; r.push("Land action only"); }
+  else if (p.scope.includes("CUP")) { s += 0; r.push("Permit only"); }
+  else { s += 1; r.push("General scope"); }
+
+  // --- Square footage scoring: net new SF = revenue signal ---
+  if (p.proposedSF !== null && p.existingSF !== null) {
+    const netNew = p.proposedSF - p.existingSF;
+    if (netNew >= 5000) { s += 3; r.push(`${netNew.toLocaleString()} net new SF`); }
+    else if (netNew >= 2000) { s += 2; r.push(`${netNew.toLocaleString()} net new SF`); }
+    else if (netNew >= 500) { s += 1; r.push(`${netNew.toLocaleString()} net new SF`); }
+  } else if (p.existingSF === 0) {
+    // Vacant lot = all new construction, but we don't know the proposed SF
+    s += 1; r.push("Vacant lot (all new SF)");
+  }
+
+  // --- Recency scoring ---
+  const mo = (Date.now() - new Date(p.dateFiled)) / (1000 * 60 * 60 * 24 * 30);
   if (mo < 3) { s += 2; r.push("Recently filed"); }
   else if (mo < 6) { s += 1; r.push("< 6 mo"); }
 
-  // Status scoring
+  // --- Status scoring ---
   if (p.status.includes("Pending")) { s += 1; r.push("Pending"); }
   if (p.status.includes("Commission") || p.status.includes("DRC") || p.status.includes("Committee")) { s += 1; r.push("Near hearing"); }
   if (p.status.includes("Intent to approve")) { s += 2; r.push("Near approval"); }

@@ -1,27 +1,29 @@
 'use client';
 import { useState, useMemo } from "react";
-import { PROJECTS, LETTER_PAGES, SCRAPED_LETTERS } from "@/data/projects";
 import { getLeadScore } from "@/data/scoring";
 
 function Badge({score}){const c=score>=7?"#16a34a":score>=4?"#d97706":"#94a3b8";const bg=score>=7?"#052e16":score>=4?"#451a03":"#1e293b";return<span style={{display:"inline-flex",alignItems:"center",background:bg,color:c,fontWeight:700,fontSize:13,padding:"3px 10px",borderRadius:6,fontFamily:"'JetBrains Mono',monospace",border:`1.5px solid ${c}33`}}>{score}/10</span>}
 function Tag({children,bg,fg}){return<span style={{fontSize:11,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.04em",padding:"2px 8px",borderRadius:4,background:bg,color:fg,whiteSpace:"nowrap"}}>{children}</span>}
 
-export default function App() {
+export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scrapedLetters: SCRAPED_LETTERS, scrapedAt }) {
   const [search, setSearch] = useState("");
   const [catFilter, setCatFilter] = useState("All");
+  const [cityFilter, setCityFilter] = useState("All");
   const [sortBy, setSortBy] = useState("score");
   const [expanded, setExpanded] = useState(null);
   const [minScore, setMinScore] = useState(0);
   const scored = useMemo(() => PROJECTS.map(p => ({ ...p, ...getLeadScore(p) })), []);
   const categories = ["All", ...new Set(PROJECTS.map(p => p.category))];
+  const cities = ["All", ...new Set(PROJECTS.map(p => p.city || "Los Gatos"))];
   const filtered = useMemo(() => {
     let list = scored;
+    if (cityFilter !== "All") list = list.filter(p => (p.city || "Los Gatos") === cityFilter);
     if (catFilter !== "All") list = list.filter(p => p.category === catFilter);
     if (search) { const q = search.toLowerCase(); list = list.filter(p => p.address.toLowerCase().includes(q)||p.description.toLowerCase().includes(q)||p.scope.toLowerCase().includes(q)||p.planner.toLowerCase().includes(q)||p.zoning.toLowerCase().includes(q)||p.apn.toLowerCase().includes(q)||p.overview.toLowerCase().includes(q)); }
     if (minScore > 0) list = list.filter(p => p.score >= minScore);
     list.sort((a,b) => { if (sortBy==="score") return b.score-a.score; if (sortBy==="date") return new Date(b.dateFiled)-new Date(a.dateFiled); return a.address.localeCompare(b.address); });
     return list;
-  }, [scored, catFilter, search, sortBy, minScore]);
+  }, [scored, catFilter, cityFilter, search, sortBy, minScore]);
   const stats = useMemo(() => ({ total:filtered.length, hot:filtered.filter(p=>p.score>=7).length, nc:filtered.filter(p=>p.category==="New Construction").length, add:filtered.filter(p=>p.category==="Addition").length, sub:filtered.filter(p=>p.category==="Subdivision").length }), [filtered]);
   const iS = {padding:"8px 12px",borderRadius:8,border:"1px solid #334155",background:"#0f172a",color:"#e2e8f0",fontSize:13,outline:"none"};
   const catC = {"New Construction":{bg:"#172554",fg:"#60a5fa"},Addition:{bg:"#422006",fg:"#fbbf24"},Subdivision:{bg:"#2e1065",fg:"#a78bfa"}};
@@ -32,7 +34,7 @@ export default function App() {
         <div style={{maxWidth:980,margin:"0 auto"}}>
           <div style={{display:"flex",alignItems:"center",gap:12}}>
             <div style={{width:40,height:40,borderRadius:10,background:"linear-gradient(135deg,#3b82f6,#8b5cf6)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20,flexShrink:0}}>🏗</div>
-            <div><h1 style={{margin:0,fontSize:21,fontWeight:700,color:"#f8fafc",letterSpacing:"-0.02em"}}>Los Gatos Construction Leads</h1><p style={{margin:0,fontSize:12,color:"#64748b"}}>Pending planning projects · Pages {SCRAPED_LETTERS.join(", ")} loaded · {PROJECTS.length} projects</p></div>
+            <div><h1 style={{margin:0,fontSize:21,fontWeight:700,color:"#f8fafc",letterSpacing:"-0.02em"}}>Construction Leads</h1><p style={{margin:0,fontSize:12,color:"#64748b"}}>Los Gatos & Saratoga pending planning projects · {PROJECTS.length} projects{scrapedAt && ` · Updated ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p></div>
           </div>
           <div style={{display:"flex",gap:18,marginTop:14,flexWrap:"wrap"}}>
             {[{l:"Projects",v:stats.total,c:"#94a3b8"},{l:"Hot (7+)",v:stats.hot,c:"#22c55e"},{l:"New Const.",v:stats.nc,c:"#3b82f6"},{l:"Additions",v:stats.add,c:"#eab308"},{l:"Subdivisions",v:stats.sub,c:"#a78bfa"}].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:"#64748b"}}>{s.l}</span></div>)}
@@ -42,6 +44,7 @@ export default function App() {
       <div style={{background:"#141c2e",borderBottom:"1px solid #1e293b",padding:"10px 20px",position:"sticky",top:0,zIndex:10}}>
         <div style={{maxWidth:980,margin:"0 auto",display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
           <input type="text" placeholder="Search address, APN, planner, zoning, description…" value={search} onChange={e=>setSearch(e.target.value)} style={{...iS,flex:"1 1 200px",minWidth:160}} />
+          <select value={cityFilter} onChange={e=>setCityFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{cities.map(c=><option key={c} value={c}>{c==="All"?"City: All":c}</option>)}</select>
           <select value={catFilter} onChange={e=>setCatFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{categories.map(c=><option key={c}>{c}</option>)}</select>
           <select value={sortBy} onChange={e=>setSortBy(e.target.value)} style={{...iS,cursor:"pointer"}}><option value="score">Sort: Lead Score</option><option value="date">Sort: Newest</option><option value="address">Sort: Address</option></select>
           <select value={minScore} onChange={e=>setMinScore(+e.target.value)} style={{...iS,cursor:"pointer"}}><option value={0}>Min: Any</option><option value={4}>Min: 4+</option><option value={7}>Min: 7+</option></select>
@@ -65,7 +68,7 @@ export default function App() {
               <div style={{flex:1,minWidth:0}}>
                 <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#f1f5f9"}}>{p.address}</span><Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag></div>
                 <div style={{fontSize:13,color:"#cbd5e1",lineHeight:1.35,marginBottom:3}}>{p.overview}</div>
-                <div style={{fontSize:11,color:"#475569"}}>{p.zoning} · APN {p.apn} · Filed {new Date(p.dateFiled).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})} · {p.planner}</div>
+                <div style={{fontSize:11,color:"#475569"}}>{p.city || "Los Gatos"}{p.zoning && ` · ${p.zoning}`}{p.apn && ` · APN ${p.apn}`}{p.dateFiled && ` · Filed ${new Date(p.dateFiled).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}`} · {p.planner}</div>
               </div>
               <div style={{flexShrink:0,fontSize:14,color:"#334155",transform:open?"rotate(180deg)":"none",transition:"transform 0.2s"}}>▾</div>
             </div>
@@ -82,7 +85,7 @@ export default function App() {
               <div style={{display:"flex",gap:5,flexWrap:"wrap",marginBottom:8}}>{p.reasons.map((r,ri)=><span key={ri} style={{fontSize:10,padding:"2px 6px",borderRadius:4,background:"#0f172a",color:"#64748b",border:"1px solid #1e293b"}}>{r}</span>)}</div>
               <div style={{fontSize:12,color:"#475569",marginBottom:10}}><strong style={{color:"#64748b"}}>App #:</strong> {p.appNumber} · <strong style={{color:"#64748b"}}>Type:</strong> {p.appType} · <strong style={{color:"#64748b"}}>Status:</strong> {p.status}</div>
               <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
-                <a href={p.pageUrl} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:5,padding:"7px 14px",borderRadius:7,background:"linear-gradient(135deg,#2563eb,#4f46e5)",color:"#fff",fontSize:12,fontWeight:600,textDecoration:"none"}}>↗ View on LosGatosCA.gov</a>
+                <a href={p.pageUrl} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:5,padding:"7px 14px",borderRadius:7,background:"linear-gradient(135deg,#2563eb,#4f46e5)",color:"#fff",fontSize:12,fontWeight:600,textDecoration:"none"}}>↗ View on {p.city==="Saratoga"||p.city==="Saratoga (Unincorporated)"?"Saratoga.ca.us":"LosGatosCA.gov"}</a>
                 {p.docs.map((d,di)=><a key={di} href={d.url} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:4,padding:"6px 10px",borderRadius:6,background:"#0b1120",color:"#64748b",fontSize:11,fontWeight:500,textDecoration:"none",border:"1px solid #1e293b",transition:"all 0.15s"}} onMouseEnter={e=>{e.target.style.borderColor="#2563eb";e.target.style.color="#93c5fd"}} onMouseLeave={e=>{e.target.style.borderColor="#1e293b";e.target.style.color="#64748b"}}>📄 {d.name}</a>)}
               </div>
             </div>)}

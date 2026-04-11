@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Los Gatos Construction Leads',
-  description: 'Pending planning projects — Town of Los Gatos',
+  title: 'Construction Leads — Los Gatos & Saratoga',
+  description: 'Pending planning projects — Los Gatos & Saratoga',
 };
 
 export default function RootLayout({ children }) {

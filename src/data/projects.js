@@ -1,7 +1,7 @@
 export const PROJECTS = [
   // === A ===
   {
-    address: "117 Alerche Drive", appNumber: "MR-25-009", appType: "Minor Residential",
+    address: "117 Alerche Drive", city: "Los Gatos", appNumber: "MR-25-009", appType: "Minor Residential",
     description: "Second-story addition exceeding 100 SF to existing single-family residence. Property sits in the HR-1 hillside zone. Intent to approve signaled by Town for April 6, 2026 — project is near final approval.",
     overview: "Residential addition in hillside zone — approaching approval. Owner may need a GC soon.",
     existingSF: null, proposedSF: null, sfNote: "100+ SF second-story addition — check plans for specifics",
@@ -14,7 +14,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "52 Ashler Avenue", appNumber: "MR-24-009", appType: "Minor Residential",
+    address: "52 Ashler Avenue", city: "Los Gatos", appNumber: "MR-24-009", appType: "Minor Residential",
     description: "Second-story addition exceeding 100 SF and exterior alterations to an existing pre-1941 single-family residence in the R-1D downtown residential zone. Historic property — consulting architect report on file.",
     overview: "Historic home renovation with second story and exterior work. Likely complex scope with preservation requirements.",
     existingSF: null, proposedSF: null, sfNote: "Pre-1941 home — 100+ SF addition + exterior alterations",
@@ -28,7 +28,7 @@ export const PROJECTS = [
   },
   // === B ===
   {
-    address: "321 Bachman Avenue", appNumber: "S-25-049", appType: "Architecture and Site",
+    address: "321 Bachman Avenue", city: "Los Gatos", appNumber: "S-25-049", appType: "Architecture and Site",
     description: "Addition with reduced setbacks to existing noncontributing single-family residence in Almond Grove Historic District on nonconforming property. Requires DRC review for setback variance.",
     overview: "Residential addition in historic district with setback variance — architectural sensitivity required.",
     existingSF: null, proposedSF: null, sfNote: "Addition to existing SFR — review plans for scope",
@@ -41,7 +41,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "220 Belgatos Road", appNumber: "S-25-012 thru -024, M-25-002, GP-24-002", appType: "Arch & Site / Subdivision / GP Amendment",
+    address: "220 Belgatos Road", city: "Los Gatos", appNumber: "S-25-012 thru -024, M-25-002, GP-24-002", appType: "Arch & Site / Subdivision / GP Amendment",
     description: "Major subdivision of one lot into fourteen lots with construction of 13 new single-family residences, grading permit, tree removal, and General Plan amendment from Public to Low Density Residential. One of the largest pending residential projects in Los Gatos.",
     overview: "MAJOR: 14-lot subdivision with 13 new custom homes. High-value multi-phase GC opportunity.",
     existingSF: null, proposedSF: null, sfNote: "13 new SFR builds — substantial total SF. Review individual lot plans.",
@@ -54,7 +54,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "127 Belhaven Drive", appNumber: "MR-26-005", appType: "Minor Residential",
+    address: "127 Belhaven Drive", city: "Los Gatos", appNumber: "MR-26-005", appType: "Minor Residential",
     description: "Second-story addition exceeding 100 SF on property zoned R-1:10. Recently filed March 2026.",
     overview: "Straightforward second-story addition — recently filed, early in process.",
     existingSF: null, proposedSF: null, sfNote: "100+ SF second-story addition",
@@ -64,7 +64,7 @@ export const PROJECTS = [
     docs: [{ name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/44708" }],
   },
   {
-    address: "350 Bella Vista Avenue", appNumber: "S-26-008", appType: "Architecture and Site",
+    address: "350 Bella Vista Avenue", city: "Los Gatos", appNumber: "S-26-008", appType: "Architecture and Site",
     description: "Addition to existing detached accessory building exceeding 450 SF and exceeding 15% lot coverage on non-conforming property. Requires A&S approval.",
     overview: "Accessory building expansion on non-conforming lot — specialty project.",
     existingSF: null, proposedSF: null, sfNote: "Existing accessory bldg + addition exceeding 450 SF",
@@ -74,7 +74,7 @@ export const PROJECTS = [
     docs: [{ name: "Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/45238" }],
   },
   {
-    address: "695 Bicknell Road", appNumber: "MR-26-001", appType: "Minor Residential",
+    address: "695 Bicknell Road", city: "Los Gatos", appNumber: "MR-26-001", appType: "Minor Residential",
     description: "Second-story addition exceeding 100 SF and exterior alterations to existing SFR on property zoned R-1:20:PD. Consulting architect report available.",
     overview: "Addition + exterior remodel on large-lot PD property. Review consulting architect findings.",
     existingSF: null, proposedSF: null, sfNote: "100+ SF addition + exterior alterations",
@@ -87,7 +87,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "101 Blossom Hill Road", appNumber: "S-23-064, U-24-021, M-24-019", appType: "Arch & Site / CUP / Subdivision",
+    address: "101 Blossom Hill Road", city: "Los Gatos", appNumber: "S-23-064, U-24-021, M-24-019", appType: "Arch & Site / CUP / Subdivision",
     description: "Demolition of existing commercial structures and construction of 63-unit multi-family mixed-use development with condo vesting map, grading permit, and tree removal under SB 330.",
     overview: "MAJOR: 63-unit mixed-use development. Demo existing commercial + full new construction.",
     existingSF: null, proposedSF: null, sfNote: "63 residential units + commercial ground floor — large-scale",
@@ -100,7 +100,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "15055 Blossom Hill Road", appNumber: "ULS25-008", appType: "Urban Lot Split",
+    address: "15055 Blossom Hill Road", city: "Los Gatos", appNumber: "ULS25-008", appType: "Urban Lot Split",
     description: "SB 9 urban lot split on property zoned R-1:10. Ministerial approval — no discretionary review.",
     overview: "Lot split only — future development may follow.",
     existingSF: null, proposedSF: null, sfNote: "Lot split — no construction proposed yet",
@@ -111,7 +111,7 @@ export const PROJECTS = [
   },
   // === C ===
   {
-    address: "14288 Capri Drive", appNumber: "S-24-044", appType: "Architecture and Site",
+    address: "14288 Capri Drive", city: "Los Gatos", appNumber: "S-24-044", appType: "Architecture and Site",
     description: "Demolition of existing commercial building and construction of 119-unit multi-family residential development with grading permit under SB 330. Largest pending residential project in Los Gatos by unit count.",
     overview: "MAJOR: 119-unit apartment complex. Full commercial demo + new construction. Highest unit count in pipeline.",
     existingSF: null, proposedSF: null, sfNote: "119 apartment units — massive scale. Review revised plans.",
@@ -124,7 +124,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "16724 Chirco Drive", appNumber: "S-25-002", appType: "Architecture and Site",
+    address: "16724 Chirco Drive", city: "Los Gatos", appNumber: "S-25-002", appType: "Architecture and Site",
     description: "Full demolition of existing SFR and construction of new custom single-family residence on R-1:8 lot. Heading to Planning Commission 4/8/2026.",
     overview: "Custom home — demo + new build. Approaching Planning Commission hearing.",
     existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — check plans for existing vs proposed SF",
@@ -137,7 +137,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "16080 Camino Del Cerro", appNumber: "MR-25-015", appType: "Minor Residential",
+    address: "16080 Camino Del Cerro", city: "Los Gatos", appNumber: "MR-25-015", appType: "Minor Residential",
     description: "Second-story addition exceeding 100 SF on hillside residential property (HR-1 zone).",
     overview: "Hillside second-story addition — may involve grading/site challenges.",
     existingSF: null, proposedSF: null, sfNote: "100+ SF second-story addition",
@@ -147,7 +147,7 @@ export const PROJECTS = [
     docs: [{ name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/43748" }],
   },
   {
-    address: "14810 Clara Street", appNumber: "TUD25-008, TUD25-009", appType: "Two-Unit Housing Development",
+    address: "14810 Clara Street", city: "Los Gatos", appNumber: "TUD25-008, TUD25-009", appType: "Two-Unit Housing Development",
     description: "SB 9 Two-Unit Housing Development with two new units on R-1:12 property. Ministerial approval.",
     overview: "Two new units under SB 9 — straightforward ministerial project.",
     existingSF: null, proposedSF: null, sfNote: "Two new residential units — review Lot A/B plans",
@@ -161,7 +161,7 @@ export const PROJECTS = [
   },
   // === E ===
   {
-    address: "15575 El Gato Lane", appNumber: "S-25-029", appType: "Architecture and Site",
+    address: "15575 El Gato Lane", city: "Los Gatos", appNumber: "S-25-029", appType: "Architecture and Site",
     description: "Full demolition of existing SFR and construction of new single-family residence on R-1:8 lot. Structure report and consulting architect letter on file.",
     overview: "Custom home — demo + new build with structural report.",
     existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — see plans & structure report",
@@ -174,7 +174,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "15825 Edmund Drive", appNumber: "MR-25-014", appType: "Minor Residential",
+    address: "15825 Edmund Drive", city: "Los Gatos", appNumber: "MR-25-014", appType: "Minor Residential",
     description: "Second-story addition exceeding 100 SF on R-1:8 property.",
     overview: "Standard second-story addition.",
     existingSF: null, proposedSF: null, sfNote: "100+ SF second-story addition",
@@ -184,7 +184,7 @@ export const PROJECTS = [
     docs: [{ name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/43742" }],
   },
   {
-    address: "16316 Englewood Avenue", appNumber: "MR-26-002", appType: "Minor Residential",
+    address: "16316 Englewood Avenue", city: "Los Gatos", appNumber: "MR-26-002", appType: "Minor Residential",
     description: "New accessory structure greater than 450 SF with reduced side yard setbacks on R-1:20 property.",
     overview: "Large accessory structure on big lot — setback variance needed.",
     existingSF: null, proposedSF: null, sfNote: "New accessory structure >450 SF",
@@ -194,7 +194,7 @@ export const PROJECTS = [
     docs: [{ name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/44391" }],
   },
   {
-    address: "32 Euclid Avenue", appNumber: "TUD26-001", appType: "Two-Unit Housing Development",
+    address: "32 Euclid Avenue", city: "Los Gatos", appNumber: "TUD26-001", appType: "Two-Unit Housing Development",
     description: "SB 9 Two-Unit Housing Development with two new units on R-1:8 property. Ministerial approval.",
     overview: "Two new units under SB 9 — ministerial project.",
     existingSF: null, proposedSF: null, sfNote: "Two new residential units",
@@ -205,7 +205,7 @@ export const PROJECTS = [
   },
   // === F ===
   {
-    address: "64 Fairview Plaza", appNumber: "S-24-004", appType: "Architecture and Site",
+    address: "64 Fairview Plaza", city: "Los Gatos", appNumber: "S-24-004", appType: "Architecture and Site",
     description: "Demolition of existing SFR and construction of new SFR with reduced front setbacks and grading permit on non-conforming R-1:8 property.",
     overview: "Custom home — demo + new build with setback variance.",
     existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — check plans for sizing",
@@ -218,7 +218,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "20101 Foster Road", appNumber: "S-25-011", appType: "Architecture and Site",
+    address: "20101 Foster Road", city: "Los Gatos", appNumber: "S-25-011", appType: "Architecture and Site",
     description: "New single-family residence on vacant HR-2½:PD hillside property with grading permit and tree removal. Visibility study completed.",
     overview: "New custom home on vacant hillside lot — site prep & grading. High-value build.",
     existingSF: 0, proposedSF: null, sfNote: "Vacant lot — all new construction.",
@@ -232,7 +232,7 @@ export const PROJECTS = [
   },
   // === G ===
   {
-    address: "53 Grove Street", appNumber: "ULS25-011", appType: "Urban Lot Split",
+    address: "53 Grove Street", city: "Los Gatos", appNumber: "ULS25-011", appType: "Urban Lot Split",
     description: "SB 9 urban lot split on R-1:20 large lot property. Ministerial approval.",
     overview: "Lot split only — large lot R-1:20. Watch for future development.",
     existingSF: null, proposedSF: null, sfNote: "Lot split — no construction proposed yet",
@@ -243,7 +243,7 @@ export const PROJECTS = [
   },
   // === H ===
   {
-    address: "200 Happy Acres Road", appNumber: "S-24-039", appType: "Architecture and Site",
+    address: "200 Happy Acres Road", city: "Los Gatos", appNumber: "S-24-039", appType: "Architecture and Site",
     description: "New single-family residence on HR-2½ hillside property with tree removal and grading permit.",
     overview: "New custom hillside home with grading — high-value opportunity.",
     existingSF: null, proposedSF: null, sfNote: "New SFR construction — see plans for proposed SF",
@@ -256,7 +256,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "16266 Harwood Road", appNumber: "S-22-045", appType: "Architecture and Site",
+    address: "16266 Harwood Road", city: "Los Gatos", appNumber: "S-22-045", appType: "Architecture and Site",
     description: "Accessory structures exceeding 1,000 SF gross floor area with grading permit on HR-1 hillside. Includes garage addition and pool house.",
     overview: "Large accessory structures (garage + pool house) >1,000 SF on hillside.",
     existingSF: null, proposedSF: null, sfNote: "Accessory structures >1,000 SF (garage + pool house)",
@@ -269,7 +269,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "69 Hernandez Avenue", appNumber: "MR-26-004", appType: "Minor Residential",
+    address: "69 Hernandez Avenue", city: "Los Gatos", appNumber: "MR-26-004", appType: "Minor Residential",
     description: "New accessory structure greater than 450 SF with reduced side setbacks on R-1:8 property.",
     overview: "Accessory structure >450 SF with setback variance.",
     existingSF: null, proposedSF: null, sfNote: "New accessory structure >450 SF",
@@ -279,7 +279,7 @@ export const PROJECTS = [
     docs: [{ name: "Development Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/44506" }],
   },
   {
-    address: "94 Hernandez Avenue", appNumber: "S-22-029", appType: "Architecture and Site",
+    address: "94 Hernandez Avenue", city: "Los Gatos", appNumber: "S-22-029", appType: "Architecture and Site",
     description: "New single-family residence on R-1:8 property. Long-pending (filed 2022).",
     overview: "Custom home build — long in pipeline, may be stalled.",
     existingSF: null, proposedSF: null, sfNote: "New SFR — see plans",
@@ -289,7 +289,7 @@ export const PROJECTS = [
     docs: [{ name: "Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/30983" }],
   },
   {
-    address: "16845 Hicks Road (Gymnasium)", appNumber: "S-26-001, V-26-001, U-26-001", appType: "Arch & Site / Variance / CUP",
+    address: "16845 Hicks Road (Gymnasium)", city: "Los Gatos", appNumber: "S-26-001, V-26-001, U-26-001", appType: "Arch & Site / Variance / CUP",
     description: "New gymnasium and sports field with height variance, CUP modification, and grading permit on HR-1 property. Institutional/commercial scale.",
     overview: "INSTITUTIONAL: New gym + sports field — commercial-scale build with height variance.",
     existingSF: null, proposedSF: null, sfNote: "New gymnasium + sports field — see plans for SF",
@@ -302,7 +302,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "193 Howes Drive", appNumber: "MR-25-012", appType: "Minor Residential",
+    address: "193 Howes Drive", city: "Los Gatos", appNumber: "MR-25-012", appType: "Minor Residential",
     description: "Second-story addition exceeding 100 SF on R-1:8 property. Consulting architect reviewed.",
     overview: "Second-story addition — consulting architect reviewed.",
     existingSF: null, proposedSF: null, sfNote: "100+ SF second-story addition",
@@ -316,7 +316,7 @@ export const PROJECTS = [
   },
   // === K ===
   {
-    address: "15315 Kennedy Road", appNumber: "ULS24-005", appType: "Urban Lot Split",
+    address: "15315 Kennedy Road", city: "Los Gatos", appNumber: "ULS24-005", appType: "Urban Lot Split",
     description: "Urban lot split of one lot into two lots on property zoned HR-2½. Ministerial approval — no public hearing required.",
     overview: "Lot split on hillside property — future development may follow.",
     existingSF: null, proposedSF: null, sfNote: "Lot split — no construction proposed yet",
@@ -329,7 +329,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "16170 Kennedy Road", appNumber: "ULS26-002", appType: "Urban Lot Split",
+    address: "16170 Kennedy Road", city: "Los Gatos", appNumber: "ULS26-002", appType: "Urban Lot Split",
     description: "SB 9 urban lot split on property zoned HR-1. Ministerial approval — no public hearing required.",
     overview: "Lot split on hillside property — recently filed.",
     existingSF: null, proposedSF: null, sfNote: "Lot split — no construction proposed yet",
@@ -339,7 +339,7 @@ export const PROJECTS = [
     docs: [{ name: "Plan Set", url: "https://www.losgatosca.gov/DocumentCenter/View/45212" }],
   },
   {
-    address: "16484 S. Kennedy Road", appNumber: "M-26-001", appType: "Lot Line Adjustment",
+    address: "16484 S. Kennedy Road", city: "Los Gatos", appNumber: "M-26-001", appType: "Lot Line Adjustment",
     description: "Lot line adjustment between two adjacent lots on property zoned HR-1. Administrative subdivision action.",
     overview: "Lot line adjustment — precursor to new construction on parcels.",
     existingSF: null, proposedSF: null, sfNote: "Lot line adjustment — no construction in this app",
@@ -352,7 +352,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "16484 S. Kennedy Road (Parcel 1)", appNumber: "S-26-002", appType: "Architecture and Site",
+    address: "16484 S. Kennedy Road (Parcel 1)", city: "Los Gatos", appNumber: "S-26-002", appType: "Architecture and Site",
     description: "Demolition of existing single-family residence and construction of a new single-family residence with site improvements on property zoned HR-1.",
     overview: "Custom home — full demo + new build on hillside parcel. Paired with Parcel 2.",
     existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — check plans for proposed SF",
@@ -365,7 +365,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "16484 S. Kennedy Road (Parcel 2)", appNumber: "S-26-003", appType: "Architecture and Site",
+    address: "16484 S. Kennedy Road (Parcel 2)", city: "Los Gatos", appNumber: "S-26-003", appType: "Architecture and Site",
     description: "Demolition of existing single-family residence and construction of a new single-family residence with site improvements on property zoned HR-1.",
     overview: "Custom home — full demo + new build on hillside parcel. Paired with Parcel 1.",
     existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — check plans for proposed SF",
@@ -378,7 +378,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "16680 Kennedy Road", appNumber: "S-25-047", appType: "Architecture and Site",
+    address: "16680 Kennedy Road", city: "Los Gatos", appNumber: "S-25-047", appType: "Architecture and Site",
     description: "Demolition of existing single-family residence and construction of a new two-story single-family residence with site work on property zoned R-1:8. Heading to DRC 4/14/2026.",
     overview: "Custom home — demo + new two-story build. Approaching DRC hearing.",
     existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — check plans for proposed SF",
@@ -391,7 +391,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "16880 Kennedy Road", appNumber: "TUD26-002", appType: "Two-Unit Housing Development",
+    address: "16880 Kennedy Road", city: "Los Gatos", appNumber: "TUD26-002", appType: "Two-Unit Housing Development",
     description: "SB 9 Two-Unit Housing Development with two new units on property zoned R-1:8. Ministerial approval.",
     overview: "Two new units under SB 9 — ministerial project.",
     existingSF: null, proposedSF: null, sfNote: "Two new residential units",
@@ -401,7 +401,7 @@ export const PROJECTS = [
     docs: [{ name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/44596" }],
   },
   {
-    address: "16837 Kennedy Road", appNumber: "ULS25-006", appType: "Urban Lot Split",
+    address: "16837 Kennedy Road", city: "Los Gatos", appNumber: "ULS25-006", appType: "Urban Lot Split",
     description: "SB 9 urban lot split of one lot into two lots on property zoned R-1:8. Ministerial approval.",
     overview: "Lot split — watch for future development on new parcels.",
     existingSF: null, proposedSF: null, sfNote: "Lot split — no construction proposed yet",
@@ -415,7 +415,7 @@ export const PROJECTS = [
   },
   // === L ===
   {
-    address: "230 La Terra Court", appNumber: "S-25-053", appType: "Architecture and Site",
+    address: "230 La Terra Court", city: "Los Gatos", appNumber: "S-25-053", appType: "Architecture and Site",
     description: "New single-family residence on vacant HR-2½:PD hillside lot with tree removal and grading permit.",
     overview: "Custom home on vacant hillside lot — ground-up build. High-value.",
     existingSF: 0, proposedSF: null, sfNote: "Vacant lot — all new construction",
@@ -428,7 +428,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "16706 Littlefield Lane", appNumber: "S-25-042", appType: "Architecture and Site",
+    address: "16706 Littlefield Lane", city: "Los Gatos", appNumber: "S-25-042", appType: "Architecture and Site",
     description: "Demolition of existing SFR and construction of new SFR with grading and tree removal on R-1:8.",
     overview: "Custom home — full demo + new build with grading.",
     existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — check plans",
@@ -441,7 +441,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "176 Loma Alta Avenue (Lot 1 & 2)", appNumber: "TUD25-012, TUD25-013", appType: "Two-Unit Housing Development",
+    address: "176 Loma Alta Avenue (Lot 1 & 2)", city: "Los Gatos", appNumber: "TUD25-012, TUD25-013", appType: "Two-Unit Housing Development",
     description: "SB 9 Two-Unit Housing Development — two new units across two lots on R-1:8. Separate plan sets.",
     overview: "Two new SB 9 units — two lot plans. Ministerial.",
     existingSF: null, proposedSF: null, sfNote: "Two new units — review both plan sets",
@@ -455,7 +455,7 @@ export const PROJECTS = [
   },
   // === M ===
   {
-    address: "0 Mireval Road", appNumber: "S-25-010", appType: "Architecture and Site",
+    address: "0 Mireval Road", city: "Los Gatos", appNumber: "S-25-010", appType: "Architecture and Site",
     description: "New single-family residence on vacant HR-5 hillside property with grading permit. Large lot zone — estate-scale build.",
     overview: "Estate-scale custom home on vacant HR-5 hillside lot. Premium build.",
     existingSF: 0, proposedSF: null, sfNote: "Vacant lot — all new construction. HR-5 = large estate lot.",
@@ -468,7 +468,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "17560 Mireval Road", appNumber: "S-24-067", appType: "Architecture and Site",
+    address: "17560 Mireval Road", city: "Los Gatos", appNumber: "S-24-067", appType: "Architecture and Site",
     description: "Addition to existing SFR with grading permit and tree removal on HR-2½ hillside. Consulting architect reviewed.",
     overview: "Hillside addition with grading — consulting architect involved. Substantial scope.",
     existingSF: null, proposedSF: null, sfNote: "Addition to existing SFR — grading + tree removal",
@@ -481,7 +481,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "300 Mountain Laurel Lane", appNumber: "S-26-005", appType: "Architecture and Site",
+    address: "300 Mountain Laurel Lane", city: "Los Gatos", appNumber: "S-26-005", appType: "Architecture and Site",
     description: "New single-family residence on vacant HR-5:PD hillside lot with grading and tree removal. Estate-scale build with color/materials board.",
     overview: "Premium estate home on vacant HR-5 lot. Design-forward project.",
     existingSF: 0, proposedSF: null, sfNote: "Vacant lot — estate-scale HR-5.",
@@ -495,7 +495,7 @@ export const PROJECTS = [
   },
   // === O ===
   {
-    address: "235 Oak Meadow Drive", appNumber: "PD-25-003", appType: "Architecture and Site",
+    address: "235 Oak Meadow Drive", city: "Los Gatos", appNumber: "PD-25-003", appType: "Architecture and Site",
     description: "Modification of Planned Development Ordinance 2371 to allow construction of a 12-unit multi-family residential development on property zoned O:PD. CEQA review pending.",
     overview: "Multi-family 12-unit development via PD modification. Mid-density residential opportunity.",
     existingSF: null, proposedSF: null, sfNote: "12 residential units — review conceptual plans",
@@ -508,7 +508,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "14789 Oka Road", appNumber: "S-24-052, M-24-017", appType: "Arch & Site / Subdivision",
+    address: "14789 Oka Road", city: "Los Gatos", appNumber: "S-24-052, M-24-017", appType: "Arch & Site / Subdivision",
     description: "Construction of 138-unit multi-family residential development with condo vesting tentative map, tree removal, grading permit, and site improvements under SB 330. CEQA initial study and mitigated negative declaration under review. One of the largest pending projects in Los Gatos.",
     overview: "MAJOR: 138-unit multi-family on vacant land. Largest unit count after Capri Drive. Full environmental review in progress.",
     existingSF: 0, proposedSF: null, sfNote: "138 residential units on vacant parcels — massive scale",
@@ -522,7 +522,7 @@ export const PROJECTS = [
   },
   // === P ===
   {
-    address: "16951 Placer Oaks Road", appNumber: "MR-23-003", appType: "Minor Residential",
+    address: "16951 Placer Oaks Road", city: "Los Gatos", appNumber: "MR-23-003", appType: "Minor Residential",
     description: "Construction of a second-story addition to an existing single-family residence on property zoned R-1:8. Categorically exempt under CEQA Section 15303.",
     overview: "Second-story addition — long-pending (filed 2023). May be stalled.",
     existingSF: null, proposedSF: null, sfNote: "Second-story addition — check plans for scope",
@@ -535,7 +535,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "34 Pleasant Street", appNumber: "MR-25-003", appType: "Minor Residential",
+    address: "34 Pleasant Street", city: "Los Gatos", appNumber: "MR-25-003", appType: "Minor Residential",
     description: "Construction of a new second-story and exterior alterations to an existing pre-1941 single-family residence, and an accessory structure greater than 450 SF on property zoned R-1D. Historic property with HPC review.",
     overview: "Historic home renovation — new second story + exterior + large accessory structure. Complex scope.",
     existingSF: null, proposedSF: null, sfNote: "Second-story + exterior + accessory >450 SF on pre-1941 home",
@@ -549,7 +549,7 @@ export const PROJECTS = [
   },
   // === R ===
   {
-    address: "10, 30, 50, 70 Reservoir Road", appNumber: "S-22-049, M-25-003", appType: "Arch & Site / Subdivision",
+    address: "10, 30, 50, 70 Reservoir Road", city: "Los Gatos", appNumber: "S-22-049, M-25-003", appType: "Arch & Site / Subdivision",
     description: "Lot merger of four parcels into two parcels, demolition of two accessory dwelling units, and construction of a new single-family residence on property zoned R-1:20.",
     overview: "Multi-parcel lot merger + demo + new custom home on large R-1:20 lots. Complex land assembly.",
     existingSF: null, proposedSF: null, sfNote: "Lot merger (4→2 parcels) + new SFR — see plans for sizing",
@@ -562,7 +562,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "39 Reservoir Road", appNumber: "S-24-010", appType: "Architecture and Site",
+    address: "39 Reservoir Road", city: "Los Gatos", appNumber: "S-24-010", appType: "Architecture and Site",
     description: "Demolition of an existing two-family residential development and construction of a new two-story two-family residential development with retention of an existing ADU on property zoned R-1D.",
     overview: "Demo + rebuild of two-family residence. Retaining existing ADU. Downtown zone.",
     existingSF: null, proposedSF: null, sfNote: "Two-family demo/rebuild + ADU retention — check plans",
@@ -575,7 +575,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "16973–16975 Roberts Road", appNumber: "M-26-002", appType: "Subdivision",
+    address: "16973–16975 Roberts Road", city: "Los Gatos", appNumber: "M-26-002", appType: "Subdivision",
     description: "Subdivision of one lot into two lots on property zoned R-M:5-12. Recently filed March 2026.",
     overview: "Multi-family zoned lot split — future multi-unit development potential.",
     existingSF: null, proposedSF: null, sfNote: "Subdivision on multi-family zoned lot — watch for future dev",
@@ -588,7 +588,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "235 Rosalie Court", appNumber: "MR-24-002", appType: "Minor Residential",
+    address: "235 Rosalie Court", city: "Los Gatos", appNumber: "MR-24-002", appType: "Minor Residential",
     description: "Construction of a two-story addition to an existing single-family residence on property zoned R-1:10.",
     overview: "Two-story addition — consulting architect reviewed.",
     existingSF: null, proposedSF: null, sfNote: "Two-story addition — check plans for scope",
@@ -601,7 +601,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "15880 Rose Avenue", appNumber: "S-25-051", appType: "Architecture and Site",
+    address: "15880 Rose Avenue", city: "Los Gatos", appNumber: "S-25-051", appType: "Architecture and Site",
     description: "Demolition of existing single-family residence and construction of a new single-family residence with site improvements on property zoned R-1:8.",
     overview: "Custom home — demo + new build. Consulting arborist and architect reports on file.",
     existingSF: null, proposedSF: null, sfNote: "Full demo/rebuild — check plans for proposed SF",
@@ -615,7 +615,7 @@ export const PROJECTS = [
   },
   // === S ===
   {
-    address: "647 N. Santa Cruz Avenue", appNumber: "S-24-060, U-24-018, M-24-020", appType: "Arch & Site / CUP / Subdivision",
+    address: "647 N. Santa Cruz Avenue", city: "Los Gatos", appNumber: "S-24-060, U-24-018, M-24-020", appType: "Arch & Site / CUP / Subdivision",
     description: "Demo of existing commercial and construction of 11-unit multi-family mixed-use with condo map, grading, and tree removal under SB 330.",
     overview: "Mixed-use 11-unit condo on Santa Cruz Ave. Demo commercial + new construction.",
     existingSF: null, proposedSF: null, sfNote: "11 residential units + commercial",
@@ -628,7 +628,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "101 S. Santa Cruz Avenue", appNumber: "S-23-040, U-23-016, M-23-008", appType: "Arch & Site / CUP / Subdivision",
+    address: "101 S. Santa Cruz Avenue", city: "Los Gatos", appNumber: "S-23-040, U-23-016, M-23-008", appType: "Arch & Site / CUP / Subdivision",
     description: "58-unit multi-family mixed-use with commercial ground floor and condo map under SB 330 on C-2 property. Downtown Los Gatos.",
     overview: "MAJOR: 58-unit mixed-use in downtown Los Gatos. Premium location.",
     existingSF: null, proposedSF: null, sfNote: "58 residential units + commercial ground floor",
@@ -641,7 +641,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "14915 Shannon Road", appNumber: "M-22-003, Z-22-001, GP-22-001", appType: "Subdivision / Zone Change / GP Amendment",
+    address: "14915 Shannon Road", city: "Los Gatos", appNumber: "M-22-003, Z-22-001, GP-22-001", appType: "Subdivision / Zone Change / GP Amendment",
     description: "GP amendment from Agricultural to Hillside Residential, zone change RC to HR-2½, subdivision into nine lots. Environmental review (MND) prepared.",
     overview: "MAJOR: 9-lot hillside subdivision with zone change. Environmental review complete.",
     existingSF: 0, proposedSF: null, sfNote: "9 new hillside lots — future custom homes.",
@@ -654,7 +654,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "401 Surmont Drive", appNumber: "M-25-004", appType: "Subdivision",
+    address: "401 Surmont Drive", city: "Los Gatos", appNumber: "M-25-004", appType: "Subdivision",
     description: "Subdivision of one lot into three lots on HR-2½ hillside property. CEQA pending.",
     overview: "3-lot hillside subdivision — future custom home sites.",
     existingSF: null, proposedSF: null, sfNote: "Subdivision only — 3 new lots",
@@ -664,7 +664,7 @@ export const PROJECTS = [
     docs: [{ name: "Subdivision Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/42504" }],
   },
   {
-    address: "415 San Benito Avenue", appNumber: "ULS26-001", appType: "Urban Lot Split",
+    address: "415 San Benito Avenue", city: "Los Gatos", appNumber: "ULS26-001", appType: "Urban Lot Split",
     description: "SB 9 urban lot split into two lots on R-1D property. Ministerial. Filed March 2026.",
     overview: "Lot split in downtown residential zone — recently filed.",
     existingSF: null, proposedSF: null, sfNote: "Lot split — no construction proposed yet",
@@ -675,7 +675,7 @@ export const PROJECTS = [
   },
   // === T ===
   {
-    address: "310 Tait Avenue", appNumber: "MR-25-016", appType: "Minor Residential",
+    address: "310 Tait Avenue", city: "Los Gatos", appNumber: "MR-25-016", appType: "Minor Residential",
     description: "Construction of a new second-story to an existing pre-1941 single-family residence on property zoned R-1D:LHP. CEQA exempt under Section 15301.",
     overview: "Historic home second-story addition in Landmark Historic Preservation zone.",
     existingSF: null, proposedSF: null, sfNote: "New second-story on pre-1941 home — check plans",
@@ -688,7 +688,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "178 Twin Oaks Drive", appNumber: "S-24-023 thru -032, M-24-013", appType: "Arch & Site / Subdivision",
+    address: "178 Twin Oaks Drive", city: "Los Gatos", appNumber: "S-24-023 thru -032, M-24-013", appType: "Arch & Site / Subdivision",
     description: "Appeal of incompleteness determination for SB 330 application requesting subdivision of one lot into twelve lots, construction of a new single-family residence on each lot, grading permit, and removal of large protected trees. Continued from Special Planning Commission 12/17/2025.",
     overview: "MAJOR: 12-lot subdivision with 12 new custom homes under SB 330 appeal. Complex regulatory path.",
     existingSF: null, proposedSF: null, sfNote: "12 new SFR builds — substantial total SF. Review individual lot plans.",
@@ -702,7 +702,7 @@ export const PROJECTS = [
   },
   // === U ===
   {
-    address: "15521 Union Avenue", appNumber: "U-26-005", appType: "Conditional Use Permit",
+    address: "15521 Union Avenue", city: "Los Gatos", appNumber: "U-26-005", appType: "Conditional Use Permit",
     description: "Conditional use permit application for a bank on property zoned C-1. Categorically exempt under CEQA Section 15301.",
     overview: "Commercial — bank CUP. Not a construction lead but tracks C-1 zone activity.",
     existingSF: null, proposedSF: null, sfNote: "Bank tenant improvement — likely interior only",
@@ -715,7 +715,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "575 University Avenue", appNumber: "U-24-003", appType: "Conditional Use Permit Modification",
+    address: "575 University Avenue", city: "Los Gatos", appNumber: "U-24-003", appType: "Conditional Use Permit Modification",
     description: "Modification to existing CUP for expanded alcohol service at existing restaurant (Los Gatos Meat & Smoke House) on property zoned LM.",
     overview: "Restaurant CUP modification — minimal construction scope.",
     existingSF: null, proposedSF: null, sfNote: "CUP modification only — likely no construction",
@@ -728,7 +728,7 @@ export const PROJECTS = [
     ],
   },
   {
-    address: "980 University Avenue", appNumber: "S-24-053, M-24-019", appType: "Arch & Site / Subdivision",
+    address: "980 University Avenue", city: "Los Gatos", appNumber: "S-24-053, M-24-019", appType: "Arch & Site / Subdivision",
     description: "Demolition of existing commercial structure and construction of 68-unit multi-family residential development with condo vesting tentative map, grading permit, and tree removal under SB 330 on property zoned CM.",
     overview: "MAJOR: 68-unit multi-family residential. Demo commercial + full new construction under SB 330.",
     existingSF: null, proposedSF: null, sfNote: "68 residential units — large-scale multi-family",
@@ -742,7 +742,7 @@ export const PROJECTS = [
   },
   // === V ===
   {
-    address: "116 Vallecitos Way", appNumber: "S-25-046", appType: "Architecture and Site",
+    address: "116 Vallecitos Way", city: "Los Gatos", appNumber: "S-25-046", appType: "Architecture and Site",
     description: "Demolition of existing single-family residence and construction of a new two-story single-family residence with site improvements and grading permit on vacant property zoned R-1:10. CEQA exempt under Section 15303.",
     overview: "Custom home — demo + new build on vacant lot with grading. Consulting architect reviewed.",
     existingSF: 0, proposedSF: null, sfNote: "Vacant lot — all new construction",
@@ -754,9 +754,23 @@ export const PROJECTS = [
       { name: "Consulting Architect Review", url: "https://www.losgatosca.gov/DocumentCenter/View/43917" },
     ],
   },
+  // === Z ===
+  {
+    address: "17445 Zena Avenue", city: "Los Gatos", appNumber: "S-25-005", appType: "Architecture and Site",
+    description: "Construction of new maintenance buildings and site work requiring a grading permit for the La Rinconada Golf Course on property zoned RC. CEQA exempt under Section 15303.",
+    overview: "Golf course maintenance buildings — institutional/commercial, not residential.",
+    existingSF: null, proposedSF: null, sfNote: "New maintenance buildings for golf course",
+    dateFiled: "2025-10-06", status: "Planning Commission - 4/22/2026", planner: "Ryan Safty",
+    category: "New Construction", scope: "Institutional (Golf Course)", zoning: "RC", apn: "409-310-01",
+    pageUrl: "https://www.losgatosca.gov/2396/Z",
+    docs: [
+      { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/43672" },
+      { name: "Project Description", url: "https://www.losgatosca.gov/DocumentCenter/View/43671" },
+    ],
+  },
   // === W ===
   {
-    address: "141 Wheeler Avenue", appNumber: "M-24-018", appType: "Subdivision",
+    address: "141 Wheeler Avenue", city: "Los Gatos", appNumber: "M-24-018", appType: "Subdivision",
     description: "Subdivision of one lot into two lots on property zoned R-1:8. Categorically exempt under CEQA Section 15315 (Minor Land Divisions).",
     overview: "Lot split — future development potential on two new parcels.",
     existingSF: null, proposedSF: null, sfNote: "Subdivision only — no construction proposed yet",
@@ -767,6 +781,261 @@ export const PROJECTS = [
       { name: "Project Description & Justification", url: "https://www.losgatosca.gov/DocumentCenter/View/40072" },
       { name: "Project Plans", url: "https://www.losgatosca.gov/DocumentCenter/View/40073" },
     ],
+  },
+  // === SARATOGA — BUILDER'S REMEDY PROJECTS ===
+  {
+    address: "Chester/Allendale (Vineyard One)", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "231-unit development on 11.57-acre site. Includes 24 single-family detached, 85 townhouses (1,787-2,427 SF), 84 residential flats (1,695-1,910 SF), 38 ADUs, and 47 affordable units. Three stories, max 39 ft. 461 parking spaces. Under MOU: applicant agreed to withdraw this 231-unit project if City approves alternative 64-unit development by April 15, 2026.",
+    overview: "MAJOR: 231-unit mixed development (or 64-unit alternative). EIR in progress. Largest Saratoga project.",
+    existingSF: 0, proposedSF: null, sfNote: "Townhomes 1,787-2,427 SF, flats 1,695-1,910 SF, SFR ~3,518 SF",
+    dateFiled: "", status: "MOU pending — may convert to 64-unit alternative", planner: "Christopher Riordan",
+    category: "New Construction", scope: "Multi-Family Mixed (231 Units)", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/611/4-ChesterAllendale-Vineyard-One",
+    docs: [{ name: "Site Plan", url: "https://www.saratoga.ca.us/DocumentCenter/View/5825/site-plan" }],
+  },
+  {
+    address: "14076 Quito Road", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "69-unit condo/townhome development on 3.85-acre vacant site. 55 attached three-story units in 12 buildings plus 14 ADUs restricted to affordable housing. Heights 37-38 ft. Units range 2,170-2,864 SF. Two-car garages + 15 guest spaces.",
+    overview: "69-unit condo development on vacant lot. Inconsistency letter sent July 2025, environmental review pending.",
+    existingSF: 0, proposedSF: null, sfNote: "Units 2,170-2,864 SF each. 69 total units.",
+    dateFiled: "", status: "Inconsistency letter sent 7/11/25 — environmental review pending", planner: "Christopher Riordan",
+    category: "New Construction", scope: "Multi-Family Condo (69 Units)", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/626/15-14076-Quito-Road",
+    docs: [{ name: "Site Plan", url: "https://www.saratoga.ca.us/DocumentCenter/View/5893/Site-Plan-3825" }],
+  },
+  {
+    address: "Pierce Road (Masson Estates)", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "25-unit single-family development on 72.45-acre vacant site. 5 homes affordable for lower-income. Homes range 2,375-7,723 SF on lots 2,086-86,351 SF. 18 acres developed, 54 acres undeveloped. Draft EIR published, public review ended Feb 2026.",
+    overview: "MAJOR: 25 custom homes on 72-acre estate site. Homes up to 7,723 SF. EIR nearly complete.",
+    existingSF: 0, proposedSF: null, sfNote: "Homes 2,375-7,723 SF. Lots up to 86,351 SF (2 acres). Premium builds.",
+    dateFiled: "", status: "Draft EIR public review ended 2/12/26 — Final EIR in preparation", planner: "Christopher Riordan",
+    category: "New Construction", scope: "Subdivision — 25 Custom Homes (72 acres)", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/641/13-Pierce-Road-Masson-Estates",
+    docs: [
+      { name: "Site Plan", url: "https://www.saratoga.ca.us/DocumentCenter/View/5832/Site-Plan" },
+      { name: "Draft EIR", url: "https://www.saratoga.ca.us/DocumentCenter/View/6188" },
+    ],
+  },
+  {
+    address: "18580 Allendale Avenue", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/619/1-18580-Allendale-Avenue",
+    docs: [],
+  },
+  {
+    address: "20440 Arbeleche Lane", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/618/2-20440-Arbeleche-Lane",
+    docs: [],
+  },
+  {
+    address: "Chiquita Court (Vineyard Hill)", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/615/3-Vineyard-Hill-Chiquita-Court",
+    docs: [],
+  },
+  {
+    address: "19521 Douglass Lane (App 1)", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development — Application 1.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/669/5-19521-Douglass-Lane-Application-1",
+    docs: [],
+  },
+  {
+    address: "19521 Douglass Lane (App 2)", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development — Application 2.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/620/6-19521-Douglass-Lane-Application-2",
+    docs: [],
+  },
+  {
+    address: "Marshall Lane", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/612/7-Marshall-Lane",
+    docs: [],
+  },
+  {
+    address: "Mt. Eden", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/617/8-Mt-Eden",
+    docs: [],
+  },
+  {
+    address: "22200 Mt. Eden Road", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/621/9-22200-Mt-Eden-Road",
+    docs: [],
+  },
+  {
+    address: "14486 Oak Place", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/622/10-14486-Oak-Place",
+    docs: [],
+  },
+  {
+    address: "14575 Oak Street", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/623/11-14575-Oak-Street",
+    docs: [],
+  },
+  {
+    address: "12048 Parker Ranch Road", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/666/12-12048-Parker-Ranch-Road",
+    docs: [],
+  },
+  {
+    address: "12991 Pierce Road", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/667/14-12991-Pierce-Road",
+    docs: [],
+  },
+  {
+    address: "13845 Saratoga Avenue", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project on Saratoga Avenue.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/614/16-13845-Saratoga-Avenue",
+    docs: [],
+  },
+  {
+    address: "14285 & 14301 Saratoga Avenue", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project on Saratoga Avenue — two parcels.",
+    overview: "Builder's Remedy project — two-parcel development. Check city page.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/627/17-14285-and-14301-Saratoga-Avenue",
+    docs: [],
+  },
+  {
+    address: "19765 Saratoga Los Gatos Road", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development on Saratoga-Los Gatos Road.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/665/18-19765-Saratoga-Los-Gatos-Road",
+    docs: [],
+  },
+  {
+    address: "13605 Surrey Lane (App 1)", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development — Application 1.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/668/19-13605-Surrey-Lane-Application-1",
+    docs: [],
+  },
+  {
+    address: "13605 Surrey Lane (App 2)", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development — Application 2.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/629/20-13605-Surrey-Lane-Application-2",
+    docs: [],
+  },
+  {
+    address: "19761 Three Oaks Way", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/625/21-19761-Three-Oaks-Way",
+    docs: [],
+  },
+  {
+    address: "Vickery Avenue", city: "Saratoga", appNumber: "", appType: "Builder's Remedy",
+    description: "Builder's Remedy housing development project in Saratoga.",
+    overview: "Builder's Remedy project — check city page for latest details.",
+    existingSF: null, proposedSF: null, sfNote: "See city page for details",
+    dateFiled: "", status: "Pending", planner: "TBD",
+    category: "New Construction", scope: "Builder's Remedy Development", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/664/22-Vickery-Avenue",
+    docs: [],
+  },
+  // === SARATOGA — OTHER MAJOR PROJECTS ===
+  {
+    address: "Chester Avenue (64-Unit Alternative)", city: "Saratoga", appNumber: "", appType: "Alternative to Builder's Remedy",
+    description: "64-unit development proposed as alternative to the 231-unit Vineyard One Builder's Remedy project. Under MOU, if City approves final map by April 15, 2026, the 231-unit project will be withdrawn.",
+    overview: "64-unit development — alternative to 231-unit Vineyard One. MOU deadline April 15, 2026.",
+    existingSF: 0, proposedSF: null, sfNote: "64 residential units — see city page for unit mix",
+    dateFiled: "", status: "MOU — City approval deadline April 15, 2026", planner: "Christopher Riordan",
+    category: "New Construction", scope: "Multi-Family (64 Units)", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/717/Chester-Avenue-APN-397-01-071",
+    docs: [],
+  },
+  {
+    address: "Quito Village (Cox Ave & Paseo Prasada)", city: "Saratoga", appNumber: "", appType: "SB 35 Streamlined",
+    description: "Mixed-use townhome redevelopment of Quito Village shopping center by Sand Hill Property Company. SB 35 ministerial approval. Demolition of existing commercial buildings underway. Includes residential townhomes and rebuilt commercial space.",
+    overview: "SB 35 mixed-use townhome project. Demolition underway — active construction site.",
+    existingSF: null, proposedSF: null, sfNote: "Townhome development — see city page for unit count",
+    dateFiled: "", status: "Under Construction — demolition phase", planner: "City of Saratoga",
+    category: "New Construction", scope: "Mixed-Use Townhomes (SB 35)", zoning: "", apn: "",
+    pageUrl: "https://www.saratoga.ca.us/467/Quito-Village-Development-Project",
+    docs: [],
+  },
+  {
+    address: "14831 Pierce Road (237-Unit)", city: "Saratoga (Unincorporated)", appNumber: "", appType: "Builder's Remedy (County)",
+    description: "237-unit Builder's Remedy project: 69 detached SFRs, 39 triplex units, 129 multi-family units, plus 81-unit hotel, clubhouse with pool, gate house, storage building, and new road network. 48 units (20%) deed restricted affordable. Existing historic winery structures to remain.",
+    overview: "MASSIVE: 237 residential units + 81-room hotel on historic winery site. County jurisdiction.",
+    existingSF: null, proposedSF: null, sfNote: "237 residential units + 81-unit hotel. Multiple building types.",
+    dateFiled: "", status: "Under County review", planner: "Robert Cain (County)",
+    category: "New Construction", scope: "Mixed-Use (237 Units + 81-Room Hotel)", zoning: "", apn: "",
+    pageUrl: "https://plandev.santaclaracounty.gov/services/planning-services/projects/current-planning-projects/current-projects-saratoga",
+    docs: [],
   },
 ];
 
@@ -787,4 +1056,4 @@ export const LETTER_PAGES = {
   Y: "https://www.losgatosca.gov/2394/Y", Z: "https://www.losgatosca.gov/2396/Z",
 };
 
-export const SCRAPED_LETTERS = ["A","B","C","E","F","G","H","K","L","M","O","P","R","S","T","U","V","W"];
+export const SCRAPED_LETTERS = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
