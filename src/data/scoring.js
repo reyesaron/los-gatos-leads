@@ -1,3 +1,35 @@
+function extractUnitCount(p) {
+  const text = `${p.scope} ${p.description} ${p.overview}`;
+  // Match all patterns: "25 units", "13 New Homes", "25 Custom Homes",
+  // "12 lots", "138-unit", "64-unit", "25-unit", "12 residences", etc.
+  const patterns = [
+    /(\d+)[\s-]*units?\b/gi,
+    /(\d+)\s*(?:new\s+|custom\s+)?(?:homes?|residences?|dwellings?)\b/gi,
+    /(\d+)[\s-]*(?:lot|parcel)s?\b/gi,
+    /(\d+)[\s-]*(?:townhomes?|condos?|flats?|buildings?)\b/gi,
+  ];
+  let maxCount = 0;
+  for (const pat of patterns) {
+    let m;
+    while ((m = pat.exec(text)) !== null) {
+      const n = parseInt(m[1]);
+      if (n > maxCount) maxCount = n;
+    }
+  }
+  return maxCount;
+}
+
+function isTooLarge(p, unitCount) {
+  if (unitCount > 5) return true;
+  // Catch projects that slip past unit regex — large acreage subdivisions,
+  // "major" multi-phase, hotel, etc.
+  const text = `${p.scope} ${p.description} ${p.overview}`.toLowerCase();
+  if (/\b\d{2,}\s*acres?\b/.test(text)) return true; // 10+ acres
+  if (text.includes("hotel")) return true;
+  if (text.includes("shopping center") || text.includes("commercial complex")) return true;
+  return false;
+}
+
 export function getLeadScore(p) {
   let s = 0, r = [];
 
@@ -29,16 +61,14 @@ export function getLeadScore(p) {
   }
 
   // -------------------------------------------------------
-  // PRIORITY 2: New construction, ≤5 units
+  // PRIORITY 2: New construction, ≤5 units — our sweet spot
   // -------------------------------------------------------
-  const unitMatch = p.scope.match(/(\d+)\s*Units?/i)
-    || p.scope.match(/(\d+)\s*New\s*Homes?/i)
-    || p.description.match(/(\d+)[\s-]*unit/i);
-  const unitCount = unitMatch ? parseInt(unitMatch[1]) : 0;
+  const unitCount = extractUnitCount(p);
+  const tooLarge = isTooLarge(p, unitCount);
 
   if (p.category === "New Construction") {
-    if (unitCount > 5) {
-      s -= 2; r.push(`${unitCount}-unit (too large)`);
+    if (tooLarge) {
+      s -= 2; r.push(unitCount > 5 ? `${unitCount}-unit (too large)` : "Project too large");
     } else if (unitCount >= 2 && unitCount <= 5) {
       s += 3; r.push(`${unitCount}-unit new construction`);
     } else if (p.scope.includes("Demo + New") || p.scope.includes("Demo +") || p.scope.match(/\(Demo/)) {
@@ -49,9 +79,11 @@ export function getLeadScore(p) {
       s += 3; r.push("Two-family build");
     } else if (p.scope.includes("Two-Unit")) {
       s += 2; r.push("SB 9 two-unit");
-    } else if (p.scope.includes("Custom Home") || p.scope.includes("Builder's Remedy")) {
-      s += 2; r.push("Custom home / BR");
-    } else if (p.scope.includes("Gymnasium") || p.scope.includes("Institutional") || p.scope.includes("Mixed-Use") || p.scope.includes("Hotel")) {
+    } else if (p.scope.includes("Custom Home")) {
+      s += 3; r.push("Custom home");
+    } else if (p.scope.includes("Builder's Remedy")) {
+      s += 1; r.push("Builder's Remedy (details TBD)");
+    } else if (p.scope.includes("Gymnasium") || p.scope.includes("Institutional") || p.scope.includes("Mixed-Use")) {
       s -= 1; r.push("Non-residential");
     } else {
       s += 2; r.push("New construction");
@@ -67,10 +99,10 @@ export function getLeadScore(p) {
   }
 
   // -------------------------------------------------------
-  // PRIORITY 3: Square footage — tiebreaker for qualifying leads
-  // Only kicks in for new construction ≤5 units
+  // PRIORITY 3: Square footage tiebreaker — only for qualifying leads
+  // (new construction, not too large)
   // -------------------------------------------------------
-  const isQualified = p.category === "New Construction" && (unitCount <= 5 || unitCount === 0);
+  const isQualified = p.category === "New Construction" && !tooLarge;
 
   if (isQualified) {
     if (p.proposedSF !== null && p.existingSF !== null) {
