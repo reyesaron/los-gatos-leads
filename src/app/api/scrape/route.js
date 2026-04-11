@@ -1,11 +1,10 @@
 import { scrapeAllPages } from "@/lib/scraper";
-import { writeFile } from "fs/promises";
+import { readFile, writeFile } from "fs/promises";
 import path from "path";
 
 const API_SECRET = process.env.SCRAPE_SECRET || "";
 
 export async function GET(request) {
-  // Simple auth check — pass ?secret=YOUR_SECRET
   const { searchParams } = new URL(request.url);
   const secret = searchParams.get("secret");
 
@@ -14,15 +13,24 @@ export async function GET(request) {
   }
 
   try {
-    const result = await scrapeAllPages();
-
-    // Write scraped data to a JSON file the app can read at build/runtime
     const outPath = path.join(process.cwd(), "src", "data", "scraped.json");
+
+    // Load previous data to preserve firstSeen dates
+    let previousData = null;
+    try {
+      const raw = await readFile(outPath, "utf-8");
+      previousData = JSON.parse(raw);
+    } catch { /* first run */ }
+
+    const result = await scrapeAllPages(previousData);
     await writeFile(outPath, JSON.stringify(result, null, 2));
+
+    const newCount = result.projects.filter(p => p.firstSeen === result.scrapedAt).length;
 
     return Response.json({
       ok: true,
       projectCount: result.projects.length,
+      newProjects: newCount,
       scrapedLetters: result.scrapedLetters,
       scrapedAt: result.scrapedAt,
       errors: result.errors,

@@ -217,10 +217,22 @@ function parsePage($, pageUrl) {
   return projects;
 }
 
-export async function scrapeAllPages() {
+function projectKey(p) {
+  return `${p.address}::${p.appNumber}`.toLowerCase();
+}
+
+export async function scrapeAllPages(previousData) {
   const allProjects = [];
   const scrapedLetters = [];
   const errors = [];
+
+  // Build a map of previously seen projects and their firstSeen dates
+  const seenMap = {};
+  if (previousData?.projects) {
+    for (const p of previousData.projects) {
+      seenMap[projectKey(p)] = p.firstSeen || previousData.scrapedAt || "";
+    }
+  }
 
   const entries = Object.entries(LETTER_URLS);
 
@@ -252,10 +264,18 @@ export async function scrapeAllPages() {
 
   scrapedLetters.sort();
 
+  const now = new Date().toISOString();
+
+  // Tag each project with firstSeen
+  for (const p of allProjects) {
+    const key = projectKey(p);
+    p.firstSeen = seenMap[key] || now;
+  }
+
   return {
     projects: allProjects,
     scrapedLetters,
-    scrapedAt: new Date().toISOString(),
+    scrapedAt: now,
     errors,
   };
 }

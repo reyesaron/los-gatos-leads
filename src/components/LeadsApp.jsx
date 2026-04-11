@@ -4,6 +4,7 @@ import { getLeadScore } from "@/data/scoring";
 
 function Badge({score}){const c=score>=7?"#16a34a":score>=4?"#d97706":"#94a3b8";const bg=score>=7?"#052e16":score>=4?"#451a03":"#1e293b";return<span style={{display:"inline-flex",alignItems:"center",background:bg,color:c,fontWeight:700,fontSize:13,padding:"3px 10px",borderRadius:6,fontFamily:"'JetBrains Mono',monospace",border:`1.5px solid ${c}33`}}>{score}/10</span>}
 function Tag({children,bg,fg}){return<span style={{fontSize:11,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.04em",padding:"2px 8px",borderRadius:4,background:bg,color:fg,whiteSpace:"nowrap"}}>{children}</span>}
+function NewBadge(){return<span className="badge-new" style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#14532d",color:"#4ade80",border:"1px solid #22c55e55",whiteSpace:"nowrap"}}>NEW</span>}
 
 export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scrapedLetters: SCRAPED_LETTERS, scrapedAt }) {
   const [search, setSearch] = useState("");
@@ -12,7 +13,10 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
   const [sortBy, setSortBy] = useState("score");
   const [expanded, setExpanded] = useState(null);
   const [minScore, setMinScore] = useState(0);
-  const scored = useMemo(() => PROJECTS.map(p => ({ ...p, ...getLeadScore(p) })), []);
+  const scored = useMemo(() => PROJECTS.map(p => {
+    const isNew = scrapedAt ? p.firstSeen === scrapedAt : (p.dateFiled && (Date.now() - new Date(p.dateFiled)) < 7 * 24 * 60 * 60 * 1000);
+    return { ...p, ...getLeadScore(p), isNew };
+  }), []);
   const categories = ["All", ...new Set(PROJECTS.map(p => p.category))];
   const cities = ["All", ...new Set(PROJECTS.map(p => p.city || "Los Gatos"))];
   const filtered = useMemo(() => {
@@ -24,7 +28,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
     list.sort((a,b) => { if (sortBy==="score") return b.score-a.score; if (sortBy==="date") return new Date(b.dateFiled)-new Date(a.dateFiled); return a.address.localeCompare(b.address); });
     return list;
   }, [scored, catFilter, cityFilter, search, sortBy, minScore]);
-  const stats = useMemo(() => ({ total:filtered.length, hot:filtered.filter(p=>p.score>=7).length, nc:filtered.filter(p=>p.category==="New Construction").length, add:filtered.filter(p=>p.category==="Addition").length, sub:filtered.filter(p=>p.category==="Subdivision").length }), [filtered]);
+  const stats = useMemo(() => ({ total:filtered.length, newLeads:filtered.filter(p=>p.isNew).length, hot:filtered.filter(p=>p.score>=7).length, nc:filtered.filter(p=>p.category==="New Construction").length, add:filtered.filter(p=>p.category==="Addition").length, sub:filtered.filter(p=>p.category==="Subdivision").length }), [filtered]);
   const iS = {padding:"8px 12px",borderRadius:8,border:"1px solid #334155",background:"#0f172a",color:"#e2e8f0",fontSize:13,outline:"none"};
   const catC = {"New Construction":{bg:"#172554",fg:"#60a5fa"},Addition:{bg:"#422006",fg:"#fbbf24"},Subdivision:{bg:"#2e1065",fg:"#a78bfa"}};
 
@@ -37,7 +41,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
             <div><h1 style={{margin:0,fontSize:21,fontWeight:700,color:"#f8fafc",letterSpacing:"-0.02em"}}>Construction Leads</h1><p style={{margin:0,fontSize:12,color:"#64748b"}}>Los Gatos & Saratoga pending planning projects · {PROJECTS.length} projects{scrapedAt && ` · Updated ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p></div>
           </div>
           <div style={{display:"flex",gap:18,marginTop:14,flexWrap:"wrap"}}>
-            {[{l:"Projects",v:stats.total,c:"#94a3b8"},{l:"Hot (7+)",v:stats.hot,c:"#22c55e"},{l:"New Const.",v:stats.nc,c:"#3b82f6"},{l:"Additions",v:stats.add,c:"#eab308"},{l:"Subdivisions",v:stats.sub,c:"#a78bfa"}].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:"#64748b"}}>{s.l}</span></div>)}
+            {[{l:"Projects",v:stats.total,c:"#94a3b8"},{l:"New",v:stats.newLeads,c:"#4ade80",pulse:true},{l:"Hot (7+)",v:stats.hot,c:"#22c55e"},{l:"New Const.",v:stats.nc,c:"#3b82f6"},{l:"Additions",v:stats.add,c:"#eab308"},{l:"Subdivisions",v:stats.sub,c:"#a78bfa"}].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:"#64748b"}}>{s.l}</span></div>)}
           </div>
         </div>
       </div>
@@ -62,11 +66,11 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
       <div style={{maxWidth:980,margin:"0 auto",padding:"10px 20px 40px"}}>
         {filtered.length===0&&<div style={{textAlign:"center",padding:40,color:"#475569"}}>No projects match your filters.</div>}
         {filtered.map((p,i)=>{const open=expanded===i;const cc=catC[p.category]||{bg:"#1e293b",fg:"#94a3b8"};return(
-          <div key={p.address+p.appNumber} style={{background:"#141c2e",borderRadius:10,border:`1px solid ${p.score>=7?"#166534":"#1e293b"}`,marginBottom:6,overflow:"hidden"}}>
+          <div key={p.address+p.appNumber} style={{background:"#141c2e",borderRadius:10,border:`1px solid ${p.isNew?"#22c55e":p.score>=7?"#166534":"#1e293b"}`,marginBottom:6,overflow:"hidden",borderLeft:p.isNew?"3px solid #4ade80":undefined}}>
             <div onClick={()=>setExpanded(open?null:i)} style={{padding:"12px 14px",cursor:"pointer",display:"flex",alignItems:"flex-start",gap:12,transition:"background 0.15s"}} onMouseEnter={e=>e.currentTarget.style.background="#1a2540"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
               <div style={{flexShrink:0,paddingTop:1}}><Badge score={p.score}/></div>
               <div style={{flex:1,minWidth:0}}>
-                <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#f1f5f9"}}>{p.address}</span><Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag></div>
+                <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#f1f5f9"}}>{p.address}</span>{p.isNew&&<NewBadge/>}<Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag></div>
                 <div style={{fontSize:13,color:"#cbd5e1",lineHeight:1.35,marginBottom:3}}>{p.overview}</div>
                 <div style={{fontSize:11,color:"#475569"}}>{p.city || "Los Gatos"}{p.zoning && ` · ${p.zoning}`}{p.apn && ` · APN ${p.apn}`}{p.dateFiled && ` · Filed ${new Date(p.dateFiled).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}`} · {p.planner}</div>
               </div>

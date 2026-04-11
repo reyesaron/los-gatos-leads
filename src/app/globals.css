@@ -10,3 +10,12 @@ body {
   font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+@keyframes pulse-new {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.badge-new {
+  animation: pulse-new 1.5s ease-in-out infinite;
+}
