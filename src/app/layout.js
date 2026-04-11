@@ -2,7 +2,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'Apex Design Build — Construction Leads',
-  description: 'Construction leads for Los Gatos & Saratoga — Apex Design Build',
+  description: 'Construction leads for Los Gatos, Saratoga & San Jose — Apex Design Build',
 };
 
 export default function RootLayout({ children }) {
