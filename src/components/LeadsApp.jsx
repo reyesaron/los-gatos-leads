@@ -25,16 +25,15 @@ function Tag({children,bg,fg}){return<span style={{fontSize:11,fontWeight:600,te
 function NewBadge(){return<span className="badge-new" style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:RED_DARK,color:RED,border:`1px solid ${RED}55`,whiteSpace:"nowrap"}}>NEW</span>}
 function StreetView({ address, city }) {
   const [show, setShow] = useState(false);
-  // Build a clean address for the embed — strip parenthetical notes and extra info
   const cleanAddr = (address || "").replace(/\s*\(.*?\)\s*/g, " ").replace(/\s*—.*$/, "").replace(/,\s*San Jose$/i, "").trim();
   const fullAddr = `${cleanAddr}, ${city || "Los Gatos"}, CA`;
-  const embedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(fullAddr)}&t=k&z=18&output=embed`;
-  const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(fullAddr)}&layer=c`;
+  const embedUrl = `https://www.google.com/maps?q=${encodeURIComponent(fullAddr)}&z=18&output=embed`;
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddr)}`;
   return (
     <div style={{ marginBottom: 10 }}>
       <div onClick={() => setShow(!show)} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 11, color: MUTED, marginBottom: show ? 6 : 0 }}>
         <span style={{ transform: show ? "rotate(90deg)" : "none", transition: "transform 0.15s", fontSize: 10 }}>▶</span>
-        <span style={{ fontWeight: 600 }}>Street View</span>
+        <span style={{ fontWeight: 600 }}>Map View</span>
         {!show && <span style={{ color: DIM, fontWeight: 400 }}>— click to load</span>}
       </div>
       {show && (
@@ -215,11 +214,30 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   }, [scored, cityFilter]);
   const PIPELINE_STAGES = ["All", "New", "Contacted", "Meeting Set", "Proposal Sent", "Won", "Lost"];
   const isLeadsView = view === "leads" || view.startsWith("leads:");
-  const viewAssignee = view.startsWith("leads:") ? view.split(":")[1] : null; // null = unassigned view
+  const isArchiveView = view === "archived";
+  const viewAssignee = view.startsWith("leads:") ? view.split(":")[1] : null;
+
+  const archiveCount = useMemo(() => scored.filter(p => p._crmStatus === "Archived").length, [scored]);
+
+  const archiveLead = useCallback(async (leadId) => {
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ leadId, action: "updateStatus", status: "Archived" }),
+      });
+      const data = await res.json();
+      if (data.lead) setCrmData(prev => ({ ...prev, [leadId]: data.lead }));
+    } catch {}
+  }, []);
+
   const filtered = useMemo(() => {
     let list = scored;
-    // Filter by assignee based on active view
-    if (isLeadsView) {
+    if (isArchiveView) {
+      list = list.filter(p => p._crmStatus === "Archived");
+    } else if (isLeadsView) {
+      // Always exclude archived from active views
+      list = list.filter(p => p._crmStatus !== "Archived");
       if (viewAssignee) {
         list = list.filter(p => p._crmAssignee === viewAssignee);
       } else {
@@ -234,7 +252,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
     if (minScore > 0) list = list.filter(p => p.score >= minScore);
     list.sort((a,b) => { if (sortBy==="score") return b.score-a.score; if (sortBy==="date") return new Date(b.dateFiled)-new Date(a.dateFiled); return a.address.localeCompare(b.address); });
     return list;
-  }, [scored, catFilter, cityFilter, hoodFilter, pipelineFilter, search, sortBy, minScore, isLeadsView, viewAssignee]);
+  }, [scored, catFilter, cityFilter, hoodFilter, pipelineFilter, search, sortBy, minScore, isLeadsView, isArchiveView, viewAssignee]);
   const overdueAll = useMemo(() => scored.filter(p => p._overdue).length, [scored]);
   const stats = useMemo(() => ({ total:filtered.length, newLeads:filtered.filter(p=>p.isNew).length, hot:filtered.filter(p=>p.score>=7).length, overdue:filtered.filter(p=>p._overdue).length, nc:filtered.filter(p=>p.category==="New Construction").length, add:filtered.filter(p=>p.category==="Addition").length, sub:filtered.filter(p=>p.category==="Subdivision").length }), [filtered]);
 
@@ -328,6 +346,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
               {id:"leads:Daniel",label:"Daniel"},
               {id:"leads:Aron",label:"Aron"},
               {id:"leads:Joseph",label:"Joseph"},
+              {id:"archived",label:`Archived${archiveCount>0?` (${archiveCount})`:""}`},
               {id:"dashboard",label:"Dashboard"},
               {id:"architects",label:"Architects"},
               {id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},
@@ -465,7 +484,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
       {view === "addLead" && <AddLeadForm onAdd={(lead) => { setManualLeads(prev => [...prev, lead]); setView("leads"); }} />}
 
       {/* FILTERS + CARDS */}
-      {isLeadsView && <>
+      {(isLeadsView || isArchiveView) && <>
       <div style={{background:CARD,borderBottom:`1px solid ${BORDER}`,padding:"10px 20px",position:"sticky",top:0,zIndex:10}}>
         <div className="apex-filters" style={{maxWidth:980,margin:"0 auto",display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
           <input type="text" placeholder="Search address, APN, planner, zoning, description..." value={search} onChange={e=>setSearch(e.target.value)} style={{...iS,flex:"1 1 200px",minWidth:160}} />
@@ -490,7 +509,10 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
                 <div style={{fontSize:13,color:"#d4d4d4",lineHeight:1.35,marginBottom:3}}>{p.overview}</div>
                 <div style={{fontSize:11,color:MUTED}}>{p.city || "Los Gatos"}{p.neighborhood && ` · ${p.neighborhood}`}{p.zoning && ` · ${p.zoning}`}{p.apn && p.apn !== "TBD" && ` · APN ${p.apn}`}{p.dateFiled && ` · Filed ${new Date(p.dateFiled).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}`} · {p.planner}</div>
               </div>
-              <div style={{flexShrink:0,fontSize:14,color:DIM,transform:open?"rotate(180deg)":"none",transition:"transform 0.2s"}}>▾</div>
+              <div style={{display:"flex",gap:4,alignItems:"center",flexShrink:0}}>
+                {!isArchiveView && p._crmStatus !== "Archived" && <button onClick={e=>{e.stopPropagation();archiveLead(p._leadId)}} title="Archive this lead" style={{background:"none",border:"none",cursor:"pointer",fontSize:12,color:DIM,padding:"2px 4px",borderRadius:3,transition:"color 0.15s"}} onMouseEnter={e=>e.target.style.color="#fb923c"} onMouseLeave={e=>e.target.style.color=DIM}>✕</button>}
+                <div style={{fontSize:14,color:DIM,transform:open?"rotate(180deg)":"none",transition:"transform 0.2s"}}>▾</div>
+              </div>
             </div>
             {open&&(<div className="apex-card-body" style={{padding:"0 14px 14px",borderTop:`1px solid ${BORDER}`,paddingTop:12}}>
               <CRMPanel key={p._leadId} leadId={p._leadId} onUpdate={handleCRMUpdate} />

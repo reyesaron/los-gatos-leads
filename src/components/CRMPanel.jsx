@@ -10,7 +10,7 @@ const MUTED = "#737373";
 const DIM = "#404040";
 
 const TEAM = ["Daniel", "Aron", "Joseph"];
-const STATUSES = ["New", "Contacted", "Meeting Set", "Proposal Sent", "Won", "Lost"];
+const STATUSES = ["New", "Contacted", "Meeting Set", "Proposal Sent", "Won", "Lost", "Archived"];
 const STATUS_COLORS = {
   New: { bg: "#1c1c1c", fg: MUTED },
   Contacted: { bg: "#172554", fg: "#60a5fa" },
@@ -18,6 +18,7 @@ const STATUS_COLORS = {
   "Proposal Sent": { bg: "#3b0764", fg: "#a78bfa" },
   Won: { bg: "#052e16", fg: "#4ade80" },
   Lost: { bg: "#1c1c1c", fg: "#525252" },
+  Archived: { bg: "#1c1c1c", fg: "#404040" },
 };
 
 const iS = { padding: "6px 10px", borderRadius: 5, border: `1px solid ${BORDER}`, background: "#111", color: TEXT, fontSize: 12, outline: "none" };
