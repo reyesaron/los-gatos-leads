@@ -1,0 +1,189 @@
+'use client';
+import { useState, useEffect, useCallback } from "react";
+
+const RED = "#dc2626";
+const BG = "#0a0a0a";
+const CARD = "#141414";
+const BORDER = "#262626";
+const TEXT = "#e5e5e5";
+const MUTED = "#737373";
+const DIM = "#404040";
+
+const TEAM = ["Daniel", "Aron", "Joseph"];
+const STATUSES = ["New", "Contacted", "Meeting Set", "Proposal Sent", "Won", "Lost"];
+const STATUS_COLORS = {
+  New: { bg: "#1c1c1c", fg: MUTED },
+  Contacted: { bg: "#172554", fg: "#60a5fa" },
+  "Meeting Set": { bg: "#422006", fg: "#fbbf24" },
+  "Proposal Sent": { bg: "#3b0764", fg: "#a78bfa" },
+  Won: { bg: "#052e16", fg: "#4ade80" },
+  Lost: { bg: "#1c1c1c", fg: "#525252" },
+};
+
+const iS = { padding: "6px 10px", borderRadius: 5, border: `1px solid ${BORDER}`, background: "#111", color: TEXT, fontSize: 12, outline: "none" };
+
+export default function CRMPanel({ leadId }) {
+  const [lead, setLead] = useState(null);
+  const [notes, setNotes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [noteText, setNoteText] = useState("");
+  const [noteAuthor, setNoteAuthor] = useState(TEAM[0]);
+  const [saving, setSaving] = useState(false);
+
+  const fetchLead = useCallback(async () => {
+    try {
+      const res = await fetch(`/api/leads?id=${encodeURIComponent(leadId)}`);
+      const data = await res.json();
+      setLead(data.lead || {});
+      setNotes((data.notes || []).map(n => typeof n === "string" ? JSON.parse(n) : n));
+    } catch { /* KV not configured yet */ }
+    setLoading(false);
+  }, [leadId]);
+
+  useEffect(() => { fetchLead(); }, [fetchLead]);
+
+  const updateStatus = async (status) => {
+    setSaving(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ leadId, action: "updateStatus", status }),
+      });
+      const data = await res.json();
+      if (data.lead) setLead(data.lead);
+    } catch {}
+    setSaving(false);
+  };
+
+  const updateAssignee = async (assignee) => {
+    setSaving(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ leadId, action: "updateStatus", assignee }),
+      });
+      const data = await res.json();
+      if (data.lead) setLead(data.lead);
+    } catch {}
+    setSaving(false);
+  };
+
+  const addNote = async () => {
+    if (!noteText.trim()) return;
+    setSaving(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ leadId, action: "addNote", note: noteText.trim(), author: noteAuthor }),
+      });
+      const data = await res.json();
+      if (data.lead) setLead(data.lead);
+      if (data.notes) setNotes(data.notes.map(n => typeof n === "string" ? JSON.parse(n) : n));
+      setNoteText("");
+    } catch {}
+    setSaving(false);
+  };
+
+  const setFollowUp = async (date) => {
+    setSaving(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ leadId, action: "setFollowUp", followUpDate: date, assignee: lead?.assignee || "" }),
+      });
+      const data = await res.json();
+      if (data.lead) setLead(data.lead);
+    } catch {}
+    setSaving(false);
+  };
+
+  const setEstValue = async (value) => {
+    setSaving(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ leadId, action: "setEstValue", estValue: parseInt(value) || 0 }),
+      });
+      const data = await res.json();
+      if (data.lead) setLead(data.lead);
+    } catch {}
+    setSaving(false);
+  };
+
+  if (loading) return <div style={{ padding: "10px 0", fontSize: 12, color: MUTED }}>Loading CRM data...</div>;
+
+  const currentStatus = lead?.status || "New";
+  const sc = STATUS_COLORS[currentStatus] || STATUS_COLORS.New;
+
+  return (
+    <div style={{ background: BG, borderRadius: 6, padding: "12px", border: `1px solid ${BORDER}`, marginBottom: 10 }}>
+      <div style={{ fontSize: 11, fontWeight: 600, color: MUTED, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 8 }}>
+        Lead Tracker
+        {saving && <span style={{ marginLeft: 8, color: DIM, fontWeight: 400, textTransform: "none" }}>Saving...</span>}
+      </div>
+
+      {/* Status + Assignee + Follow-up + Est Value row */}
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10, alignItems: "center" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+          <span style={{ fontSize: 11, color: MUTED }}>Status:</span>
+          <select value={currentStatus} onChange={e => updateStatus(e.target.value)} style={{ ...iS, background: sc.bg, color: sc.fg, fontWeight: 600 }}>
+            {STATUSES.map(s => <option key={s} value={s}>{s}</option>)}
+          </select>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+          <span style={{ fontSize: 11, color: MUTED }}>Assigned:</span>
+          <select value={lead?.assignee || ""} onChange={e => updateAssignee(e.target.value)} style={iS}>
+            <option value="">Unassigned</option>
+            {TEAM.map(t => <option key={t} value={t}>{t}</option>)}
+          </select>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+          <span style={{ fontSize: 11, color: MUTED }}>Follow-up:</span>
+          <input type="date" value={lead?.followUpDate || ""} onChange={e => setFollowUp(e.target.value)} style={{ ...iS, width: 130 }} />
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+          <span style={{ fontSize: 11, color: MUTED }}>Est. value:</span>
+          <input type="text" placeholder="$0" value={lead?.estValue ? `$${Number(lead.estValue).toLocaleString()}` : ""} onBlur={e => setEstValue(e.target.value.replace(/[$,]/g, ""))} onChange={() => {}} onFocus={e => { e.target.value = lead?.estValue || ""; }} style={{ ...iS, width: 90, fontFamily: "'JetBrains Mono',monospace" }} />
+        </div>
+      </div>
+
+      {/* Last contact info */}
+      {lead?.lastContactBy && (
+        <div style={{ fontSize: 11, color: MUTED, marginBottom: 8 }}>
+          Last contact: <strong style={{ color: TEXT }}>{lead.lastContactBy}</strong> on {new Date(lead.lastContactAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" })}
+        </div>
+      )}
+
+      {/* Add note */}
+      <div style={{ display: "flex", gap: 6, marginBottom: 8, alignItems: "flex-start" }}>
+        <select value={noteAuthor} onChange={e => setNoteAuthor(e.target.value)} style={{ ...iS, width: 90, flexShrink: 0 }}>
+          {TEAM.map(t => <option key={t} value={t}>{t}</option>)}
+        </select>
+        <textarea value={noteText} onChange={e => setNoteText(e.target.value)} placeholder="Add a note about this lead..." rows={2} style={{ ...iS, flex: 1, resize: "vertical", fontFamily: "inherit", minHeight: 36 }} onKeyDown={e => { if (e.key === "Enter" && e.metaKey) addNote(); }} />
+        <button onClick={addNote} disabled={!noteText.trim() || saving} style={{ ...iS, background: noteText.trim() ? RED : "#1c1c1c", color: "#fff", cursor: noteText.trim() ? "pointer" : "default", fontWeight: 600, flexShrink: 0, opacity: noteText.trim() ? 1 : 0.4, border: "none", padding: "6px 14px" }}>
+          Log
+        </button>
+      </div>
+
+      {/* Notes history */}
+      {notes.length > 0 && (
+        <div style={{ maxHeight: 200, overflowY: "auto", borderTop: `1px solid ${BORDER}`, paddingTop: 8 }}>
+          {notes.map((n, i) => (
+            <div key={i} style={{ marginBottom: 6, fontSize: 12, lineHeight: 1.4 }}>
+              <span style={{ color: TEXT, fontWeight: 600 }}>{n.author}</span>
+              <span style={{ color: DIM, marginLeft: 6, fontSize: 10 }}>
+                {new Date(n.timestamp).toLocaleDateString("en-US", { month: "short", day: "numeric" })} {new Date(n.timestamp).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}
+              </span>
+              <div style={{ color: MUTED, marginTop: 2 }}>{n.text}</div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

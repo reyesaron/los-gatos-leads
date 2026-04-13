@@ -1,6 +1,7 @@
 'use client';
 import { useState, useMemo } from "react";
 import { getLeadScore } from "@/data/scoring";
+import CRMPanel from "@/components/CRMPanel";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -117,6 +118,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
               <div style={{flexShrink:0,fontSize:14,color:DIM,transform:open?"rotate(180deg)":"none",transition:"transform 0.2s"}}>▾</div>
             </div>
             {open&&(<div style={{padding:"0 14px 14px",borderTop:`1px solid ${BORDER}`,paddingTop:12}}>
+              <CRMPanel leadId={btoa(encodeURIComponent(p.address + "|" + (p.appNumber || p.scope))).replace(/[^a-zA-Z0-9]/g, "").slice(0, 40)} />
               <p style={{margin:"0 0 10px",fontSize:13,color:MUTED,lineHeight:1.45}}>{p.description}</p>
               <div style={{background:BG,borderRadius:6,padding:"10px 12px",marginBottom:10,border:`1px solid ${BORDER}`}}>
                 <div style={{fontSize:11,fontWeight:600,color:MUTED,textTransform:"uppercase",letterSpacing:"0.04em",marginBottom:6}}>Square Footage</div>
