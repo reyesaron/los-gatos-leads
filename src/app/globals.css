@@ -9,6 +9,7 @@ body {
   color: #e5e5e5;
   font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 
 @keyframes pulse-new {
@@ -18,4 +19,121 @@ body {
 
 .badge-new {
   animation: pulse-new 1.5s ease-in-out infinite;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  /* Header */
+  .apex-header-row {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .apex-header-row img {
+    height: 36px !important;
+  }
+  .apex-header-title h1 {
+    font-size: 17px !important;
+  }
+  .apex-bell-wrap {
+    position: absolute !important;
+    top: 16px !important;
+    right: 16px !important;
+  }
+
+  /* Stats bar */
+  .apex-stats {
+    gap: 12px !important;
+  }
+  .apex-stats span:first-child {
+    font-size: 17px !important;
+  }
+
+  /* Tabs */
+  .apex-tabs {
+    flex-wrap: wrap !important;
+  }
+  .apex-tabs button {
+    font-size: 11px !important;
+    padding: 5px 10px !important;
+  }
+
+  /* Filter bar */
+  .apex-filters {
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+  .apex-filters input,
+  .apex-filters select {
+    width: 100% !important;
+    min-width: unset !important;
+    flex: unset !important;
+  }
+
+  /* Cards */
+  .apex-card-header {
+    padding: 10px !important;
+    gap: 8px !important;
+  }
+  .apex-card-body {
+    padding: 0 10px 10px !important;
+  }
+
+  /* CRM panel */
+  .apex-crm-row {
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+  .apex-crm-row > div {
+    width: 100% !important;
+  }
+  .apex-crm-row select,
+  .apex-crm-row input {
+    flex: 1 !important;
+  }
+
+  /* Contact info */
+  .apex-contact-fields {
+    flex-direction: column !important;
+    padding-left: 0 !important;
+  }
+
+  /* Dashboard */
+  .apex-dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .apex-metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Notification dropdown */
+  .apex-notif-dropdown {
+    width: calc(100vw - 32px) !important;
+    right: -8px !important;
+  }
+
+  /* Add lead form */
+  .apex-form-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .apex-form-grid > div[style*="grid-column"] {
+    grid-column: auto !important;
+  }
+
+  /* A-Z nav */
+  .apex-az a {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 10px !important;
+  }
+
+  /* Street view */
+  .apex-streetview iframe {
+    height: 180px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .apex-metrics-grid {
+    grid-template-columns: 1fr !important;
+  }
 }

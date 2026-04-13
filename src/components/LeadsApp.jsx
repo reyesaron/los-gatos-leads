@@ -37,7 +37,7 @@ function StreetView({ address, city }) {
         {!show && <span style={{ color: DIM, fontWeight: 400 }}>— click to load</span>}
       </div>
       {show && (
-        <div style={{ borderRadius: 6, overflow: "hidden", border: `1px solid ${BORDER}`, position: "relative" }}>
+        <div className="apex-streetview" style={{ borderRadius: 6, overflow: "hidden", border: `1px solid ${BORDER}`, position: "relative" }}>
           <iframe src={embedUrl} width="100%" height="220" style={{ border: 0, display: "block" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
           <a href={mapsUrl} target="_blank" rel="noopener noreferrer" style={{ position: "absolute", top: 6, right: 6, fontSize: 10, padding: "3px 8px", borderRadius: 4, background: "rgba(0,0,0,0.7)", color: "#fff", textDecoration: "none" }}>Open in Maps</a>
         </div>
@@ -80,7 +80,7 @@ function AddLeadForm({ onAdd }) {
     <div style={{ maxWidth: 600, margin: "0 auto", padding: "20px 20px 40px" }}>
       <div style={{ fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 16 }}>Add Lead Manually</div>
       <div style={{ background: "#141414", borderRadius: 8, border: "1px solid #262626", padding: 16 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+        <div className="apex-form-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           <div style={{ gridColumn: "1 / -1" }}>
             <div style={label}>Address *</div>
             <input value={form.address} onChange={e => set("address", e.target.value)} placeholder="123 Main Street" style={iS} />
@@ -292,15 +292,15 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
       {/* HEADER */}
       <div style={{background:"linear-gradient(145deg,#0f0f0f,#141414,#0f0f0f)",borderBottom:`1px solid ${BORDER}`,padding:"20px 20px 16px"}}>
         <div style={{maxWidth:980,margin:"0 auto"}}>
-          <div style={{display:"flex",alignItems:"center",gap:14}}>
+          <div className="apex-header-row" style={{display:"flex",alignItems:"center",gap:14,position:"relative"}}>
             <img src="/apex-logo-full.jpg" alt="Apex Design Build" style={{height:48,borderRadius:6,flexShrink:0}} />
-            <div style={{borderLeft:`2px solid ${RED}`,paddingLeft:14,flex:1}}>
+            <div className="apex-header-title" style={{borderLeft:`2px solid ${RED}`,paddingLeft:14,flex:1}}>
               <h1 style={{margin:0,fontSize:20,fontWeight:700,color:"#fff",letterSpacing:"-0.02em"}}>Construction Leads</h1>
               <p style={{margin:0,fontSize:12,color:MUTED}}>Los Gatos · Saratoga · San Jose · {allProjects.length} projects{scrapedAt && ` · Updated ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p>
             </div>
-            <NotificationBell scored={scored} crmData={crmData} activityFeed={activityFeed} />
+            <div className="apex-bell-wrap"><NotificationBell scored={scored} crmData={crmData} activityFeed={activityFeed} /></div>
           </div>
-          <div style={{display:"flex",gap:18,marginTop:14,flexWrap:"wrap"}}>
+          <div className="apex-stats" style={{display:"flex",gap:18,marginTop:14,flexWrap:"wrap"}}>
             {[
               {l:"Projects",v:stats.total,c:MUTED},
               {l:"New",v:stats.newLeads,c:RED,pulse:true},
@@ -311,7 +311,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
               {l:"Subdivisions",v:stats.sub,c:DIM},
             ].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:MUTED}}>{s.l}</span></div>)}
           </div>
-          <div style={{display:"flex",gap:4,marginTop:14,alignItems:"center"}}>
+          <div className="apex-tabs" style={{display:"flex",gap:4,marginTop:14,alignItems:"center"}}>
             {[{id:"leads",label:"Leads"},{id:"dashboard",label:"Dashboard"},{id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},{id:"addLead",label:"+ Add Lead"}].map(t=>(
               <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"5px 16px",borderRadius:5,border:`1px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:CARD,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>{t.label}</button>
             ))}
@@ -347,7 +347,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
       {view === "dashboard" && (
         <div style={{maxWidth:980,margin:"0 auto",padding:"14px 20px 40px"}}>
           {/* Top metrics */}
-          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))",gap:8,marginBottom:16}}>
+          <div className="apex-metrics-grid" style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))",gap:8,marginBottom:16}}>
             {[
               {label:"Total Leads",value:dashboard.total,color:TEXT},
               {label:"Pipeline Value",value:`$${dashboard.totalValue.toLocaleString()}`,color:"#fff"},
@@ -364,7 +364,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
           </div>
 
           {/* Breakdowns */}
-          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+          <div className="apex-dashboard-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
             {/* By Pipeline Stage */}
             <div style={{background:CARD,borderRadius:6,border:`1px solid ${BORDER}`,padding:"14px"}}>
               <div style={{fontSize:11,color:MUTED,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:10,fontWeight:600}}>By Pipeline Stage</div>
@@ -444,7 +444,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
       {/* FILTERS */}
       {view === "leads" && <>
       <div style={{background:CARD,borderBottom:`1px solid ${BORDER}`,padding:"10px 20px",position:"sticky",top:0,zIndex:10}}>
-        <div style={{maxWidth:980,margin:"0 auto",display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
+        <div className="apex-filters" style={{maxWidth:980,margin:"0 auto",display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
           <input type="text" placeholder="Search address, APN, planner, zoning, description..." value={search} onChange={e=>setSearch(e.target.value)} style={{...iS,flex:"1 1 200px",minWidth:160}} />
           <select value={cityFilter} onChange={e=>{setCityFilter(e.target.value);setHoodFilter("All")}} style={{...iS,cursor:"pointer"}}>{cities.map(c=><option key={c} value={c}>{c==="All"?"City: All":c}</option>)}</select>
           {neighborhoods.length>0&&<select value={hoodFilter} onChange={e=>setHoodFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{neighborhoods.map(n=><option key={n} value={n}>{n==="All"?"Neighborhood: All":n}</option>)}</select>}
@@ -471,7 +471,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
         {filtered.length===0&&<div style={{textAlign:"center",padding:40,color:MUTED}}>No projects match your filters.</div>}
         {filtered.map((p,i)=>{const open=expanded===i;const cc=catC[p.category]||{bg:"#1c1c1c",fg:MUTED};return(
           <div key={p.address+p.appNumber} style={{background:CARD,borderRadius:8,border:`1px solid ${p._overdue?"#fb923c":p.isNew?RED:p.score>=7?RED_MID:BORDER}`,marginBottom:6,overflow:"hidden",borderLeft:p._overdue?"3px solid #fb923c":p.isNew?`3px solid ${RED}`:undefined}}>
-            <div onClick={()=>setExpanded(open?null:i)} style={{padding:"12px 14px",cursor:"pointer",display:"flex",alignItems:"flex-start",gap:12,transition:"background 0.15s"}} onMouseEnter={e=>e.currentTarget.style.background="#1a1a1a"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
+            <div className="apex-card-header" onClick={()=>setExpanded(open?null:i)} style={{padding:"12px 14px",cursor:"pointer",display:"flex",alignItems:"flex-start",gap:12,transition:"background 0.15s"}} onMouseEnter={e=>e.currentTarget.style.background="#1a1a1a"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
               <div style={{flexShrink:0,paddingTop:1}}><Badge score={p.score}/></div>
               <div style={{flex:1,minWidth:0}}>
                 <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#fff"}}>{p.address}</span>{p._overdue&&<OverdueBadge/>}{p._followUpSoon&&<SoonBadge/>}{p.isNew&&<NewBadge/>}<Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag>{p._crmStatus && p._crmStatus!=="New"&&<Tag bg={p._crmStatus==="Won"?"#052e16":p._crmStatus==="Lost"?"#1c1c1c":"#172554"} fg={p._crmStatus==="Won"?"#4ade80":p._crmStatus==="Lost"?"#525252":"#60a5fa"}>{p._crmStatus}</Tag>}{p._crmAssignee&&<span style={{fontSize:10,color:DIM}}>{p._crmAssignee}</span>}</div>
@@ -480,7 +480,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
               </div>
               <div style={{flexShrink:0,fontSize:14,color:DIM,transform:open?"rotate(180deg)":"none",transition:"transform 0.2s"}}>▾</div>
             </div>
-            {open&&(<div style={{padding:"0 14px 14px",borderTop:`1px solid ${BORDER}`,paddingTop:12}}>
+            {open&&(<div className="apex-card-body" style={{padding:"0 14px 14px",borderTop:`1px solid ${BORDER}`,paddingTop:12}}>
               <CRMPanel leadId={p._leadId} onUpdate={handleCRMUpdate} />
               <StreetView address={p.address} city={p.city} />
               <p style={{margin:"0 0 10px",fontSize:13,color:MUTED,lineHeight:1.45}}>{p.description}</p>

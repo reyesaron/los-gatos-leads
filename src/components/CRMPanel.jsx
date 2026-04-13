@@ -156,8 +156,8 @@ export default function CRMPanel({ leadId, onUpdate }) {
         {saving && <span style={{ marginLeft: 8, color: DIM, fontWeight: 400, textTransform: "none" }}>Saving...</span>}
       </div>
 
-      {/* Status + Assignee + Follow-up + Est Value row */}
-      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10, alignItems: "center" }}>
+      {/* Status + Assignee + Follow-up + Est Value + Source row */}
+      <div className="apex-crm-row" style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10, alignItems: "center" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
           <span style={{ fontSize: 11, color: MUTED }}>Status:</span>
           <select value={currentStatus} onChange={e => updateStatus(e.target.value)} style={{ ...iS, background: sc.bg, color: sc.fg, fontWeight: 600 }}>
@@ -203,7 +203,7 @@ export default function CRMPanel({ leadId, onUpdate }) {
           {lead?.contactName && <span style={{ color: DIM, fontWeight: 400 }}>— {lead.contactName}{lead.contactRole ? ` (${lead.contactRole})` : ""}</span>}
         </div>
         {showContact && (
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", paddingLeft: 16 }}>
+          <div className="apex-contact-fields" style={{ display: "flex", gap: 8, flexWrap: "wrap", paddingLeft: 16 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
               <span style={{ fontSize: 11, color: MUTED }}>Name:</span>
               <input type="text" defaultValue={lead?.contactName || ""} onBlur={e => saveContact("contactName", e.target.value)} placeholder="Owner / Architect" style={{ ...iS, width: 140 }} />

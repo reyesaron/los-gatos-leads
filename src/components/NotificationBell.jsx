@@ -102,7 +102,7 @@ export default function NotificationBell({ scored, crmData, activityFeed }) {
 
       {/* Dropdown */}
       {open && (
-        <div style={{ position: "absolute", top: "100%", right: 0, marginTop: 8, width: 340, maxHeight: 400, overflowY: "auto", background: CARD, border: `1px solid ${BORDER}`, borderRadius: 8, zIndex: 100, boxShadow: "0 8px 24px rgba(0,0,0,0.5)" }}>
+        <div className="apex-notif-dropdown" style={{ position: "absolute", top: "100%", right: 0, marginTop: 8, width: 340, maxHeight: 400, overflowY: "auto", background: CARD, border: `1px solid ${BORDER}`, borderRadius: 8, zIndex: 100, boxShadow: "0 8px 24px rgba(0,0,0,0.5)" }}>
           <div style={{ padding: "10px 14px", borderBottom: `1px solid ${BORDER}`, fontSize: 12, fontWeight: 600, color: TEXT }}>
             Notifications {count > 0 && <span style={{ color: MUTED, fontWeight: 400 }}>({count})</span>}
           </div>
