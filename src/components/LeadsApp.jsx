@@ -21,6 +21,8 @@ function Badge({score}){
 }
 function Tag({children,bg,fg}){return<span style={{fontSize:11,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.04em",padding:"2px 8px",borderRadius:4,background:bg,color:fg,whiteSpace:"nowrap"}}>{children}</span>}
 function NewBadge(){return<span className="badge-new" style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:RED_DARK,color:RED,border:`1px solid ${RED}55`,whiteSpace:"nowrap"}}>NEW</span>}
+function OverdueBadge(){return<span className="badge-new" style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#431407",color:"#fb923c",border:"1px solid #fb923c55",whiteSpace:"nowrap"}}>OVERDUE</span>}
+function SoonBadge(){return<span style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#422006",color:"#fbbf24",border:"1px solid #fbbf2433",whiteSpace:"nowrap"}}>FOLLOW UP</span>}
 
 export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scrapedLetters: SCRAPED_LETTERS, scrapedAt }) {
   const [view, setView] = useState("leads"); // "leads" or "activity"
@@ -53,7 +55,10 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
     const isNew = scrapedAt ? p.firstSeen === scrapedAt : (p.dateFiled && (Date.now() - new Date(p.dateFiled)) < 7 * 24 * 60 * 60 * 1000);
     const lid = getLeadId(p);
     const crm = crmData[lid];
-    return { ...p, ...getLeadScore(p), isNew, _leadId: lid, _crmStatus: crm?.status || "New", _crmAssignee: crm?.assignee || "", _crmFollowUp: crm?.followUpDate || "" };
+    const followUp = crm?.followUpDate || "";
+    const isOverdue = followUp && new Date(followUp) < new Date(new Date().toDateString());
+    const followUpSoon = followUp && !isOverdue && (new Date(followUp) - new Date(new Date().toDateString())) <= 2 * 24 * 60 * 60 * 1000;
+    return { ...p, ...getLeadScore(p), isNew, _leadId: lid, _crmStatus: crm?.status || "New", _crmAssignee: crm?.assignee || "", _crmFollowUp: followUp, _overdue: isOverdue, _followUpSoon: followUpSoon };
   }), [crmData, getLeadId]);
   const categories = ["All", ...new Set(PROJECTS.map(p => p.category))];
   const cities = ["All", ...new Set(PROJECTS.map(p => p.city || "Los Gatos"))];
@@ -74,7 +79,8 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
     list.sort((a,b) => { if (sortBy==="score") return b.score-a.score; if (sortBy==="date") return new Date(b.dateFiled)-new Date(a.dateFiled); return a.address.localeCompare(b.address); });
     return list;
   }, [scored, catFilter, cityFilter, hoodFilter, pipelineFilter, search, sortBy, minScore]);
-  const stats = useMemo(() => ({ total:filtered.length, newLeads:filtered.filter(p=>p.isNew).length, hot:filtered.filter(p=>p.score>=7).length, nc:filtered.filter(p=>p.category==="New Construction").length, add:filtered.filter(p=>p.category==="Addition").length, sub:filtered.filter(p=>p.category==="Subdivision").length }), [filtered]);
+  const overdueAll = useMemo(() => scored.filter(p => p._overdue).length, [scored]);
+  const stats = useMemo(() => ({ total:filtered.length, newLeads:filtered.filter(p=>p.isNew).length, hot:filtered.filter(p=>p.score>=7).length, overdue:filtered.filter(p=>p._overdue).length, nc:filtered.filter(p=>p.category==="New Construction").length, add:filtered.filter(p=>p.category==="Addition").length, sub:filtered.filter(p=>p.category==="Subdivision").length }), [filtered]);
 
   // Build lead ID → address lookup
   const leadIdToAddress = useMemo(() => {
@@ -119,6 +125,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
             {[
               {l:"Projects",v:stats.total,c:MUTED},
               {l:"New",v:stats.newLeads,c:RED,pulse:true},
+              {l:"Overdue",v:overdueAll,c:"#fb923c",pulse:true},
               {l:"Hot (7+)",v:stats.hot,c:"#fff"},
               {l:"New Const.",v:stats.nc,c:TEXT},
               {l:"Additions",v:stats.add,c:MUTED},
@@ -185,11 +192,11 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
       <div style={{maxWidth:980,margin:"0 auto",padding:"10px 20px 40px"}}>
         {filtered.length===0&&<div style={{textAlign:"center",padding:40,color:MUTED}}>No projects match your filters.</div>}
         {filtered.map((p,i)=>{const open=expanded===i;const cc=catC[p.category]||{bg:"#1c1c1c",fg:MUTED};return(
-          <div key={p.address+p.appNumber} style={{background:CARD,borderRadius:8,border:`1px solid ${p.isNew?RED:p.score>=7?RED_MID:BORDER}`,marginBottom:6,overflow:"hidden",borderLeft:p.isNew?`3px solid ${RED}`:undefined}}>
+          <div key={p.address+p.appNumber} style={{background:CARD,borderRadius:8,border:`1px solid ${p._overdue?"#fb923c":p.isNew?RED:p.score>=7?RED_MID:BORDER}`,marginBottom:6,overflow:"hidden",borderLeft:p._overdue?"3px solid #fb923c":p.isNew?`3px solid ${RED}`:undefined}}>
             <div onClick={()=>setExpanded(open?null:i)} style={{padding:"12px 14px",cursor:"pointer",display:"flex",alignItems:"flex-start",gap:12,transition:"background 0.15s"}} onMouseEnter={e=>e.currentTarget.style.background="#1a1a1a"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
               <div style={{flexShrink:0,paddingTop:1}}><Badge score={p.score}/></div>
               <div style={{flex:1,minWidth:0}}>
-                <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#fff"}}>{p.address}</span>{p.isNew&&<NewBadge/>}<Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag>{p._crmStatus && p._crmStatus!=="New"&&<Tag bg={p._crmStatus==="Won"?"#052e16":p._crmStatus==="Lost"?"#1c1c1c":"#172554"} fg={p._crmStatus==="Won"?"#4ade80":p._crmStatus==="Lost"?"#525252":"#60a5fa"}>{p._crmStatus}</Tag>}{p._crmAssignee&&<span style={{fontSize:10,color:DIM}}>{p._crmAssignee}</span>}</div>
+                <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#fff"}}>{p.address}</span>{p._overdue&&<OverdueBadge/>}{p._followUpSoon&&<SoonBadge/>}{p.isNew&&<NewBadge/>}<Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag>{p._crmStatus && p._crmStatus!=="New"&&<Tag bg={p._crmStatus==="Won"?"#052e16":p._crmStatus==="Lost"?"#1c1c1c":"#172554"} fg={p._crmStatus==="Won"?"#4ade80":p._crmStatus==="Lost"?"#525252":"#60a5fa"}>{p._crmStatus}</Tag>}{p._crmAssignee&&<span style={{fontSize:10,color:DIM}}>{p._crmAssignee}</span>}</div>
                 <div style={{fontSize:13,color:"#d4d4d4",lineHeight:1.35,marginBottom:3}}>{p.overview}</div>
                 <div style={{fontSize:11,color:MUTED}}>{p.city || "Los Gatos"}{p.neighborhood && ` · ${p.neighborhood}`}{p.zoning && ` · ${p.zoning}`}{p.apn && p.apn !== "TBD" && ` · APN ${p.apn}`}{p.dateFiled && ` · Filed ${new Date(p.dateFiled).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}`} · {p.planner}</div>
               </div>
