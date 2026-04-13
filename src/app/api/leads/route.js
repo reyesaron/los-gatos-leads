@@ -81,6 +81,14 @@ export async function POST(request) {
     entry.updatedAt = new Date().toISOString();
   }
 
+  else if (action === "setContact") {
+    if (body.contactName !== undefined) entry.contactName = body.contactName;
+    if (body.contactPhone !== undefined) entry.contactPhone = body.contactPhone;
+    if (body.contactEmail !== undefined) entry.contactEmail = body.contactEmail;
+    if (body.contactRole !== undefined) entry.contactRole = body.contactRole;
+    entry.updatedAt = new Date().toISOString();
+  }
+
   else {
     return Response.json({ error: "Unknown action" }, { status: 400 });
   }

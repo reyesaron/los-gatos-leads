@@ -29,6 +29,7 @@ export default function CRMPanel({ leadId, onUpdate }) {
   const [noteText, setNoteText] = useState("");
   const [noteAuthor, setNoteAuthor] = useState(TEAM[0]);
   const [saving, setSaving] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   const fetchLead = useCallback(async () => {
     try {
@@ -115,6 +116,20 @@ export default function CRMPanel({ leadId, onUpdate }) {
     setSaving(false);
   };
 
+  const saveContact = async (field, value) => {
+    setSaving(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ leadId, action: "setContact", [field]: value }),
+      });
+      const data = await res.json();
+      if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }
+    } catch {}
+    setSaving(false);
+  };
+
   if (loading) return <div style={{ padding: "10px 0", fontSize: 12, color: MUTED }}>Loading CRM data...</div>;
 
   const currentStatus = lead?.status || "New";
@@ -150,6 +165,42 @@ export default function CRMPanel({ leadId, onUpdate }) {
           <span style={{ fontSize: 11, color: MUTED }}>Est. value:</span>
           <input type="text" placeholder="$0" value={lead?.estValue ? `$${Number(lead.estValue).toLocaleString()}` : ""} onBlur={e => setEstValue(e.target.value.replace(/[$,]/g, ""))} onChange={() => {}} onFocus={e => { e.target.value = lead?.estValue || ""; }} style={{ ...iS, width: 90, fontFamily: "'JetBrains Mono',monospace" }} />
         </div>
+      </div>
+
+      {/* Contact info */}
+      <div style={{ marginBottom: 8 }}>
+        <div onClick={() => setShowContact(!showContact)} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 11, color: MUTED, marginBottom: showContact ? 6 : 0 }}>
+          <span style={{ transform: showContact ? "rotate(90deg)" : "none", transition: "transform 0.15s", fontSize: 10 }}>▶</span>
+          <span style={{ fontWeight: 600 }}>Contact Info</span>
+          {lead?.contactName && <span style={{ color: DIM, fontWeight: 400 }}>— {lead.contactName}{lead.contactRole ? ` (${lead.contactRole})` : ""}</span>}
+        </div>
+        {showContact && (
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", paddingLeft: 16 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+              <span style={{ fontSize: 11, color: MUTED }}>Name:</span>
+              <input type="text" defaultValue={lead?.contactName || ""} onBlur={e => saveContact("contactName", e.target.value)} placeholder="Owner / Architect" style={{ ...iS, width: 140 }} />
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+              <span style={{ fontSize: 11, color: MUTED }}>Role:</span>
+              <select defaultValue={lead?.contactRole || ""} onChange={e => saveContact("contactRole", e.target.value)} style={iS}>
+                <option value="">—</option>
+                <option value="Owner">Owner</option>
+                <option value="Architect">Architect</option>
+                <option value="Designer">Designer</option>
+                <option value="Agent">Agent</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+              <span style={{ fontSize: 11, color: MUTED }}>Phone:</span>
+              <input type="tel" defaultValue={lead?.contactPhone || ""} onBlur={e => saveContact("contactPhone", e.target.value)} placeholder="(408) 555-1234" style={{ ...iS, width: 130 }} />
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+              <span style={{ fontSize: 11, color: MUTED }}>Email:</span>
+              <input type="email" defaultValue={lead?.contactEmail || ""} onBlur={e => saveContact("contactEmail", e.target.value)} placeholder="name@email.com" style={{ ...iS, width: 180 }} />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Last contact info */}
