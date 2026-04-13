@@ -35,8 +35,8 @@ export default function CRMPanel({ leadId }) {
       const res = await fetch(`/api/leads?id=${encodeURIComponent(leadId)}`);
       const data = await res.json();
       setLead(data.lead || {});
-      setNotes((data.notes || []).map(n => typeof n === "string" ? JSON.parse(n) : n));
-    } catch { /* KV not configured yet */ }
+      setNotes(data.notes || data.lead?.notes || []);
+    } catch { /* Blob not configured yet */ }
     setLoading(false);
   }, [leadId]);
 
@@ -81,7 +81,7 @@ export default function CRMPanel({ leadId }) {
       });
       const data = await res.json();
       if (data.lead) setLead(data.lead);
-      if (data.notes) setNotes(data.notes.map(n => typeof n === "string" ? JSON.parse(n) : n));
+      if (data.notes) setNotes(data.notes);
       setNoteText("");
     } catch {}
     setSaving(false);

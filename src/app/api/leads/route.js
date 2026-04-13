@@ -1,24 +1,38 @@
-import { kv } from "@vercel/kv";
+import { put, list } from "@vercel/blob";
+
+const BLOB_NAME = "leads-crm.json";
+
+async function loadCRM() {
+  try {
+    const { blobs } = await list({ prefix: BLOB_NAME });
+    if (blobs.length === 0) return {};
+    const res = await fetch(blobs[0].url);
+    return await res.json();
+  } catch {
+    return {};
+  }
+}
+
+async function saveCRM(data) {
+  await put(BLOB_NAME, JSON.stringify(data), {
+    access: "public",
+    addRandomSuffix: false,
+  });
+}
 
 // GET /api/leads — fetch CRM data for all leads (or a specific one)
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const leadId = searchParams.get("id");
+  const crm = await loadCRM();
 
   if (leadId) {
-    const data = await kv.hgetall(`lead:${leadId}`);
-    const notes = await kv.lrange(`notes:${leadId}`, 0, -1);
-    return Response.json({ lead: data || {}, notes: notes || [] });
+    const entry = crm[leadId] || { status: "New", notes: [] };
+    return Response.json({ lead: entry, notes: entry.notes || [] });
   }
 
-  // Get all lead CRM data
-  const keys = await kv.keys("lead:*");
-  const leads = {};
-  for (const key of keys) {
-    const id = key.replace("lead:", "");
-    leads[id] = await kv.hgetall(key);
-  }
-  return Response.json({ leads });
+  // Return all leads' CRM data
+  return Response.json({ leads: crm });
 }
 
 // POST /api/leads — update lead status, add notes
@@ -30,60 +44,47 @@ export async function POST(request) {
     return Response.json({ error: "leadId required" }, { status: 400 });
   }
 
-  const key = `lead:${leadId}`;
+  const crm = await loadCRM();
+  if (!crm[leadId]) crm[leadId] = { status: "New", notes: [] };
+  const entry = crm[leadId];
 
   if (action === "updateStatus") {
-    const { status, assignee } = body;
-    const updates = { updatedAt: new Date().toISOString() };
-    if (status) updates.status = status;
-    if (assignee) updates.assignee = assignee;
-    await kv.hset(key, updates);
-    const lead = await kv.hgetall(key);
-    return Response.json({ ok: true, lead });
+    if (body.status) entry.status = body.status;
+    if (body.assignee !== undefined) entry.assignee = body.assignee;
+    entry.updatedAt = new Date().toISOString();
   }
 
-  if (action === "addNote") {
+  else if (action === "addNote") {
     const { note, author } = body;
     if (!note || !author) {
       return Response.json({ error: "note and author required" }, { status: 400 });
     }
-    const entry = JSON.stringify({
+    if (!entry.notes) entry.notes = [];
+    entry.notes.unshift({
       text: note,
       author,
       timestamp: new Date().toISOString(),
     });
-    await kv.lpush(`notes:${leadId}`, entry);
-    // Also update the lead's last activity
-    await kv.hset(key, {
-      lastContactBy: author,
-      lastContactAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    });
-    const notes = await kv.lrange(`notes:${leadId}`, 0, -1);
-    const lead = await kv.hgetall(key);
-    return Response.json({ ok: true, lead, notes });
+    entry.lastContactBy = author;
+    entry.lastContactAt = new Date().toISOString();
+    entry.updatedAt = new Date().toISOString();
   }
 
-  if (action === "setFollowUp") {
-    const { followUpDate, assignee } = body;
-    await kv.hset(key, {
-      followUpDate: followUpDate || "",
-      followUpAssignee: assignee || "",
-      updatedAt: new Date().toISOString(),
-    });
-    const lead = await kv.hgetall(key);
-    return Response.json({ ok: true, lead });
+  else if (action === "setFollowUp") {
+    entry.followUpDate = body.followUpDate || "";
+    entry.followUpAssignee = body.assignee || "";
+    entry.updatedAt = new Date().toISOString();
   }
 
-  if (action === "setEstValue") {
-    const { estValue } = body;
-    await kv.hset(key, {
-      estValue: estValue || 0,
-      updatedAt: new Date().toISOString(),
-    });
-    const lead = await kv.hgetall(key);
-    return Response.json({ ok: true, lead });
+  else if (action === "setEstValue") {
+    entry.estValue = body.estValue || 0;
+    entry.updatedAt = new Date().toISOString();
   }
 
-  return Response.json({ error: "Unknown action" }, { status: 400 });
+  else {
+    return Response.json({ error: "Unknown action" }, { status: 400 });
+  }
+
+  await saveCRM(crm);
+  return Response.json({ ok: true, lead: entry, notes: entry.notes || [] });
 }
