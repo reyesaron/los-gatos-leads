@@ -24,6 +24,105 @@ function NewBadge(){return<span className="badge-new" style={{display:"inline-fl
 function OverdueBadge(){return<span className="badge-new" style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#431407",color:"#fb923c",border:"1px solid #fb923c55",whiteSpace:"nowrap"}}>OVERDUE</span>}
 function SoonBadge(){return<span style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#422006",color:"#fbbf24",border:"1px solid #fbbf2433",whiteSpace:"nowrap"}}>FOLLOW UP</span>}
 
+const FORM_CITIES = ["Los Gatos", "Saratoga", "San Jose", "Campbell", "Other"];
+const FORM_CATEGORIES = ["New Construction", "Addition", "Subdivision"];
+const FORM_TEAM = ["Daniel", "Aron", "Joseph"];
+
+function AddLeadForm({ onAdd }) {
+  const [saving, setSaving] = useState(false);
+  const [form, setForm] = useState({ address: "", city: "San Jose", neighborhood: "", category: "New Construction", scope: "Custom Home", description: "", zoning: "", apn: "", dateFiled: new Date().toISOString().split("T")[0], planner: "", appType: "", existingSF: "", proposedSF: "", addedBy: FORM_TEAM[0] });
+  const set = (k, v) => setForm(f => ({ ...f, [k]: v }));
+
+  const submit = async () => {
+    if (!form.address.trim()) return;
+    setSaving(true);
+    try {
+      const res = await fetch("/api/leads/manual", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "add", ...form, existingSF: form.existingSF ? Number(form.existingSF) : null, proposedSF: form.proposedSF ? Number(form.proposedSF) : null }),
+      });
+      const data = await res.json();
+      if (data.ok) onAdd(data.lead);
+    } catch {}
+    setSaving(false);
+  };
+
+  const iS = { padding: "8px 10px", borderRadius: 5, border: "1px solid #262626", background: "#111", color: "#e5e5e5", fontSize: 13, outline: "none", width: "100%" };
+  const label = { fontSize: 11, color: "#737373", marginBottom: 3, fontWeight: 600 };
+
+  return (
+    <div style={{ maxWidth: 600, margin: "0 auto", padding: "20px 20px 40px" }}>
+      <div style={{ fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 16 }}>Add Lead Manually</div>
+      <div style={{ background: "#141414", borderRadius: 8, border: "1px solid #262626", padding: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+          <div style={{ gridColumn: "1 / -1" }}>
+            <div style={label}>Address *</div>
+            <input value={form.address} onChange={e => set("address", e.target.value)} placeholder="123 Main Street" style={iS} />
+          </div>
+          <div>
+            <div style={label}>City *</div>
+            <select value={form.city} onChange={e => set("city", e.target.value)} style={iS}>{FORM_CITIES.map(c => <option key={c}>{c}</option>)}</select>
+          </div>
+          <div>
+            <div style={label}>Neighborhood</div>
+            <input value={form.neighborhood} onChange={e => set("neighborhood", e.target.value)} placeholder="e.g. Willow Glen" style={iS} />
+          </div>
+          <div>
+            <div style={label}>Category</div>
+            <select value={form.category} onChange={e => set("category", e.target.value)} style={iS}>{FORM_CATEGORIES.map(c => <option key={c}>{c}</option>)}</select>
+          </div>
+          <div>
+            <div style={label}>Scope</div>
+            <input value={form.scope} onChange={e => set("scope", e.target.value)} placeholder="e.g. Custom Home (Demo/Rebuild)" style={iS} />
+          </div>
+          <div style={{ gridColumn: "1 / -1" }}>
+            <div style={label}>Description</div>
+            <textarea value={form.description} onChange={e => set("description", e.target.value)} placeholder="Project details, source, context..." rows={3} style={{ ...iS, resize: "vertical", fontFamily: "inherit" }} />
+          </div>
+          <div>
+            <div style={label}>Existing SF</div>
+            <input type="number" value={form.existingSF} onChange={e => set("existingSF", e.target.value)} placeholder="0 for vacant" style={iS} />
+          </div>
+          <div>
+            <div style={label}>Proposed SF</div>
+            <input type="number" value={form.proposedSF} onChange={e => set("proposedSF", e.target.value)} placeholder="e.g. 3500" style={iS} />
+          </div>
+          <div>
+            <div style={label}>Zoning</div>
+            <input value={form.zoning} onChange={e => set("zoning", e.target.value)} placeholder="e.g. R-1" style={iS} />
+          </div>
+          <div>
+            <div style={label}>APN</div>
+            <input value={form.apn} onChange={e => set("apn", e.target.value)} placeholder="e.g. 527-29-031" style={iS} />
+          </div>
+          <div>
+            <div style={label}>Date Filed</div>
+            <input type="date" value={form.dateFiled} onChange={e => set("dateFiled", e.target.value)} style={iS} />
+          </div>
+          <div>
+            <div style={label}>App Type</div>
+            <input value={form.appType} onChange={e => set("appType", e.target.value)} placeholder="e.g. Building Permit" style={iS} />
+          </div>
+          <div>
+            <div style={label}>Planner / Source</div>
+            <input value={form.planner} onChange={e => set("planner", e.target.value)} placeholder="e.g. Referral from architect" style={iS} />
+          </div>
+          <div>
+            <div style={label}>Added By</div>
+            <select value={form.addedBy} onChange={e => set("addedBy", e.target.value)} style={iS}>{FORM_TEAM.map(t => <option key={t}>{t}</option>)}</select>
+          </div>
+        </div>
+        <div style={{ display: "flex", gap: 8, marginTop: 16, justifyContent: "flex-end" }}>
+          <button onClick={submit} disabled={!form.address.trim() || saving} style={{ padding: "8px 20px", borderRadius: 6, border: "none", background: form.address.trim() ? "#dc2626" : "#1c1c1c", color: "#fff", fontSize: 13, fontWeight: 600, cursor: form.address.trim() ? "pointer" : "default", opacity: form.address.trim() ? 1 : 0.4 }}>
+            {saving ? "Saving..." : "Add Lead"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function exportCSV(leads, crmData, getLeadId) {
   const headers = ["Address","City","Neighborhood","Category","Scope","Score","Pipeline Status","Assigned To","Contact Name","Contact Role","Contact Phone","Contact Email","Est. Value","Follow-Up Date","Last Contact By","Last Contact Date","Zoning","APN","Date Filed","Permit Status","Planner","Notes"];
   const esc = (v) => { const s = String(v ?? ""); return s.includes(",") || s.includes('"') || s.includes("\n") ? `"${s.replace(/"/g, '""')}"` : s; };
@@ -43,7 +142,7 @@ function exportCSV(leads, crmData, getLeadId) {
 }
 
 export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scrapedLetters: SCRAPED_LETTERS, scrapedAt }) {
-  const [view, setView] = useState("leads"); // "leads" or "activity"
+  const [view, setView] = useState("leads"); // "leads", "activity", or "addLead"
   const [search, setSearch] = useState("");
   const [catFilter, setCatFilter] = useState("All");
   const [cityFilter, setCityFilter] = useState("All");
@@ -53,10 +152,12 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
   const [hoodFilter, setHoodFilter] = useState("All");
   const [pipelineFilter, setPipelineFilter] = useState("All");
   const [crmData, setCrmData] = useState({});
+  const [manualLeads, setManualLeads] = useState([]);
 
-  // Load all CRM data on mount
+  // Load CRM data and manual leads on mount
   useEffect(() => {
     fetch("/api/leads").then(r => r.json()).then(d => setCrmData(d.leads || {})).catch(() => {});
+    fetch("/api/leads/manual").then(r => r.json()).then(d => setManualLeads(d.leads || [])).catch(() => {});
   }, []);
 
   // Generate lead ID consistently
@@ -69,7 +170,8 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
     setCrmData(prev => ({ ...prev, [leadId]: leadData }));
   }, []);
 
-  const scored = useMemo(() => PROJECTS.map(p => {
+  const allProjects = useMemo(() => [...PROJECTS, ...manualLeads], [manualLeads]);
+  const scored = useMemo(() => allProjects.map(p => {
     const isNew = scrapedAt ? p.firstSeen === scrapedAt : (p.dateFiled && (Date.now() - new Date(p.dateFiled)) < 7 * 24 * 60 * 60 * 1000);
     const lid = getLeadId(p);
     const crm = crmData[lid];
@@ -77,7 +179,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
     const isOverdue = followUp && new Date(followUp) < new Date(new Date().toDateString());
     const followUpSoon = followUp && !isOverdue && (new Date(followUp) - new Date(new Date().toDateString())) <= 2 * 24 * 60 * 60 * 1000;
     return { ...p, ...getLeadScore(p), isNew, _leadId: lid, _crmStatus: crm?.status || "New", _crmAssignee: crm?.assignee || "", _crmFollowUp: followUp, _overdue: isOverdue, _followUpSoon: followUpSoon };
-  }), [crmData, getLeadId]);
+  }), [allProjects, crmData, getLeadId]);
   const categories = ["All", ...new Set(PROJECTS.map(p => p.category))];
   const cities = ["All", ...new Set(PROJECTS.map(p => p.city || "Los Gatos"))];
   const neighborhoods = useMemo(() => {
@@ -136,7 +238,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
             <img src="/apex-logo-full.jpg" alt="Apex Design Build" style={{height:48,borderRadius:6,flexShrink:0}} />
             <div style={{borderLeft:`2px solid ${RED}`,paddingLeft:14}}>
               <h1 style={{margin:0,fontSize:20,fontWeight:700,color:"#fff",letterSpacing:"-0.02em"}}>Construction Leads</h1>
-              <p style={{margin:0,fontSize:12,color:MUTED}}>Los Gatos · Saratoga · San Jose · {PROJECTS.length} projects{scrapedAt && ` · Updated ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p>
+              <p style={{margin:0,fontSize:12,color:MUTED}}>Los Gatos · Saratoga · San Jose · {allProjects.length} projects{scrapedAt && ` · Updated ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p>
             </div>
           </div>
           <div style={{display:"flex",gap:18,marginTop:14,flexWrap:"wrap"}}>
@@ -151,7 +253,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
             ].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:MUTED}}>{s.l}</span></div>)}
           </div>
           <div style={{display:"flex",gap:4,marginTop:14,alignItems:"center"}}>
-            {[{id:"leads",label:"Leads"},{id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`}].map(t=>(
+            {[{id:"leads",label:"Leads"},{id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},{id:"addLead",label:"+ Add Lead"}].map(t=>(
               <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"5px 16px",borderRadius:5,border:`1px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:CARD,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>{t.label}</button>
             ))}
             <button onClick={()=>exportCSV(filtered,crmData,getLeadId)} style={{marginLeft:"auto",padding:"5px 14px",borderRadius:5,border:`1px solid ${BORDER}`,background:CARD,color:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>Export CSV</button>
@@ -181,6 +283,9 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
           ))}
         </div>
       )}
+
+      {/* ADD LEAD FORM */}
+      {view === "addLead" && <AddLeadForm onAdd={(lead) => { setManualLeads(prev => [...prev, lead]); setView("leads"); }} />}
 
       {/* FILTERS */}
       {view === "leads" && <>
