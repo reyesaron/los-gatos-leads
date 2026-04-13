@@ -21,6 +21,30 @@ function Badge({score}){
 }
 function Tag({children,bg,fg}){return<span style={{fontSize:11,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.04em",padding:"2px 8px",borderRadius:4,background:bg,color:fg,whiteSpace:"nowrap"}}>{children}</span>}
 function NewBadge(){return<span className="badge-new" style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:RED_DARK,color:RED,border:`1px solid ${RED}55`,whiteSpace:"nowrap"}}>NEW</span>}
+function StreetView({ address, city }) {
+  const [show, setShow] = useState(false);
+  // Build a clean address for the embed — strip parenthetical notes and extra info
+  const cleanAddr = (address || "").replace(/\s*\(.*?\)\s*/g, " ").replace(/\s*—.*$/, "").replace(/,\s*San Jose$/i, "").trim();
+  const fullAddr = `${cleanAddr}, ${city || "Los Gatos"}, CA`;
+  const embedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(fullAddr)}&t=k&z=18&output=embed`;
+  const mapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(fullAddr)}&layer=c`;
+  return (
+    <div style={{ marginBottom: 10 }}>
+      <div onClick={() => setShow(!show)} style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 11, color: MUTED, marginBottom: show ? 6 : 0 }}>
+        <span style={{ transform: show ? "rotate(90deg)" : "none", transition: "transform 0.15s", fontSize: 10 }}>▶</span>
+        <span style={{ fontWeight: 600 }}>Street View</span>
+        {!show && <span style={{ color: DIM, fontWeight: 400 }}>— click to load</span>}
+      </div>
+      {show && (
+        <div style={{ borderRadius: 6, overflow: "hidden", border: `1px solid ${BORDER}`, position: "relative" }}>
+          <iframe src={embedUrl} width="100%" height="220" style={{ border: 0, display: "block" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+          <a href={mapsUrl} target="_blank" rel="noopener noreferrer" style={{ position: "absolute", top: 6, right: 6, fontSize: 10, padding: "3px 8px", borderRadius: 4, background: "rgba(0,0,0,0.7)", color: "#fff", textDecoration: "none" }}>Open in Maps</a>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function OverdueBadge(){return<span className="badge-new" style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#431407",color:"#fb923c",border:"1px solid #fb923c55",whiteSpace:"nowrap"}}>OVERDUE</span>}
 function SoonBadge(){return<span style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#422006",color:"#fbbf24",border:"1px solid #fbbf2433",whiteSpace:"nowrap"}}>FOLLOW UP</span>}
 
@@ -328,6 +352,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
             </div>
             {open&&(<div style={{padding:"0 14px 14px",borderTop:`1px solid ${BORDER}`,paddingTop:12}}>
               <CRMPanel leadId={p._leadId} onUpdate={handleCRMUpdate} />
+              <StreetView address={p.address} city={p.city} />
               <p style={{margin:"0 0 10px",fontSize:13,color:MUTED,lineHeight:1.45}}>{p.description}</p>
               <div style={{background:BG,borderRadius:6,padding:"10px 12px",marginBottom:10,border:`1px solid ${BORDER}`}}>
                 <div style={{fontSize:11,fontWeight:600,color:MUTED,textTransform:"uppercase",letterSpacing:"0.04em",marginBottom:6}}>Square Footage</div>
