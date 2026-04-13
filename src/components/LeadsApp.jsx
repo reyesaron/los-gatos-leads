@@ -49,7 +49,7 @@ function StreetView({ address, city }) {
 function OverdueBadge(){return<span className="badge-new" style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#431407",color:"#fb923c",border:"1px solid #fb923c55",whiteSpace:"nowrap"}}>OVERDUE</span>}
 function SoonBadge(){return<span style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#422006",color:"#fbbf24",border:"1px solid #fbbf2433",whiteSpace:"nowrap"}}>FOLLOW UP</span>}
 
-const FORM_CITIES = ["Los Gatos", "Saratoga", "San Jose", "Campbell", "Other"];
+const FORM_CITIES = ["Los Gatos", "Saratoga", "San Jose", "Woodside", "Atherton", "Los Altos", "Los Altos Hills", "Palo Alto", "Milpitas", "Morgan Hill", "Campbell", "Other"];
 const FORM_CATEGORIES = ["New Construction", "Addition", "Subdivision"];
 const FORM_TEAM = ["Daniel", "Aron", "Joseph"];
 
@@ -296,7 +296,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
             <img src="/apex-logo-full.jpg" alt="Apex Design Build" style={{height:48,borderRadius:6,flexShrink:0}} />
             <div className="apex-header-title" style={{borderLeft:`2px solid ${RED}`,paddingLeft:14,flex:1}}>
               <h1 style={{margin:0,fontSize:20,fontWeight:700,color:"#fff",letterSpacing:"-0.02em"}}>Construction Leads</h1>
-              <p style={{margin:0,fontSize:12,color:MUTED}}>Los Gatos · Saratoga · San Jose · {allProjects.length} projects{scrapedAt && ` · Updated ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p>
+              <p style={{margin:0,fontSize:12,color:MUTED}}>South Bay Construction Leads · {allProjects.length} projects{scrapedAt && ` · Updated ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p>
             </div>
             <div className="apex-bell-wrap"><NotificationBell scored={scored} crmData={crmData} activityFeed={activityFeed} /></div>
           </div>
