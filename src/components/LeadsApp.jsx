@@ -2,6 +2,7 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { getLeadScore } from "@/data/scoring";
 import CRMPanel from "@/components/CRMPanel";
+import NotificationBell from "@/components/NotificationBell";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -293,10 +294,11 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
         <div style={{maxWidth:980,margin:"0 auto"}}>
           <div style={{display:"flex",alignItems:"center",gap:14}}>
             <img src="/apex-logo-full.jpg" alt="Apex Design Build" style={{height:48,borderRadius:6,flexShrink:0}} />
-            <div style={{borderLeft:`2px solid ${RED}`,paddingLeft:14}}>
+            <div style={{borderLeft:`2px solid ${RED}`,paddingLeft:14,flex:1}}>
               <h1 style={{margin:0,fontSize:20,fontWeight:700,color:"#fff",letterSpacing:"-0.02em"}}>Construction Leads</h1>
               <p style={{margin:0,fontSize:12,color:MUTED}}>Los Gatos · Saratoga · San Jose · {allProjects.length} projects{scrapedAt && ` · Updated ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p>
             </div>
+            <NotificationBell scored={scored} crmData={crmData} activityFeed={activityFeed} />
           </div>
           <div style={{display:"flex",gap:18,marginTop:14,flexWrap:"wrap"}}>
             {[
