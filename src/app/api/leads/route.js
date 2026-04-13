@@ -24,17 +24,20 @@ async function saveCRM(data) {
 
 // GET /api/leads — fetch CRM data for all leads (or a specific one)
 export async function GET(request) {
-  const { searchParams } = new URL(request.url);
-  const leadId = searchParams.get("id");
-  const crm = await loadCRM();
+  try {
+    const { searchParams } = new URL(request.url);
+    const leadId = searchParams.get("id");
+    const crm = await loadCRM();
 
-  if (leadId) {
-    const entry = crm[leadId] || { status: "New", notes: [] };
-    return Response.json({ lead: entry, notes: entry.notes || [] });
+    if (leadId) {
+      const entry = crm[leadId] || { status: "New", notes: [] };
+      return Response.json({ lead: entry, notes: entry.notes || [] });
+    }
+
+    return Response.json({ leads: crm });
+  } catch (err) {
+    return Response.json({ error: "Failed to load: " + err.message }, { status: 500 });
   }
-
-  // Return all leads' CRM data
-  return Response.json({ leads: crm });
 }
 
 // POST /api/leads — update lead status, add notes
@@ -101,6 +104,10 @@ export async function POST(request) {
     return Response.json({ error: "Unknown action" }, { status: 400 });
   }
 
-  await saveCRM(crm);
+  try {
+    await saveCRM(crm);
+  } catch (err) {
+    return Response.json({ error: "Failed to save: " + err.message }, { status: 500 });
+  }
   return Response.json({ ok: true, lead: entry, notes: entry.notes || [] });
 }
