@@ -173,7 +173,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
   const [catFilter, setCatFilter] = useState("All");
   const [cityFilter, setCityFilter] = useState("All");
   const [sortBy, setSortBy] = useState("score");
-  const [expanded, setExpanded] = useState(null);
+  const [expandedId, setExpandedId] = useState(null);
   const [minScore, setMinScore] = useState(0);
   const [hoodFilter, setHoodFilter] = useState("All");
   const [pipelineFilter, setPipelineFilter] = useState("All");
@@ -473,9 +473,9 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
       {/* PROJECT CARDS */}
       <div style={{maxWidth:980,margin:"0 auto",padding:"10px 20px 40px"}}>
         {filtered.length===0&&<div style={{textAlign:"center",padding:40,color:MUTED}}>No projects match your filters.</div>}
-        {filtered.map((p,i)=>{const open=expanded===i;const cc=catC[p.category]||{bg:"#1c1c1c",fg:MUTED};return(
+        {filtered.map((p,i)=>{const open=expandedId===p._leadId;const cc=catC[p.category]||{bg:"#1c1c1c",fg:MUTED};return(
           <div key={p.address+p.appNumber} style={{background:CARD,borderRadius:8,border:`1px solid ${p._overdue?"#fb923c":p.isNew?RED:p.score>=7?RED_MID:BORDER}`,marginBottom:6,overflow:"hidden",borderLeft:p._overdue?"3px solid #fb923c":p.isNew?`3px solid ${RED}`:undefined}}>
-            <div className="apex-card-header" onClick={()=>setExpanded(open?null:i)} style={{padding:"12px 14px",cursor:"pointer",display:"flex",alignItems:"flex-start",gap:12,transition:"background 0.15s"}} onMouseEnter={e=>e.currentTarget.style.background="#1a1a1a"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
+            <div className="apex-card-header" onClick={()=>setExpandedId(open?null:p._leadId)} style={{padding:"12px 14px",cursor:"pointer",display:"flex",alignItems:"flex-start",gap:12,transition:"background 0.15s"}} onMouseEnter={e=>e.currentTarget.style.background="#1a1a1a"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
               <div style={{flexShrink:0,paddingTop:1}}><Badge score={p.score}/></div>
               <div style={{flex:1,minWidth:0}}>
                 <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#fff"}}>{p.address}</span>{p._overdue&&<OverdueBadge/>}{p._followUpSoon&&<SoonBadge/>}{p.isNew&&<NewBadge/>}<Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag>{p._crmStatus && p._crmStatus!=="New"&&<Tag bg={p._crmStatus==="Won"?"#052e16":p._crmStatus==="Lost"?"#1c1c1c":"#172554"} fg={p._crmStatus==="Won"?"#4ade80":p._crmStatus==="Lost"?"#525252":"#60a5fa"}>{p._crmStatus}</Tag>}{p._crmAssignee&&<span style={{fontSize:10,color:DIM}}>{p._crmAssignee}</span>}</div>
@@ -485,7 +485,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
               <div style={{flexShrink:0,fontSize:14,color:DIM,transform:open?"rotate(180deg)":"none",transition:"transform 0.2s"}}>▾</div>
             </div>
             {open&&(<div className="apex-card-body" style={{padding:"0 14px 14px",borderTop:`1px solid ${BORDER}`,paddingTop:12}}>
-              <CRMPanel leadId={p._leadId} onUpdate={handleCRMUpdate} initialData={crmData[p._leadId] || null} />
+              <CRMPanel key={p._leadId} leadId={p._leadId} onUpdate={handleCRMUpdate} />
               <StreetView address={p.address} city={p.city} />
               <p style={{margin:"0 0 10px",fontSize:13,color:MUTED,lineHeight:1.45}}>{p.description}</p>
               <div style={{background:BG,borderRadius:6,padding:"10px 12px",marginBottom:10,border:`1px solid ${BORDER}`}}>

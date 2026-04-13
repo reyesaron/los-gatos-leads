@@ -22,29 +22,25 @@ const STATUS_COLORS = {
 
 const iS = { padding: "6px 10px", borderRadius: 5, border: `1px solid ${BORDER}`, background: "#111", color: TEXT, fontSize: 12, outline: "none" };
 
-export default function CRMPanel({ leadId, onUpdate, initialData }) {
-  const [lead, setLead] = useState(initialData || null);
-  const [notes, setNotes] = useState(initialData?.notes || []);
-  const [loading, setLoading] = useState(!initialData);
+export default function CRMPanel({ leadId, onUpdate }) {
+  const [lead, setLead] = useState(null);
+  const [notes, setNotes] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [noteText, setNoteText] = useState("");
   const [noteAuthor, setNoteAuthor] = useState(TEAM[0]);
   const [saving, setSaving] = useState(false);
   const [showContact, setShowContact] = useState(false);
+  const [hasFetched, setHasFetched] = useState(false);
 
-  // Only fetch from API if no initial data provided
+  // Fetch once on mount — never overwrite from parent
   useEffect(() => {
-    if (initialData) return;
+    if (hasFetched) return;
     fetch(`/api/leads?id=${encodeURIComponent(leadId)}`)
       .then(r => r.json())
       .then(data => { setLead(data.lead || {}); setNotes(data.notes || data.lead?.notes || []); })
       .catch(() => {})
-      .finally(() => setLoading(false));
-  }, [leadId, initialData]);
-
-  // Sync with parent when initialData changes (e.g. after page-level re-fetch)
-  useEffect(() => {
-    if (initialData) { setLead(initialData); setNotes(initialData.notes || []); }
-  }, [initialData]);
+      .finally(() => { setLoading(false); setHasFetched(true); });
+  }, [leadId, hasFetched]);
 
   const updateStatus = async (status) => {
     setSaving(true);
