@@ -24,6 +24,24 @@ function NewBadge(){return<span className="badge-new" style={{display:"inline-fl
 function OverdueBadge(){return<span className="badge-new" style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#431407",color:"#fb923c",border:"1px solid #fb923c55",whiteSpace:"nowrap"}}>OVERDUE</span>}
 function SoonBadge(){return<span style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#422006",color:"#fbbf24",border:"1px solid #fbbf2433",whiteSpace:"nowrap"}}>FOLLOW UP</span>}
 
+function exportCSV(leads, crmData, getLeadId) {
+  const headers = ["Address","City","Neighborhood","Category","Scope","Score","Pipeline Status","Assigned To","Contact Name","Contact Role","Contact Phone","Contact Email","Est. Value","Follow-Up Date","Last Contact By","Last Contact Date","Zoning","APN","Date Filed","Permit Status","Planner","Notes"];
+  const esc = (v) => { const s = String(v ?? ""); return s.includes(",") || s.includes('"') || s.includes("\n") ? `"${s.replace(/"/g, '""')}"` : s; };
+  const rows = leads.map(p => {
+    const crm = crmData[getLeadId(p)] || {};
+    const notes = (crm.notes || []).map(n => `[${n.author} ${new Date(n.timestamp).toLocaleDateString()}] ${n.text}`).join(" | ");
+    return [p.address, p.city||"Los Gatos", p.neighborhood||"", p.category, p.scope, p.score, crm.status||"New", crm.assignee||"", crm.contactName||"", crm.contactRole||"", crm.contactPhone||"", crm.contactEmail||"", crm.estValue||"", crm.followUpDate||"", crm.lastContactBy||"", crm.lastContactAt?new Date(crm.lastContactAt).toLocaleDateString():"", p.zoning||"", p.apn||"", p.dateFiled||"", p.status||"", p.planner||"", notes].map(esc).join(",");
+  });
+  const csv = [headers.join(","), ...rows].join("\n");
+  const blob = new Blob([csv], { type: "text/csv" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `apex-leads-${new Date().toISOString().split("T")[0]}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scrapedLetters: SCRAPED_LETTERS, scrapedAt }) {
   const [view, setView] = useState("leads"); // "leads" or "activity"
   const [search, setSearch] = useState("");
@@ -132,10 +150,11 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
               {l:"Subdivisions",v:stats.sub,c:DIM},
             ].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:MUTED}}>{s.l}</span></div>)}
           </div>
-          <div style={{display:"flex",gap:4,marginTop:14}}>
+          <div style={{display:"flex",gap:4,marginTop:14,alignItems:"center"}}>
             {[{id:"leads",label:"Leads"},{id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`}].map(t=>(
               <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"5px 16px",borderRadius:5,border:`1px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:CARD,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>{t.label}</button>
             ))}
+            <button onClick={()=>exportCSV(filtered,crmData,getLeadId)} style={{marginLeft:"auto",padding:"5px 14px",borderRadius:5,border:`1px solid ${BORDER}`,background:CARD,color:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>Export CSV</button>
           </div>
         </div>
       </div>
