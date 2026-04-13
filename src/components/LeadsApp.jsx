@@ -167,7 +167,7 @@ function exportCSV(leads, crmData, getLeadId) {
   URL.revokeObjectURL(url);
 }
 
-export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scrapedLetters: SCRAPED_LETTERS, scrapedAt }) {
+export default function App({ projects: PROJECTS, scrapedAt }) {
   const [view, setView] = useState("leads"); // "leads", "activity", or "addLead"
   const [search, setSearch] = useState("");
   const [catFilter, setCatFilter] = useState("All");
@@ -214,8 +214,18 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
     return hoods.length > 0 ? ["All", ...hoods] : [];
   }, [scored, cityFilter]);
   const PIPELINE_STAGES = ["All", "New", "Contacted", "Meeting Set", "Proposal Sent", "Won", "Lost"];
+  const isLeadsView = view === "leads" || view.startsWith("leads:");
+  const viewAssignee = view.startsWith("leads:") ? view.split(":")[1] : null; // null = unassigned view
   const filtered = useMemo(() => {
     let list = scored;
+    // Filter by assignee based on active view
+    if (isLeadsView) {
+      if (viewAssignee) {
+        list = list.filter(p => p._crmAssignee === viewAssignee);
+      } else {
+        list = list.filter(p => !p._crmAssignee);
+      }
+    }
     if (cityFilter !== "All") list = list.filter(p => (p.city || "Los Gatos") === cityFilter);
     if (hoodFilter !== "All") list = list.filter(p => p.neighborhood === hoodFilter);
     if (catFilter !== "All") list = list.filter(p => p.category === catFilter);
@@ -224,7 +234,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
     if (minScore > 0) list = list.filter(p => p.score >= minScore);
     list.sort((a,b) => { if (sortBy==="score") return b.score-a.score; if (sortBy==="date") return new Date(b.dateFiled)-new Date(a.dateFiled); return a.address.localeCompare(b.address); });
     return list;
-  }, [scored, catFilter, cityFilter, hoodFilter, pipelineFilter, search, sortBy, minScore]);
+  }, [scored, catFilter, cityFilter, hoodFilter, pipelineFilter, search, sortBy, minScore, isLeadsView, viewAssignee]);
   const overdueAll = useMemo(() => scored.filter(p => p._overdue).length, [scored]);
   const stats = useMemo(() => ({ total:filtered.length, newLeads:filtered.filter(p=>p.isNew).length, hot:filtered.filter(p=>p.score>=7).length, overdue:filtered.filter(p=>p._overdue).length, nc:filtered.filter(p=>p.category==="New Construction").length, add:filtered.filter(p=>p.category==="Addition").length, sub:filtered.filter(p=>p.category==="Subdivision").length }), [filtered]);
 
@@ -312,8 +322,17 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
               {l:"Subdivisions",v:stats.sub,c:DIM},
             ].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:MUTED}}>{s.l}</span></div>)}
           </div>
-          <div className="apex-tabs" style={{display:"flex",gap:4,marginTop:14,alignItems:"center"}}>
-            {[{id:"leads",label:"Leads"},{id:"dashboard",label:"Dashboard"},{id:"architects",label:"Architects"},{id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},{id:"addLead",label:"+ Add Lead"}].map(t=>(
+          <div className="apex-tabs" style={{display:"flex",gap:4,marginTop:14,alignItems:"center",flexWrap:"wrap"}}>
+            {[
+              {id:"leads",label:"Unassigned"},
+              {id:"leads:Daniel",label:"Daniel"},
+              {id:"leads:Aron",label:"Aron"},
+              {id:"leads:Joseph",label:"Joseph"},
+              {id:"dashboard",label:"Dashboard"},
+              {id:"architects",label:"Architects"},
+              {id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},
+              {id:"addLead",label:"+ Add Lead"},
+            ].map(t=>(
               <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"5px 16px",borderRadius:5,border:`1px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:CARD,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>{t.label}</button>
             ))}
             <button onClick={()=>exportCSV(filtered,crmData,getLeadId)} style={{marginLeft:"auto",padding:"5px 14px",borderRadius:5,border:`1px solid ${BORDER}`,background:CARD,color:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>Export CSV</button>
@@ -445,8 +464,8 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
       {/* ADD LEAD FORM */}
       {view === "addLead" && <AddLeadForm onAdd={(lead) => { setManualLeads(prev => [...prev, lead]); setView("leads"); }} />}
 
-      {/* FILTERS */}
-      {view === "leads" && <>
+      {/* FILTERS + CARDS */}
+      {isLeadsView && <>
       <div style={{background:CARD,borderBottom:`1px solid ${BORDER}`,padding:"10px 20px",position:"sticky",top:0,zIndex:10}}>
         <div className="apex-filters" style={{maxWidth:980,margin:"0 auto",display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
           <input type="text" placeholder="Search address, APN, planner, zoning, description..." value={search} onChange={e=>setSearch(e.target.value)} style={{...iS,flex:"1 1 200px",minWidth:160}} />
@@ -458,17 +477,6 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
           <select value={minScore} onChange={e=>setMinScore(+e.target.value)} style={{...iS,cursor:"pointer"}}><option value={0}>Min: Any</option><option value={4}>Min: 4+</option><option value={7}>Min: 7+</option></select>
         </div>
       </div>
-
-      {/* A-Z NAV */}
-      {(cityFilter === "All" || cityFilter === "Los Gatos") && <div style={{maxWidth:980,margin:"0 auto",padding:"14px 20px 0"}}>
-        <div style={{background:CARD,borderRadius:8,padding:"10px 14px",border:`1px solid ${BORDER}`}}>
-          <div style={{fontSize:11,color:MUTED,marginBottom:6,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.05em"}}>Browse All Streets — LosGatosCA.gov</div>
-          <div style={{display:"flex",gap:3,flexWrap:"wrap"}}>
-            {Object.entries(LETTER_PAGES).map(([l,url])=>{const sc=SCRAPED_LETTERS.includes(l);return<a key={l} href={url} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",width:l.length>1?"auto":28,height:28,borderRadius:4,background:sc?"#1a1a1a":BG,color:sc?"#fff":DIM,fontSize:11,fontWeight:600,textDecoration:"none",border:`1px solid ${sc?`${RED}33`:BORDER}`,padding:l.length>1?"0 7px":0,transition:"all 0.15s"}} onMouseEnter={e=>{e.target.style.background=RED;e.target.style.color="#fff"}} onMouseLeave={e=>{e.target.style.background=sc?"#1a1a1a":BG;e.target.style.color=sc?"#fff":DIM}}>{l}</a>})}
-          </div>
-          <div style={{fontSize:10,color:DIM,marginTop:5}}>Highlighted = data loaded</div>
-        </div>
-      </div>}
 
       {/* PROJECT CARDS */}
       <div style={{maxWidth:980,margin:"0 auto",padding:"10px 20px 40px"}}>
