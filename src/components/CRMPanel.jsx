@@ -116,6 +116,20 @@ export default function CRMPanel({ leadId, onUpdate }) {
     setSaving(false);
   };
 
+  const saveSource = async (source, sourceNote) => {
+    setSaving(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ leadId, action: "setSource", source, sourceNote }),
+      });
+      const data = await res.json();
+      if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }
+    } catch {}
+    setSaving(false);
+  };
+
   const saveContact = async (field, value) => {
     setSaving(true);
     try {
@@ -164,6 +178,20 @@ export default function CRMPanel({ leadId, onUpdate }) {
         <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
           <span style={{ fontSize: 11, color: MUTED }}>Est. value:</span>
           <input type="text" placeholder="$0" value={lead?.estValue ? `$${Number(lead.estValue).toLocaleString()}` : ""} onBlur={e => setEstValue(e.target.value.replace(/[$,]/g, ""))} onChange={() => {}} onFocus={e => { e.target.value = lead?.estValue || ""; }} style={{ ...iS, width: 90, fontFamily: "'JetBrains Mono',monospace" }} />
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+          <span style={{ fontSize: 11, color: MUTED }}>Source:</span>
+          <select value={lead?.leadSource || ""} onChange={e => saveSource(e.target.value, lead?.sourceNote || "")} style={iS}>
+            <option value="">—</option>
+            <option value="Scraper">Scraper</option>
+            <option value="Referral">Referral</option>
+            <option value="Architect">Architect</option>
+            <option value="Drive-by">Drive-by</option>
+            <option value="Realtor">Realtor</option>
+            <option value="Website">Website</option>
+            <option value="Cold Call">Cold Call</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
       </div>
 

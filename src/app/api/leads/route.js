@@ -81,6 +81,12 @@ export async function POST(request) {
     entry.updatedAt = new Date().toISOString();
   }
 
+  else if (action === "setSource") {
+    if (body.source !== undefined) entry.leadSource = body.source;
+    if (body.sourceNote !== undefined) entry.sourceNote = body.sourceNote;
+    entry.updatedAt = new Date().toISOString();
+  }
+
   else if (action === "setContact") {
     if (body.contactName !== undefined) entry.contactName = body.contactName;
     if (body.contactPhone !== undefined) entry.contactPhone = body.contactPhone;
