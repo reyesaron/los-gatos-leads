@@ -485,7 +485,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
               <div style={{flexShrink:0,fontSize:14,color:DIM,transform:open?"rotate(180deg)":"none",transition:"transform 0.2s"}}>▾</div>
             </div>
             {open&&(<div className="apex-card-body" style={{padding:"0 14px 14px",borderTop:`1px solid ${BORDER}`,paddingTop:12}}>
-              <CRMPanel leadId={p._leadId} onUpdate={handleCRMUpdate} />
+              <CRMPanel leadId={p._leadId} onUpdate={handleCRMUpdate} initialData={crmData[p._leadId] || null} />
               <StreetView address={p.address} city={p.city} />
               <p style={{margin:"0 0 10px",fontSize:13,color:MUTED,lineHeight:1.45}}>{p.description}</p>
               <div style={{background:BG,borderRadius:6,padding:"10px 12px",marginBottom:10,border:`1px solid ${BORDER}`}}>

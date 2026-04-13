@@ -22,26 +22,29 @@ const STATUS_COLORS = {
 
 const iS = { padding: "6px 10px", borderRadius: 5, border: `1px solid ${BORDER}`, background: "#111", color: TEXT, fontSize: 12, outline: "none" };
 
-export default function CRMPanel({ leadId, onUpdate }) {
-  const [lead, setLead] = useState(null);
-  const [notes, setNotes] = useState([]);
-  const [loading, setLoading] = useState(true);
+export default function CRMPanel({ leadId, onUpdate, initialData }) {
+  const [lead, setLead] = useState(initialData || null);
+  const [notes, setNotes] = useState(initialData?.notes || []);
+  const [loading, setLoading] = useState(!initialData);
   const [noteText, setNoteText] = useState("");
   const [noteAuthor, setNoteAuthor] = useState(TEAM[0]);
   const [saving, setSaving] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
-  const fetchLead = useCallback(async () => {
-    try {
-      const res = await fetch(`/api/leads?id=${encodeURIComponent(leadId)}`);
-      const data = await res.json();
-      setLead(data.lead || {});
-      setNotes(data.notes || data.lead?.notes || []);
-    } catch { /* Blob not configured yet */ }
-    setLoading(false);
-  }, [leadId]);
+  // Only fetch from API if no initial data provided
+  useEffect(() => {
+    if (initialData) return;
+    fetch(`/api/leads?id=${encodeURIComponent(leadId)}`)
+      .then(r => r.json())
+      .then(data => { setLead(data.lead || {}); setNotes(data.notes || data.lead?.notes || []); })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, [leadId, initialData]);
 
-  useEffect(() => { fetchLead(); }, [fetchLead]);
+  // Sync with parent when initialData changes (e.g. after page-level re-fetch)
+  useEffect(() => {
+    if (initialData) { setLead(initialData); setNotes(initialData.notes || []); }
+  }, [initialData]);
 
   const updateStatus = async (status) => {
     setSaving(true);

@@ -6,7 +6,9 @@ async function loadCRM() {
   try {
     const { blobs } = await list({ prefix: BLOB_NAME });
     if (blobs.length === 0) return {};
-    const res = await fetch(blobs[0].url);
+    // Cache-bust: append timestamp to avoid CDN serving stale data
+    const url = blobs[0].url + (blobs[0].url.includes("?") ? "&" : "?") + `_t=${Date.now()}`;
+    const res = await fetch(url, { cache: "no-store" });
     return await res.json();
   } catch {
     return {};
