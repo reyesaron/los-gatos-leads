@@ -23,6 +23,7 @@ function Tag({children,bg,fg}){return<span style={{fontSize:11,fontWeight:600,te
 function NewBadge(){return<span className="badge-new" style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:RED_DARK,color:RED,border:`1px solid ${RED}55`,whiteSpace:"nowrap"}}>NEW</span>}
 
 export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scrapedLetters: SCRAPED_LETTERS, scrapedAt }) {
+  const [view, setView] = useState("leads"); // "leads" or "activity"
   const [search, setSearch] = useState("");
   const [catFilter, setCatFilter] = useState("All");
   const [cityFilter, setCityFilter] = useState("All");
@@ -74,6 +75,31 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
     return list;
   }, [scored, catFilter, cityFilter, hoodFilter, pipelineFilter, search, sortBy, minScore]);
   const stats = useMemo(() => ({ total:filtered.length, newLeads:filtered.filter(p=>p.isNew).length, hot:filtered.filter(p=>p.score>=7).length, nc:filtered.filter(p=>p.category==="New Construction").length, add:filtered.filter(p=>p.category==="Addition").length, sub:filtered.filter(p=>p.category==="Subdivision").length }), [filtered]);
+
+  // Build lead ID → address lookup
+  const leadIdToAddress = useMemo(() => {
+    const map = {};
+    for (const p of scored) map[p._leadId] = p.address;
+    return map;
+  }, [scored]);
+
+  // Build activity feed from all CRM notes
+  const activityFeed = useMemo(() => {
+    const items = [];
+    for (const [leadId, entry] of Object.entries(crmData)) {
+      const addr = leadIdToAddress[leadId] || "Unknown Lead";
+      if (entry.notes) {
+        for (const note of entry.notes) {
+          items.push({ type: "note", author: note.author, text: note.text, timestamp: note.timestamp, address: addr, leadId });
+        }
+      }
+      if (entry.status && entry.status !== "New" && entry.updatedAt) {
+        items.push({ type: "status", author: entry.lastContactBy || entry.assignee || "—", text: `Status → ${entry.status}`, timestamp: entry.updatedAt, address: addr, leadId });
+      }
+    }
+    items.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    return items;
+  }, [crmData, leadIdToAddress]);
   const iS = {padding:"8px 12px",borderRadius:6,border:`1px solid ${BORDER}`,background:"#111",color:TEXT,fontSize:13,outline:"none"};
   const catC = {"New Construction":{bg:RED_DARK,fg:RED},Addition:{bg:"#1c1c1c",fg:"#d4d4d4"},Subdivision:{bg:"#1c1c1c",fg:MUTED}};
 
@@ -99,10 +125,39 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
               {l:"Subdivisions",v:stats.sub,c:DIM},
             ].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:MUTED}}>{s.l}</span></div>)}
           </div>
+          <div style={{display:"flex",gap:4,marginTop:14}}>
+            {[{id:"leads",label:"Leads"},{id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`}].map(t=>(
+              <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"5px 16px",borderRadius:5,border:`1px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:CARD,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>{t.label}</button>
+            ))}
+          </div>
         </div>
       </div>
 
+      {/* ACTIVITY FEED VIEW */}
+      {view === "activity" && (
+        <div style={{maxWidth:980,margin:"0 auto",padding:"14px 20px 40px"}}>
+          <div style={{fontSize:13,fontWeight:600,color:TEXT,marginBottom:12}}>Recent Activity</div>
+          {activityFeed.length === 0 && <div style={{textAlign:"center",padding:40,color:MUTED}}>No activity yet. Log notes on leads to see them here.</div>}
+          {activityFeed.map((item, i) => (
+            <div key={i} style={{background:CARD,borderRadius:6,border:`1px solid ${BORDER}`,padding:"10px 14px",marginBottom:4,display:"flex",gap:10,alignItems:"flex-start"}}>
+              <div style={{width:6,height:6,borderRadius:3,background:item.type==="note"?RED:"#60a5fa",flexShrink:0,marginTop:6}} />
+              <div style={{flex:1,minWidth:0}}>
+                <div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap"}}>
+                  <span style={{fontSize:12,fontWeight:600,color:TEXT}}>{item.author}</span>
+                  <span style={{fontSize:10,color:DIM}}>
+                    {new Date(item.timestamp).toLocaleDateString("en-US",{month:"short",day:"numeric"})} {new Date(item.timestamp).toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"})}
+                  </span>
+                  <span style={{fontSize:11,color:MUTED,marginLeft:"auto",textAlign:"right",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",maxWidth:250}}>{item.address}</span>
+                </div>
+                <div style={{fontSize:12,color:item.type==="note"?"#d4d4d4":"#60a5fa",marginTop:3,lineHeight:1.4}}>{item.text}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* FILTERS */}
+      {view === "leads" && <>
       <div style={{background:CARD,borderBottom:`1px solid ${BORDER}`,padding:"10px 20px",position:"sticky",top:0,zIndex:10}}>
         <div style={{maxWidth:980,margin:"0 auto",display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
           <input type="text" placeholder="Search address, APN, planner, zoning, description..." value={search} onChange={e=>setSearch(e.target.value)} style={{...iS,flex:"1 1 200px",minWidth:160}} />
@@ -168,6 +223,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
           <img src="/apex-logo.webp" alt="Apex Design Build" style={{height:24,opacity:0.4}} />
         </div>
       </div>
+      </>}
     </div>
   );
 }
