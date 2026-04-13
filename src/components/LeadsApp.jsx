@@ -250,6 +250,39 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
     items.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
     return items;
   }, [crmData, leadIdToAddress]);
+  // Dashboard metrics
+  const dashboard = useMemo(() => {
+    const byStage = {};
+    const byAssignee = {};
+    const byCity = {};
+    const bySource = {};
+    let totalValue = 0, wonCount = 0, lostCount = 0, wonValue = 0;
+
+    for (const p of scored) {
+      const crm = crmData[p._leadId] || {};
+      const stage = crm.status || "New";
+      const assignee = crm.assignee || "Unassigned";
+      const city = p.city || "Los Gatos";
+      const source = crm.leadSource || "Unknown";
+      const val = Number(crm.estValue) || 0;
+
+      byStage[stage] = (byStage[stage] || 0) + 1;
+      byAssignee[assignee] = (byAssignee[assignee] || 0) + 1;
+      byCity[city] = (byCity[city] || 0) + 1;
+      bySource[source] = (bySource[source] || 0) + 1;
+
+      if (val > 0) totalValue += val;
+      if (stage === "Won") { wonCount++; wonValue += val; }
+      if (stage === "Lost") lostCount++;
+    }
+
+    const decided = wonCount + lostCount;
+    const winRate = decided > 0 ? Math.round((wonCount / decided) * 100) : 0;
+    const avgDeal = wonCount > 0 ? Math.round(wonValue / wonCount) : 0;
+
+    return { byStage, byAssignee, byCity, bySource, totalValue, wonCount, lostCount, winRate, avgDeal, total: scored.length };
+  }, [scored, crmData]);
+
   const iS = {padding:"8px 12px",borderRadius:6,border:`1px solid ${BORDER}`,background:"#111",color:TEXT,fontSize:13,outline:"none"};
   const catC = {"New Construction":{bg:RED_DARK,fg:RED},Addition:{bg:"#1c1c1c",fg:"#d4d4d4"},Subdivision:{bg:"#1c1c1c",fg:MUTED}};
 
@@ -277,7 +310,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
             ].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:MUTED}}>{s.l}</span></div>)}
           </div>
           <div style={{display:"flex",gap:4,marginTop:14,alignItems:"center"}}>
-            {[{id:"leads",label:"Leads"},{id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},{id:"addLead",label:"+ Add Lead"}].map(t=>(
+            {[{id:"leads",label:"Leads"},{id:"dashboard",label:"Dashboard"},{id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},{id:"addLead",label:"+ Add Lead"}].map(t=>(
               <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"5px 16px",borderRadius:5,border:`1px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:CARD,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>{t.label}</button>
             ))}
             <button onClick={()=>exportCSV(filtered,crmData,getLeadId)} style={{marginLeft:"auto",padding:"5px 14px",borderRadius:5,border:`1px solid ${BORDER}`,background:CARD,color:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>Export CSV</button>
@@ -305,6 +338,101 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* DASHBOARD VIEW */}
+      {view === "dashboard" && (
+        <div style={{maxWidth:980,margin:"0 auto",padding:"14px 20px 40px"}}>
+          {/* Top metrics */}
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))",gap:8,marginBottom:16}}>
+            {[
+              {label:"Total Leads",value:dashboard.total,color:TEXT},
+              {label:"Pipeline Value",value:`$${dashboard.totalValue.toLocaleString()}`,color:"#fff"},
+              {label:"Win Rate",value:`${dashboard.winRate}%`,color:dashboard.winRate>0?"#4ade80":MUTED},
+              {label:"Won",value:dashboard.wonCount,color:"#4ade80"},
+              {label:"Lost",value:dashboard.lostCount,color:"#525252"},
+              {label:"Avg Deal",value:dashboard.avgDeal>0?`$${dashboard.avgDeal.toLocaleString()}`:"—",color:TEXT},
+            ].map(m=>(
+              <div key={m.label} style={{background:CARD,borderRadius:6,border:`1px solid ${BORDER}`,padding:"12px 14px"}}>
+                <div style={{fontSize:10,color:MUTED,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:4,fontWeight:600}}>{m.label}</div>
+                <div style={{fontSize:22,fontWeight:700,color:m.color,fontFamily:"'JetBrains Mono',monospace"}}>{m.value}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Breakdowns */}
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+            {/* By Pipeline Stage */}
+            <div style={{background:CARD,borderRadius:6,border:`1px solid ${BORDER}`,padding:"14px"}}>
+              <div style={{fontSize:11,color:MUTED,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:10,fontWeight:600}}>By Pipeline Stage</div>
+              {["New","Contacted","Meeting Set","Proposal Sent","Won","Lost"].map(stage=>{
+                const count = dashboard.byStage[stage]||0;
+                const pct = dashboard.total>0?Math.round((count/dashboard.total)*100):0;
+                const barColor = stage==="Won"?"#4ade80":stage==="Lost"?"#525252":stage==="New"?MUTED:RED;
+                return <div key={stage} style={{marginBottom:6}}>
+                  <div style={{display:"flex",justifyContent:"space-between",fontSize:12,marginBottom:3}}>
+                    <span style={{color:TEXT}}>{stage}</span>
+                    <span style={{color:MUTED,fontFamily:"'JetBrains Mono',monospace"}}>{count}</span>
+                  </div>
+                  <div style={{height:4,borderRadius:2,background:"#1c1c1c"}}>
+                    <div style={{height:4,borderRadius:2,background:barColor,width:`${pct}%`,transition:"width 0.3s"}} />
+                  </div>
+                </div>;
+              })}
+            </div>
+
+            {/* By Team Member */}
+            <div style={{background:CARD,borderRadius:6,border:`1px solid ${BORDER}`,padding:"14px"}}>
+              <div style={{fontSize:11,color:MUTED,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:10,fontWeight:600}}>By Team Member</div>
+              {Object.entries(dashboard.byAssignee).sort((a,b)=>b[1]-a[1]).map(([name,count])=>{
+                const pct = dashboard.total>0?Math.round((count/dashboard.total)*100):0;
+                return <div key={name} style={{marginBottom:6}}>
+                  <div style={{display:"flex",justifyContent:"space-between",fontSize:12,marginBottom:3}}>
+                    <span style={{color:TEXT}}>{name}</span>
+                    <span style={{color:MUTED,fontFamily:"'JetBrains Mono',monospace"}}>{count}</span>
+                  </div>
+                  <div style={{height:4,borderRadius:2,background:"#1c1c1c"}}>
+                    <div style={{height:4,borderRadius:2,background:RED,width:`${pct}%`,transition:"width 0.3s"}} />
+                  </div>
+                </div>;
+              })}
+            </div>
+
+            {/* By City */}
+            <div style={{background:CARD,borderRadius:6,border:`1px solid ${BORDER}`,padding:"14px"}}>
+              <div style={{fontSize:11,color:MUTED,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:10,fontWeight:600}}>By City</div>
+              {Object.entries(dashboard.byCity).sort((a,b)=>b[1]-a[1]).map(([city,count])=>{
+                const pct = dashboard.total>0?Math.round((count/dashboard.total)*100):0;
+                return <div key={city} style={{marginBottom:6}}>
+                  <div style={{display:"flex",justifyContent:"space-between",fontSize:12,marginBottom:3}}>
+                    <span style={{color:TEXT}}>{city}</span>
+                    <span style={{color:MUTED,fontFamily:"'JetBrains Mono',monospace"}}>{count}</span>
+                  </div>
+                  <div style={{height:4,borderRadius:2,background:"#1c1c1c"}}>
+                    <div style={{height:4,borderRadius:2,background:"#fff",width:`${pct}%`,transition:"width 0.3s"}} />
+                  </div>
+                </div>;
+              })}
+            </div>
+
+            {/* By Source */}
+            <div style={{background:CARD,borderRadius:6,border:`1px solid ${BORDER}`,padding:"14px"}}>
+              <div style={{fontSize:11,color:MUTED,textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:10,fontWeight:600}}>By Lead Source</div>
+              {Object.entries(dashboard.bySource).sort((a,b)=>b[1]-a[1]).map(([source,count])=>{
+                const pct = dashboard.total>0?Math.round((count/dashboard.total)*100):0;
+                return <div key={source} style={{marginBottom:6}}>
+                  <div style={{display:"flex",justifyContent:"space-between",fontSize:12,marginBottom:3}}>
+                    <span style={{color:TEXT}}>{source}</span>
+                    <span style={{color:MUTED,fontFamily:"'JetBrains Mono',monospace"}}>{count}</span>
+                  </div>
+                  <div style={{height:4,borderRadius:2,background:"#1c1c1c"}}>
+                    <div style={{height:4,borderRadius:2,background:"#fbbf24",width:`${pct}%`,transition:"width 0.3s"}} />
+                  </div>
+                </div>;
+              })}
+            </div>
+          </div>
         </div>
       )}
 
