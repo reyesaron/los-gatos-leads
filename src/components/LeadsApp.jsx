@@ -3,6 +3,7 @@ import { useState, useMemo, useEffect, useCallback } from "react";
 import { getLeadScore } from "@/data/scoring";
 import CRMPanel from "@/components/CRMPanel";
 import NotificationBell from "@/components/NotificationBell";
+import ArchitectsView from "@/components/ArchitectsView";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -312,7 +313,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
             ].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:MUTED}}>{s.l}</span></div>)}
           </div>
           <div className="apex-tabs" style={{display:"flex",gap:4,marginTop:14,alignItems:"center"}}>
-            {[{id:"leads",label:"Leads"},{id:"dashboard",label:"Dashboard"},{id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},{id:"addLead",label:"+ Add Lead"}].map(t=>(
+            {[{id:"leads",label:"Leads"},{id:"dashboard",label:"Dashboard"},{id:"architects",label:"Architects"},{id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},{id:"addLead",label:"+ Add Lead"}].map(t=>(
               <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"5px 16px",borderRadius:5,border:`1px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:CARD,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>{t.label}</button>
             ))}
             <button onClick={()=>exportCSV(filtered,crmData,getLeadId)} style={{marginLeft:"auto",padding:"5px 14px",borderRadius:5,border:`1px solid ${BORDER}`,background:CARD,color:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>Export CSV</button>
@@ -437,6 +438,9 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
           </div>
         </div>
       )}
+
+      {/* ARCHITECTS VIEW */}
+      {view === "architects" && <ArchitectsView crmData={crmData} scored={scored} />}
 
       {/* ADD LEAD FORM */}
       {view === "addLead" && <AddLeadForm onAdd={(lead) => { setManualLeads(prev => [...prev, lead]); setView("leads"); }} />}
