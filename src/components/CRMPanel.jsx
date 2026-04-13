@@ -22,7 +22,7 @@ const STATUS_COLORS = {
 
 const iS = { padding: "6px 10px", borderRadius: 5, border: `1px solid ${BORDER}`, background: "#111", color: TEXT, fontSize: 12, outline: "none" };
 
-export default function CRMPanel({ leadId }) {
+export default function CRMPanel({ leadId, onUpdate }) {
   const [lead, setLead] = useState(null);
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -51,7 +51,7 @@ export default function CRMPanel({ leadId }) {
         body: JSON.stringify({ leadId, action: "updateStatus", status }),
       });
       const data = await res.json();
-      if (data.lead) setLead(data.lead);
+      if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }
     } catch {}
     setSaving(false);
   };
@@ -65,7 +65,7 @@ export default function CRMPanel({ leadId }) {
         body: JSON.stringify({ leadId, action: "updateStatus", assignee }),
       });
       const data = await res.json();
-      if (data.lead) setLead(data.lead);
+      if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }
     } catch {}
     setSaving(false);
   };
@@ -80,7 +80,7 @@ export default function CRMPanel({ leadId }) {
         body: JSON.stringify({ leadId, action: "addNote", note: noteText.trim(), author: noteAuthor }),
       });
       const data = await res.json();
-      if (data.lead) setLead(data.lead);
+      if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }
       if (data.notes) setNotes(data.notes);
       setNoteText("");
     } catch {}
@@ -96,7 +96,7 @@ export default function CRMPanel({ leadId }) {
         body: JSON.stringify({ leadId, action: "setFollowUp", followUpDate: date, assignee: lead?.assignee || "" }),
       });
       const data = await res.json();
-      if (data.lead) setLead(data.lead);
+      if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }
     } catch {}
     setSaving(false);
   };
@@ -110,7 +110,7 @@ export default function CRMPanel({ leadId }) {
         body: JSON.stringify({ leadId, action: "setEstValue", estValue: parseInt(value) || 0 }),
       });
       const data = await res.json();
-      if (data.lead) setLead(data.lead);
+      if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }
     } catch {}
     setSaving(false);
   };

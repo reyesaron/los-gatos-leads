@@ -1,5 +1,5 @@
 'use client';
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { getLeadScore } from "@/data/scoring";
 import CRMPanel from "@/components/CRMPanel";
 
@@ -30,10 +30,30 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
   const [expanded, setExpanded] = useState(null);
   const [minScore, setMinScore] = useState(0);
   const [hoodFilter, setHoodFilter] = useState("All");
+  const [pipelineFilter, setPipelineFilter] = useState("All");
+  const [crmData, setCrmData] = useState({});
+
+  // Load all CRM data on mount
+  useEffect(() => {
+    fetch("/api/leads").then(r => r.json()).then(d => setCrmData(d.leads || {})).catch(() => {});
+  }, []);
+
+  // Generate lead ID consistently
+  const getLeadId = useCallback((p) =>
+    btoa(encodeURIComponent(p.address + "|" + (p.appNumber || p.scope))).replace(/[^a-zA-Z0-9]/g, "").slice(0, 40)
+  , []);
+
+  // Called by CRMPanel when data changes
+  const handleCRMUpdate = useCallback((leadId, leadData) => {
+    setCrmData(prev => ({ ...prev, [leadId]: leadData }));
+  }, []);
+
   const scored = useMemo(() => PROJECTS.map(p => {
     const isNew = scrapedAt ? p.firstSeen === scrapedAt : (p.dateFiled && (Date.now() - new Date(p.dateFiled)) < 7 * 24 * 60 * 60 * 1000);
-    return { ...p, ...getLeadScore(p), isNew };
-  }), []);
+    const lid = getLeadId(p);
+    const crm = crmData[lid];
+    return { ...p, ...getLeadScore(p), isNew, _leadId: lid, _crmStatus: crm?.status || "New", _crmAssignee: crm?.assignee || "", _crmFollowUp: crm?.followUpDate || "" };
+  }), [crmData, getLeadId]);
   const categories = ["All", ...new Set(PROJECTS.map(p => p.category))];
   const cities = ["All", ...new Set(PROJECTS.map(p => p.city || "Los Gatos"))];
   const neighborhoods = useMemo(() => {
@@ -41,16 +61,18 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
     const hoods = [...new Set(relevant.map(p => p.neighborhood).filter(Boolean))].sort();
     return hoods.length > 0 ? ["All", ...hoods] : [];
   }, [scored, cityFilter]);
+  const PIPELINE_STAGES = ["All", "New", "Contacted", "Meeting Set", "Proposal Sent", "Won", "Lost"];
   const filtered = useMemo(() => {
     let list = scored;
     if (cityFilter !== "All") list = list.filter(p => (p.city || "Los Gatos") === cityFilter);
     if (hoodFilter !== "All") list = list.filter(p => p.neighborhood === hoodFilter);
     if (catFilter !== "All") list = list.filter(p => p.category === catFilter);
+    if (pipelineFilter !== "All") list = list.filter(p => p._crmStatus === pipelineFilter);
     if (search) { const q = search.toLowerCase(); list = list.filter(p => p.address.toLowerCase().includes(q)||p.description.toLowerCase().includes(q)||p.scope.toLowerCase().includes(q)||p.planner.toLowerCase().includes(q)||p.zoning.toLowerCase().includes(q)||p.apn.toLowerCase().includes(q)||p.overview.toLowerCase().includes(q)); }
     if (minScore > 0) list = list.filter(p => p.score >= minScore);
     list.sort((a,b) => { if (sortBy==="score") return b.score-a.score; if (sortBy==="date") return new Date(b.dateFiled)-new Date(a.dateFiled); return a.address.localeCompare(b.address); });
     return list;
-  }, [scored, catFilter, cityFilter, hoodFilter, search, sortBy, minScore]);
+  }, [scored, catFilter, cityFilter, hoodFilter, pipelineFilter, search, sortBy, minScore]);
   const stats = useMemo(() => ({ total:filtered.length, newLeads:filtered.filter(p=>p.isNew).length, hot:filtered.filter(p=>p.score>=7).length, nc:filtered.filter(p=>p.category==="New Construction").length, add:filtered.filter(p=>p.category==="Addition").length, sub:filtered.filter(p=>p.category==="Subdivision").length }), [filtered]);
   const iS = {padding:"8px 12px",borderRadius:6,border:`1px solid ${BORDER}`,background:"#111",color:TEXT,fontSize:13,outline:"none"};
   const catC = {"New Construction":{bg:RED_DARK,fg:RED},Addition:{bg:"#1c1c1c",fg:"#d4d4d4"},Subdivision:{bg:"#1c1c1c",fg:MUTED}};
@@ -88,6 +110,7 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
           {neighborhoods.length>0&&<select value={hoodFilter} onChange={e=>setHoodFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{neighborhoods.map(n=><option key={n} value={n}>{n==="All"?"Neighborhood: All":n}</option>)}</select>}
           <select value={catFilter} onChange={e=>setCatFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{categories.map(c=><option key={c}>{c}</option>)}</select>
           <select value={sortBy} onChange={e=>setSortBy(e.target.value)} style={{...iS,cursor:"pointer"}}><option value="score">Sort: Lead Score</option><option value="date">Sort: Newest</option><option value="address">Sort: Address</option></select>
+          <select value={pipelineFilter} onChange={e=>setPipelineFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{PIPELINE_STAGES.map(s=><option key={s} value={s}>{s==="All"?"Pipeline: All":s}</option>)}</select>
           <select value={minScore} onChange={e=>setMinScore(+e.target.value)} style={{...iS,cursor:"pointer"}}><option value={0}>Min: Any</option><option value={4}>Min: 4+</option><option value={7}>Min: 7+</option></select>
         </div>
       </div>
@@ -111,14 +134,14 @@ export default function App({ projects: PROJECTS, letterPages: LETTER_PAGES, scr
             <div onClick={()=>setExpanded(open?null:i)} style={{padding:"12px 14px",cursor:"pointer",display:"flex",alignItems:"flex-start",gap:12,transition:"background 0.15s"}} onMouseEnter={e=>e.currentTarget.style.background="#1a1a1a"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
               <div style={{flexShrink:0,paddingTop:1}}><Badge score={p.score}/></div>
               <div style={{flex:1,minWidth:0}}>
-                <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#fff"}}>{p.address}</span>{p.isNew&&<NewBadge/>}<Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag></div>
+                <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#fff"}}>{p.address}</span>{p.isNew&&<NewBadge/>}<Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag>{p._crmStatus && p._crmStatus!=="New"&&<Tag bg={p._crmStatus==="Won"?"#052e16":p._crmStatus==="Lost"?"#1c1c1c":"#172554"} fg={p._crmStatus==="Won"?"#4ade80":p._crmStatus==="Lost"?"#525252":"#60a5fa"}>{p._crmStatus}</Tag>}{p._crmAssignee&&<span style={{fontSize:10,color:DIM}}>{p._crmAssignee}</span>}</div>
                 <div style={{fontSize:13,color:"#d4d4d4",lineHeight:1.35,marginBottom:3}}>{p.overview}</div>
                 <div style={{fontSize:11,color:MUTED}}>{p.city || "Los Gatos"}{p.neighborhood && ` · ${p.neighborhood}`}{p.zoning && ` · ${p.zoning}`}{p.apn && p.apn !== "TBD" && ` · APN ${p.apn}`}{p.dateFiled && ` · Filed ${new Date(p.dateFiled).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}`} · {p.planner}</div>
               </div>
               <div style={{flexShrink:0,fontSize:14,color:DIM,transform:open?"rotate(180deg)":"none",transition:"transform 0.2s"}}>▾</div>
             </div>
             {open&&(<div style={{padding:"0 14px 14px",borderTop:`1px solid ${BORDER}`,paddingTop:12}}>
-              <CRMPanel leadId={btoa(encodeURIComponent(p.address + "|" + (p.appNumber || p.scope))).replace(/[^a-zA-Z0-9]/g, "").slice(0, 40)} />
+              <CRMPanel leadId={p._leadId} onUpdate={handleCRMUpdate} />
               <p style={{margin:"0 0 10px",fontSize:13,color:MUTED,lineHeight:1.45}}>{p.description}</p>
               <div style={{background:BG,borderRadius:6,padding:"10px 12px",marginBottom:10,border:`1px solid ${BORDER}`}}>
                 <div style={{fontSize:11,fontWeight:600,color:MUTED,textTransform:"uppercase",letterSpacing:"0.04em",marginBottom:6}}>Square Footage</div>
