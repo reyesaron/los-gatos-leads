@@ -1,73 +1,17 @@
-import { put, list } from "@vercel/blob";
+import { createContactsAPI } from "@/lib/contacts-api";
 
-const BLOB_NAME = "architects.json";
+const api = createContactsAPI("architects.json");
 
-async function loadArchitects() {
-  try {
-    const { blobs } = await list({ prefix: BLOB_NAME });
-    if (blobs.length === 0) return [];
-    const url = blobs[0].url + (blobs[0].url.includes("?") ? "&" : "?") + `_t=${Date.now()}`;
-    const res = await fetch(url, { cache: "no-store" });
-    return await res.json();
-  } catch {
-    return [];
-  }
-}
-
-async function saveArchitects(data) {
-  await put(BLOB_NAME, JSON.stringify(data), {
-    access: "public",
-    addRandomSuffix: false,
-    allowOverwrite: true,
-  });
-}
-
-export async function GET() {
-  const architects = await loadArchitects();
-  return Response.json({ architects });
+// Wrap to return "architects" key for backward compat with existing ArchitectsView
+export async function GET(request) {
+  const resp = await api.GET(request);
+  const data = await resp.json();
+  return Response.json({ architects: data.contacts || [] }, { headers: { "Cache-Control": "no-store" } });
 }
 
 export async function POST(request) {
-  const body = await request.json();
-  const { action } = body;
-  const architects = await loadArchitects();
-
-  if (action === "add") {
-    const { name, firm, phone, email, cities, specialty, notes } = body;
-    if (!name) return Response.json({ error: "name required" }, { status: 400 });
-    architects.push({
-      id: Date.now().toString(36),
-      name,
-      firm: firm || "",
-      phone: phone || "",
-      email: email || "",
-      cities: cities || [],
-      specialty: specialty || "",
-      notes: notes || "",
-      addedAt: new Date().toISOString(),
-    });
-    await saveArchitects(architects);
-    return Response.json({ ok: true, architects });
-  }
-
-  if (action === "update") {
-    const { id, ...fields } = body;
-    const idx = architects.findIndex(a => a.id === id);
-    if (idx === -1) return Response.json({ error: "not found" }, { status: 404 });
-    Object.assign(architects[idx], fields, { updatedAt: new Date().toISOString() });
-    delete architects[idx].action;
-    await saveArchitects(architects);
-    return Response.json({ ok: true, architects });
-  }
-
-  if (action === "delete") {
-    const { id } = body;
-    const idx = architects.findIndex(a => a.id === id);
-    if (idx === -1) return Response.json({ error: "not found" }, { status: 404 });
-    architects.splice(idx, 1);
-    await saveArchitects(architects);
-    return Response.json({ ok: true, architects });
-  }
-
-  return Response.json({ error: "Unknown action" }, { status: 400 });
+  const resp = await api.POST(request);
+  const data = await resp.json();
+  if (data.contacts) return Response.json({ ...data, architects: data.contacts });
+  return Response.json(data);
 }

@@ -3,7 +3,7 @@ import { useState, useMemo, useEffect, useCallback } from "react";
 import { getLeadScore } from "@/data/scoring";
 import CRMPanel from "@/components/CRMPanel";
 import NotificationBell from "@/components/NotificationBell";
-import ArchitectsView from "@/components/ArchitectsView";
+import ContactsView from "@/components/ContactsView";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -349,6 +349,8 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
               {id:"archived",label:`Archived${archiveCount>0?` (${archiveCount})`:""}`},
               {id:"dashboard",label:"Dashboard"},
               {id:"architects",label:"Architects"},
+              {id:"designers",label:"Designers"},
+              {id:"realtors",label:"Realtors"},
               {id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},
               {id:"addLead",label:"+ Add Lead"},
             ].map(t=>(
@@ -478,7 +480,9 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
       )}
 
       {/* ARCHITECTS VIEW */}
-      {view === "architects" && <ArchitectsView crmData={crmData} scored={scored} />}
+      {view === "architects" && <ContactsView role="Architect" apiPath="/api/architects" crmData={crmData} scored={scored} />}
+      {view === "designers" && <ContactsView role="Designer" apiPath="/api/designers" crmData={crmData} scored={scored} />}
+      {view === "realtors" && <ContactsView role="Realtor" apiPath="/api/realtors" crmData={crmData} scored={scored} />}
 
       {/* ADD LEAD FORM */}
       {view === "addLead" && <AddLeadForm onAdd={(lead) => { setManualLeads(prev => [...prev, lead]); setView("leads"); }} />}
