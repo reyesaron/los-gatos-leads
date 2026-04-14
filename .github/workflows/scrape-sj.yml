@@ -21,8 +21,8 @@ jobs:
 
       - run: npm ci
 
-      - name: Scrape SJ permits
-        run: node src/scripts/scrape-sj-permits.mjs
+      - name: Scrape SJ permits (Open Data Portal)
+        run: node src/scripts/scrape-sj-opendata.mjs
 
       - name: Merge SJ permits
         run: node src/scripts/merge-sj-permits.mjs
