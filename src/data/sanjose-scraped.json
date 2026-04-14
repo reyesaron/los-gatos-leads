@@ -1,538 +1,6 @@
 {
   "projects": [
     {
-      "address": "INTERIOR ALTERATION, San Jose",
-      "city": "San Jose",
-      "neighborhood": "West San Jose",
-      "appNumber": "2025-103328-RS",
-      "appType": "Additions/Alterations",
-      "description": "(B 100%) INTERIOR ALTERATION — Owner: LIU XIANG AND HU YING. APN: 37725010. Valuation: $2,705.",
-      "overview": "Residential Alteration in West San Jose. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2025-09-30",
-      "status": "B-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Alteration",
-      "zoning": "",
-      "apn": "37725010",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2025-103328-RS",
-      "owner": "LIU XIANG AND HU YING",
-      "valuation": 2705,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "MAIN RESIDENCE ADDITION, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Almaden Valley",
-      "appNumber": "2025-119170-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BE 100%) MAIN RESIDENCE ADDITION — Owner: SUNKAR GAURAV S AND BHIWAGADE NEHA. APN: 56933090. Valuation: $63,916.",
-      "overview": "Residential Addition in Almaden Valley. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2025-09-23",
-      "status": "B-Complete, E-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Addition",
-      "zoning": "",
-      "apn": "56933090",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2025-119170-RS",
-      "owner": "SUNKAR GAURAV S AND BHIWAGADE NEHA",
-      "valuation": 63916,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "ALTERATIONS, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Almaden Valley",
-      "appNumber": "2025-124325-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BM 100%) ALTERATIONS — Owner: KEITEL THOMAS C TRUSTEE & ET AL. APN: 56766048. Valuation: $1,860.",
-      "overview": "Residential Alteration in Almaden Valley. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2025-09-11",
-      "status": "B-Complete, M-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Alteration",
-      "zoning": "",
-      "apn": "56766048",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2025-124325-RS",
-      "owner": "KEITEL THOMAS C TRUSTEE & ET AL",
-      "valuation": 1860,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "BACKYARD REMODEL, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Almaden Valley",
-      "appNumber": "2024-110267-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BEP 100%) BACKYARD REMODEL — Owner: MCLAREN MATTHEW G AND WALKIN CLEONA C. APN: 57722014. Valuation: $77,669.",
-      "overview": "Major Remodel in Almaden Valley. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2025-07-29",
-      "status": "B-Complete, E-Complete, P-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Major Remodel",
-      "zoning": "",
-      "apn": "57722014",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2024-110267-RS",
-      "owner": "MCLAREN MATTHEW G AND WALKIN CLEONA C",
-      "valuation": 77669,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "POOL DEMO NON BUILDABLE, San Jose",
-      "city": "San Jose",
-      "neighborhood": "West San Jose",
-      "appNumber": "2025-121167-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BP100%) POOL DEMO NON BUILDABLE — Owner: ZHAI JIANJUN AND WEI LI. APN: 37321047. Valuation: $0.",
-      "overview": "Residential Alteration in West San Jose. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2025-07-23",
-      "status": "B-Complete, P-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Alteration",
-      "zoning": "",
-      "apn": "37321047",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2025-121167-RS",
-      "owner": "ZHAI JIANJUN AND WEI LI",
-      "valuation": 0,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "KITCHEN REMODEL, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Cambrian",
-      "appNumber": "2025-111997-RS",
-      "appType": "Additions/Alterations",
-      "description": "(MEP100%)KITCHEN REMODEL — Owner: LANDMARK EMPIRE LLC  DANH HGUYEN. APN: 48630098. Valuation: $0.",
-      "overview": "Major Remodel in Cambrian. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2025-05-27",
-      "status": "E-Complete, M-Complete, P-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Major Remodel",
-      "zoning": "",
-      "apn": "48630098",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2025-111997-RS",
-      "owner": "LANDMARK EMPIRE LLC  DANH HGUYEN",
-      "valuation": 0,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "MAIN RESIDENCE ADD/ALT, San Jose",
-      "city": "San Jose",
-      "neighborhood": "West San Jose",
-      "appNumber": "2025-109477-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BE 100%) MAIN RESIDENCE ADD/ALT — Owner: HONG HAO AND GAO YU. APN: 37210017. Valuation: $3,623.",
-      "overview": "Residential Addition in West San Jose. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2025-05-14",
-      "status": "B-Complete, E-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Addition",
-      "zoning": "",
-      "apn": "37210017",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2025-109477-RS",
-      "owner": "HONG HAO AND GAO YU",
-      "valuation": 3623,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "BPD COVERED PATIO/FIREPLACE DEMO, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Willow Glen",
-      "appNumber": "2026-097704-RS",
-      "appType": "Additions/Alterations",
-      "description": "BPD (BE100%) COVERED PATIO/FIREPLACE DEMO — Owner: LAM CHRISTINE SHUI-WAH TRUSTEE. APN: 26112082. Valuation: $11,913.",
-      "overview": "Residential Alteration in Willow Glen. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2026-04-09",
-      "status": "B-Complete, E-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Alteration",
-      "zoning": "",
-      "apn": "26112082",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2026-097704-RS",
-      "owner": "LAM CHRISTINE SHUI-WAH TRUSTEE",
-      "valuation": 11913,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "POOL AND SPA DEMO - BUILDABLE, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Almaden Valley",
-      "appNumber": "2026-105884-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BEP 100%) POOL AND SPA DEMO - BUILDABLE — Owner: CHITTIREDDY SUDHEER BABU AND CHINTHIREDD. APN: 56924024. Valuation: $0.",
-      "overview": "Residential Alteration in Almaden Valley. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2026-04-08",
-      "status": "B-Complete, E-Complete, P-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Alteration",
-      "zoning": "",
-      "apn": "56924024",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2026-105884-RS",
-      "owner": "CHITTIREDDY SUDHEER BABU AND CHINTHIREDD",
-      "valuation": 0,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "ADDITION, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Almaden Valley",
-      "appNumber": "2025-140222-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BE100%) ADDITION  — Owner: SENGUPTA RAJDEEP AND MOUMITA TRUSTEE. APN: 56912029. Valuation: $93,845.",
-      "overview": "Residential Addition in Almaden Valley. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2026-04-10",
-      "status": "B-Complete, E-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Addition",
-      "zoning": "",
-      "apn": "56912029",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2025-140222-RS",
-      "owner": "SENGUPTA RAJDEEP AND MOUMITA TRUSTEE",
-      "valuation": 93845,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "ADDITION, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Almaden Valley",
-      "appNumber": "2023-109995-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BE 100%) ADDITION — Owner: WRAY HAROLD P AND DIANE L. APN: 56911007. Valuation: $90,380.",
-      "overview": "Residential Addition (540 SF) in Almaden Valley. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": 540,
-      "sfNote": "540 SF per permit",
-      "dateFiled": "2024-03-07",
-      "status": "B-Complete, E-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Addition",
-      "zoning": "",
-      "apn": "56911007",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2023-109995-RS",
-      "owner": "WRAY HAROLD P AND DIANE L",
-      "valuation": 90380,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "BATH REMODEL & REWIRING, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Cambrian",
-      "appNumber": "2026-110453-RS",
-      "appType": "Additions/Alterations",
-      "description": "BATH REMODEL & REWIRING — Owner: NING PENG AND SUN LI. APN: 44613025. Valuation: $0.",
-      "overview": "Major Remodel in Cambrian. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2026-03-30",
-      "status": "E-Complete, M-Complete, P-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Major Remodel",
-      "zoning": "",
-      "apn": "44613025",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2026-110453-RS",
-      "owner": "NING PENG AND SUN LI",
-      "valuation": 0,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "POOL DEMO, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Almaden Valley",
-      "appNumber": "2026-110008-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BP 100%) POOL DEMO — Owner: DENG YULIN AND CHOU SHIHYAO. APN: 58630038. Valuation: $0.",
-      "overview": "Residential Alteration in Almaden Valley. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2026-03-26",
-      "status": "B-Complete, P-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Alteration",
-      "zoning": "",
-      "apn": "58630038",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2026-110008-RS",
-      "owner": "DENG YULIN AND CHOU SHIHYAO",
-      "valuation": 0,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "BATHROOM REMODEL, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Almaden Valley",
-      "appNumber": "2026-108924-RS",
-      "appType": "Additions/Alterations",
-      "description": "(EPM 100%) BATHROOM REMODEL — Owner: TOBIN SEAN D AND MICHELLE. APN: 56738003. Valuation: $0.",
-      "overview": "Major Remodel in Almaden Valley. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2026-03-20",
-      "status": "E-Complete, M-Complete, P-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Major Remodel",
-      "zoning": "",
-      "apn": "56738003",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2026-108924-RS",
-      "owner": "TOBIN SEAN D AND MICHELLE",
-      "valuation": 0,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "POOL DEMO NON-BUILD, San Jose",
-      "city": "San Jose",
-      "neighborhood": "West San Jose",
-      "appNumber": "2026-108426-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BE100%) POOL DEMO NON-BUILD — Owner: ROWALT WENDY YU TRUSTEE. APN: 29935077. Valuation: $0.",
-      "overview": "Residential Alteration in West San Jose. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2026-03-18",
-      "status": "B-Complete, E-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Alteration",
-      "zoning": "",
-      "apn": "29935077",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2026-108426-RS",
-      "owner": "ROWALT WENDY YU TRUSTEE",
-      "valuation": 0,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "RS GARAGE DEMO REBUILD, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Willow Glen",
-      "appNumber": "2022-695020-RS",
-      "appType": "Additions/Alterations",
-      "description": "RS (BEP 100%) GARAGE DEMO REBUILD — Owner: RIEPE MICHAEL A TRUSTEE. APN: 26105063. Valuation: $25,381.",
-      "overview": "Custom Home (Demo/Rebuild) (420 SF) in Willow Glen. Permit issued — no contractor on record.",
-      "existingSF": 0,
-      "proposedSF": 420,
-      "sfNote": "420 SF per permit",
-      "dateFiled": "2023-03-12",
-      "status": "B-Complete, E-Complete, P-Complete",
-      "planner": "City of San Jose",
-      "category": "New Construction",
-      "scope": "Custom Home (Demo/Rebuild)",
-      "zoning": "",
-      "apn": "26105063",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2022-695020-RS",
-      "owner": "RIEPE MICHAEL A TRUSTEE",
-      "valuation": 25381,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "ADDITION, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Willow Glen",
-      "appNumber": "2024-108896-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BEM 100%) ADDITION — Owner: ARION GROUP LLC    & ARION GROUP LLC  NGUYEN LUU. APN: 26132053. Valuation: $21,206.",
-      "overview": "Residential Addition in Willow Glen. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2025-02-28",
-      "status": "B-Complete, E-Complete, M-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Addition",
-      "zoning": "",
-      "apn": "26132053",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2024-108896-RS",
-      "owner": "ARION GROUP LLC    & ARION GROUP LLC  NGUYEN LUU",
-      "valuation": 21206,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "DEMOLITION, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Almaden Valley",
-      "appNumber": "2026-105140-RS",
-      "appType": "Demolition",
-      "description": "(BP100%) DEMOLITION — Owner: ALMADEN INVESTMENTS LLC    et al. APN: 58333032. Valuation: $0.",
-      "overview": "Residential Alteration in Almaden Valley. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2026-02-26",
-      "status": "B-Complete, P-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Alteration",
-      "zoning": "",
-      "apn": "58333032",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2026-105140-RS",
-      "owner": "ALMADEN INVESTMENTS LLC    et al",
-      "valuation": 0,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
-      "address": "ADDITION, San Jose",
-      "city": "San Jose",
-      "neighborhood": "Almaden Valley",
-      "appNumber": "2024-115256-RS",
-      "appType": "Additions/Alterations",
-      "description": "(BEM 100%) ADDITION  — Owner: TSE SIUCHEONG KENNY AND HUANG SHWUMIIN S. APN: 58339025. Valuation: $62,955.",
-      "overview": "Residential Addition in Almaden Valley. Permit issued — no contractor on record.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "SF not listed on permit",
-      "dateFiled": "2025-02-26",
-      "status": "B-Complete, E-Complete, M-Complete",
-      "planner": "City of San Jose",
-      "category": "Addition",
-      "scope": "Residential Addition",
-      "zoning": "",
-      "apn": "58339025",
-      "pageUrl": "https://permits.sanjoseca.gov/search",
-      "docs": [],
-      "permitNumber": "2024-115256-RS",
-      "owner": "TSE SIUCHEONG KENNY AND HUANG SHWUMIIN S",
-      "valuation": 62955,
-      "firstSeen": "2026-04-14T02:06:46.587Z",
-      "dataSource": "sj-opendata-building",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
-      "permitStage": "Issued"
-    },
-    {
       "address": "AD26-138, San Jose",
       "city": "San Jose",
       "neighborhood": "Willow Glen",
@@ -557,7 +25,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -585,7 +53,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -613,7 +81,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -641,7 +109,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -669,7 +137,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -697,7 +165,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -725,7 +193,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -753,7 +221,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -781,7 +249,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -809,7 +277,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -837,7 +305,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -865,7 +333,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -893,7 +361,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -921,7 +389,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -949,7 +417,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -977,7 +445,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1005,7 +473,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1033,7 +501,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1061,7 +529,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1089,7 +557,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1117,7 +585,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1145,7 +613,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1173,7 +641,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1201,7 +669,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1229,7 +697,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1257,7 +725,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1285,7 +753,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1313,7 +781,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1341,7 +809,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1369,7 +837,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1397,7 +865,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1425,7 +893,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1453,7 +921,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1481,7 +949,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1509,7 +977,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-30",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1537,7 +1005,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1565,7 +1033,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1593,7 +1061,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1621,7 +1089,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1649,7 +1117,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1677,7 +1145,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1705,7 +1173,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1733,7 +1201,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1761,7 +1229,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1789,7 +1257,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1817,7 +1285,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1845,7 +1313,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1873,7 +1341,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1901,7 +1369,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1929,7 +1397,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1957,7 +1425,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1985,7 +1453,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2013,7 +1481,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2041,7 +1509,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2069,7 +1537,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2097,7 +1565,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2125,7 +1593,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2153,7 +1621,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2181,7 +1649,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2209,7 +1677,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2237,7 +1705,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2265,7 +1733,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2293,7 +1761,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2321,7 +1789,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2349,7 +1817,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2377,7 +1845,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2405,7 +1873,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2433,7 +1901,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2461,7 +1929,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2489,7 +1957,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2517,7 +1985,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2545,7 +2013,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2573,7 +2041,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2601,7 +2069,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2629,7 +2097,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2657,7 +2125,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2685,7 +2153,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2713,7 +2181,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2741,7 +2209,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2769,7 +2237,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2797,7 +2265,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2825,7 +2293,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2853,7 +2321,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2881,7 +2349,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2909,7 +2377,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2937,7 +2405,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2965,7 +2433,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2993,7 +2461,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3021,7 +2489,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3049,7 +2517,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3077,7 +2545,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3105,7 +2573,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3133,7 +2601,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3161,7 +2629,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3189,7 +2657,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3217,7 +2685,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3245,7 +2713,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3273,7 +2741,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3301,7 +2769,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3329,7 +2797,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3357,7 +2825,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3385,7 +2853,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3413,7 +2881,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3441,7 +2909,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3469,7 +2937,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3497,7 +2965,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3525,7 +2993,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3553,7 +3021,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3581,7 +3049,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3609,7 +3077,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3637,7 +3105,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3665,7 +3133,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3693,7 +3161,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3721,7 +3189,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3749,7 +3217,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3777,7 +3245,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3805,7 +3273,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3833,7 +3301,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3861,7 +3329,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3889,7 +3357,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3917,7 +3385,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3945,7 +3413,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3973,7 +3441,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4001,7 +3469,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4029,7 +3497,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4057,7 +3525,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4085,7 +3553,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4113,7 +3581,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4141,7 +3609,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4169,7 +3637,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4197,7 +3665,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4225,7 +3693,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4253,7 +3721,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4281,7 +3749,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4309,7 +3777,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4337,7 +3805,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4365,7 +3833,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4393,7 +3861,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4421,7 +3889,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4449,7 +3917,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4477,7 +3945,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4505,7 +3973,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4533,7 +4001,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4561,7 +4029,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4589,7 +4057,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4617,7 +4085,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4645,7 +4113,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4673,7 +4141,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4701,7 +4169,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4729,7 +4197,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4757,7 +4225,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4785,7 +4253,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4813,7 +4281,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4841,7 +4309,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4869,7 +4337,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4897,7 +4365,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4925,7 +4393,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4953,7 +4421,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -4981,7 +4449,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5009,7 +4477,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5037,7 +4505,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5065,7 +4533,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5093,7 +4561,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5121,7 +4589,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5149,7 +4617,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5177,7 +4645,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5205,7 +4673,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5233,7 +4701,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5261,7 +4729,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5289,7 +4757,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5317,7 +4785,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5345,7 +4813,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5373,7 +4841,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5401,7 +4869,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5429,7 +4897,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5457,7 +4925,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5485,7 +4953,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5513,7 +4981,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5541,7 +5009,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5569,7 +5037,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5597,7 +5065,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5625,7 +5093,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5653,7 +5121,7 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     },
     {
@@ -5681,11 +5149,11 @@
       "valuation": 0,
       "firstSeen": "2026-04-14T00:56:55.288Z",
       "dataSource": "sj-opendata-planning-180",
-      "lastVerified": "2026-04-14T02:06:46.587Z",
+      "lastVerified": "2026-04-14T02:14:17.380Z",
       "permitStage": "Planning Review"
     }
   ],
-  "scrapedAt": "2026-04-14T02:06:46.587Z",
+  "scrapedAt": "2026-04-14T02:14:17.380Z",
   "source": "San Jose Open Data Portal (data.sanjoseca.gov)",
   "datasets": [
     "active-building-permits",

@@ -15,15 +15,11 @@ const OUT_PATH = path.join(__dirname, "..", "data", "sanjose-scraped.json");
 
 const API_BASE = "https://data.sanjoseca.gov/api/3/action/datastore_search_sql";
 
-// Dataset resource IDs
+// Dataset resource IDs — planning permits only (pre-construction leads)
 const DATASETS = {
-  activeBuilding: "761b7ae8-3be1-4ad6-923d-c7af6404a904",
   planning30: "711a7de0-217c-4bd7-98b9-e1b1d02ea187",
   planning60_180: "a6df12fb-ca4b-49e8-8cde-d444b112877b",
 };
-
-const SFR_TYPES = ["Single-Family", "1 & 2 Family Residential", "Single Dwelling Unit"];
-const BUILDING_WORK_TYPES = ["New Construction", "Additions/Alterations", "Demolition"];
 
 // APN prefix → neighborhood
 const APN_TO_NEIGHBORHOOD = {
@@ -146,61 +142,11 @@ async function main() {
   const now = new Date().toISOString();
   const allProjects = new Map(); // keyed by permit number to dedup
 
-  // === 1. Active Building Permits — SFR, no contractor, significant work ===
-  console.log("1. Querying Active Building Permits...");
-  const sfrTypes = SFR_TYPES.map(t => `'${t}'`).join(",");
-  const workTypes = BUILDING_WORK_TYPES.map(t => `'${t}'`).join(",");
+  // Building permits skipped — if inspections are happening, they already have a GC.
+  // Only planning permits are valid leads (pre-construction, no builder hired).
 
-  const buildingRecords = await queryDatastore(
-    `SELECT * FROM "${DATASETS.activeBuilding}" WHERE "SUBTYPEDESCRIPTION" IN (${sfrTypes}) AND "CONTRACTOR" IS NULL AND "WORKDESCRIPTION" IN (${workTypes}) AND "ISSUEDATE" > '2024-01-01' ORDER BY "ISSUEDATE" DESC LIMIT 500`
-  );
-  console.log(`   Raw: ${buildingRecords.length} permits`);
-
-  let buildingCount = 0;
-  for (const r of buildingRecords) {
-    if (!isSignificantBuildingWork(r.FOLDERNAME)) continue;
-    if (isCompleted(r.PERMITAPPROVALS)) continue; // Done — not a lead
-    const apn = (r.ASSESSORS_PARCEL_NUMBER || "").trim();
-    const neighborhood = getNeighborhood(apn);
-    if (!neighborhood) continue;
-
-    const permitNumber = (r.FOLDERNUMBER || "").trim();
-    if (!permitNumber || allProjects.has(permitNumber)) continue;
-
-    const { category, scope } = classifyPermit(r.FOLDERNAME, r.WORKDESCRIPTION);
-    const sqft = parseInt(r.SQUAREFOOTAGE) || 0;
-    const address = cleanAddress(r.FOLDERNAME);
-    const owner = (r.OWNERNAME || "").trim();
-
-    allProjects.set(permitNumber, {
-      address: `${address}, San Jose`,
-      city: "San Jose",
-      neighborhood,
-      appNumber: permitNumber,
-      appType: r.WORKDESCRIPTION || "",
-      description: `${r.FOLDERNAME || ""} — Owner: ${owner}. APN: ${apn}. Valuation: $${(parseInt(r.PERMITVALUATION) || 0).toLocaleString()}.`,
-      overview: `${scope}${sqft > 0 ? ` (${sqft.toLocaleString()} SF)` : ""} in ${neighborhood}. Permit issued — no contractor on record.`,
-      existingSF: category === "New Construction" ? 0 : null,
-      proposedSF: sqft > 0 ? sqft : null,
-      sfNote: sqft > 0 ? `${sqft.toLocaleString()} SF per permit` : "SF not listed on permit",
-      dateFiled: parseDate(r.ISSUEDATE),
-      status: (r.PERMITAPPROVALS || "Active").trim(),
-      planner: "City of San Jose",
-      category, scope, zoning: "",
-      apn, pageUrl: "https://permits.sanjoseca.gov/search",
-      docs: [], permitNumber, owner,
-      valuation: parseInt(r.PERMITVALUATION) || 0,
-      firstSeen: previousProjects[permitNumber] || now,
-      dataSource: "sj-opendata-building",
-      lastVerified: now,
-      permitStage: "Issued",
-    });
-    buildingCount++;
-  }
-  console.log(`   Filtered: ${buildingCount} leads in target neighborhoods`);
-
-  // === 2. Planning Permits (last 30 days) — earliest stage, all are leads ===
-  console.log("2. Querying Planning Permits (last 30 days)...");
+  // === 1. Planning Permits (last 30 days) — earliest stage, best leads ===
+  console.log("1. Querying Planning Permits (last 30 days)...");
   const planningRecords30 = await queryDatastore(
     `SELECT * FROM "${DATASETS.planning30}" ORDER BY "ISSUEDATE" DESC LIMIT 200`
   );
@@ -253,7 +199,7 @@ async function main() {
   console.log(`   Filtered: ${planning30Count} leads in target neighborhoods`);
 
   // === 3. Planning Permits (60-180 days) — pipeline leads ===
-  console.log("3. Querying Planning Permits (60-180 days)...");
+  console.log("2. Querying Planning Permits (60-180 days)...");
   const planningRecords180 = await queryDatastore(
     `SELECT * FROM "${DATASETS.planning60_180}" ORDER BY "ISSUEDATE" DESC LIMIT 600`
   );
