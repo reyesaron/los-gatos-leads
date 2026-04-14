@@ -77,6 +77,17 @@ function isSignificantBuildingWork(folderName) {
   return false;
 }
 
+function isCompleted(permitApprovals) {
+  const s = (permitApprovals || "").toLowerCase();
+  if (!s || s === "active") return false;
+  // Only complete if ALL 4 disciplines (B, E, M, P) show complete
+  const hasB = /b[-\s]*(?:4\.\s*)?complete/i.test(s);
+  const hasE = /e[-\s]*(?:4\.\s*)?complete/i.test(s);
+  const hasM = /m[-\s]*(?:4\.\s*)?complete/i.test(s);
+  const hasP = /p[-\s]*(?:4\.\s*)?complete/i.test(s);
+  return hasB && hasE && hasM && hasP;
+}
+
 function classifyPermit(folderName, workDesc) {
   const fn = (folderName || "").toUpperCase();
   const work = workDesc || "";
@@ -148,6 +159,7 @@ async function main() {
   let buildingCount = 0;
   for (const r of buildingRecords) {
     if (!isSignificantBuildingWork(r.FOLDERNAME)) continue;
+    if (isCompleted(r.PERMITAPPROVALS)) continue; // Done — not a lead
     const apn = (r.ASSESSORS_PARCEL_NUMBER || "").trim();
     const neighborhood = getNeighborhood(apn);
     if (!neighborhood) continue;

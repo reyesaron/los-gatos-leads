@@ -24,8 +24,13 @@ export default async function Home() {
   // LG projects: scraped data if available, otherwise hardcoded
   const lgProjects = lgScraped?.projects || PROJECTS.filter(p => !p.city || p.city === "Los Gatos");
 
-  // Non-LG hardcoded projects (Saratoga, manually added SJ)
-  const nonLGHardcoded = PROJECTS.filter(p => p.city && p.city !== "Los Gatos");
+  // Non-LG hardcoded projects (Saratoga, manually added SJ) — exclude completed/on-market
+  const nonLGHardcoded = PROJECTS.filter(p => {
+    if (!p.city || p.city === "Los Gatos") return false;
+    const s = (p.status || "").toLowerCase();
+    if (s.includes("completed") || s.includes("on market")) return false;
+    return true;
+  });
 
   // SJ scraped permits (deduplicate against hardcoded SJ by address)
   const hardcodedSJAddresses = new Set(
