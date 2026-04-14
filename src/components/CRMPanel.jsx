@@ -36,7 +36,7 @@ export default function CRMPanel({ leadId, onUpdate }) {
   // Fetch once on mount — never overwrite from parent
   useEffect(() => {
     if (hasFetched) return;
-    fetch(`/api/leads?id=${encodeURIComponent(leadId)}`)
+    fetch(`/api/leads?id=${encodeURIComponent(leadId)}&_t=${Date.now()}`)
       .then(r => r.json())
       .then(data => { setLead(data.lead || {}); setNotes(data.notes || data.lead?.notes || []); })
       .catch(() => {})

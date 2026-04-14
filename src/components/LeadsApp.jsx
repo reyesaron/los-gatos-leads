@@ -181,8 +181,8 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
 
   // Load CRM data and manual leads on mount
   useEffect(() => {
-    fetch("/api/leads").then(r => r.json()).then(d => setCrmData(d.leads || {})).catch(() => {});
-    fetch("/api/leads/manual").then(r => r.json()).then(d => setManualLeads(d.leads || [])).catch(() => {});
+    fetch(`/api/leads?_t=${Date.now()}`).then(r => r.json()).then(d => setCrmData(d.leads || {})).catch(() => {});
+    fetch(`/api/leads/manual?_t=${Date.now()}`).then(r => r.json()).then(d => setManualLeads(d.leads || [])).catch(() => {});
   }, []);
 
   // Generate lead ID consistently

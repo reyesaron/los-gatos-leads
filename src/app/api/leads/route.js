@@ -30,12 +30,14 @@ export async function GET(request) {
     const leadId = searchParams.get("id");
     const crm = await loadCRM();
 
+    const headers = { "Cache-Control": "no-store, no-cache, must-revalidate", "Pragma": "no-cache" };
+
     if (leadId) {
       const entry = crm[leadId] || { status: "New", notes: [] };
-      return Response.json({ lead: entry, notes: entry.notes || [] });
+      return Response.json({ lead: entry, notes: entry.notes || [] }, { headers });
     }
 
-    return Response.json({ leads: crm });
+    return Response.json({ leads: crm }, { headers });
   } catch (err) {
     return Response.json({ error: "Failed to load: " + err.message }, { status: 500 });
   }
