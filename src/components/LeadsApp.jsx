@@ -49,7 +49,7 @@ function StreetView({ address, city }) {
 function OverdueBadge(){return<span className="badge-new" style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#431407",color:"#fb923c",border:"1px solid #fb923c55",whiteSpace:"nowrap"}}>OVERDUE</span>}
 function SoonBadge(){return<span style={{display:"inline-flex",alignItems:"center",fontSize:10,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.06em",padding:"2px 7px",borderRadius:4,background:"#422006",color:"#fbbf24",border:"1px solid #fbbf2433",whiteSpace:"nowrap"}}>FOLLOW UP</span>}
 
-const FORM_CITIES = ["Los Gatos", "Saratoga", "San Jose", "Woodside", "Atherton", "Los Altos", "Los Altos Hills", "Palo Alto", "Milpitas", "Morgan Hill", "Campbell", "Other"];
+const FORM_CITIES = ["Los Gatos", "Saratoga", "San Jose", "Sunnyvale", "Cupertino", "Mountain View", "Woodside", "Atherton", "Los Altos", "Los Altos Hills", "Palo Alto", "Milpitas", "Morgan Hill", "Campbell", "Other"];
 const FORM_CATEGORIES = ["New Construction", "Addition", "Subdivision"];
 const FORM_TEAM = ["Daniel", "Aron", "Joseph"];
 
