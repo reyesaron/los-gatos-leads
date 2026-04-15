@@ -168,6 +168,8 @@ function exportCSV(leads, crmData, getLeadId) {
   a.download = `apex-leads-${new Date().toISOString().split("T")[0]}.csv`;
   a.click();
   URL.revokeObjectURL(url);
+  // Log the export
+  fetch("/api/audit/log", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "csv_export", targetType: "leads", details: `Exported ${rows.length} leads to CSV` }) }).catch(() => {});
 }
 
 function AuthWrapper({ children, onUser }) {

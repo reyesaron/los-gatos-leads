@@ -1,4 +1,5 @@
-import { loadUsers, saveUsers, verifyPassword, hashPassword, validatePassword, verifyToken } from "@/lib/auth";
+import { loadUsers, saveUsers, verifyPassword, hashPassword, validatePassword, verifyToken, getClientIP } from "@/lib/auth";
+import { logAudit } from "@/lib/audit";
 import { cookies } from "next/headers";
 
 export async function POST(request) {
@@ -36,6 +37,9 @@ export async function POST(request) {
     users[userIdx].passwordChangedAt = new Date().toISOString();
     users[userIdx].mustChangePassword = false;
     await saveUsers(users);
+
+    const ip = getClientIP(request);
+    await logAudit({ action: "password_change", userName: payload.name, userEmail: payload.email, userRole: payload.role, ip, targetType: "auth", targetId: payload.email, details: "Password changed", userAgent: request.headers.get("user-agent") || "" });
 
     return Response.json({ ok: true, message: "Password updated successfully" });
   } catch (err) {

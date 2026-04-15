@@ -51,9 +51,11 @@ export function createContactsAPI(blobName) {
       const { id, ...fields } = body;
       const idx = contacts.findIndex(a => a.id === id);
       if (idx === -1) return Response.json({ error: "not found" }, { status: 404 });
+      const oldName = contacts[idx].name;
       Object.assign(contacts[idx], fields, { updatedAt: new Date().toISOString() });
       delete contacts[idx].action;
       await saveContacts(contacts);
+      await auditFromRequest(request, { action: `${contactType}_update`, targetType: contactType, targetId: oldName, details: `Updated ${contactType}: ${oldName}` });
       return Response.json({ ok: true, contacts });
     }
 
@@ -64,6 +66,7 @@ export function createContactsAPI(blobName) {
       contacts[idx].nextTouchDate = nextTouchDate || "";
       contacts[idx].updatedAt = new Date().toISOString();
       await saveContacts(contacts);
+      await auditFromRequest(request, { action: `${contactType}_setNextTouch`, targetType: contactType, targetId: contacts[idx].name, details: `Next touch: ${nextTouchDate || "cleared"}` });
       return Response.json({ ok: true, contacts });
     }
 
@@ -74,6 +77,7 @@ export function createContactsAPI(blobName) {
       contacts[idx].relationshipStatus = relationshipStatus || "";
       contacts[idx].updatedAt = new Date().toISOString();
       await saveContacts(contacts);
+      await auditFromRequest(request, { action: `${contactType}_setRelationship`, targetType: contactType, targetId: contacts[idx].name, details: `Relationship → ${relationshipStatus}` });
       return Response.json({ ok: true, contacts });
     }
 
@@ -93,6 +97,7 @@ export function createContactsAPI(blobName) {
       contacts[idx].lastInteractionBy = author;
       contacts[idx].updatedAt = new Date().toISOString();
       await saveContacts(contacts);
+      await auditFromRequest(request, { action: `${contactType}_interaction`, targetType: contactType, targetId: contacts[idx].name, details: `${type} by ${author}: ${(note || "").slice(0, 60)}` });
       return Response.json({ ok: true, contacts });
     }
 

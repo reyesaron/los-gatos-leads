@@ -1,4 +1,5 @@
-import { loadUsers, saveUsers, verifyToken, sanitizeUser } from "@/lib/auth";
+import { loadUsers, saveUsers, verifyToken, sanitizeUser, getClientIP } from "@/lib/auth";
+import { logAudit } from "@/lib/audit";
 import { cookies } from "next/headers";
 
 // GET — list all users (admin only)
@@ -64,6 +65,11 @@ export async function POST(request) {
     }
 
     await saveUsers(users);
+
+    const targetUser = action === "delete" ? userId : (users[idx]?.name || userId);
+    const ip = getClientIP(request);
+    await logAudit({ action: `admin_${action}`, userName: payload.name, userEmail: payload.email, userRole: "admin", ip, targetType: "user", targetId: targetUser, details: `Admin ${action}: ${targetUser}`, userAgent: request.headers.get("user-agent") || "" });
+
     return Response.json({ ok: true, users: users.map(sanitizeUser) });
   } catch (err) {
     return Response.json({ error: err.message }, { status: 500 });
