@@ -16,9 +16,10 @@ async function loadJSON(filename) {
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const [lgScraped, sjMerged] = await Promise.all([
+  const [lgScraped, sjMerged, paScraped] = await Promise.all([
     loadJSON("scraped.json"),
     loadJSON("sanjose-merged.json"),
+    loadJSON("paloalto-scraped.json"),
   ]);
 
   // LG projects: scraped data if available, otherwise hardcoded
@@ -40,7 +41,10 @@ export default async function Home() {
     p => !hardcodedSJAddresses.has(p.address.toLowerCase())
   );
 
-  const projects = [...lgProjects, ...nonLGHardcoded, ...sjScrapedProjects];
+  // PA scraped permits
+  const paProjects = (paScraped?.projects || []);
+
+  const projects = [...lgProjects, ...nonLGHardcoded, ...sjScrapedProjects, ...paProjects];
   const scrapedLetters = lgScraped?.scrapedLetters || SCRAPED_LETTERS;
   const scrapedAt = lgScraped?.scrapedAt || sjMerged?.scrapedAt || null;
 

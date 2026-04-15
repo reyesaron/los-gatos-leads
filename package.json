@@ -9,6 +9,7 @@
     "scrape:sj": "node src/scripts/scrape-sj-opendata.mjs",
     "merge:sj": "node src/scripts/merge-sj-permits.mjs",
     "scrape:sj:full": "node src/scripts/scrape-sj-opendata.mjs && node src/scripts/merge-sj-permits.mjs",
+    "scrape:pa": "node src/scripts/scrape-pa-opendata.mjs",
     "start": "next start"
   },
   "dependencies": {

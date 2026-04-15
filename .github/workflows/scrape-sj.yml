@@ -1,4 +1,4 @@
-name: Scrape San Jose SFR Permits
+name: Scrape SJ + PA Permits
 
 on:
   schedule:
@@ -21,20 +21,23 @@ jobs:
 
       - run: npm ci
 
-      - name: Scrape SJ permits (Open Data Portal)
+      - name: Scrape San Jose permits (Open Data Portal)
         run: node src/scripts/scrape-sj-opendata.mjs
 
-      - name: Merge SJ permits
+      - name: Merge San Jose permits
         run: node src/scripts/merge-sj-permits.mjs
+
+      - name: Scrape Palo Alto permits (Open Data Portal)
+        run: node src/scripts/scrape-pa-opendata.mjs
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/sanjose-scraped.json src/data/sanjose-merged.json
+          git add src/data/sanjose-scraped.json src/data/sanjose-merged.json src/data/paloalto-scraped.json
           if git diff --cached --quiet; then
-            echo "No changes to San Jose permit data"
+            echo "No changes to permit data"
           else
-            git commit -m "chore: update San Jose SFR permit data $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git commit -m "chore: update SJ + PA permit data $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
           fi
