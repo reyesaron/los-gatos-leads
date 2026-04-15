@@ -13,6 +13,35 @@ async function loadJSON(filename) {
   return null;
 }
 
+function normalizeAddress(addr) {
+  return (addr || "").toLowerCase().replace(/[,.\s]+/g, " ").replace(/\s*(ca|california)\s*\d{5}.*$/i, "").trim();
+}
+
+function deduplicateProjects(allProjects) {
+  const seen = new Map();
+  const result = [];
+  for (const p of allProjects) {
+    const key = normalizeAddress(p.address);
+    if (!key) { result.push(p); continue; }
+    if (seen.has(key)) {
+      // Keep the one with more data — prefer scraped over hardcoded, prefer one with more fields filled
+      const existing = seen.get(key);
+      const existingScore = (existing.description?.length || 0) + (existing.proposedSF ? 100 : 0) + (existing.dateFiled ? 50 : 0);
+      const newScore = (p.description?.length || 0) + (p.proposedSF ? 100 : 0) + (p.dateFiled ? 50 : 0);
+      if (newScore > existingScore) {
+        // Replace with richer entry
+        const idx = result.indexOf(existing);
+        if (idx >= 0) result[idx] = p;
+        seen.set(key, p);
+      }
+    } else {
+      seen.set(key, p);
+      result.push(p);
+    }
+  }
+  return result;
+}
+
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
@@ -33,26 +62,21 @@ export default async function Home() {
     return true;
   });
 
-  // SJ scraped permits (deduplicate against hardcoded SJ by address)
-  const hardcodedSJAddresses = new Set(
-    nonLGHardcoded.filter(p => p.city === "San Jose").map(p => p.address.toLowerCase())
-  );
-  const sjScrapedProjects = (sjMerged?.projects || []).filter(
-    p => !hardcodedSJAddresses.has(p.address.toLowerCase())
-  );
-
-  // PA scraped permits
+  // Scraped data from open data portals
+  const sjProjects = (sjMerged?.projects || []);
   const paProjects = (paScraped?.projects || []);
 
-  const projects = [...lgProjects, ...nonLGHardcoded, ...sjScrapedProjects, ...paProjects];
+  // Merge all sources then deduplicate by normalized address
+  // Order matters: scraped data comes last so it wins over hardcoded on ties
+  const allRaw = [...nonLGHardcoded, ...lgProjects, ...sjProjects, ...paProjects];
+  const projects = deduplicateProjects(allRaw);
+
   const scrapedLetters = lgScraped?.scrapedLetters || SCRAPED_LETTERS;
-  const scrapedAt = lgScraped?.scrapedAt || sjMerged?.scrapedAt || null;
+  const scrapedAt = lgScraped?.scrapedAt || sjMerged?.scrapedAt || paScraped?.scrapedAt || null;
 
   return (
     <LeadsApp
       projects={projects}
-      letterPages={LETTER_PAGES}
-      scrapedLetters={scrapedLetters}
       scrapedAt={scrapedAt}
     />
   );
