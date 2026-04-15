@@ -1,5 +1,8 @@
 import { put, list } from "@vercel/blob";
 import { auditFromRequest } from "@/lib/audit-helper";
+import { verifyToken, loadUsers, saveUsers } from "@/lib/auth";
+import { createCalendarEvent, updateCalendarEvent, deleteCalendarEvent, refreshTokensIfNeeded } from "@/lib/google-calendar";
+import { cookies } from "next/headers";
 
 const BLOB_NAME = "leads-crm.json";
 
@@ -83,6 +86,57 @@ export async function POST(request) {
     entry.followUpDate = body.followUpDate || "";
     entry.followUpAssignee = body.assignee || "";
     entry.updatedAt = new Date().toISOString();
+
+    // Google Calendar integration
+    try {
+      const cookieStore = await cookies();
+      const authToken = cookieStore.get("auth-token")?.value;
+      if (authToken) {
+        const payload = verifyToken(authToken);
+        if (payload) {
+          const users = await loadUsers();
+          // Find the target user: assigned user first, then current user
+          const assignee = entry.assignee ? users.find(u => u.name === entry.assignee) : null;
+          const currentUser = users.find(u => u.id === payload.id);
+          const calUser = (assignee?.googleCalendarConnected ? assignee : currentUser?.googleCalendarConnected ? currentUser : null);
+
+          if (calUser?.googleTokens) {
+            const tokens = await refreshTokensIfNeeded(calUser.googleTokens);
+            if (tokens !== calUser.googleTokens) {
+              const uidx = users.findIndex(u => u.id === calUser.id);
+              if (uidx >= 0) { users[uidx].googleTokens = tokens; await saveUsers(users); }
+            }
+
+            const address = body.leadAddress || leadId;
+            const scope = body.leadScope || "";
+
+            if (body.followUpDate) {
+              if (entry.calendarEventId) {
+                // Update existing event
+                await updateCalendarEvent(tokens, entry.calendarEventId, {
+                  address, scope, notes: entry.notes?.[0]?.text || "",
+                  followUpDate: body.followUpDate,
+                });
+              } else {
+                // Create new event
+                const event = await createCalendarEvent(tokens, {
+                  address, scope, notes: entry.notes?.[0]?.text || "",
+                  followUpDate: body.followUpDate,
+                });
+                entry.calendarEventId = event.id;
+              }
+            } else if (entry.calendarEventId) {
+              // Follow-up cleared — delete the event
+              await deleteCalendarEvent(tokens, entry.calendarEventId);
+              delete entry.calendarEventId;
+            }
+          }
+        }
+      }
+    } catch (err) {
+      // Best effort — don't fail the follow-up save if calendar fails
+      console.error("Calendar event error:", err.message);
+    }
   }
 
   else if (action === "setEstValue") {

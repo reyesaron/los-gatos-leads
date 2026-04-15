@@ -82,6 +82,20 @@ export default function ProfileMenu({ user, onLogout, onAdminClick, onAuditClick
             )}
           </div>
 
+          {/* Google Calendar */}
+          <div style={{ padding: "10px 14px", borderBottom: `1px solid ${BORDER}` }}>
+            {user.googleCalendarConnected ? (
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ fontSize: 12, color: "#4ade80" }}>Google Calendar connected</span>
+                <button onClick={async () => { await fetch("/api/auth/google", { method: "DELETE" }); window.location.reload(); }} style={{ background: "none", border: "none", color: DIM, fontSize: 11, cursor: "pointer" }}>Disconnect</button>
+              </div>
+            ) : (
+              <button onClick={async () => { const res = await fetch("/api/auth/google"); const data = await res.json(); if (data.url) window.location.href = data.url; }} style={{ background: "none", border: "none", color: MUTED, fontSize: 12, cursor: "pointer", padding: 0 }}>
+                Connect Google Calendar
+              </button>
+            )}
+          </div>
+
           {/* Admin */}
           {user.role === "admin" && (
             <div style={{ padding: "10px 14px", borderBottom: `1px solid ${BORDER}`, display: "flex", gap: 16 }}>

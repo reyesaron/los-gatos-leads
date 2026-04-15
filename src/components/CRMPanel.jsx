@@ -23,7 +23,7 @@ const STATUS_COLORS = {
 
 const iS = { padding: "6px 10px", borderRadius: 5, border: `1px solid ${BORDER}`, background: "#111", color: TEXT, fontSize: 12, outline: "none" };
 
-export default function CRMPanel({ leadId, onUpdate }) {
+export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
   const [lead, setLead] = useState(null);
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -94,7 +94,7 @@ export default function CRMPanel({ leadId, onUpdate }) {
       const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ leadId, action: "setFollowUp", followUpDate: date, assignee: lead?.assignee || "" }),
+        body: JSON.stringify({ leadId, action: "setFollowUp", followUpDate: date, assignee: lead?.assignee || "", leadAddress: leadAddress || "", leadScope: leadScope || "" }),
       });
       const data = await res.json();
       if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }

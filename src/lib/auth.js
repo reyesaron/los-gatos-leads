@@ -164,7 +164,7 @@ export function getClientIP(request) {
 }
 
 export function sanitizeUser(user) {
-  const { passwordHash, ...safe } = user;
+  const { passwordHash, googleTokens, ...safe } = user;
   return safe;
 }
 

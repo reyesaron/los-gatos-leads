@@ -549,7 +549,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
               </div>
             </div>
             {open&&(<div className="apex-card-body" style={{padding:"0 14px 14px",borderTop:`1px solid ${BORDER}`,paddingTop:12}}>
-              <CRMPanel key={p._leadId} leadId={p._leadId} onUpdate={handleCRMUpdate} />
+              <CRMPanel key={p._leadId} leadId={p._leadId} onUpdate={handleCRMUpdate} leadAddress={p.address} leadScope={p.scope} />
               <StreetView address={p.address} city={p.city} />
               <p style={{margin:"0 0 10px",fontSize:13,color:MUTED,lineHeight:1.45}}>{p.description}</p>
               <div style={{background:BG,borderRadius:6,padding:"10px 12px",marginBottom:10,border:`1px solid ${BORDER}`}}>
