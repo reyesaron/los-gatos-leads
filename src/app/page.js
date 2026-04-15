@@ -24,19 +24,47 @@ function deduplicateProjects(allProjects) {
     const key = normalizeAddress(p.address);
     if (!key) { result.push(p); continue; }
     if (seen.has(key)) {
-      // Keep the one with more data — prefer scraped over hardcoded, prefer one with more fields filled
+      // Merge into the existing entry — combine permits, descriptions, and keep best data
       const existing = seen.get(key);
-      const existingScore = (existing.description?.length || 0) + (existing.proposedSF ? 100 : 0) + (existing.dateFiled ? 50 : 0);
-      const newScore = (p.description?.length || 0) + (p.proposedSF ? 100 : 0) + (p.dateFiled ? 50 : 0);
-      if (newScore > existingScore) {
-        // Replace with richer entry
-        const idx = result.indexOf(existing);
-        if (idx >= 0) result[idx] = p;
-        seen.set(key, p);
+
+      // Merge permit numbers
+      const existingPermits = existing.appNumber || "";
+      const newPermit = p.appNumber || "";
+      if (newPermit && !existingPermits.includes(newPermit)) {
+        existing.appNumber = existingPermits ? `${existingPermits}, ${newPermit}` : newPermit;
       }
+
+      // Merge descriptions — append if different
+      if (p.description && !existing.description.includes(p.description.slice(0, 40))) {
+        existing.description = `${existing.description} | ${p.description}`;
+      }
+
+      // Keep the richer overview, scope, and category
+      const existingScore = (existing.description?.length || 0) + (existing.proposedSF ? 100 : 0);
+      const newScore = (p.description?.length || 0) + (p.proposedSF ? 100 : 0);
+      if (newScore > existingScore) {
+        existing.overview = p.overview;
+        existing.scope = p.scope;
+        existing.category = p.category;
+      }
+
+      // Keep best SF data
+      if (p.proposedSF && (!existing.proposedSF || p.proposedSF > existing.proposedSF)) {
+        existing.proposedSF = p.proposedSF;
+        existing.sfNote = p.sfNote;
+      }
+      if (p.existingSF !== null && existing.existingSF === null) existing.existingSF = p.existingSF;
+
+      // Keep best metadata
+      if (p.dateFiled && !existing.dateFiled) existing.dateFiled = p.dateFiled;
+      if (p.valuation && (!existing.valuation || p.valuation > existing.valuation)) existing.valuation = p.valuation;
+      if (p.zoning && !existing.zoning) existing.zoning = p.zoning;
+      if (p.apn && !existing.apn) existing.apn = p.apn;
     } else {
-      seen.set(key, p);
-      result.push(p);
+      // Clone to avoid mutating source data
+      const entry = { ...p };
+      seen.set(key, entry);
+      result.push(entry);
     }
   }
   return result;
