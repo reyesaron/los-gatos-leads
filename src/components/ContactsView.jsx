@@ -25,7 +25,7 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [editId, setEditId] = useState(null);
-  const [form, setForm] = useState({ name: "", firm: "", phone: "", email: "", cities: [], specialty: "", notes: "" });
+  const [form, setForm] = useState({ name: "", firm: "", phone: "", email: "", url: "", socials: "", cities: [], specialty: "", notes: "" });
   const [saving, setSaving] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -74,7 +74,7 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
     return allContacts.filter(a => a.name.toLowerCase().includes(q) || (a.firm || "").toLowerCase().includes(q) || (a.specialty || "").toLowerCase().includes(q) || (a.cities || []).some(c => c.toLowerCase().includes(q)));
   }, [allContacts, search]);
 
-  const resetForm = () => { setForm({ name: "", firm: "", phone: "", email: "", cities: [], specialty: "", notes: "" }); setEditId(null); setShowForm(false); };
+  const resetForm = () => { setForm({ name: "", firm: "", phone: "", email: "", url: "", socials: "", cities: [], specialty: "", notes: "" }); setEditId(null); setShowForm(false); };
 
   const submit = async () => {
     if (!form.name.trim()) return;
@@ -99,7 +99,7 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
   };
 
   const startEdit = (a) => {
-    setForm({ name: a.name, firm: a.firm || "", phone: a.phone || "", email: a.email || "", cities: a.cities || [], specialty: a.specialty || "", notes: a.notes || "" });
+    setForm({ name: a.name, firm: a.firm || "", phone: a.phone || "", email: a.email || "", url: a.url || "", socials: a.socials || "", cities: a.cities || [], specialty: a.specialty || "", notes: a.notes || "" });
     setEditId(a.id);
     setShowForm(true);
   };
@@ -143,6 +143,14 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
               <input value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} placeholder="jane@email.com" style={iS} />
             </div>
             <div>
+              <div style={{ fontSize: 11, color: MUTED, marginBottom: 3, fontWeight: 600 }}>Website</div>
+              <input value={form.url} onChange={e => setForm(f => ({ ...f, url: e.target.value }))} placeholder="https://..." style={iS} />
+            </div>
+            <div>
+              <div style={{ fontSize: 11, color: MUTED, marginBottom: 3, fontWeight: 600 }}>Socials</div>
+              <input value={form.socials} onChange={e => setForm(f => ({ ...f, socials: e.target.value }))} placeholder="Instagram, LinkedIn, etc." style={iS} />
+            </div>
+            <div>
               <div style={{ fontSize: 11, color: MUTED, marginBottom: 3, fontWeight: 600 }}>Specialty</div>
               <input value={form.specialty} onChange={e => setForm(f => ({ ...f, specialty: e.target.value }))} placeholder={config.specialtyPlaceholder} style={iS} />
             </div>
@@ -182,8 +190,10 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", fontSize: 11, color: MUTED, marginBottom: 2 }}>
               {a.phone && <span>{a.phone}</span>}
               {a.email && <span>{a.email}</span>}
+              {a.url && <a href={a.url.startsWith("http") ? a.url : `https://${a.url}`} target="_blank" rel="noopener noreferrer" style={{ color: "#60a5fa", textDecoration: "none" }}>{a.url.replace(/^https?:\/\//, "")}</a>}
               {a.specialty && <span>{a.specialty}</span>}
             </div>
+            {a.socials && <div style={{ fontSize: 11, color: DIM, marginBottom: 2 }}>{a.socials}</div>}
             {(a.cities || []).length > 0 && (
               <div style={{ display: "flex", gap: 3, flexWrap: "wrap", marginBottom: 2 }}>
                 {a.cities.map(c => <span key={c} style={{ fontSize: 10, padding: "1px 6px", borderRadius: 3, background: BG, color: DIM, border: `1px solid ${BORDER}` }}>{c}</span>)}
