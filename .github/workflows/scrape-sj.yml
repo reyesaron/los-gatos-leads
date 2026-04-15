@@ -3,6 +3,7 @@ name: Scrape SJ + PA Permits
 on:
   schedule:
     - cron: "0 23 * * 1" # Every Monday at 4pm PT (23:00 UTC)
+    - cron: "0 17 * * 4" # Every Thursday at 10am PT (17:00 UTC)
   workflow_dispatch: # Allow manual trigger
 
 jobs:
