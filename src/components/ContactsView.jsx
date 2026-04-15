@@ -154,9 +154,9 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
               <div style={{ fontSize: 11, color: MUTED, marginBottom: 3, fontWeight: 600 }}>Specialty</div>
               <input value={form.specialty} onChange={e => setForm(f => ({ ...f, specialty: e.target.value }))} placeholder={config.specialtyPlaceholder} style={iS} />
             </div>
-            <div>
+            <div style={{ gridColumn: "1 / -1" }}>
               <div style={{ fontSize: 11, color: MUTED, marginBottom: 3, fontWeight: 600 }}>Notes</div>
-              <input value={form.notes} onChange={e => setForm(f => ({ ...f, notes: e.target.value }))} placeholder="Met at..." style={iS} />
+              <textarea value={form.notes} onChange={e => { setForm(f => ({ ...f, notes: e.target.value })); e.target.style.height = "auto"; e.target.style.height = e.target.scrollHeight + "px"; }} placeholder="Met at..." rows={2} style={{ ...iS, resize: "vertical", fontFamily: "inherit", minHeight: 40, overflow: "hidden" }} />
             </div>
             <div style={{ gridColumn: "1 / -1" }}>
               <div style={{ fontSize: 11, color: MUTED, marginBottom: 4, fontWeight: 600 }}>Active Cities</div>
