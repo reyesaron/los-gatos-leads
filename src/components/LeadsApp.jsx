@@ -8,6 +8,7 @@ import AuthScreen from "@/components/AuthScreen";
 import ProfileMenu from "@/components/ProfileMenu";
 import AdminUsers from "@/components/AdminUsers";
 import AuditLogView from "@/components/AuditLogView";
+import IdleTimeout from "@/components/IdleTimeout";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -342,6 +343,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
 
   return (
     <AuthWrapper onUser={setCurrentUser}>
+    <IdleTimeout onLogout={() => setCurrentUser(null)} />
     <div style={{fontFamily:"'DM Sans','Segoe UI',system-ui,sans-serif",background:BG,minHeight:"100vh",color:TEXT}}>
       {/* HEADER */}
       <div style={{background:"linear-gradient(145deg,#0f0f0f,#141414,#0f0f0f)",borderBottom:`1px solid ${BORDER}`,padding:"20px 20px 16px"}}>
