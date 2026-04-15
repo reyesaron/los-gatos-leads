@@ -1,4 +1,5 @@
 import { loadUsers, verifyPassword, createToken, sanitizeUser, getClientIP, checkLoginRateLimit, recordLoginFailure, clearLoginAttempts, logLoginEvent } from "@/lib/auth";
+import { logAudit } from "@/lib/audit";
 import { cookies } from "next/headers";
 
 export async function POST(request) {
@@ -23,6 +24,8 @@ export async function POST(request) {
     if (!user || !(await verifyPassword(password, user.passwordHash))) {
       const result = recordLoginFailure(email, ip);
       logLoginEvent("login_failure", email, ip, result.locked ? "Triggered lockout" : `${result.attemptsLeft} attempts left`);
+      const ua = request.headers.get("user-agent") || "";
+      await logAudit({ action: result.locked ? "login_lockout" : "login_failure", userEmail: email, ip, targetType: "auth", targetId: email, details: result.locked ? "Account locked after 5 failures" : `Failed attempt — ${result.attemptsLeft} left`, userAgent: ua });
       const msg = result.locked
         ? `Too many failed attempts. Account locked for 15 minutes.`
         : `Invalid email or password. ${result.attemptsLeft} attempt${result.attemptsLeft !== 1 ? "s" : ""} remaining.`;
@@ -40,6 +43,8 @@ export async function POST(request) {
     // Successful login — clear failed attempts and log
     clearLoginAttempts(email);
     logLoginEvent("login_success", email, ip, user.name);
+    const ua = request.headers.get("user-agent") || "";
+    await logAudit({ action: "login_success", userName: user.name, userEmail: email, userRole: user.role, ip, targetType: "auth", targetId: email, details: `Login successful`, userAgent: ua });
 
     const token = createToken(user);
 

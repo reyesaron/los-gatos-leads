@@ -1,6 +1,8 @@
 import { put, list } from "@vercel/blob";
+import { auditFromRequest } from "@/lib/audit-helper";
 
 export function createContactsAPI(blobName) {
+  const contactType = blobName.replace(".json", "");
   async function loadContacts() {
     try {
       const { blobs } = await list({ prefix: blobName });
@@ -41,6 +43,7 @@ export function createContactsAPI(blobName) {
         addedAt: new Date().toISOString(),
       });
       await saveContacts(contacts);
+      await auditFromRequest(request, { action: `${contactType}_add`, targetType: contactType, targetId: name, details: `Added ${contactType}: ${name}` });
       return Response.json({ ok: true, contacts });
     }
 
@@ -97,8 +100,10 @@ export function createContactsAPI(blobName) {
       const { id } = body;
       const idx = contacts.findIndex(a => a.id === id);
       if (idx === -1) return Response.json({ error: "not found" }, { status: 404 });
+      const deleted = contacts[idx];
       contacts.splice(idx, 1);
       await saveContacts(contacts);
+      await auditFromRequest(request, { action: `${contactType}_delete`, targetType: contactType, targetId: deleted.name || id, details: `Deleted ${contactType}: ${deleted.name || id}` });
       return Response.json({ ok: true, contacts });
     }
 

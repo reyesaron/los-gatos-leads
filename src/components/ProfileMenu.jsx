@@ -12,7 +12,7 @@ const DIM = "#404040";
 
 const iS = { padding: "8px 10px", borderRadius: 5, border: `1px solid ${BORDER}`, background: "#111", color: TEXT, fontSize: 12, outline: "none", width: "100%" };
 
-export default function ProfileMenu({ user, onLogout, onAdminClick }) {
+export default function ProfileMenu({ user, onLogout, onAdminClick, onAuditClick }) {
   const [open, setOpen] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [passForm, setPassForm] = useState({ currentPassword: "", newPassword: "", newPasswordConfirm: "" });
@@ -84,9 +84,12 @@ export default function ProfileMenu({ user, onLogout, onAdminClick }) {
 
           {/* Admin */}
           {user.role === "admin" && (
-            <div style={{ padding: "10px 14px", borderBottom: `1px solid ${BORDER}` }}>
+            <div style={{ padding: "10px 14px", borderBottom: `1px solid ${BORDER}`, display: "flex", gap: 16 }}>
               <button onClick={() => { onAdminClick(); setOpen(false); }} style={{ background: "none", border: "none", color: MUTED, fontSize: 12, cursor: "pointer", padding: 0 }}>
                 Manage Users
+              </button>
+              <button onClick={() => { onAuditClick(); setOpen(false); }} style={{ background: "none", border: "none", color: MUTED, fontSize: 12, cursor: "pointer", padding: 0 }}>
+                Audit Log
               </button>
             </div>
           )}

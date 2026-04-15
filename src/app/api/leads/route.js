@@ -1,4 +1,5 @@
 import { put, list } from "@vercel/blob";
+import { auditFromRequest } from "@/lib/audit-helper";
 
 const BLOB_NAME = "leads-crm.json";
 
@@ -112,5 +113,20 @@ export async function POST(request) {
   } catch (err) {
     return Response.json({ error: "Failed to save: " + err.message }, { status: 500 });
   }
+
+  // Audit log
+  await auditFromRequest(request, {
+    action: `lead_${action}`,
+    targetType: "lead",
+    targetId: leadId,
+    details: action === "updateStatus" ? `Status → ${body.status || ""}, Assignee → ${body.assignee || ""}` :
+             action === "addNote" ? `Note by ${body.author}: ${(body.note || "").slice(0, 80)}` :
+             action === "setFollowUp" ? `Follow-up: ${body.followUpDate || "cleared"}` :
+             action === "setEstValue" ? `Est. value: $${body.estValue || 0}` :
+             action === "setSource" ? `Source: ${body.source || ""}` :
+             action === "setContact" ? `Contact: ${body.contactName || ""} (${body.contactRole || ""})` :
+             action,
+  });
+
   return Response.json({ ok: true, lead: entry, notes: entry.notes || [] });
 }

@@ -1,4 +1,5 @@
 import { put, list } from "@vercel/blob";
+import { auditFromRequest } from "@/lib/audit-helper";
 
 const BLOB_NAME = "manual-leads.json";
 
@@ -65,6 +66,7 @@ export async function POST(request) {
     };
     leads.push(lead);
     await saveManualLeads(leads);
+    await auditFromRequest(request, { action: "manual_lead_add", targetType: "lead", targetId: address, details: `Manual lead: ${address}, ${city}` });
     return Response.json({ ok: true, lead, total: leads.length });
   }
 

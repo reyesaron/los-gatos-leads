@@ -7,6 +7,7 @@ import ContactsView from "@/components/ContactsView";
 import AuthScreen from "@/components/AuthScreen";
 import ProfileMenu from "@/components/ProfileMenu";
 import AdminUsers from "@/components/AdminUsers";
+import AuditLogView from "@/components/AuditLogView";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -351,7 +352,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
             </div>
             <div className="apex-bell-wrap" style={{display:"flex",gap:8,alignItems:"center"}}>
               <NotificationBell scored={scored} crmData={crmData} activityFeed={activityFeed} />
-              {currentUser && <ProfileMenu user={currentUser} onLogout={() => setCurrentUser(null)} onAdminClick={() => setView("admin")} />}
+              {currentUser && <ProfileMenu user={currentUser} onLogout={() => setCurrentUser(null)} onAdminClick={() => setView("admin")} onAuditClick={() => setView("auditLog")} />}
             </div>
           </div>
           <div className="apex-stats" style={{display:"flex",gap:18,marginTop:14,flexWrap:"wrap"}}>
@@ -576,8 +577,9 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
       </div>
       </>}
 
-      {/* ADMIN USERS VIEW */}
+      {/* ADMIN VIEWS */}
       {view === "admin" && currentUser?.role === "admin" && <AdminUsers />}
+      {view === "auditLog" && currentUser?.role === "admin" && <AuditLogView />}
     </div>
     </AuthWrapper>
   );
