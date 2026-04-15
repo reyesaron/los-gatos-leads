@@ -257,6 +257,7 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
         const isOpen = expandedId === (a.id || i);
         return (
         <div key={a.id || i} style={{ background: CARD, borderRadius: 6, border: `1px solid ${BORDER}`, marginBottom: 4, overflow: "hidden" }}>
+          {/* Collapsed header — name, firm, tags, last contact */}
           <div onClick={() => setExpandedId(isOpen ? null : (a.id || i))} style={{ padding: "10px 14px", cursor: "pointer", display: "flex", gap: 12, alignItems: "flex-start", transition: "background 0.15s" }} onMouseEnter={e => e.currentTarget.style.background = "#1a1a1a"} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
             <div style={{ width: 36, height: 36, borderRadius: 6, background: a.projectCount > 0 ? RED_DARK : "#1c1c1c", color: a.projectCount > 0 ? RED : DIM, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>
               {a.projectCount}
@@ -268,25 +269,47 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
                 {a.relationshipStatus && a.relationshipStatus !== "New" && <span style={{ fontSize: 9, padding: "1px 5px", borderRadius: 3, background: `${REL_COLORS[a.relationshipStatus] || MUTED}22`, color: REL_COLORS[a.relationshipStatus] || MUTED, fontWeight: 600 }}>{a.relationshipStatus.toUpperCase()}</span>}
                 {a.source === "crm" && <span style={{ fontSize: 9, padding: "1px 5px", borderRadius: 3, background: "#172554", color: "#60a5fa" }}>FROM LEADS</span>}
               </div>
-              <div style={{ display: "flex", gap: 12, flexWrap: "wrap", fontSize: 11, color: MUTED, marginBottom: 2 }}>
-                {a.phone && <span>{a.phone}</span>}
-                {a.email && <span>{a.email}</span>}
-                {a.url && <a href={a.url.startsWith("http") ? a.url : `https://${a.url}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ color: "#60a5fa", textDecoration: "none" }}>{a.url.replace(/^https?:\/\//, "")}</a>}
-                {a.specialty && <span>{a.specialty}</span>}
-              </div>
               {a.lastInteraction && <div style={{ fontSize: 10, color: DIM }}>Last contact: {new Date(a.lastInteraction).toLocaleDateString("en-US", { month: "short", day: "numeric" })} by {a.lastInteractionBy || "—"}</div>}
               {a.nextTouchDate && new Date(a.nextTouchDate) < new Date(new Date().toDateString()) && <div className="badge-new" style={{ fontSize: 10, color: "#fb923c", fontWeight: 600 }}>Touch overdue — {a.nextTouchDate}</div>}
             </div>
-            <div style={{ display: "flex", gap: 4, alignItems: "center", flexShrink: 0 }}>
-              {a.source !== "crm" && a.id && <>
-                <button onClick={e => { e.stopPropagation(); startEdit(a); }} style={{ padding: "4px 8px", borderRadius: 4, border: `1px solid ${BORDER}`, background: BG, color: MUTED, fontSize: 10, cursor: "pointer" }}>Edit</button>
-                <button onClick={e => { e.stopPropagation(); deleteContact(a.id); }} style={{ padding: "4px 8px", borderRadius: 4, border: `1px solid ${BORDER}`, background: BG, color: DIM, fontSize: 10, cursor: "pointer" }}>Del</button>
-              </>}
-              <div style={{ fontSize: 14, color: DIM, transform: isOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>▾</div>
-            </div>
+            <div style={{ fontSize: 14, color: DIM, transform: isOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s", flexShrink: 0 }}>▾</div>
           </div>
+
+          {/* Expanded — all info read-only + relationship controls + interaction log */}
           {isOpen && (
-            <div style={{ padding: "0 14px 10px", borderTop: `1px solid ${BORDER}`, paddingTop: 8 }}>
+            <div style={{ padding: "0 14px 10px", borderTop: `1px solid ${BORDER}`, paddingTop: 10 }}>
+              {/* Contact details — read-only with clickable links */}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4px 24px", fontSize: 11, marginBottom: 8 }}>
+                {a.phone && <div><span style={{ color: MUTED }}>Phone: </span><a href={`tel:${a.phone.replace(/[^\d+]/g, "")}`} style={{ color: TEXT, textDecoration: "none" }}>{a.phone}</a></div>}
+                {a.email && <div><span style={{ color: MUTED }}>Email: </span><a href={`mailto:${a.email}`} style={{ color: "#60a5fa", textDecoration: "none" }}>{a.email}</a></div>}
+                {a.url && <div><span style={{ color: MUTED }}>Website: </span><a href={a.url.startsWith("http") ? a.url : `https://${a.url}`} target="_blank" rel="noopener noreferrer" style={{ color: "#60a5fa", textDecoration: "none" }}>{a.url.replace(/^https?:\/\//, "")}</a></div>}
+                {a.socials && <div><span style={{ color: MUTED }}>Socials: </span><a href={a.socials.startsWith("http") ? a.socials : a.socials.startsWith("@") ? `https://instagram.com/${a.socials.replace("@","")}` : `https://${a.socials}`} target="_blank" rel="noopener noreferrer" style={{ color: "#60a5fa", textDecoration: "none" }}>{a.socials}</a></div>}
+                {a.specialty && <div><span style={{ color: MUTED }}>Specialty: </span><span style={{ color: TEXT }}>{a.specialty}</span></div>}
+                {a.firm && <div><span style={{ color: MUTED }}>{config.firmLabel}: </span><span style={{ color: TEXT }}>{a.firm}</span></div>}
+              </div>
+
+              {/* Cities */}
+              {(a.cities || []).length > 0 && (
+                <div style={{ display: "flex", gap: 3, flexWrap: "wrap", marginBottom: 6 }}>
+                  {a.cities.map(c => <span key={c} style={{ fontSize: 10, padding: "1px 6px", borderRadius: 3, background: BG, color: DIM, border: `1px solid ${BORDER}` }}>{c}</span>)}
+                </div>
+              )}
+
+              {/* Notes */}
+              {a.notes && <div style={{ fontSize: 11, color: MUTED, fontStyle: "italic", marginBottom: 6, lineHeight: 1.4 }}>{a.notes}</div>}
+
+              {/* Referrals */}
+              {(() => {
+                const referrals = (a.interactions || []).filter(n => n.type === "Referral");
+                const projectList = a.projects || [];
+                const allRefs = [...new Set([...projectList, ...referrals.map(r => r.note)])].filter(Boolean);
+                if (allRefs.length === 0) return null;
+                return <div style={{ fontSize: 11, color: DIM, marginBottom: 6 }}>
+                  <span style={{ color: RED, fontWeight: 600 }}>{allRefs.length} referral{allRefs.length !== 1 ? "s" : ""}</span>: {allRefs.join(" · ")}
+                </div>;
+              })()}
+
+              {/* Relationship + Next touch + Edit/Delete controls */}
               {a.id && <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6, flexWrap: "wrap" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
                   <span style={{ fontSize: 11, color: MUTED }}>Relationship:</span>
@@ -298,23 +321,13 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
                   <span style={{ fontSize: 11, color: MUTED }}>Next touch:</span>
                   <input type="date" value={a.nextTouchDate || ""} onChange={e => updateNextTouch(a.id, e.target.value)} style={{ ...iS, width: 130, padding: "3px 8px", fontSize: 11 }} />
                 </div>
+                {a.source !== "crm" && <>
+                  <button onClick={() => startEdit(a)} style={{ padding: "4px 10px", borderRadius: 4, border: `1px solid ${BORDER}`, background: BG, color: MUTED, fontSize: 10, cursor: "pointer" }}>Edit</button>
+                  <button onClick={() => deleteContact(a.id)} style={{ padding: "4px 10px", borderRadius: 4, border: `1px solid ${BORDER}`, background: BG, color: DIM, fontSize: 10, cursor: "pointer" }}>Del</button>
+                </>}
               </div>}
-              {a.socials && <div style={{ fontSize: 11, color: DIM, marginBottom: 4 }}>Socials: {a.socials}</div>}
-              {(a.cities || []).length > 0 && (
-                <div style={{ display: "flex", gap: 3, flexWrap: "wrap", marginBottom: 4 }}>
-                  {a.cities.map(c => <span key={c} style={{ fontSize: 10, padding: "1px 6px", borderRadius: 3, background: BG, color: DIM, border: `1px solid ${BORDER}` }}>{c}</span>)}
-                </div>
-              )}
-              {(() => {
-                const referrals = (a.interactions || []).filter(n => n.type === "Referral");
-                const projectList = a.projects || [];
-                const allRefs = [...new Set([...projectList, ...referrals.map(r => r.note)])].filter(Boolean);
-                if (allRefs.length === 0) return null;
-                return <div style={{ fontSize: 11, color: DIM, marginBottom: 4 }}>
-                  <span style={{ color: RED, fontWeight: 600 }}>{allRefs.length} referral{allRefs.length !== 1 ? "s" : ""}</span>: {allRefs.join(" · ")}
-                </div>;
-              })()}
-              {a.notes && <div style={{ fontSize: 11, color: DIM, fontStyle: "italic", marginBottom: 4 }}>{a.notes}</div>}
+
+              {/* Interaction log */}
               {a.id && <InteractionLog contact={a} apiPath={apiPath} onUpdate={setContacts} />}
             </div>
           )}
