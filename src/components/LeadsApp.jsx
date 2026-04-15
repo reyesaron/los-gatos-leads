@@ -173,7 +173,7 @@ function exportCSV(leads, crmData, getLeadId) {
   fetch("/api/audit/log", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "csv_export", targetType: "leads", details: `Exported ${rows.length} leads to CSV` }) }).catch(() => {});
 }
 
-function AuthWrapper({ children, onUser }) {
+function AuthWrapper({ children, onUser, loggedOut }) {
   const [authUser, setAuthUser] = useState(undefined);
   const [authChecked, setAuthChecked] = useState(false);
 
@@ -185,6 +185,11 @@ function AuthWrapper({ children, onUser }) {
     }).catch(() => { setAuthUser(null); onUser(null); }).finally(() => setAuthChecked(true));
   }, []);
 
+  // React to logout from ProfileMenu
+  useEffect(() => {
+    if (loggedOut) setAuthUser(null);
+  }, [loggedOut]);
+
   if (!authChecked) return <div style={{ minHeight: "100vh", background: "#0a0a0a", display: "flex", alignItems: "center", justifyContent: "center" }}><img src="/apex-logo-full.jpg" alt="Apex" style={{ height: 48, borderRadius: 8, opacity: 0.5 }} /></div>;
   if (!authUser) return <AuthScreen onLogin={(user) => { setAuthUser(user); onUser(user); }} />;
   return children;
@@ -192,6 +197,7 @@ function AuthWrapper({ children, onUser }) {
 
 export default function App({ projects: PROJECTS, scrapedAt }) {
   const [currentUser, setCurrentUser] = useState(null);
+  const [loggedOut, setLoggedOut] = useState(false);
   const [view, setView] = useState("leads");
   const [search, setSearch] = useState("");
   const [catFilter, setCatFilter] = useState("All");
@@ -342,8 +348,8 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   const catC = {"New Construction":{bg:RED_DARK,fg:RED},Addition:{bg:"#1c1c1c",fg:"#d4d4d4"},Subdivision:{bg:"#1c1c1c",fg:MUTED}};
 
   return (
-    <AuthWrapper onUser={setCurrentUser}>
-    <IdleTimeout onLogout={() => setCurrentUser(null)} />
+    <AuthWrapper onUser={(u) => { setCurrentUser(u); if (u) setLoggedOut(false); }} loggedOut={loggedOut}>
+    <IdleTimeout onLogout={() => { setCurrentUser(null); setLoggedOut(true); }} />
     <div style={{fontFamily:"'DM Sans','Segoe UI',system-ui,sans-serif",background:BG,minHeight:"100vh",color:TEXT}}>
       {/* HEADER */}
       <div style={{background:"linear-gradient(145deg,#0f0f0f,#141414,#0f0f0f)",borderBottom:`1px solid ${BORDER}`,padding:"20px 20px 16px"}}>
@@ -356,7 +362,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
             </div>
             <div className="apex-bell-wrap" style={{display:"flex",gap:8,alignItems:"center"}}>
               <NotificationBell scored={scored} crmData={crmData} activityFeed={activityFeed} currentUser={currentUser?.name || ""} />
-              {currentUser && <ProfileMenu user={currentUser} onLogout={() => setCurrentUser(null)} onAdminClick={() => setView("admin")} onAuditClick={() => setView("auditLog")} />}
+              {currentUser && <ProfileMenu user={currentUser} onLogout={() => { setCurrentUser(null); setLoggedOut(true); }} onAdminClick={() => setView("admin")} onAuditClick={() => setView("auditLog")} />}
             </div>
           </div>
           <div className="apex-stats" style={{display:"flex",gap:18,marginTop:14,flexWrap:"wrap"}}>
