@@ -34,6 +34,7 @@ export async function POST(request) {
 
     users[userIdx].passwordHash = await hashPassword(newPassword);
     users[userIdx].passwordChangedAt = new Date().toISOString();
+    users[userIdx].mustChangePassword = false;
     await saveUsers(users);
 
     return Response.json({ ok: true, message: "Password updated successfully" });

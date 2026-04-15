@@ -65,6 +65,78 @@ export function validateEmail(email) {
   return null;
 }
 
+// --- Rate Limiting ---
+
+const _loginAttempts = new Map(); // key: email or IP → { count, lockedUntil }
+const MAX_LOGIN_ATTEMPTS = 5;
+const LOCKOUT_MINUTES = 15;
+
+const _signupAttempts = new Map(); // key: IP → { count, resetAt }
+const MAX_SIGNUP_PER_HOUR = 3;
+
+export function checkLoginRateLimit(email, ip) {
+  const key = email.toLowerCase();
+  const now = Date.now();
+  const entry = _loginAttempts.get(key);
+
+  if (entry && entry.lockedUntil && now < entry.lockedUntil) {
+    const minsLeft = Math.ceil((entry.lockedUntil - now) / 60000);
+    return { blocked: true, message: `Account locked. Try again in ${minsLeft} minute${minsLeft !== 1 ? "s" : ""}.`, attemptsLeft: 0 };
+  }
+
+  return { blocked: false, attemptsLeft: entry ? MAX_LOGIN_ATTEMPTS - entry.count : MAX_LOGIN_ATTEMPTS };
+}
+
+export function recordLoginFailure(email, ip) {
+  const key = email.toLowerCase();
+  const now = Date.now();
+  const entry = _loginAttempts.get(key) || { count: 0, lockedUntil: null };
+
+  // Reset if lockout expired
+  if (entry.lockedUntil && now >= entry.lockedUntil) {
+    entry.count = 0;
+    entry.lockedUntil = null;
+  }
+
+  entry.count++;
+  if (entry.count >= MAX_LOGIN_ATTEMPTS) {
+    entry.lockedUntil = now + LOCKOUT_MINUTES * 60 * 1000;
+  }
+
+  _loginAttempts.set(key, entry);
+  return { locked: entry.count >= MAX_LOGIN_ATTEMPTS, attemptsLeft: Math.max(0, MAX_LOGIN_ATTEMPTS - entry.count) };
+}
+
+export function clearLoginAttempts(email) {
+  _loginAttempts.delete(email.toLowerCase());
+}
+
+export function checkSignupRateLimit(ip) {
+  const now = Date.now();
+  const entry = _signupAttempts.get(ip);
+
+  if (entry && now < entry.resetAt) {
+    if (entry.count >= MAX_SIGNUP_PER_HOUR) {
+      return { blocked: true, message: "Too many signup attempts. Try again later." };
+    }
+  }
+
+  return { blocked: false };
+}
+
+export function recordSignupAttempt(ip) {
+  const now = Date.now();
+  const entry = _signupAttempts.get(ip) || { count: 0, resetAt: now + 60 * 60 * 1000 };
+
+  if (now >= entry.resetAt) {
+    entry.count = 0;
+    entry.resetAt = now + 60 * 60 * 1000;
+  }
+
+  entry.count++;
+  _signupAttempts.set(ip, entry);
+}
+
 // --- JWT Sessions ---
 
 export function createToken(user) {
@@ -95,3 +167,59 @@ export function sanitizeUser(user) {
   const { passwordHash, ...safe } = user;
   return safe;
 }
+
+// --- Login Audit Log ---
+// Stored in-memory, flushed to Blob periodically
+let _loginLog = [];
+
+export function logLoginEvent(type, email, ip, details) {
+  _loginLog.push({
+    type, // "login_success", "login_failure", "lockout"
+    email: email || "",
+    ip: ip || "unknown",
+    details: details || "",
+    timestamp: new Date().toISOString(),
+  });
+  // Flush to Blob every 10 entries
+  if (_loginLog.length >= 10) flushLoginLog();
+}
+
+async function flushLoginLog() {
+  if (_loginLog.length === 0) return;
+  const entries = [..._loginLog];
+  _loginLog = [];
+  try {
+    // Load existing log
+    let existing = [];
+    const { blobs } = await list({ prefix: "login-log.json" });
+    if (blobs.length > 0) {
+      const url = blobs[0].url + "?_t=" + Date.now();
+      const res = await fetch(url, { cache: "no-store" });
+      existing = await res.json();
+    }
+    // Append and keep last 1000 entries
+    const combined = [...entries, ...existing].slice(0, 1000);
+    await put("login-log.json", JSON.stringify(combined), {
+      access: "public", addRandomSuffix: false, allowOverwrite: true,
+    });
+  } catch { /* best effort */ }
+}
+
+export async function getLoginLog() {
+  // Merge in-memory with persisted
+  try {
+    const { blobs } = await list({ prefix: "login-log.json" });
+    let persisted = [];
+    if (blobs.length > 0) {
+      const url = blobs[0].url + "?_t=" + Date.now();
+      const res = await fetch(url, { cache: "no-store" });
+      persisted = await res.json();
+    }
+    return [..._loginLog, ...persisted];
+  } catch {
+    return [..._loginLog];
+  }
+}
+
+// Force flush on module unload (best effort)
+export { flushLoginLog };

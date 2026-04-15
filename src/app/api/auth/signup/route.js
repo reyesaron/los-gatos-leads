@@ -1,7 +1,15 @@
-import { loadUsers, saveUsers, hashPassword, validatePassword, validateEmail, sanitizeUser } from "@/lib/auth";
+import { loadUsers, saveUsers, hashPassword, validatePassword, validateEmail, sanitizeUser, getClientIP, checkSignupRateLimit, recordSignupAttempt } from "@/lib/auth";
 
 export async function POST(request) {
   try {
+    const ip = getClientIP(request);
+
+    // Check signup rate limit
+    const rateCheck = checkSignupRateLimit(ip);
+    if (rateCheck.blocked) {
+      return Response.json({ error: rateCheck.message }, { status: 429 });
+    }
+
     const { name, email, password, passwordConfirm } = await request.json();
 
     if (!name || !email || !password || !passwordConfirm) {
@@ -25,6 +33,9 @@ export async function POST(request) {
       return Response.json({ error: "An account with this email already exists" }, { status: 400 });
     }
 
+    // Record the attempt
+    recordSignupAttempt(ip);
+
     const passwordHash = await hashPassword(password);
     const isFirstUser = users.length === 0;
 
@@ -35,6 +46,7 @@ export async function POST(request) {
       passwordHash,
       role: isFirstUser ? "admin" : "user",
       status: isFirstUser ? "approved" : "pending",
+      mustChangePassword: false,
       createdAt: new Date().toISOString(),
     };
 
