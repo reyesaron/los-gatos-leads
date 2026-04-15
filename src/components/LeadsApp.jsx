@@ -351,7 +351,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
               <p style={{margin:0,fontSize:12,color:MUTED}}>South Bay Construction Leads · {allProjects.length} projects{scrapedAt && ` · Updated ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p>
             </div>
             <div className="apex-bell-wrap" style={{display:"flex",gap:8,alignItems:"center"}}>
-              <NotificationBell scored={scored} crmData={crmData} activityFeed={activityFeed} />
+              <NotificationBell scored={scored} crmData={crmData} activityFeed={activityFeed} currentUser={currentUser?.name || ""} />
               {currentUser && <ProfileMenu user={currentUser} onLogout={() => setCurrentUser(null)} onAdminClick={() => setView("admin")} onAuditClick={() => setView("auditLog")} />}
             </div>
           </div>

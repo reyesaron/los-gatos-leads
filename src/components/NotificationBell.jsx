@@ -1,5 +1,5 @@
 'use client';
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 
 const RED = "#dc2626";
 const BG = "#0a0a0a";
@@ -9,18 +9,8 @@ const TEXT = "#e5e5e5";
 const MUTED = "#737373";
 const DIM = "#404040";
 
-const TEAM = ["Daniel", "Aron", "Joseph"];
-
-export default function NotificationBell({ scored, crmData, activityFeed }) {
+export default function NotificationBell({ scored, crmData, activityFeed, currentUser }) {
   const [open, setOpen] = useState(false);
-  const [currentUser, setCurrentUser] = useState(() => {
-    if (typeof window !== "undefined") return localStorage.getItem("apex-user") || "";
-    return "";
-  });
-
-  useEffect(() => {
-    if (currentUser) localStorage.setItem("apex-user", currentUser);
-  }, [currentUser]);
 
   const lastSeen = useMemo(() => {
     if (typeof window === "undefined") return new Date().toISOString();
@@ -85,12 +75,6 @@ export default function NotificationBell({ scored, crmData, activityFeed }) {
   return (
     <div style={{ position: "relative" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        {/* User selector */}
-        <select value={currentUser} onChange={e => setCurrentUser(e.target.value)} style={{ padding: "4px 8px", borderRadius: 4, border: `1px solid ${BORDER}`, background: "#111", color: currentUser ? TEXT : MUTED, fontSize: 11, outline: "none" }}>
-          <option value="">I am...</option>
-          {TEAM.map(t => <option key={t} value={t}>{t}</option>)}
-        </select>
-
         {/* Bell */}
         <button onClick={() => { setOpen(!open); if (!open) markSeen(); }} style={{ position: "relative", background: "none", border: "none", cursor: "pointer", fontSize: 18, padding: 4, color: count > 0 ? TEXT : DIM }}>
           🔔
