@@ -1,9 +1,7 @@
 import { google } from "googleapis";
 
 const SCOPES = ["https://www.googleapis.com/auth/calendar.events"];
-const REDIRECT_URI = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}/api/auth/google/callback`
-  : "https://los-gatos-leads.vercel.app/api/auth/google/callback";
+const REDIRECT_URI = "https://los-gatos-leads.vercel.app/api/auth/google/callback";
 
 function getOAuth2Client() {
   return new google.auth.OAuth2(
