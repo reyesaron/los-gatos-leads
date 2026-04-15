@@ -70,6 +70,15 @@ function deduplicateProjects(allProjects) {
   return result;
 }
 
+const COMMERCIAL_FILTER = /tenant\s*improve|commercial\s*(?:build|struct|project|develop)|office\s*(?:tenant|build|renov)|retail\s*(?:tenant|build)|restaurant\s*(?:tenant|improve)|industrial\s*(?:build|plant)|warehouse|hotel|motel|church|school|daycare|data\s*center|antenna|cell\s*(?:site|tower)/i;
+
+function filterCommercial(projects) {
+  return projects.filter(p => {
+    const text = `${p.description || ""} ${p.scope || ""} ${p.overview || ""} ${p.appType || ""}`;
+    return !COMMERCIAL_FILTER.test(text);
+  });
+}
+
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
@@ -94,10 +103,10 @@ export default async function Home() {
   const sjProjects = (sjMerged?.projects || []);
   const paProjects = (paScraped?.projects || []);
 
-  // Merge all sources then deduplicate by normalized address
-  // Order matters: scraped data comes last so it wins over hardcoded on ties
+  // Merge all sources, filter commercial/TI, then deduplicate
   const allRaw = [...nonLGHardcoded, ...lgProjects, ...sjProjects, ...paProjects];
-  const projects = deduplicateProjects(allRaw);
+  const residentialOnly = filterCommercial(allRaw);
+  const projects = deduplicateProjects(residentialOnly);
 
   const scrapedLetters = lgScraped?.scrapedLetters || SCRAPED_LETTERS;
   const scrapedAt = lgScraped?.scrapedAt || sjMerged?.scrapedAt || paScraped?.scrapedAt || null;
