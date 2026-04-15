@@ -1,5 +1,8 @@
 import { put, list } from "@vercel/blob";
 import { auditFromRequest } from "@/lib/audit-helper";
+import { verifyToken, loadUsers } from "@/lib/auth";
+import { createEventForUsers, updateEventForUsers, deleteEventForUsers } from "@/lib/google-calendar";
+import { cookies } from "next/headers";
 
 export function createContactsAPI(blobName) {
   const contactType = blobName.replace(".json", "");
@@ -65,6 +68,40 @@ export function createContactsAPI(blobName) {
       if (idx === -1) return Response.json({ error: "not found" }, { status: 404 });
       contacts[idx].nextTouchDate = nextTouchDate || "";
       contacts[idx].updatedAt = new Date().toISOString();
+
+      // Google Calendar — create events for current user (who set the reminder)
+      try {
+        const cookieStore = await cookies();
+        const authToken = cookieStore.get("auth-token")?.value;
+        if (authToken) {
+          const payload = verifyToken(authToken);
+          if (payload) {
+            const users = await loadUsers();
+            const currentUser = users.find(u => u.id === payload.id);
+            const calUsers = currentUser?.googleCalendarConnected ? [currentUser] : [];
+
+            if (calUsers.length > 0) {
+              const contactName = contacts[idx].name;
+              const title = `Touch: ${contactName} (${contactType})`;
+              const description = `Follow up with ${contactName}${contacts[idx].firm ? ` at ${contacts[idx].firm}` : ""}\n\nView in CRM: https://los-gatos-leads.vercel.app`;
+
+              if (nextTouchDate) {
+                if (contacts[idx].calendarEventIds) {
+                  await updateEventForUsers(calUsers, contacts[idx].calendarEventIds, { title, description, followUpDate: nextTouchDate });
+                } else {
+                  contacts[idx].calendarEventIds = await createEventForUsers(calUsers, { title, description, followUpDate: nextTouchDate });
+                }
+              } else if (contacts[idx].calendarEventIds) {
+                await deleteEventForUsers(calUsers, contacts[idx].calendarEventIds);
+                delete contacts[idx].calendarEventIds;
+              }
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Contact calendar error:", err.message);
+      }
+
       await saveContacts(contacts);
       await auditFromRequest(request, { action: `${contactType}_setNextTouch`, targetType: contactType, targetId: contacts[idx].name, details: `Next touch: ${nextTouchDate || "cleared"}` });
       return Response.json({ ok: true, contacts });

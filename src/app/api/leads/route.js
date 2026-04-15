@@ -1,7 +1,7 @@
 import { put, list } from "@vercel/blob";
 import { auditFromRequest } from "@/lib/audit-helper";
 import { verifyToken, loadUsers, saveUsers } from "@/lib/auth";
-import { createCalendarEvent, updateCalendarEvent, deleteCalendarEvent, refreshTokensIfNeeded } from "@/lib/google-calendar";
+import { createEventForUsers, updateEventForUsers, deleteEventForUsers } from "@/lib/google-calendar";
 import { cookies } from "next/headers";
 
 const BLOB_NAME = "leads-crm.json";
@@ -87,7 +87,7 @@ export async function POST(request) {
     entry.followUpAssignee = body.assignee || "";
     entry.updatedAt = new Date().toISOString();
 
-    // Google Calendar integration
+    // Google Calendar integration — create events for BOTH assigned user AND current user
     try {
       const cookieStore = await cookies();
       const authToken = cookieStore.get("auth-token")?.value;
@@ -95,46 +95,34 @@ export async function POST(request) {
         const payload = verifyToken(authToken);
         if (payload) {
           const users = await loadUsers();
-          // Find the target user: assigned user first, then current user
-          const assignee = entry.assignee ? users.find(u => u.name === entry.assignee) : null;
           const currentUser = users.find(u => u.id === payload.id);
-          const calUser = (assignee?.googleCalendarConnected ? assignee : currentUser?.googleCalendarConnected ? currentUser : null);
+          const assignee = entry.assignee ? users.find(u => u.name === entry.assignee) : null;
 
-          if (calUser?.googleTokens) {
-            const tokens = await refreshTokensIfNeeded(calUser.googleTokens);
-            if (tokens !== calUser.googleTokens) {
-              const uidx = users.findIndex(u => u.id === calUser.id);
-              if (uidx >= 0) { users[uidx].googleTokens = tokens; await saveUsers(users); }
-            }
+          // Both users get calendar events (deduplicated if same person)
+          const calUsers = [];
+          if (currentUser?.googleCalendarConnected) calUsers.push(currentUser);
+          if (assignee?.googleCalendarConnected && assignee.id !== currentUser?.id) calUsers.push(assignee);
 
+          if (calUsers.length > 0) {
             const address = body.leadAddress || leadId;
             const scope = body.leadScope || "";
+            const title = `Follow-up: ${address}`;
+            const description = `${scope}\n\n${entry.notes?.[0]?.text || ""}\n\nView in CRM: https://los-gatos-leads.vercel.app`.trim();
 
             if (body.followUpDate) {
-              if (entry.calendarEventId) {
-                // Update existing event
-                await updateCalendarEvent(tokens, entry.calendarEventId, {
-                  address, scope, notes: entry.notes?.[0]?.text || "",
-                  followUpDate: body.followUpDate,
-                });
+              if (entry.calendarEventIds) {
+                await updateEventForUsers(calUsers, entry.calendarEventIds, { title, description, followUpDate: body.followUpDate });
               } else {
-                // Create new event
-                const event = await createCalendarEvent(tokens, {
-                  address, scope, notes: entry.notes?.[0]?.text || "",
-                  followUpDate: body.followUpDate,
-                });
-                entry.calendarEventId = event.id;
+                entry.calendarEventIds = await createEventForUsers(calUsers, { title, description, followUpDate: body.followUpDate });
               }
-            } else if (entry.calendarEventId) {
-              // Follow-up cleared — delete the event
-              await deleteCalendarEvent(tokens, entry.calendarEventId);
-              delete entry.calendarEventId;
+            } else if (entry.calendarEventIds) {
+              await deleteEventForUsers(calUsers, entry.calendarEventIds);
+              delete entry.calendarEventIds;
             }
           }
         }
       }
     } catch (err) {
-      // Best effort — don't fail the follow-up save if calendar fails
       console.error("Calendar event error:", err.message);
     }
   }
