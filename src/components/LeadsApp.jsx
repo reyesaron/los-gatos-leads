@@ -4,6 +4,9 @@ import { getLeadScore } from "@/data/scoring";
 import CRMPanel from "@/components/CRMPanel";
 import NotificationBell from "@/components/NotificationBell";
 import ContactsView from "@/components/ContactsView";
+import AuthScreen from "@/components/AuthScreen";
+import ProfileMenu from "@/components/ProfileMenu";
+import AdminUsers from "@/components/AdminUsers";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -166,8 +169,26 @@ function exportCSV(leads, crmData, getLeadId) {
   URL.revokeObjectURL(url);
 }
 
+function AuthWrapper({ children, onUser }) {
+  const [authUser, setAuthUser] = useState(undefined);
+  const [authChecked, setAuthChecked] = useState(false);
+
+  useEffect(() => {
+    fetch(`/api/auth/me?_t=${Date.now()}`).then(r => r.json()).then(d => {
+      const user = d.user || null;
+      setAuthUser(user);
+      onUser(user);
+    }).catch(() => { setAuthUser(null); onUser(null); }).finally(() => setAuthChecked(true));
+  }, []);
+
+  if (!authChecked) return <div style={{ minHeight: "100vh", background: "#0a0a0a", display: "flex", alignItems: "center", justifyContent: "center" }}><img src="/apex-logo-full.jpg" alt="Apex" style={{ height: 48, borderRadius: 8, opacity: 0.5 }} /></div>;
+  if (!authUser) return <AuthScreen onLogin={(user) => { setAuthUser(user); onUser(user); }} />;
+  return children;
+}
+
 export default function App({ projects: PROJECTS, scrapedAt }) {
-  const [view, setView] = useState("leads"); // "leads", "activity", or "addLead"
+  const [currentUser, setCurrentUser] = useState(null);
+  const [view, setView] = useState("leads");
   const [search, setSearch] = useState("");
   const [catFilter, setCatFilter] = useState("All");
   const [cityFilter, setCityFilter] = useState("All");
@@ -317,6 +338,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   const catC = {"New Construction":{bg:RED_DARK,fg:RED},Addition:{bg:"#1c1c1c",fg:"#d4d4d4"},Subdivision:{bg:"#1c1c1c",fg:MUTED}};
 
   return (
+    <AuthWrapper onUser={setCurrentUser}>
     <div style={{fontFamily:"'DM Sans','Segoe UI',system-ui,sans-serif",background:BG,minHeight:"100vh",color:TEXT}}>
       {/* HEADER */}
       <div style={{background:"linear-gradient(145deg,#0f0f0f,#141414,#0f0f0f)",borderBottom:`1px solid ${BORDER}`,padding:"20px 20px 16px"}}>
@@ -327,7 +349,10 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
               <h1 style={{margin:0,fontSize:20,fontWeight:700,color:"#fff",letterSpacing:"-0.02em"}}>Construction Leads</h1>
               <p style={{margin:0,fontSize:12,color:MUTED}}>South Bay Construction Leads · {allProjects.length} projects{scrapedAt && ` · Updated ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p>
             </div>
-            <div className="apex-bell-wrap"><NotificationBell scored={scored} crmData={crmData} activityFeed={activityFeed} /></div>
+            <div className="apex-bell-wrap" style={{display:"flex",gap:8,alignItems:"center"}}>
+              <NotificationBell scored={scored} crmData={crmData} activityFeed={activityFeed} />
+              {currentUser && <ProfileMenu user={currentUser} onLogout={() => setCurrentUser(null)} onAdminClick={() => setView("admin")} />}
+            </div>
           </div>
           <div className="apex-stats" style={{display:"flex",gap:18,marginTop:14,flexWrap:"wrap"}}>
             {[
@@ -550,6 +575,10 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
         </div>
       </div>
       </>}
+
+      {/* ADMIN USERS VIEW */}
+      {view === "admin" && currentUser?.role === "admin" && <AdminUsers />}
     </div>
+    </AuthWrapper>
   );
 }
