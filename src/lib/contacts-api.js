@@ -54,6 +54,45 @@ export function createContactsAPI(blobName) {
       return Response.json({ ok: true, contacts });
     }
 
+    if (action === "setNextTouch") {
+      const { id, nextTouchDate } = body;
+      const idx = contacts.findIndex(a => a.id === id);
+      if (idx === -1) return Response.json({ error: "not found" }, { status: 404 });
+      contacts[idx].nextTouchDate = nextTouchDate || "";
+      contacts[idx].updatedAt = new Date().toISOString();
+      await saveContacts(contacts);
+      return Response.json({ ok: true, contacts });
+    }
+
+    if (action === "setRelationship") {
+      const { id, relationshipStatus } = body;
+      const idx = contacts.findIndex(a => a.id === id);
+      if (idx === -1) return Response.json({ error: "not found" }, { status: 404 });
+      contacts[idx].relationshipStatus = relationshipStatus || "";
+      contacts[idx].updatedAt = new Date().toISOString();
+      await saveContacts(contacts);
+      return Response.json({ ok: true, contacts });
+    }
+
+    if (action === "addInteraction") {
+      const { id, type, note, author } = body;
+      if (!id || !author) return Response.json({ error: "id and author required" }, { status: 400 });
+      const idx = contacts.findIndex(a => a.id === id);
+      if (idx === -1) return Response.json({ error: "not found" }, { status: 404 });
+      if (!contacts[idx].interactions) contacts[idx].interactions = [];
+      contacts[idx].interactions.unshift({
+        type: type || "Note",
+        note: note || "",
+        author,
+        timestamp: new Date().toISOString(),
+      });
+      contacts[idx].lastInteraction = new Date().toISOString();
+      contacts[idx].lastInteractionBy = author;
+      contacts[idx].updatedAt = new Date().toISOString();
+      await saveContacts(contacts);
+      return Response.json({ ok: true, contacts });
+    }
+
     if (action === "delete") {
       const { id } = body;
       const idx = contacts.findIndex(a => a.id === id);

@@ -19,6 +19,66 @@ const ROLE_CONFIG = {
   Realtor: { title: "Realtor Database", singular: "Realtor", specialtyPlaceholder: "Luxury, new construction, teardowns...", firmLabel: "Brokerage" },
 };
 
+const INTERACTION_TYPES = ["Call", "Meeting", "Lunch", "Email", "Text", "Referral", "Note"];
+const TEAM = ["Daniel", "Aron", "Joseph"];
+const RELATIONSHIP_STATUSES = ["New", "Reached Out", "Connected", "Active Referrer", "Inactive"];
+const REL_COLORS = { New: MUTED, "Reached Out": "#60a5fa", Connected: "#4ade80", "Active Referrer": "#dc2626", Inactive: "#404040" };
+
+function InteractionLog({ contact, apiPath, onUpdate }) {
+  const [noteText, setNoteText] = useState("");
+  const [noteType, setNoteType] = useState("Call");
+  const [noteAuthor, setNoteAuthor] = useState(TEAM[0]);
+  const [saving, setSaving] = useState(false);
+
+  const addInteraction = async () => {
+    if (!noteText.trim()) return;
+    setSaving(true);
+    try {
+      const res = await fetch(apiPath, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "addInteraction", id: contact.id, type: noteType, note: noteText.trim(), author: noteAuthor }),
+      });
+      const data = await res.json();
+      if (data.contacts || data.architects) onUpdate(data.contacts || data.architects);
+      setNoteText("");
+    } catch {}
+    setSaving(false);
+  };
+
+  const interactions = contact.interactions || [];
+  const typeColors = { Call: "#60a5fa", Meeting: "#4ade80", Lunch: "#fbbf24", Email: "#a78bfa", Text: "#94a3b8", Referral: "#dc2626", Note: "#737373" };
+
+  return (
+    <div style={{ marginTop: 8, borderTop: `1px solid ${BORDER}`, paddingTop: 8 }}>
+      <div style={{ display: "flex", gap: 4, marginBottom: 6, alignItems: "flex-start" }}>
+        <select value={noteAuthor} onChange={e => setNoteAuthor(e.target.value)} style={{ ...iS, width: 80, flexShrink: 0, padding: "4px 6px", fontSize: 11 }}>
+          {TEAM.map(t => <option key={t} value={t}>{t}</option>)}
+        </select>
+        <select value={noteType} onChange={e => setNoteType(e.target.value)} style={{ ...iS, width: 75, flexShrink: 0, padding: "4px 6px", fontSize: 11 }}>
+          {INTERACTION_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
+        </select>
+        <input value={noteText} onChange={e => setNoteText(e.target.value)} placeholder="Log interaction..." onKeyDown={e => { if (e.key === "Enter") addInteraction(); }} style={{ ...iS, flex: 1, padding: "4px 8px", fontSize: 11 }} />
+        <button onClick={addInteraction} disabled={!noteText.trim() || saving} style={{ padding: "4px 10px", borderRadius: 4, border: "none", background: noteText.trim() ? RED : "#1c1c1c", color: "#fff", fontSize: 11, fontWeight: 600, cursor: noteText.trim() ? "pointer" : "default", opacity: noteText.trim() ? 1 : 0.4, flexShrink: 0 }}>Log</button>
+      </div>
+      {interactions.length > 0 && (
+        <div style={{ maxHeight: 150, overflowY: "auto" }}>
+          {interactions.map((n, i) => (
+            <div key={i} style={{ marginBottom: 4, fontSize: 11, lineHeight: 1.4, display: "flex", gap: 6, alignItems: "flex-start" }}>
+              <span style={{ fontSize: 9, fontWeight: 700, padding: "1px 4px", borderRadius: 3, background: `${typeColors[n.type] || MUTED}22`, color: typeColors[n.type] || MUTED, whiteSpace: "nowrap", marginTop: 1 }}>{n.type}</span>
+              <div style={{ flex: 1 }}>
+                <span style={{ color: TEXT, fontWeight: 600 }}>{n.author}</span>
+                <span style={{ color: DIM, marginLeft: 6, fontSize: 10 }}>{new Date(n.timestamp).toLocaleDateString("en-US", { month: "short", day: "numeric" })} {new Date(n.timestamp).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}</span>
+                <div style={{ color: MUTED, marginTop: 1 }}>{n.note}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function ContactsView({ role, apiPath, crmData, scored }) {
   const config = ROLE_CONFIG[role] || ROLE_CONFIG.Architect;
   const [contacts, setContacts] = useState([]);
@@ -28,6 +88,7 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
   const [form, setForm] = useState({ name: "", firm: "", phone: "", email: "", url: "", socials: "", cities: [], specialty: "", notes: "" });
   const [saving, setSaving] = useState(false);
   const [search, setSearch] = useState("");
+  const [expandedId, setExpandedId] = useState(null);
 
   useEffect(() => {
     fetch(`${apiPath}?_t=${Date.now()}`).then(r => r.json()).then(d => setContacts(d.architects || d.contacts || [])).catch(() => {}).finally(() => setLoading(false));
@@ -104,6 +165,22 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
     setShowForm(true);
   };
 
+  const updateNextTouch = async (id, date) => {
+    try {
+      const res = await fetch(apiPath, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "setNextTouch", id, nextTouchDate: date }) });
+      const data = await res.json();
+      if (data.contacts || data.architects) setContacts(data.contacts || data.architects);
+    } catch {}
+  };
+
+  const updateRelationship = async (id, status) => {
+    try {
+      const res = await fetch(apiPath, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "setRelationship", id, relationshipStatus: status }) });
+      const data = await res.json();
+      if (data.contacts || data.architects) setContacts(data.contacts || data.architects);
+    } catch {}
+  };
+
   const toggleCity = (city) => {
     setForm(f => ({ ...f, cities: f.cities.includes(city) ? f.cities.filter(c => c !== city) : [...f.cities, city] }));
   };
@@ -176,42 +253,73 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
       )}
 
       {filtered.length === 0 && <div style={{ textAlign: "center", padding: 40, color: MUTED }}>No {config.singular.toLowerCase()}s yet. Add one or set contact role to "{role}" on a lead.</div>}
-      {filtered.map((a, i) => (
-        <div key={a.id || i} style={{ background: CARD, borderRadius: 6, border: `1px solid ${BORDER}`, padding: "10px 14px", marginBottom: 4, display: "flex", gap: 12, alignItems: "flex-start" }}>
-          <div style={{ width: 36, height: 36, borderRadius: 6, background: a.projectCount > 0 ? RED_DARK : "#1c1c1c", color: a.projectCount > 0 ? RED : DIM, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>
-            {a.projectCount}
-          </div>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 2 }}>
-              <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{a.name}</span>
-              {a.firm && <span style={{ fontSize: 11, color: MUTED }}>{a.firm}</span>}
-              {a.source === "crm" && <span style={{ fontSize: 9, padding: "1px 5px", borderRadius: 3, background: "#172554", color: "#60a5fa" }}>FROM LEADS</span>}
+      {filtered.map((a, i) => {
+        const isOpen = expandedId === (a.id || i);
+        return (
+        <div key={a.id || i} style={{ background: CARD, borderRadius: 6, border: `1px solid ${BORDER}`, marginBottom: 4, overflow: "hidden" }}>
+          <div onClick={() => setExpandedId(isOpen ? null : (a.id || i))} style={{ padding: "10px 14px", cursor: "pointer", display: "flex", gap: 12, alignItems: "flex-start", transition: "background 0.15s" }} onMouseEnter={e => e.currentTarget.style.background = "#1a1a1a"} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
+            <div style={{ width: 36, height: 36, borderRadius: 6, background: a.projectCount > 0 ? RED_DARK : "#1c1c1c", color: a.projectCount > 0 ? RED : DIM, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>
+              {a.projectCount}
             </div>
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap", fontSize: 11, color: MUTED, marginBottom: 2 }}>
-              {a.phone && <span>{a.phone}</span>}
-              {a.email && <span>{a.email}</span>}
-              {a.url && <a href={a.url.startsWith("http") ? a.url : `https://${a.url}`} target="_blank" rel="noopener noreferrer" style={{ color: "#60a5fa", textDecoration: "none" }}>{a.url.replace(/^https?:\/\//, "")}</a>}
-              {a.specialty && <span>{a.specialty}</span>}
-            </div>
-            {a.socials && <div style={{ fontSize: 11, color: DIM, marginBottom: 2 }}>{a.socials}</div>}
-            {(a.cities || []).length > 0 && (
-              <div style={{ display: "flex", gap: 3, flexWrap: "wrap", marginBottom: 2 }}>
-                {a.cities.map(c => <span key={c} style={{ fontSize: 10, padding: "1px 6px", borderRadius: 3, background: BG, color: DIM, border: `1px solid ${BORDER}` }}>{c}</span>)}
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginBottom: 2 }}>
+                <span style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{a.name}</span>
+                {a.firm && <span style={{ fontSize: 11, color: MUTED }}>{a.firm}</span>}
+                {a.relationshipStatus && a.relationshipStatus !== "New" && <span style={{ fontSize: 9, padding: "1px 5px", borderRadius: 3, background: `${REL_COLORS[a.relationshipStatus] || MUTED}22`, color: REL_COLORS[a.relationshipStatus] || MUTED, fontWeight: 600 }}>{a.relationshipStatus.toUpperCase()}</span>}
+                {a.source === "crm" && <span style={{ fontSize: 9, padding: "1px 5px", borderRadius: 3, background: "#172554", color: "#60a5fa" }}>FROM LEADS</span>}
               </div>
-            )}
-            {a.projects && a.projects.length > 0 && (
-              <div style={{ fontSize: 11, color: DIM, marginTop: 2 }}>Projects: {a.projects.join(", ")}</div>
-            )}
-            {a.notes && <div style={{ fontSize: 11, color: DIM, fontStyle: "italic", marginTop: 2 }}>{a.notes}</div>}
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap", fontSize: 11, color: MUTED, marginBottom: 2 }}>
+                {a.phone && <span>{a.phone}</span>}
+                {a.email && <span>{a.email}</span>}
+                {a.url && <a href={a.url.startsWith("http") ? a.url : `https://${a.url}`} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ color: "#60a5fa", textDecoration: "none" }}>{a.url.replace(/^https?:\/\//, "")}</a>}
+                {a.specialty && <span>{a.specialty}</span>}
+              </div>
+              {a.lastInteraction && <div style={{ fontSize: 10, color: DIM }}>Last contact: {new Date(a.lastInteraction).toLocaleDateString("en-US", { month: "short", day: "numeric" })} by {a.lastInteractionBy || "—"}</div>}
+              {a.nextTouchDate && new Date(a.nextTouchDate) < new Date(new Date().toDateString()) && <div className="badge-new" style={{ fontSize: 10, color: "#fb923c", fontWeight: 600 }}>Touch overdue — {a.nextTouchDate}</div>}
+            </div>
+            <div style={{ display: "flex", gap: 4, alignItems: "center", flexShrink: 0 }}>
+              {a.source !== "crm" && a.id && <>
+                <button onClick={e => { e.stopPropagation(); startEdit(a); }} style={{ padding: "4px 8px", borderRadius: 4, border: `1px solid ${BORDER}`, background: BG, color: MUTED, fontSize: 10, cursor: "pointer" }}>Edit</button>
+                <button onClick={e => { e.stopPropagation(); deleteContact(a.id); }} style={{ padding: "4px 8px", borderRadius: 4, border: `1px solid ${BORDER}`, background: BG, color: DIM, fontSize: 10, cursor: "pointer" }}>Del</button>
+              </>}
+              <div style={{ fontSize: 14, color: DIM, transform: isOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>▾</div>
+            </div>
           </div>
-          {a.source !== "crm" && a.id && (
-            <div style={{ display: "flex", gap: 4, flexShrink: 0 }}>
-              <button onClick={() => startEdit(a)} style={{ padding: "4px 8px", borderRadius: 4, border: `1px solid ${BORDER}`, background: BG, color: MUTED, fontSize: 10, cursor: "pointer" }}>Edit</button>
-              <button onClick={() => deleteContact(a.id)} style={{ padding: "4px 8px", borderRadius: 4, border: `1px solid ${BORDER}`, background: BG, color: DIM, fontSize: 10, cursor: "pointer" }}>Del</button>
+          {isOpen && (
+            <div style={{ padding: "0 14px 10px", borderTop: `1px solid ${BORDER}`, paddingTop: 8 }}>
+              {a.id && <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6, flexWrap: "wrap" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                  <span style={{ fontSize: 11, color: MUTED }}>Relationship:</span>
+                  <select value={a.relationshipStatus || "New"} onChange={e => updateRelationship(a.id, e.target.value)} style={{ ...iS, width: "auto", padding: "3px 8px", fontSize: 11, color: REL_COLORS[a.relationshipStatus || "New"], fontWeight: 600 }}>
+                    {RELATIONSHIP_STATUSES.map(s => <option key={s} value={s}>{s}</option>)}
+                  </select>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                  <span style={{ fontSize: 11, color: MUTED }}>Next touch:</span>
+                  <input type="date" value={a.nextTouchDate || ""} onChange={e => updateNextTouch(a.id, e.target.value)} style={{ ...iS, width: 130, padding: "3px 8px", fontSize: 11 }} />
+                </div>
+              </div>}
+              {a.socials && <div style={{ fontSize: 11, color: DIM, marginBottom: 4 }}>Socials: {a.socials}</div>}
+              {(a.cities || []).length > 0 && (
+                <div style={{ display: "flex", gap: 3, flexWrap: "wrap", marginBottom: 4 }}>
+                  {a.cities.map(c => <span key={c} style={{ fontSize: 10, padding: "1px 6px", borderRadius: 3, background: BG, color: DIM, border: `1px solid ${BORDER}` }}>{c}</span>)}
+                </div>
+              )}
+              {(() => {
+                const referrals = (a.interactions || []).filter(n => n.type === "Referral");
+                const projectList = a.projects || [];
+                const allRefs = [...new Set([...projectList, ...referrals.map(r => r.note)])].filter(Boolean);
+                if (allRefs.length === 0) return null;
+                return <div style={{ fontSize: 11, color: DIM, marginBottom: 4 }}>
+                  <span style={{ color: RED, fontWeight: 600 }}>{allRefs.length} referral{allRefs.length !== 1 ? "s" : ""}</span>: {allRefs.join(" · ")}
+                </div>;
+              })()}
+              {a.notes && <div style={{ fontSize: 11, color: DIM, fontStyle: "italic", marginBottom: 4 }}>{a.notes}</div>}
+              {a.id && <InteractionLog contact={a} apiPath={apiPath} onUpdate={setContacts} />}
             </div>
           )}
         </div>
-      ))}
+      );})}
     </div>
   );
 }
