@@ -11,6 +11,7 @@
     "scrape:sj:full": "node src/scripts/scrape-sj-opendata.mjs && node src/scripts/merge-sj-permits.mjs",
     "scrape:pa": "node src/scripts/scrape-pa-opendata.mjs",
     "scrape:cup": "node src/scripts/scrape-cupertino.mjs",
+    "scrape:la": "node src/scripts/scrape-losaltos.mjs",
     "start": "next start"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "googleapis": "^171.4.0",
     "jsonwebtoken": "^9.0.3",
     "next": "^14.2.0",
+    "pdf-parse": "^2.4.5",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"
   },

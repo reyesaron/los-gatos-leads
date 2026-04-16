@@ -82,11 +82,12 @@ function filterCommercial(projects) {
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const [lgScraped, sjMerged, paScraped, cupScraped] = await Promise.all([
+  const [lgScraped, sjMerged, paScraped, cupScraped, laScraped] = await Promise.all([
     loadJSON("scraped.json"),
     loadJSON("sanjose-merged.json"),
     loadJSON("paloalto-scraped.json"),
     loadJSON("cupertino-scraped.json"),
+    loadJSON("losaltos-scraped.json"),
   ]);
 
   // LG projects: scraped data if available, otherwise hardcoded
@@ -104,14 +105,15 @@ export default async function Home() {
   const sjProjects = (sjMerged?.projects || []);
   const paProjects = (paScraped?.projects || []);
   const cupProjects = (cupScraped?.projects || []);
+  const laProjects = (laScraped?.projects || []);
 
   // Merge all sources, filter commercial/TI, then deduplicate
-  const allRaw = [...nonLGHardcoded, ...lgProjects, ...sjProjects, ...paProjects, ...cupProjects];
+  const allRaw = [...nonLGHardcoded, ...lgProjects, ...sjProjects, ...paProjects, ...cupProjects, ...laProjects];
   const residentialOnly = filterCommercial(allRaw);
   const projects = deduplicateProjects(residentialOnly);
 
   const scrapedLetters = lgScraped?.scrapedLetters || SCRAPED_LETTERS;
-  const scrapedAt = lgScraped?.scrapedAt || sjMerged?.scrapedAt || paScraped?.scrapedAt || cupScraped?.scrapedAt || null;
+  const scrapedAt = lgScraped?.scrapedAt || sjMerged?.scrapedAt || paScraped?.scrapedAt || cupScraped?.scrapedAt || laScraped?.scrapedAt || null;
 
   return (
     <LeadsApp

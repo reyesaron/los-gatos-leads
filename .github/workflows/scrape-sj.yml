@@ -37,14 +37,17 @@ jobs:
       - name: Scrape Cupertino permits (Accela)
         run: node src/scripts/scrape-cupertino.mjs
 
+      - name: Scrape Los Altos projects (eTRAKiT)
+        run: node src/scripts/scrape-losaltos.mjs
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/sanjose-scraped.json src/data/sanjose-merged.json src/data/paloalto-scraped.json src/data/cupertino-scraped.json
+          git add src/data/sanjose-scraped.json src/data/sanjose-merged.json src/data/paloalto-scraped.json src/data/cupertino-scraped.json src/data/losaltos-scraped.json
           if git diff --cached --quiet; then
             echo "No changes to permit data"
           else
-            git commit -m "chore: update SJ + PA + Cupertino permit data $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git commit -m "chore: update permit data $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
           fi
