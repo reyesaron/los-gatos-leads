@@ -14,13 +14,17 @@ function getOAuth2Client() {
 // --- OAuth Flow ---
 
 export function getAuthUrl(userId) {
-  const client = getOAuth2Client();
-  return client.generateAuthUrl({
+  // Build URL manually — googleapis library was generating empty client_id on Vercel
+  const params = new URLSearchParams({
+    client_id: process.env.GOOGLE_CLIENT_ID,
+    redirect_uri: REDIRECT_URI,
+    response_type: "code",
+    scope: SCOPES.join(" "),
     access_type: "offline",
-    scope: SCOPES,
     prompt: "consent",
     state: userId,
   });
+  return `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`;
 }
 
 export async function getTokensFromCode(code) {
