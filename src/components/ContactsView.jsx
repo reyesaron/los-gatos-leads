@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useMemo } from "react";
+import DatePicker from "@/components/DatePicker";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -319,7 +320,7 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
                   <span style={{ fontSize: 11, color: MUTED }}>Next touch:</span>
-                  <input type="date" value={a.nextTouchDate || ""} min="2024-01-01" max="2030-12-31" onChange={e => updateNextTouch(a.id, e.target.value)} style={{ ...iS, width: 130, padding: "3px 8px", fontSize: 11 }} />
+                  <DatePicker value={a.nextTouchDate || ""} onChange={date => updateNextTouch(a.id, date)} placeholder="Set touch date" />
                 </div>
                 {a.source !== "crm" && <>
                   <button onClick={() => startEdit(a)} style={{ padding: "4px 10px", borderRadius: 4, border: `1px solid ${BORDER}`, background: BG, color: MUTED, fontSize: 10, cursor: "pointer" }}>Edit</button>

@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useCallback } from "react";
+import DatePicker from "@/components/DatePicker";
 
 const RED = "#dc2626";
 const BG = "#0a0a0a";
@@ -173,7 +174,7 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
           <span style={{ fontSize: 11, color: MUTED }}>Follow-up:</span>
-          <input type="date" value={lead?.followUpDate || ""} min="2024-01-01" max="2030-12-31" onChange={e => setFollowUp(e.target.value)} style={{ ...iS, width: 130 }} />
+          <DatePicker value={lead?.followUpDate || ""} onChange={setFollowUp} placeholder="Set follow-up" />
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
           <span style={{ fontSize: 11, color: MUTED }}>Est. value:</span>
