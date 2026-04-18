@@ -250,7 +250,9 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
 
   const archiveCount = useMemo(() => scored.filter(p => p._crmStatus === "Archived").length, [scored]);
 
-  const archiveLead = useCallback(async (leadId) => {
+  const [confirmDialog, setConfirmDialog] = useState(null);
+
+  const doArchiveLead = useCallback(async (leadId) => {
     try {
       const res = await fetch("/api/leads", {
         method: "POST",
@@ -261,6 +263,14 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
       if (data.lead) setCrmData(prev => ({ ...prev, [leadId]: data.lead }));
     } catch {}
   }, []);
+
+  const archiveLead = useCallback((leadId) => {
+    const lead = scored.find(p => p._leadId === leadId);
+    setConfirmDialog({
+      message: `Archive "${lead?.address || "this lead"}"? It will move to the Archived tab.`,
+      onConfirm: () => { doArchiveLead(leadId); setConfirmDialog(null); },
+    });
+  }, [scored, doArchiveLead]);
 
   const filtered = useMemo(() => {
     let list = scored;
@@ -350,6 +360,17 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   return (
     <AuthWrapper onUser={(u) => { setCurrentUser(u); if (u) setLoggedOut(false); }} loggedOut={loggedOut}>
     <IdleTimeout onLogout={() => { setCurrentUser(null); setLoggedOut(true); }} />
+    {confirmDialog && (
+      <div style={{position:"fixed",top:0,left:0,right:0,bottom:0,background:"rgba(0,0,0,0.7)",zIndex:9999,display:"flex",alignItems:"center",justifyContent:"center"}}>
+        <div style={{background:"#141414",border:"1px solid #262626",borderRadius:10,padding:"24px 28px",maxWidth:400,width:"90%",textAlign:"center"}}>
+          <div style={{fontSize:14,color:"#e5e5e5",marginBottom:16,lineHeight:1.5}}>{confirmDialog.message}</div>
+          <div style={{display:"flex",gap:10,justifyContent:"center"}}>
+            <button onClick={confirmDialog.onConfirm} style={{padding:"8px 20px",borderRadius:6,border:"none",background:"#dc2626",color:"#fff",fontSize:13,fontWeight:600,cursor:"pointer"}}>Confirm</button>
+            <button onClick={()=>setConfirmDialog(null)} style={{padding:"8px 20px",borderRadius:6,border:"1px solid #262626",background:"transparent",color:"#737373",fontSize:13,cursor:"pointer"}}>Cancel</button>
+          </div>
+        </div>
+      </div>
+    )}
     <div style={{fontFamily:"'DM Sans','Segoe UI',system-ui,sans-serif",background:BG,minHeight:"100vh",color:TEXT}}>
       {/* HEADER */}
       <div style={{background:"linear-gradient(145deg,#0f0f0f,#141414,#0f0f0f)",borderBottom:`1px solid ${BORDER}`,padding:"20px 20px 16px"}}>

@@ -90,6 +90,8 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
   const [saving, setSaving] = useState(false);
   const [search, setSearch] = useState("");
   const [expandedId, setExpandedId] = useState(null);
+  const [showInactive, setShowInactive] = useState(false);
+  const [confirmDialog, setConfirmDialog] = useState(null); // { type, message, onConfirm }
 
   useEffect(() => {
     fetch(`${apiPath}?_t=${Date.now()}`).then(r => r.json()).then(d => setContacts(d.architects || d.contacts || [])).catch(() => {}).finally(() => setLoading(false));
@@ -130,16 +132,21 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
     return merged;
   }, [contacts, crmContacts]);
 
-  const filtered = useMemo(() => {
-    if (!search) return allContacts;
-    const q = search.toLowerCase();
-    return allContacts.filter(a => a.name.toLowerCase().includes(q) || (a.firm || "").toLowerCase().includes(q) || (a.specialty || "").toLowerCase().includes(q) || (a.cities || []).some(c => c.toLowerCase().includes(q)));
+  const { activeContacts, inactiveContacts } = useMemo(() => {
+    let list = allContacts;
+    if (search) {
+      const q = search.toLowerCase();
+      list = list.filter(a => a.name.toLowerCase().includes(q) || (a.firm || "").toLowerCase().includes(q) || (a.specialty || "").toLowerCase().includes(q) || (a.cities || []).some(c => c.toLowerCase().includes(q)));
+    }
+    return {
+      activeContacts: list.filter(a => a.relationshipStatus !== "Inactive"),
+      inactiveContacts: list.filter(a => a.relationshipStatus === "Inactive"),
+    };
   }, [allContacts, search]);
 
   const resetForm = () => { setForm({ name: "", firm: "", phone: "", email: "", url: "", socials: "", cities: [], specialty: "", notes: "" }); setEditId(null); setShowForm(false); };
 
-  const submit = async () => {
-    if (!form.name.trim()) return;
+  const doSubmit = async () => {
     setSaving(true);
     const action = editId ? "update" : "add";
     const body = { action, ...form, ...(editId ? { id: editId } : {}) };
@@ -150,6 +157,35 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
       resetForm();
     } catch {}
     setSaving(false);
+  };
+
+  const submit = () => {
+    if (!form.name.trim()) return;
+    if (!editId) {
+      // Check for existing inactive contact with same name
+      const inactive = allContacts.find(a => a.name.toLowerCase() === form.name.trim().toLowerCase() && a.relationshipStatus === "Inactive");
+      if (inactive) {
+        setConfirmDialog({
+          message: `"${inactive.name}" already exists as an inactive contact. Would you like to reactivate them instead?`,
+          confirmLabel: "Reactivate",
+          onConfirm: () => { doUpdateRelationship(inactive.id, "New"); setConfirmDialog(null); resetForm(); setShowInactive(false); },
+          onDeny: () => { setConfirmDialog(null); doSubmit(); },
+          denyLabel: "Add Anyway",
+        });
+        return;
+      }
+      // Check for existing active contact
+      const active = allContacts.find(a => a.name.toLowerCase() === form.name.trim().toLowerCase() && a.relationshipStatus !== "Inactive");
+      if (active) {
+        setConfirmDialog({
+          message: `"${active.name}" already exists in your contacts.`,
+          onConfirm: () => setConfirmDialog(null),
+          confirmLabel: "OK",
+        });
+        return;
+      }
+    }
+    doSubmit();
   };
 
   const deleteContact = async (id) => {
@@ -174,12 +210,24 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
     } catch {}
   };
 
-  const updateRelationship = async (id, status) => {
+  const doUpdateRelationship = async (id, status) => {
     try {
       const res = await fetch(apiPath, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "setRelationship", id, relationshipStatus: status }) });
       const data = await res.json();
       if (data.contacts || data.architects) setContacts(data.contacts || data.architects);
     } catch {}
+  };
+
+  const updateRelationship = (id, status) => {
+    if (status === "Inactive") {
+      const contact = allContacts.find(a => a.id === id);
+      setConfirmDialog({
+        message: `Move ${contact?.name || "this contact"} to inactive? They won't appear in the main list.`,
+        onConfirm: () => { doUpdateRelationship(id, status); setConfirmDialog(null); },
+      });
+    } else {
+      doUpdateRelationship(id, status);
+    }
   };
 
   const toggleCity = (city) => {
@@ -193,7 +241,7 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
         <div style={{ fontSize: 15, fontWeight: 700, color: TEXT, flex: 1 }}>
           {config.title}
-          <span style={{ fontSize: 12, color: MUTED, fontWeight: 400, marginLeft: 8 }}>{allContacts.length} contacts</span>
+          <span style={{ fontSize: 12, color: MUTED, fontWeight: 400, marginLeft: 8 }}>{activeContacts.length} active{inactiveContacts.length > 0 ? ` · ${inactiveContacts.length} inactive` : ""}</span>
         </div>
         <input type="text" placeholder="Search..." value={search} onChange={e => setSearch(e.target.value)} style={{ ...iS, width: 180, padding: "6px 10px" }} />
         <button onClick={() => { resetForm(); setShowForm(!showForm); }} style={{ padding: "6px 14px", borderRadius: 5, border: "none", background: RED, color: "#fff", fontSize: 12, fontWeight: 600, cursor: "pointer" }}>
@@ -253,8 +301,31 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
         </div>
       )}
 
-      {filtered.length === 0 && <div style={{ textAlign: "center", padding: 40, color: MUTED }}>No {config.singular.toLowerCase()}s yet. Add one or set contact role to "{role}" on a lead.</div>}
-      {filtered.map((a, i) => {
+      {/* Confirmation Dialog */}
+      {confirmDialog && (
+        <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(0,0,0,0.7)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ background: CARD, border: `1px solid ${BORDER}`, borderRadius: 10, padding: "24px 28px", maxWidth: 400, width: "90%", textAlign: "center" }}>
+            <div style={{ fontSize: 14, color: TEXT, marginBottom: 16, lineHeight: 1.5 }}>{confirmDialog.message}</div>
+            <div style={{ display: "flex", gap: 10, justifyContent: "center" }}>
+              <button onClick={confirmDialog.onConfirm} style={{ padding: "8px 20px", borderRadius: 6, border: "none", background: RED, color: "#fff", fontSize: 13, fontWeight: 600, cursor: "pointer" }}>
+                {confirmDialog.confirmLabel || "Confirm"}
+              </button>
+              {confirmDialog.onDeny ? (
+                <button onClick={confirmDialog.onDeny} style={{ padding: "8px 20px", borderRadius: 6, border: `1px solid ${BORDER}`, background: "transparent", color: MUTED, fontSize: 13, cursor: "pointer" }}>
+                  {confirmDialog.denyLabel || "No"}
+                </button>
+              ) : (
+                <button onClick={() => setConfirmDialog(null)} style={{ padding: "8px 20px", borderRadius: 6, border: `1px solid ${BORDER}`, background: "transparent", color: MUTED, fontSize: 13, cursor: "pointer" }}>
+                  Cancel
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {activeContacts.length === 0 && inactiveContacts.length === 0 && <div style={{ textAlign: "center", padding: 40, color: MUTED }}>No {config.singular.toLowerCase()}s yet. Add one or set contact role to "{role}" on a lead.</div>}
+      {activeContacts.map((a, i) => {
         const isOpen = expandedId === (a.id || i);
         return (
         <div key={a.id || i} style={{ background: CARD, borderRadius: 6, border: `1px solid ${BORDER}`, marginBottom: 4, overflow: isOpen ? "visible" : "hidden" }}>
@@ -334,6 +405,47 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
           )}
         </div>
       );})}
+
+      {/* Inactive section */}
+      {inactiveContacts.length > 0 && (
+        <div style={{ marginTop: 16 }}>
+          <button onClick={() => setShowInactive(!showInactive)} style={{ display: "flex", alignItems: "center", gap: 6, background: "none", border: "none", cursor: "pointer", fontSize: 12, color: DIM, padding: "4px 0", marginBottom: 6 }}>
+            <span style={{ transform: showInactive ? "rotate(90deg)" : "none", transition: "transform 0.15s", fontSize: 10 }}>▶</span>
+            <span style={{ fontWeight: 600 }}>Inactive ({inactiveContacts.length})</span>
+          </button>
+          {showInactive && inactiveContacts.map((a, i) => {
+            const isOpen = expandedId === (a.id || `inactive-${i}`);
+            return (
+              <div key={a.id || `inactive-${i}`} style={{ background: CARD, borderRadius: 6, border: `1px solid ${BORDER}`, marginBottom: 4, opacity: 0.5, overflow: isOpen ? "visible" : "hidden" }}>
+                <div onClick={() => setExpandedId(isOpen ? null : (a.id || `inactive-${i}`))} style={{ padding: "10px 14px", cursor: "pointer", display: "flex", gap: 12, alignItems: "flex-start" }}>
+                  <div style={{ width: 36, height: 36, borderRadius: 6, background: "#1c1c1c", color: DIM, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>
+                    {a.projectCount || 0}
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                      <span style={{ fontSize: 13, fontWeight: 700, color: MUTED }}>{a.name}</span>
+                      {a.firm && <span style={{ fontSize: 11, color: DIM }}>{a.firm}</span>}
+                      <span style={{ fontSize: 9, padding: "1px 5px", borderRadius: 3, background: "#1c1c1c", color: DIM, fontWeight: 600 }}>INACTIVE</span>
+                    </div>
+                  </div>
+                  <div style={{ fontSize: 14, color: DIM, transform: isOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s", flexShrink: 0 }}>▾</div>
+                </div>
+                {isOpen && (
+                  <div style={{ padding: "0 14px 10px", borderTop: `1px solid ${BORDER}`, paddingTop: 8, opacity: 1 }}>
+                    {a.id && <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
+                      <button onClick={() => { doUpdateRelationship(a.id, "New"); }} style={{ padding: "5px 14px", borderRadius: 5, border: "none", background: RED, color: "#fff", fontSize: 11, fontWeight: 600, cursor: "pointer" }}>Reactivate</button>
+                      <button onClick={() => deleteContact(a.id)} style={{ padding: "5px 14px", borderRadius: 5, border: `1px solid ${BORDER}`, background: "transparent", color: DIM, fontSize: 11, cursor: "pointer" }}>Delete Permanently</button>
+                    </div>}
+                    {a.phone && <div style={{ fontSize: 11, color: DIM }}>Phone: {a.phone}</div>}
+                    {a.email && <div style={{ fontSize: 11, color: DIM }}>Email: {a.email}</div>}
+                    {a.notes && <div style={{ fontSize: 11, color: DIM, fontStyle: "italic", marginTop: 4 }}>{a.notes}</div>}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
