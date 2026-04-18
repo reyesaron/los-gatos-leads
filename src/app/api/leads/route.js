@@ -83,7 +83,18 @@ export async function POST(request) {
   }
 
   else if (action === "setFollowUp") {
-    entry.followUpDate = body.followUpDate || "";
+    // Validate and fix date — ensure 4-digit year starting with 20
+    let followUpDate = body.followUpDate || "";
+    if (followUpDate) {
+      const parts = followUpDate.split("-");
+      if (parts.length === 3) {
+        let year = parseInt(parts[0]);
+        if (year < 100) year += 2000;
+        if (year < 2000) year = 2000 + (year % 100);
+        followUpDate = `${year}-${parts[1].padStart(2, "0")}-${parts[2].padStart(2, "0")}`;
+      }
+    }
+    entry.followUpDate = followUpDate;
     entry.followUpAssignee = body.assignee || "";
     entry.updatedAt = new Date().toISOString();
 

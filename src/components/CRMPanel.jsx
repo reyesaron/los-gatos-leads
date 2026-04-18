@@ -173,7 +173,7 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
           <span style={{ fontSize: 11, color: MUTED }}>Follow-up:</span>
-          <input type="date" value={lead?.followUpDate || ""} onChange={e => setFollowUp(e.target.value)} style={{ ...iS, width: 130 }} />
+          <input type="date" value={lead?.followUpDate || ""} min="2024-01-01" max="2030-12-31" onChange={e => setFollowUp(e.target.value)} style={{ ...iS, width: 130 }} />
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
           <span style={{ fontSize: 11, color: MUTED }}>Est. value:</span>
