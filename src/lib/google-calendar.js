@@ -5,8 +5,8 @@ const REDIRECT_URI = "https://los-gatos-leads.vercel.app/api/auth/google/callbac
 
 function getOAuth2Client() {
   return new google.auth.OAuth2(
-    process.env.GOOGLE_CLIENT_ID,
-    process.env.GOOGLE_CLIENT_SECRET,
+    (process.env.GOOGLE_CLIENT_ID || "").trim(),
+    (process.env.GOOGLE_CLIENT_SECRET || "").trim(),
     REDIRECT_URI
   );
 }
@@ -16,7 +16,7 @@ function getOAuth2Client() {
 export function getAuthUrl(userId) {
   // Build URL manually — googleapis library was generating empty client_id on Vercel
   const params = new URLSearchParams({
-    client_id: process.env.GOOGLE_CLIENT_ID,
+    client_id: (process.env.GOOGLE_CLIENT_ID || "").trim(),
     redirect_uri: REDIRECT_URI,
     response_type: "code",
     scope: SCOPES.join(" "),
