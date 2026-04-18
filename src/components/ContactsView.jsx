@@ -319,7 +319,7 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
                   <span style={{ fontSize: 11, color: MUTED }}>Next touch:</span>
-                  <input type="date" value={a.nextTouchDate || ""} onChange={e => updateNextTouch(a.id, e.target.value)} style={{ ...iS, width: 130, padding: "3px 8px", fontSize: 11 }} />
+                  <input type="date" value={a.nextTouchDate || ""} min="2024-01-01" max="2030-12-31" onChange={e => updateNextTouch(a.id, e.target.value)} style={{ ...iS, width: 130, padding: "3px 8px", fontSize: 11 }} />
                 </div>
                 {a.source !== "crm" && <>
                   <button onClick={() => startEdit(a)} style={{ padding: "4px 10px", borderRadius: 4, border: `1px solid ${BORDER}`, background: BG, color: MUTED, fontSize: 10, cursor: "pointer" }}>Edit</button>

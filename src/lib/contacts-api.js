@@ -63,10 +63,21 @@ export function createContactsAPI(blobName) {
     }
 
     if (action === "setNextTouch") {
-      const { id, nextTouchDate } = body;
+      const { id } = body;
+      let nextTouchDate = body.nextTouchDate || "";
+      // Fix short years
+      if (nextTouchDate) {
+        const parts = nextTouchDate.split("-");
+        if (parts.length === 3) {
+          let year = parseInt(parts[0]);
+          if (year < 100) year += 2000;
+          if (year < 2000) year = 2000 + (year % 100);
+          nextTouchDate = `${year}-${parts[1].padStart(2, "0")}-${parts[2].padStart(2, "0")}`;
+        }
+      }
       const idx = contacts.findIndex(a => a.id === id);
       if (idx === -1) return Response.json({ error: "not found" }, { status: 404 });
-      contacts[idx].nextTouchDate = nextTouchDate || "";
+      contacts[idx].nextTouchDate = nextTouchDate;
       contacts[idx].updatedAt = new Date().toISOString();
 
       // Google Calendar — create events for current user (who set the reminder)
