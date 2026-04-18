@@ -257,7 +257,7 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
       {filtered.map((a, i) => {
         const isOpen = expandedId === (a.id || i);
         return (
-        <div key={a.id || i} style={{ background: CARD, borderRadius: 6, border: `1px solid ${BORDER}`, marginBottom: 4, overflow: "hidden" }}>
+        <div key={a.id || i} style={{ background: CARD, borderRadius: 6, border: `1px solid ${BORDER}`, marginBottom: 4, overflow: isOpen ? "visible" : "hidden" }}>
           {/* Collapsed header — name, firm, tags, last contact */}
           <div onClick={() => setExpandedId(isOpen ? null : (a.id || i))} style={{ padding: "10px 14px", cursor: "pointer", display: "flex", gap: 12, alignItems: "flex-start", transition: "background 0.15s" }} onMouseEnter={e => e.currentTarget.style.background = "#1a1a1a"} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
             <div style={{ width: 36, height: 36, borderRadius: 6, background: a.projectCount > 0 ? RED_DARK : "#1c1c1c", color: a.projectCount > 0 ? RED : DIM, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>

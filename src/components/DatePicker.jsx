@@ -120,6 +120,8 @@ export default function DatePicker({ value, onChange, placeholder }) {
   const [showCalendar, setShowCalendar] = useState(false);
   const ref = useRef(null);
 
+  const [openUp, setOpenUp] = useState(false);
+
   // Close on outside click
   useEffect(() => {
     const handleClick = (e) => {
@@ -131,6 +133,15 @@ export default function DatePicker({ value, onChange, placeholder }) {
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
+
+  // Detect if dropdown should open upward
+  useEffect(() => {
+    if (open && ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      const spaceBelow = window.innerHeight - rect.bottom;
+      setOpenUp(spaceBelow < 300);
+    }
+  }, [open]);
 
   const handleQuickSelect = (days) => {
     onChange(addDays(days));
@@ -165,7 +176,7 @@ export default function DatePicker({ value, onChange, placeholder }) {
 
       {/* Dropdown */}
       {open && (
-        <div style={{ position: "absolute", top: "100%", left: 0, marginTop: 4, zIndex: 50 }}>
+        <div style={{ position: "absolute", [openUp ? "bottom" : "top"]: "100%", left: 0, [openUp ? "marginBottom" : "marginTop"]: 4, zIndex: 200 }}>
           {!showCalendar ? (
             <div style={{ background: CARD, border: `1px solid ${BORDER}`, borderRadius: 8, padding: 6, minWidth: 140, boxShadow: "0 8px 24px rgba(0,0,0,0.5)" }}>
               {QUICK_OPTIONS.map(opt => (
