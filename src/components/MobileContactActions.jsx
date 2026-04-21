@@ -45,7 +45,7 @@ export default function MobileContactActions({ contact, apiPath, onUpdate, onClo
 
   return (
     <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.85)", zIndex: 9998, display: "flex", alignItems: "flex-end", justifyContent: "center" }} onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
-      <div style={{ background: CARD, width: "100%", maxWidth: 500, borderRadius: "16px 16px 0 0", maxHeight: "90vh", overflowY: "auto" }} onClick={e => e.stopPropagation()}>
+      <div style={{ background: CARD, width: "100%", maxWidth: 500, borderRadius: "16px 16px 0 0", height: "85vh", overflowY: "auto", display: "flex", flexDirection: "column" }} onClick={e => e.stopPropagation()}>
         {/* Handle bar */}
         <div style={{ display: "flex", justifyContent: "center", padding: "8px 0 4px" }}>
           <div style={{ width: 40, height: 4, borderRadius: 2, background: DIM }} />
@@ -93,7 +93,7 @@ export default function MobileContactActions({ contact, apiPath, onUpdate, onClo
         </div>
 
         {/* Tab content */}
-        <div style={{ padding: "0 20px 24px" }}>
+        <div style={{ padding: "0 20px 24px", flex: 1, overflowY: "auto" }}>
           {/* INFO TAB */}
           {tab === "info" && (
             <div>
