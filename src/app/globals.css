@@ -119,6 +119,17 @@ body {
     grid-column: auto !important;
   }
 
+  /* Mobile card — bigger touch targets */
+  .apex-card-header {
+    min-height: 48px !important;
+    padding: 12px !important;
+  }
+
+  /* Mobile buttons — thumb-friendly */
+  button, select, .apex-crm-row button, .apex-crm-row select {
+    min-height: 44px !important;
+  }
+
   /* Street view */
   .apex-streetview iframe {
     height: 180px !important;

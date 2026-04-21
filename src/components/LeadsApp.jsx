@@ -9,6 +9,7 @@ import ProfileMenu from "@/components/ProfileMenu";
 import AdminUsers from "@/components/AdminUsers";
 import AuditLogView from "@/components/AuditLogView";
 import IdleTimeout from "@/components/IdleTimeout";
+import MobileActions from "@/components/MobileActions";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -199,6 +200,15 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   const [currentUser, setCurrentUser] = useState(null);
   const [loggedOut, setLoggedOut] = useState(false);
   const [view, setView] = useState("leads");
+  const [mobileActionLead, setMobileActionLead] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
   const [search, setSearch] = useState("");
   const [catFilter, setCatFilter] = useState("All");
   const [cityFilter, setCityFilter] = useState("All");
@@ -360,6 +370,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   return (
     <AuthWrapper onUser={(u) => { setCurrentUser(u); if (u) setLoggedOut(false); }} loggedOut={loggedOut}>
     <IdleTimeout onLogout={() => { setCurrentUser(null); setLoggedOut(true); }} />
+    {mobileActionLead && <MobileActions lead={mobileActionLead} leadId={mobileActionLead._leadId} currentUser={currentUser} onUpdate={handleCRMUpdate} onClose={() => setMobileActionLead(null)} />}
     {confirmDialog && (
       <div style={{position:"fixed",top:0,left:0,right:0,bottom:0,background:"rgba(0,0,0,0.7)",zIndex:9999,display:"flex",alignItems:"center",justifyContent:"center"}}>
         <div style={{background:"#141414",border:"1px solid #262626",borderRadius:10,padding:"24px 28px",maxWidth:400,width:"90%",textAlign:"center"}}>
@@ -563,7 +574,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
         {filtered.length===0&&<div style={{textAlign:"center",padding:40,color:MUTED}}>No projects match your filters.</div>}
         {filtered.map((p,i)=>{const open=expandedId===p._leadId;const cc=catC[p.category]||{bg:"#1c1c1c",fg:MUTED};return(
           <div key={p.address+p.appNumber} style={{background:CARD,borderRadius:8,border:`1px solid ${p._overdue?"#fb923c":p.isNew?RED:p.score>=7?RED_MID:BORDER}`,marginBottom:6,overflow:"hidden",borderLeft:p._overdue?"3px solid #fb923c":p.isNew?`3px solid ${RED}`:undefined}}>
-            <div className="apex-card-header" onClick={()=>setExpandedId(open?null:p._leadId)} style={{padding:"12px 14px",cursor:"pointer",display:"flex",alignItems:"flex-start",gap:12,transition:"background 0.15s"}} onMouseEnter={e=>e.currentTarget.style.background="#1a1a1a"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
+            <div className="apex-card-header" onClick={()=>{if(isMobile){setMobileActionLead(p)}else{setExpandedId(open?null:p._leadId)}}} style={{padding:"12px 14px",cursor:"pointer",display:"flex",alignItems:"flex-start",gap:12,transition:"background 0.15s"}} onMouseEnter={e=>e.currentTarget.style.background="#1a1a1a"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
               <div style={{flexShrink:0,paddingTop:1}}><Badge score={p.score}/></div>
               <div style={{flex:1,minWidth:0}}>
                 <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#fff"}}>{p.address}</span>{p._overdue&&<OverdueBadge/>}{p._followUpSoon&&<SoonBadge/>}{p.isNew&&<NewBadge/>}<Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag>{p._crmStatus && p._crmStatus!=="New"&&<Tag bg={p._crmStatus==="Won"?"#052e16":p._crmStatus==="Lost"?"#1c1c1c":"#172554"} fg={p._crmStatus==="Won"?"#4ade80":p._crmStatus==="Lost"?"#525252":"#60a5fa"}>{p._crmStatus}</Tag>}{p._crmAssignee&&<span style={{fontSize:10,color:DIM}}>{p._crmAssignee}</span>}</div>

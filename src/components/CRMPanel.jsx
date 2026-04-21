@@ -232,6 +232,22 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
         )}
       </div>
 
+      {/* Quick contact buttons */}
+      {(lead?.contactPhone || lead?.contactEmail) && (
+        <div style={{ display: "flex", gap: 6, marginBottom: 8 }}>
+          {lead.contactPhone && (
+            <a href={`tel:${lead.contactPhone.replace(/[^\d+]/g, "")}`} style={{ display: "flex", alignItems: "center", gap: 4, padding: "6px 12px", borderRadius: 6, background: "#052e16", color: "#4ade80", fontSize: 11, fontWeight: 600, textDecoration: "none" }}>
+              📞 {lead.contactName?.split(" ")[0] || "Call"}
+            </a>
+          )}
+          {lead.contactEmail && (
+            <a href={`mailto:${lead.contactEmail}`} style={{ display: "flex", alignItems: "center", gap: 4, padding: "6px 12px", borderRadius: 6, background: "#172554", color: "#60a5fa", fontSize: 11, fontWeight: 600, textDecoration: "none" }}>
+              ✉ Email
+            </a>
+          )}
+        </div>
+      )}
+
       {/* Last contact info */}
       {lead?.lastContactBy && (
         <div style={{ fontSize: 11, color: MUTED, marginBottom: 8 }}>
