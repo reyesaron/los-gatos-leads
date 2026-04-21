@@ -548,9 +548,9 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
       )}
 
       {/* ARCHITECTS VIEW */}
-      {view === "architects" && <ContactsView role="Architect" apiPath="/api/architects" crmData={crmData} scored={scored} />}
-      {view === "designers" && <ContactsView role="Designer" apiPath="/api/designers" crmData={crmData} scored={scored} />}
-      {view === "realtors" && <ContactsView role="Realtor" apiPath="/api/realtors" crmData={crmData} scored={scored} />}
+      {view === "architects" && <ContactsView role="Architect" apiPath="/api/architects" crmData={crmData} scored={scored} currentUser={currentUser} />}
+      {view === "designers" && <ContactsView role="Designer" apiPath="/api/designers" crmData={crmData} scored={scored} currentUser={currentUser} />}
+      {view === "realtors" && <ContactsView role="Realtor" apiPath="/api/realtors" crmData={crmData} scored={scored} currentUser={currentUser} />}
 
       {/* ADD LEAD FORM */}
       {view === "addLead" && <AddLeadForm onAdd={(lead) => { setManualLeads(prev => [...prev, lead]); setView("leads"); }} />}

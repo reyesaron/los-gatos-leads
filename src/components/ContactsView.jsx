@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useMemo } from "react";
 import DatePicker from "@/components/DatePicker";
+import MobileContactActions from "@/components/MobileContactActions";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -80,7 +81,7 @@ function InteractionLog({ contact, apiPath, onUpdate }) {
   );
 }
 
-export default function ContactsView({ role, apiPath, crmData, scored }) {
+export default function ContactsView({ role, apiPath, crmData, scored, currentUser }) {
   const config = ROLE_CONFIG[role] || ROLE_CONFIG.Architect;
   const [contacts, setContacts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -91,7 +92,16 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
   const [search, setSearch] = useState("");
   const [expandedId, setExpandedId] = useState(null);
   const [showInactive, setShowInactive] = useState(false);
-  const [confirmDialog, setConfirmDialog] = useState(null); // { type, message, onConfirm }
+  const [confirmDialog, setConfirmDialog] = useState(null);
+  const [mobileContact, setMobileContact] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   useEffect(() => {
     fetch(`${apiPath}?_t=${Date.now()}`).then(r => r.json()).then(d => setContacts(d.architects || d.contacts || [])).catch(() => {}).finally(() => setLoading(false));
@@ -330,7 +340,7 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
         return (
         <div key={a.id || i} style={{ background: CARD, borderRadius: 6, border: `1px solid ${BORDER}`, marginBottom: 4, overflow: isOpen ? "visible" : "hidden" }}>
           {/* Collapsed header — name, firm, tags, last contact */}
-          <div onClick={() => setExpandedId(isOpen ? null : (a.id || i))} style={{ padding: "10px 14px", cursor: "pointer", display: "flex", gap: 12, alignItems: "flex-start", transition: "background 0.15s" }} onMouseEnter={e => e.currentTarget.style.background = "#1a1a1a"} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
+          <div onClick={() => { if (isMobile && a.id) { setMobileContact(a); } else { setExpandedId(isOpen ? null : (a.id || i)); } }} style={{ padding: "10px 14px", cursor: "pointer", display: "flex", gap: 12, alignItems: "flex-start", transition: "background 0.15s" }} onMouseEnter={e => e.currentTarget.style.background = "#1a1a1a"} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
             <div style={{ width: 36, height: 36, borderRadius: 6, background: a.projectCount > 0 ? RED_DARK : "#1c1c1c", color: a.projectCount > 0 ? RED : DIM, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 700, fontFamily: "'JetBrains Mono',monospace", flexShrink: 0 }}>
               {a.projectCount}
             </div>
@@ -445,6 +455,17 @@ export default function ContactsView({ role, apiPath, crmData, scored }) {
             );
           })}
         </div>
+      )}
+
+      {/* Mobile action sheet for contacts */}
+      {mobileContact && (
+        <MobileContactActions
+          contact={mobileContact}
+          apiPath={apiPath}
+          currentUser={currentUser}
+          onUpdate={(updated) => { setContacts(updated); setMobileContact(null); }}
+          onClose={() => setMobileContact(null)}
+        />
       )}
     </div>
   );
