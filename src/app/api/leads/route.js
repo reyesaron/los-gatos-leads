@@ -72,15 +72,18 @@ export async function POST(request) {
       return Response.json({ error: "note and author required" }, { status: 400 });
     }
     if (!entry.notes) entry.notes = [];
+    const contactDate = body.contactDate ? new Date(body.contactDate + "T12:00:00").toISOString() : null;
+    const loggedAt = new Date().toISOString();
     entry.notes.unshift({
       text: note,
       author,
       type: body.type || "Note",
-      timestamp: new Date().toISOString(),
+      contactDate: body.contactDate || new Date().toISOString().split("T")[0],
+      timestamp: loggedAt,
     });
     entry.lastContactBy = author;
-    entry.lastContactAt = new Date().toISOString();
-    entry.updatedAt = new Date().toISOString();
+    entry.lastContactAt = contactDate || loggedAt;
+    entry.updatedAt = loggedAt;
   }
 
   else if (action === "setFollowUp") {

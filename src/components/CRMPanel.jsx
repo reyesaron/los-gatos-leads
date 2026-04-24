@@ -33,6 +33,7 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
   const [noteText, setNoteText] = useState("");
   const [noteAuthor, setNoteAuthor] = useState(TEAM[0]);
   const [noteType, setNoteType] = useState("Note");
+  const [noteDate, setNoteDate] = useState(new Date().toISOString().split("T")[0]);
   const [saving, setSaving] = useState(false);
   // showContact state removed — contact info is now always visible
   const [hasFetched, setHasFetched] = useState(false);
@@ -82,7 +83,7 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
       const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ leadId, action: "addNote", note: noteText.trim(), author: noteAuthor, type: noteType }),
+        body: JSON.stringify({ leadId, action: "addNote", note: noteText.trim(), author: noteAuthor, type: noteType, contactDate: noteDate }),
       });
       const data = await res.json();
       if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }
@@ -260,6 +261,7 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
         <select value={noteType} onChange={e => setNoteType(e.target.value)} style={{ ...iS, width: 75, flexShrink: 0, color: TYPE_COLORS[noteType] || MUTED, fontWeight: 600 }}>
           {INTERACTION_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
         </select>
+        <input type="date" value={noteDate} onChange={e => setNoteDate(e.target.value)} style={{ ...iS, width: 120, flexShrink: 0 }} />
         <textarea value={noteText} onChange={e => setNoteText(e.target.value)} placeholder="Add a note about this lead..." rows={2} style={{ ...iS, flex: 1, resize: "vertical", fontFamily: "inherit", minHeight: 36 }} onKeyDown={e => { if (e.key === "Enter" && e.metaKey) addNote(); }} />
         <button onClick={addNote} disabled={!noteText.trim() || saving} style={{ ...iS, background: noteText.trim() ? RED : "#1c1c1c", color: "#fff", cursor: noteText.trim() ? "pointer" : "default", fontWeight: 600, flexShrink: 0, opacity: noteText.trim() ? 1 : 0.4, border: "none", padding: "6px 14px" }}>
           Log
@@ -274,9 +276,12 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
               {n.type && n.type !== "Note" && <span style={{ fontSize: 9, fontWeight: 700, padding: "1px 4px", borderRadius: 3, background: `${TYPE_COLORS[n.type] || MUTED}22`, color: TYPE_COLORS[n.type] || MUTED, whiteSpace: "nowrap", marginTop: 1 }}>{n.type}</span>}
               <div>
                 <span style={{ color: TEXT, fontWeight: 600 }}>{n.author}</span>
-                <span style={{ color: DIM, marginLeft: 6, fontSize: 10 }}>
-                  {new Date(n.timestamp).toLocaleDateString("en-US", { month: "short", day: "numeric" })} {new Date(n.timestamp).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}
+                <span style={{ color: TEXT, marginLeft: 6, fontSize: 11, fontWeight: 500 }}>
+                  {new Date((n.contactDate || n.timestamp) + (n.contactDate ? "T12:00:00" : "")).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
                 </span>
+                {n.contactDate && n.timestamp && <span style={{ color: DIM, marginLeft: 4, fontSize: 9 }}>
+                  logged {new Date(n.timestamp).toLocaleDateString("en-US", { month: "short", day: "numeric" })} {new Date(n.timestamp).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}
+                </span>}
                 <div style={{ color: MUTED, marginTop: 2 }}>{n.text}</div>
               </div>
             </div>

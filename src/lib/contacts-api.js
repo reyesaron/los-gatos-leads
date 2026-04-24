@@ -135,15 +135,18 @@ export function createContactsAPI(blobName) {
       const idx = contacts.findIndex(a => a.id === id);
       if (idx === -1) return Response.json({ error: "not found" }, { status: 404 });
       if (!contacts[idx].interactions) contacts[idx].interactions = [];
+      const contactDate = body.contactDate ? new Date(body.contactDate + "T12:00:00").toISOString() : null;
+      const loggedAt = new Date().toISOString();
       contacts[idx].interactions.unshift({
         type: type || "Note",
         note: note || "",
         author,
-        timestamp: new Date().toISOString(),
+        contactDate: body.contactDate || new Date().toISOString().split("T")[0],
+        timestamp: loggedAt,
       });
-      contacts[idx].lastInteraction = new Date().toISOString();
+      contacts[idx].lastInteraction = contactDate || loggedAt;
       contacts[idx].lastInteractionBy = author;
-      contacts[idx].updatedAt = new Date().toISOString();
+      contacts[idx].updatedAt = loggedAt;
       await saveContacts(contacts);
       await auditFromRequest(request, { action: `${contactType}_interaction`, targetType: contactType, targetId: contacts[idx].name, details: `${type} by ${author}: ${(note || "").slice(0, 60)}` });
       return Response.json({ ok: true, contacts });

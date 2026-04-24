@@ -76,15 +76,30 @@ function Toast({ message, onDone }) {
 function LogTab({ notes, onLog, saving, flashField, currentUser, onViewAll }) {
   const [noteText, setNoteText] = useState("");
   const [noteType, setNoteType] = useState("Note");
+  const [contactDate, setContactDate] = useState(new Date().toISOString().split("T")[0]);
 
   return (
     <div style={{ padding: "0 20px" }}>
+      {/* Contact date — defaults to today */}
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
+        <span style={{ fontSize: 12, color: MUTED, fontWeight: 600, flexShrink: 0 }}>Date:</span>
+        <input
+          type="date"
+          value={contactDate}
+          onChange={e => setContactDate(e.target.value)}
+          style={{ ...iS, flex: 1, fontSize: 14 }}
+        />
+        {contactDate !== new Date().toISOString().split("T")[0] && (
+          <button onClick={() => setContactDate(new Date().toISOString().split("T")[0])} style={{ background: "none", border: "none", color: RED, fontSize: 12, cursor: "pointer", flexShrink: 0 }}>Today</button>
+        )}
+      </div>
+
       {/* Quick-log buttons */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 6, marginBottom: 14 }}>
         {QUICK_NOTES.map(q => (
           <button
             key={q.text}
-            onClick={() => onLog(q.text, q.type)}
+            onClick={() => onLog(q.text, q.type, contactDate)}
             disabled={saving}
             style={{
               padding: "11px 10px", borderRadius: 8,
@@ -112,11 +127,11 @@ function LogTab({ notes, onLog, saving, flashField, currentUser, onViewAll }) {
           value={noteText}
           onChange={e => setNoteText(e.target.value)}
           placeholder="Add a note..."
-          onKeyDown={e => { if (e.key === "Enter" && noteText.trim()) { onLog(noteText.trim(), noteType); setNoteText(""); } }}
+          onKeyDown={e => { if (e.key === "Enter" && noteText.trim()) { onLog(noteText.trim(), noteType, contactDate); setNoteText(""); } }}
           style={{ ...iS, flex: 1 }}
         />
         <button
-          onClick={() => { if (noteText.trim()) { onLog(noteText.trim(), noteType); setNoteText(""); } }}
+          onClick={() => { if (noteText.trim()) { onLog(noteText.trim(), noteType, contactDate); setNoteText(""); } }}
           disabled={!noteText.trim() || saving}
           style={{ padding: "12px 18px", borderRadius: 8, border: "none", background: noteText.trim() ? RED : "#1c1c1c", color: "#fff", fontSize: 14, fontWeight: 600, cursor: noteText.trim() ? "pointer" : "default", opacity: noteText.trim() ? 1 : 0.4, flexShrink: 0 }}
         >
@@ -133,8 +148,8 @@ function LogTab({ notes, onLog, saving, flashField, currentUser, onViewAll }) {
               {n.type && n.type !== "Note" && <span style={{ fontSize: 10, fontWeight: 700, padding: "2px 5px", borderRadius: 3, background: `${TYPE_COLORS[n.type] || MUTED}22`, color: TYPE_COLORS[n.type] || MUTED, whiteSpace: "nowrap", marginTop: 1 }}>{n.type}</span>}
               <div style={{ flex: 1, minWidth: 0 }}>
                 <span style={{ color: TEXT, fontWeight: 600 }}>{n.author}</span>
-                <span style={{ color: DIM, marginLeft: 6, fontSize: 11 }}>
-                  {new Date(n.timestamp).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+                <span style={{ color: "#fff", marginLeft: 6, fontSize: 12, fontWeight: 500 }}>
+                  {new Date((n.contactDate || n.timestamp) + (n.contactDate ? "T12:00:00" : "")).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
                 </span>
                 <div style={{ color: MUTED, marginTop: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{n.text || n.note}</div>
               </div>
@@ -187,10 +202,12 @@ function AllNotesView({ notes, onBack }) {
           <div key={i} style={{ marginBottom: 12, paddingBottom: 12, borderBottom: i < notes.length - 1 ? `1px solid ${BORDER}` : "none", display: "flex", gap: 8, alignItems: "flex-start" }}>
             {n.type && n.type !== "Note" && <span style={{ fontSize: 10, fontWeight: 700, padding: "2px 5px", borderRadius: 3, background: `${TYPE_COLORS[n.type] || MUTED}22`, color: TYPE_COLORS[n.type] || MUTED, whiteSpace: "nowrap", marginTop: 2 }}>{n.type}</span>}
             <div style={{ flex: 1 }}>
-              <span style={{ fontSize: 14, color: TEXT, fontWeight: 600 }}>{n.author}</span>
-              <span style={{ color: DIM, marginLeft: 8, fontSize: 12 }}>
-                {new Date(n.timestamp).toLocaleDateString("en-US", { month: "short", day: "numeric" })} {new Date(n.timestamp).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}
-              </span>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+                <span style={{ fontSize: 14, color: TEXT, fontWeight: 600 }}>{n.author}</span>
+                <span style={{ color: "#fff", fontSize: 13, fontWeight: 500 }}>
+                  {new Date((n.contactDate || n.timestamp) + (n.contactDate ? "T12:00:00" : "")).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                </span>
+              </div>
               <div style={{ color: MUTED, marginTop: 4, fontSize: 14, lineHeight: 1.5 }}>{n.text || n.note}</div>
             </div>
           </div>
@@ -240,8 +257,8 @@ export function MobileLeadView({ lead, leadId, onUpdate, onClose, currentUser })
   };
 
   const showToast = (msg) => { setToast(msg); };
-  const logNote = (text, type) => {
-    doAction("addNote", { note: text, author: currentUser?.name || "Unknown", type });
+  const logNote = (text, type, contactDate) => {
+    doAction("addNote", { note: text, author: currentUser?.name || "Unknown", type, contactDate });
     setFlashField(text);
     setTimeout(() => setFlashField(null), 800);
     showToast(`${type} logged`);
@@ -473,8 +490,8 @@ export function MobileContactView({ contact, apiPath, onUpdate, onClose, current
   };
 
   const showToast = (msg) => { setToast(msg); };
-  const logNote = (text, type) => {
-    doAction("addInteraction", { type, note: text, author: currentUser?.name || "Unknown" });
+  const logNote = (text, type, contactDate) => {
+    doAction("addInteraction", { type, note: text, author: currentUser?.name || "Unknown", contactDate });
     setFlashField(text);
     setTimeout(() => setFlashField(null), 800);
     showToast(`${type} logged`);

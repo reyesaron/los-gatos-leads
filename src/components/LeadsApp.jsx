@@ -218,6 +218,8 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   const [mobileTab, setMobileTab] = useState("leads");
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
+  const [leadsMode, setLeadsMode] = useState("my"); // "my" or "all"
+  const [assigneeFilter, setAssigneeFilter] = useState("All"); // for "all" mode filtering
   const [expandedId, setExpandedId] = useState(null);
   const [minScore, setMinScore] = useState(0);
   const [hoodFilter, setHoodFilter] = useState("All");
@@ -259,15 +261,15 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
     return hoods.length > 0 ? ["All", ...hoods] : [];
   }, [scored, cityFilter]);
   const PIPELINE_STAGES = ["All", "New", "Contacted", "Meeting Set", "Proposal Sent", "Won", "Lost"];
-  const isLeadsView = view === "leads" || view.startsWith("leads:");
+  const isLeadsView = view === "leads";
   const isArchiveView = view === "archived";
-  const viewAssignee = view.startsWith("leads:") ? view.split(":")[1] : null;
+  const viewAssignee = null; // legacy — now handled by leadsMode + assigneeFilter
 
   const archiveCount = useMemo(() => scored.filter(p => p._crmStatus === "Archived").length, [scored]);
 
   // Count active filters for mobile badge
-  const activeFilterCount = [cityFilter !== "All", hoodFilter !== "All", catFilter !== "All", pipelineFilter !== "All", minScore > 0, sortBy !== "score"].filter(Boolean).length;
-  const clearAllFilters = () => { setCityFilter("All"); setHoodFilter("All"); setCatFilter("All"); setPipelineFilter("All"); setMinScore(0); setSortBy("score"); setSearch(""); };
+  const activeFilterCount = [cityFilter !== "All", hoodFilter !== "All", catFilter !== "All", pipelineFilter !== "All", minScore > 0, sortBy !== "score", leadsMode === "all" && assigneeFilter !== "All"].filter(Boolean).length;
+  const clearAllFilters = () => { setCityFilter("All"); setHoodFilter("All"); setCatFilter("All"); setPipelineFilter("All"); setMinScore(0); setSortBy("score"); setSearch(""); setAssigneeFilter("All"); };
 
   // Mobile tab → view sync
   const setMobileView = (tab) => {
@@ -319,12 +321,15 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
     if (isArchiveView) {
       list = list.filter(p => p._crmStatus === "Archived");
     } else if (isLeadsView) {
-      // Always exclude archived from active views
       list = list.filter(p => p._crmStatus !== "Archived");
-      if (viewAssignee) {
-        list = list.filter(p => p._crmAssignee === viewAssignee);
-      } else {
-        list = list.filter(p => !p._crmAssignee);
+      if (leadsMode === "my" && currentUser?.name) {
+        list = list.filter(p => p._crmAssignee === currentUser.name);
+      } else if (leadsMode === "all" && assigneeFilter !== "All") {
+        if (assigneeFilter === "Unassigned") {
+          list = list.filter(p => !p._crmAssignee);
+        } else {
+          list = list.filter(p => p._crmAssignee === assigneeFilter);
+        }
       }
     }
     if (cityFilter !== "All") list = list.filter(p => (p.city || "Los Gatos") === cityFilter);
@@ -335,7 +340,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
     if (minScore > 0) list = list.filter(p => p.score >= minScore);
     list.sort((a,b) => { if (sortBy==="score") return b.score-a.score; if (sortBy==="date") return new Date(b.dateFiled)-new Date(a.dateFiled); return a.address.localeCompare(b.address); });
     return list;
-  }, [scored, catFilter, cityFilter, hoodFilter, pipelineFilter, search, sortBy, minScore, isLeadsView, isArchiveView, viewAssignee]);
+  }, [scored, catFilter, cityFilter, hoodFilter, pipelineFilter, search, sortBy, minScore, isLeadsView, isArchiveView, leadsMode, assigneeFilter, currentUser]);
   const overdueAll = useMemo(() => scored.filter(p => p._overdue).length, [scored]);
   const stats = useMemo(() => ({ total:filtered.length, newLeads:filtered.filter(p=>p.isNew).length, hot:filtered.filter(p=>p.score>=7).length, overdue:filtered.filter(p=>p._overdue).length, nc:filtered.filter(p=>p.category==="New Construction").length, add:filtered.filter(p=>p.category==="Addition").length, sub:filtered.filter(p=>p.category==="Subdivision").length }), [filtered]);
 
@@ -477,18 +482,27 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
               ].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:MUTED}}>{s.l}</span></div>)}
             </div>
             <div className="apex-tabs" style={{display:"flex",gap:4,marginTop:14,alignItems:"center",flexWrap:"wrap"}}>
+              {/* My Leads / All Leads toggle */}
+              <div style={{display:"flex",gap:0,borderRadius:5,overflow:"hidden",border:`1px solid ${BORDER}`}}>
+                <button onClick={()=>{setView("leads");setLeadsMode("my")}} style={{padding:"5px 16px",border:"none",background:view==="leads"&&leadsMode==="my"?RED_DARK:CARD,color:view==="leads"&&leadsMode==="my"?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer"}}>My Leads</button>
+                <button onClick={()=>{setView("leads");setLeadsMode("all")}} style={{padding:"5px 16px",border:"none",borderLeft:`1px solid ${BORDER}`,background:view==="leads"&&leadsMode==="all"?RED_DARK:CARD,color:view==="leads"&&leadsMode==="all"?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer"}}>All Leads</button>
+              </div>
+              {/* Assignee filter — only shown in All Leads mode */}
+              {view==="leads"&&leadsMode==="all"&&(
+                <select value={assigneeFilter} onChange={e=>setAssigneeFilter(e.target.value)} style={{padding:"5px 10px",borderRadius:5,border:`1px solid ${BORDER}`,background:CARD,color:assigneeFilter!=="All"?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer"}}>
+                  <option value="All">All Team</option>
+                  <option value="Unassigned">Unassigned</option>
+                  {FORM_TEAM.map(t=><option key={t} value={t}>{t}</option>)}
+                </select>
+              )}
               {[
-                {id:"leads",label:"Unassigned"},
-                {id:"leads:Daniel",label:"Daniel"},
-                {id:"leads:Aron",label:"Aron"},
-                {id:"leads:Joseph",label:"Joseph"},
-                {id:"archived",label:`Archived${archiveCount>0?` (${archiveCount})`:""}`},
                 {id:"dashboard",label:"Dashboard"},
                 {id:"architects",label:"Architects"},
                 {id:"designers",label:"Designers"},
                 {id:"realtors",label:"Realtors"},
                 {id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},
                 {id:"addLead",label:"+ Add Lead"},
+                {id:"archived",label:`Archived${archiveCount>0?` (${archiveCount})`:""}`},
               ].map(t=>(
                 <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"5px 16px",borderRadius:5,border:`1px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:CARD,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>{t.label}</button>
               ))}
@@ -503,18 +517,21 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
         <div style={{textAlign:"center",padding:"8px 0",color:MUTED,fontSize:12,background:CARD,borderBottom:`1px solid ${BORDER}`}}>Refreshing...</div>
       )}
 
-      {/* Mobile: assignee chips on Leads tab */}
-      {isMobile && (isLeadsView || isArchiveView) && (
-        <div style={{padding:"8px 16px",display:"flex",gap:6,overflowX:"auto",WebkitOverflowScrolling:"touch",background:BG,borderBottom:`1px solid ${BORDER}`}}>
-          {[
-            {id:"leads",label:"All"},
-            {id:"leads:Daniel",label:"Daniel"},
-            {id:"leads:Aron",label:"Aron"},
-            {id:"leads:Joseph",label:"Joseph"},
-          ].map(t=>(
-            <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"6px 14px",borderRadius:20,border:`1.5px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:BG,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",flexShrink:0,whiteSpace:"nowrap"}}>{t.label}</button>
-          ))}
-          <button onClick={pullRefresh} disabled={refreshing} style={{padding:"6px 12px",borderRadius:20,border:`1.5px solid ${BORDER}`,background:BG,color:MUTED,fontSize:12,cursor:"pointer",flexShrink:0}}>
+      {/* Mobile: My Leads / All Leads toggle on Leads tab */}
+      {isMobile && isLeadsView && (
+        <div style={{padding:"8px 16px",display:"flex",gap:6,alignItems:"center",background:BG,borderBottom:`1px solid ${BORDER}`}}>
+          <div style={{display:"flex",gap:0,borderRadius:20,overflow:"hidden",border:`1px solid ${BORDER}`,flexShrink:0}}>
+            <button onClick={()=>setLeadsMode("my")} style={{padding:"7px 16px",border:"none",background:leadsMode==="my"?RED_DARK:BG,color:leadsMode==="my"?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer"}}>My Leads</button>
+            <button onClick={()=>setLeadsMode("all")} style={{padding:"7px 16px",border:"none",borderLeft:`1px solid ${BORDER}`,background:leadsMode==="all"?RED_DARK:BG,color:leadsMode==="all"?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer"}}>All Leads</button>
+          </div>
+          {leadsMode==="all"&&(
+            <select value={assigneeFilter} onChange={e=>setAssigneeFilter(e.target.value)} style={{padding:"6px 10px",borderRadius:20,border:`1.5px solid ${assigneeFilter!=="All"?RED:BORDER}`,background:assigneeFilter!=="All"?RED_DARK:BG,color:assigneeFilter!=="All"?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",flexShrink:0}}>
+              <option value="All">All Team</option>
+              <option value="Unassigned">Unassigned</option>
+              {FORM_TEAM.map(t=><option key={t} value={t}>{t}</option>)}
+            </select>
+          )}
+          <button onClick={pullRefresh} disabled={refreshing} style={{marginLeft:"auto",padding:"6px 12px",borderRadius:20,border:`1.5px solid ${BORDER}`,background:BG,color:MUTED,fontSize:12,cursor:"pointer",flexShrink:0}}>
             {refreshing ? "..." : "↻"}
           </button>
         </div>
@@ -729,6 +746,12 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
                   {PIPELINE_STAGES.map(s=><button key={s} onClick={()=>setPipelineFilter(s)} style={{padding:"10px 14px",borderRadius:8,border:`1px solid ${pipelineFilter===s?RED:BORDER}`,background:pipelineFilter===s?RED_DARK:BG,color:pipelineFilter===s?RED:TEXT,fontSize:13,fontWeight:pipelineFilter===s?700:400,cursor:"pointer"}}>{s}</button>)}
                 </div>
               </div>
+              {leadsMode==="all"&&<div>
+                <div style={{fontSize:12,color:MUTED,fontWeight:600,marginBottom:6}}>Team Member</div>
+                <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+                  {["All","Unassigned",...FORM_TEAM].map(t=><button key={t} onClick={()=>setAssigneeFilter(t)} style={{padding:"10px 14px",borderRadius:8,border:`1px solid ${assigneeFilter===t?RED:BORDER}`,background:assigneeFilter===t?RED_DARK:BG,color:assigneeFilter===t?RED:TEXT,fontSize:13,fontWeight:assigneeFilter===t?700:400,cursor:"pointer"}}>{t==="All"?"All Team":t}</button>)}
+                </div>
+              </div>}
               <div>
                 <div style={{fontSize:12,color:MUTED,fontWeight:600,marginBottom:6}}>Min Score</div>
                 <div style={{display:"flex",gap:6}}>
@@ -783,6 +806,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
           {pipelineFilter!=="All"&&<span onClick={()=>setPipelineFilter("All")} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 10px",borderRadius:6,background:RED_DARK,color:RED,fontSize:11,fontWeight:600,cursor:"pointer"}}>{pipelineFilter} ✕</span>}
           {minScore>0&&<span onClick={()=>setMinScore(0)} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 10px",borderRadius:6,background:RED_DARK,color:RED,fontSize:11,fontWeight:600,cursor:"pointer"}}>Min {minScore}+ ✕</span>}
           {sortBy!=="score"&&<span onClick={()=>setSortBy("score")} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 10px",borderRadius:6,background:RED_DARK,color:RED,fontSize:11,fontWeight:600,cursor:"pointer"}}>{sortBy==="date"?"Newest":"A-Z"} ✕</span>}
+          {leadsMode==="all"&&assigneeFilter!=="All"&&<span onClick={()=>setAssigneeFilter("All")} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 10px",borderRadius:6,background:RED_DARK,color:RED,fontSize:11,fontWeight:600,cursor:"pointer"}}>{assigneeFilter} ✕</span>}
         </div>
       )}
 
