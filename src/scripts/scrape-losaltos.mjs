@@ -11,7 +11,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT_PATH = path.join(__dirname, "..", "data", "losaltos-scraped.json");
 
 const SEARCH_URL = "https://trakit.losaltosca.gov/etrakit/Search/project.aspx";
-const PREFIXES = ["26-", "25-"]; // current + previous year
+// Auto-generate year prefixes — current year + previous year (2-digit)
+const now = new Date();
+const currentYY = String(now.getFullYear()).slice(-2);
+const prevYY = String(now.getFullYear() - 1).slice(-2);
+const PREFIXES = [`${currentYY}-`, `${prevYY}-`];
 
 async function scrapeAllProjects(browser) {
   const page = await browser.newPage();

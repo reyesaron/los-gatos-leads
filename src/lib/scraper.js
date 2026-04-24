@@ -141,6 +141,8 @@ function parsePage($, pageUrl) {
 
     const address = frView.find("h3 strong").text().trim();
     if (!address) return;
+    // Skip non-address entries (e.g. intro text like "on the map.")
+    if (address.length < 5 || !/\d/.test(address)) return;
 
     const paragraphs = frView.find("p").toArray();
     const appNumberRaw = parseField(paragraphs, $, "Application Number");

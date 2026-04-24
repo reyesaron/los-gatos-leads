@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      SCRAPER_LOG_TOKEN: ${{ secrets.SCRAPER_LOG_TOKEN }}
 
     steps:
       - uses: actions/checkout@v4
@@ -26,19 +28,37 @@ jobs:
         run: npx playwright install chromium
 
       - name: Scrape San Jose permits (Open Data Portal)
-        run: node src/scripts/scrape-sj-opendata.mjs
+        id: sj
+        run: node src/scripts/scrape-sj-opendata.mjs && echo "sj_status=success" >> $GITHUB_OUTPUT || echo "sj_status=failure" >> $GITHUB_OUTPUT
+        continue-on-error: true
 
       - name: Merge San Jose permits
+        if: steps.sj.outputs.sj_status == 'success'
         run: node src/scripts/merge-sj-permits.mjs
+        continue-on-error: true
 
       - name: Scrape Palo Alto permits (Open Data Portal)
-        run: node src/scripts/scrape-pa-opendata.mjs
+        id: pa
+        run: node src/scripts/scrape-pa-opendata.mjs && echo "pa_status=success" >> $GITHUB_OUTPUT || echo "pa_status=failure" >> $GITHUB_OUTPUT
+        continue-on-error: true
 
       - name: Scrape Cupertino permits (Accela)
-        run: node src/scripts/scrape-cupertino.mjs
+        id: cup
+        run: node src/scripts/scrape-cupertino.mjs && echo "cup_status=success" >> $GITHUB_OUTPUT || echo "cup_status=failure" >> $GITHUB_OUTPUT
+        continue-on-error: true
 
       - name: Scrape Los Altos projects (eTRAKiT)
-        run: node src/scripts/scrape-losaltos.mjs
+        id: la
+        run: node src/scripts/scrape-losaltos.mjs && echo "la_status=success" >> $GITHUB_OUTPUT || echo "la_status=failure" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Log scraper results
+        if: always()
+        run: |
+          node scripts/log-scrape.mjs san-jose ${{ steps.sj.outputs.sj_status || 'failure' }}
+          node scripts/log-scrape.mjs palo-alto ${{ steps.pa.outputs.pa_status || 'failure' }}
+          node scripts/log-scrape.mjs cupertino ${{ steps.cup.outputs.cup_status || 'failure' }}
+          node scripts/log-scrape.mjs los-altos ${{ steps.la.outputs.la_status || 'failure' }}
 
       - name: Commit and push if changed
         run: |
