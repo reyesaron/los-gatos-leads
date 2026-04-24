@@ -215,6 +215,9 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   const [sortBy, setSortBy] = useState("score");
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const [showMobileFilters, setShowMobileFilters] = useState(false);
+  const [mobileTab, setMobileTab] = useState("leads");
+  const [showMoreMenu, setShowMoreMenu] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
   const [expandedId, setExpandedId] = useState(null);
   const [minScore, setMinScore] = useState(0);
   const [hoodFilter, setHoodFilter] = useState("All");
@@ -265,6 +268,29 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   // Count active filters for mobile badge
   const activeFilterCount = [cityFilter !== "All", hoodFilter !== "All", catFilter !== "All", pipelineFilter !== "All", minScore > 0, sortBy !== "score"].filter(Boolean).length;
   const clearAllFilters = () => { setCityFilter("All"); setHoodFilter("All"); setCatFilter("All"); setPipelineFilter("All"); setMinScore(0); setSortBy("score"); setSearch(""); };
+
+  // Mobile tab → view sync
+  const setMobileView = (tab) => {
+    setMobileTab(tab);
+    if (tab === "leads") setView("leads");
+    else if (tab === "contacts") setView("architects");
+    else if (tab === "activity") setView("activity");
+    else if (tab === "dashboard") setView("dashboard");
+  };
+
+  // Pull to refresh
+  const pullRefresh = async () => {
+    setRefreshing(true);
+    try {
+      const [leadsRes, manualRes] = await Promise.all([
+        fetch(`/api/leads?_t=${Date.now()}`).then(r => r.json()),
+        fetch(`/api/leads/manual?_t=${Date.now()}`).then(r => r.json()),
+      ]);
+      if (leadsRes.leads) setCrmData(leadsRes.leads);
+      if (manualRes.leads) setManualLeads(manualRes.leads);
+    } catch {}
+    setRefreshing(false);
+  };
 
   const [confirmDialog, setConfirmDialog] = useState(null);
 
@@ -388,52 +414,124 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
         </div>
       </div>
     )}
-    <div style={{fontFamily:"'DM Sans','Segoe UI',system-ui,sans-serif",background:BG,minHeight:"100vh",color:TEXT}}>
+    <div style={{fontFamily:"'DM Sans','Segoe UI',system-ui,sans-serif",background:BG,minHeight:"100vh",color:TEXT,paddingBottom:isMobile?60:0}}>
+
+      {/* Mobile "More" menu */}
+      {isMobile && showMoreMenu && (
+        <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.85)",zIndex:9997,display:"flex",alignItems:"flex-end",justifyContent:"center"}} onClick={()=>setShowMoreMenu(false)}>
+          <div style={{background:CARD,width:"100%",maxWidth:500,borderRadius:"16px 16px 0 0",padding:"10px 0 20px"}} onClick={e=>e.stopPropagation()}>
+            <div style={{display:"flex",justifyContent:"center",padding:"6px 0 10px"}}><div style={{width:40,height:4,borderRadius:2,background:DIM}}/></div>
+            {[
+              {id:"addLead",label:"+ Add Lead",color:RED},
+              {id:"archived",label:`Archived (${archiveCount})`,color:MUTED},
+              {label:"Export CSV",color:MUTED,action:()=>{exportCSV(filtered,crmData,getLeadId);setShowMoreMenu(false)}},
+              {id:"admin",label:"Admin Users",color:MUTED},
+              {id:"auditLog",label:"Audit Log",color:MUTED},
+            ].map((item,i)=>(
+              <button key={i} onClick={()=>{if(item.action){item.action()}else{setView(item.id);setShowMoreMenu(false)}}} style={{display:"block",width:"100%",padding:"14px 24px",background:"transparent",border:"none",color:item.color,fontSize:16,fontWeight:500,cursor:"pointer",textAlign:"left"}}>
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* HEADER */}
-      <div style={{background:"linear-gradient(145deg,#0f0f0f,#141414,#0f0f0f)",borderBottom:`1px solid ${BORDER}`,padding:"20px 20px 16px"}}>
+      <div style={{background:"linear-gradient(145deg,#0f0f0f,#141414,#0f0f0f)",borderBottom:`1px solid ${BORDER}`,padding:isMobile?"12px 16px 10px":"20px 20px 16px"}}>
         <div style={{maxWidth:980,margin:"0 auto"}}>
-          <div className="apex-header-row" style={{display:"flex",alignItems:"center",gap:14,position:"relative"}}>
-            <img src="/apex-logo-full.jpg" alt="Apex Design Build" style={{height:48,borderRadius:6,flexShrink:0}} />
-            <div className="apex-header-title" style={{borderLeft:`2px solid ${RED}`,paddingLeft:14,flex:1}}>
-              <h1 style={{margin:0,fontSize:20,fontWeight:700,color:"#fff",letterSpacing:"-0.02em"}}>Construction Leads</h1>
-              <p style={{margin:0,fontSize:12,color:MUTED}}>South Bay Construction Leads · {allProjects.length} projects{scrapedAt && ` · Updated ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p>
+          <div className="apex-header-row" style={{display:"flex",alignItems:"center",gap:isMobile?10:14,position:"relative"}}>
+            <img src="/apex-logo-full.jpg" alt="Apex Design Build" style={{height:isMobile?36:48,borderRadius:6,flexShrink:0}} />
+            <div className="apex-header-title" style={{borderLeft:`2px solid ${RED}`,paddingLeft:isMobile?10:14,flex:1}}>
+              <h1 style={{margin:0,fontSize:isMobile?16:20,fontWeight:700,color:"#fff",letterSpacing:"-0.02em"}}>Construction Leads</h1>
+              <p style={{margin:0,fontSize:11,color:MUTED}}>{allProjects.length} projects{scrapedAt && ` · ${new Date(scrapedAt).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}`}</p>
             </div>
             <div className="apex-bell-wrap" style={{display:"flex",gap:8,alignItems:"center"}}>
               <NotificationBell scored={scored} crmData={crmData} activityFeed={activityFeed} currentUser={currentUser?.name || ""} />
               {currentUser && <ProfileMenu user={currentUser} onLogout={() => { setCurrentUser(null); setLoggedOut(true); }} onAdminClick={() => setView("admin")} onAuditClick={() => setView("auditLog")} />}
             </div>
           </div>
-          <div className="apex-stats" style={{display:"flex",gap:18,marginTop:14,flexWrap:"wrap"}}>
-            {[
-              {l:"Projects",v:stats.total,c:MUTED},
-              {l:"New",v:stats.newLeads,c:RED,pulse:true},
-              {l:"Overdue",v:overdueAll,c:"#fb923c",pulse:true},
-              {l:"Hot (7+)",v:stats.hot,c:"#fff"},
-              {l:"New Const.",v:stats.nc,c:TEXT},
-              {l:"Additions",v:stats.add,c:MUTED},
-              {l:"Subdivisions",v:stats.sub,c:DIM},
-            ].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:MUTED}}>{s.l}</span></div>)}
-          </div>
-          <div className="apex-tabs" style={{display:"flex",gap:4,marginTop:14,alignItems:"center",flexWrap:"wrap"}}>
-            {[
-              {id:"leads",label:"Unassigned"},
-              {id:"leads:Daniel",label:"Daniel"},
-              {id:"leads:Aron",label:"Aron"},
-              {id:"leads:Joseph",label:"Joseph"},
-              {id:"archived",label:`Archived${archiveCount>0?` (${archiveCount})`:""}`},
-              {id:"dashboard",label:"Dashboard"},
-              {id:"architects",label:"Architects"},
-              {id:"designers",label:"Designers"},
-              {id:"realtors",label:"Realtors"},
-              {id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},
-              {id:"addLead",label:"+ Add Lead"},
-            ].map(t=>(
-              <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"5px 16px",borderRadius:5,border:`1px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:CARD,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>{t.label}</button>
-            ))}
-            <button onClick={()=>exportCSV(filtered,crmData,getLeadId)} style={{marginLeft:"auto",padding:"5px 14px",borderRadius:5,border:`1px solid ${BORDER}`,background:CARD,color:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>Export CSV</button>
-          </div>
+
+          {/* Mobile: compact stats strip */}
+          {isMobile && (isLeadsView || isArchiveView || view === "dashboard") && (
+            <div style={{display:"flex",gap:14,marginTop:10,overflowX:"auto",WebkitOverflowScrolling:"touch",paddingBottom:2}}>
+              {[
+                {l:"Total",v:stats.total,c:MUTED},
+                {l:"New",v:stats.newLeads,c:RED,pulse:true},
+                {l:"Overdue",v:overdueAll,c:"#fb923c",pulse:true},
+                {l:"Hot",v:stats.hot,c:"#fff"},
+              ].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:4,flexShrink:0}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:18,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:10,color:MUTED}}>{s.l}</span></div>)}
+            </div>
+          )}
+
+          {/* Desktop: full stats + nav tabs */}
+          {!isMobile && <>
+            <div className="apex-stats" style={{display:"flex",gap:18,marginTop:14,flexWrap:"wrap"}}>
+              {[
+                {l:"Projects",v:stats.total,c:MUTED},
+                {l:"New",v:stats.newLeads,c:RED,pulse:true},
+                {l:"Overdue",v:overdueAll,c:"#fb923c",pulse:true},
+                {l:"Hot (7+)",v:stats.hot,c:"#fff"},
+                {l:"New Const.",v:stats.nc,c:TEXT},
+                {l:"Additions",v:stats.add,c:MUTED},
+                {l:"Subdivisions",v:stats.sub,c:DIM},
+              ].map(s=><div key={s.l} style={{display:"flex",alignItems:"baseline",gap:5}}><span className={s.pulse&&s.v>0?"badge-new":""} style={{fontSize:21,fontWeight:700,color:s.c,fontFamily:"'JetBrains Mono',monospace"}}>{s.v}</span><span style={{fontSize:11,color:MUTED}}>{s.l}</span></div>)}
+            </div>
+            <div className="apex-tabs" style={{display:"flex",gap:4,marginTop:14,alignItems:"center",flexWrap:"wrap"}}>
+              {[
+                {id:"leads",label:"Unassigned"},
+                {id:"leads:Daniel",label:"Daniel"},
+                {id:"leads:Aron",label:"Aron"},
+                {id:"leads:Joseph",label:"Joseph"},
+                {id:"archived",label:`Archived${archiveCount>0?` (${archiveCount})`:""}`},
+                {id:"dashboard",label:"Dashboard"},
+                {id:"architects",label:"Architects"},
+                {id:"designers",label:"Designers"},
+                {id:"realtors",label:"Realtors"},
+                {id:"activity",label:`Activity${activityFeed.length>0?` (${activityFeed.length})`:""}`},
+                {id:"addLead",label:"+ Add Lead"},
+              ].map(t=>(
+                <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"5px 16px",borderRadius:5,border:`1px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:CARD,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>{t.label}</button>
+              ))}
+              <button onClick={()=>exportCSV(filtered,crmData,getLeadId)} style={{marginLeft:"auto",padding:"5px 14px",borderRadius:5,border:`1px solid ${BORDER}`,background:CARD,color:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",transition:"all 0.15s"}}>Export CSV</button>
+            </div>
+          </>}
         </div>
       </div>
+
+      {/* Mobile: pull to refresh indicator */}
+      {isMobile && refreshing && (
+        <div style={{textAlign:"center",padding:"8px 0",color:MUTED,fontSize:12,background:CARD,borderBottom:`1px solid ${BORDER}`}}>Refreshing...</div>
+      )}
+
+      {/* Mobile: assignee chips on Leads tab */}
+      {isMobile && (isLeadsView || isArchiveView) && (
+        <div style={{padding:"8px 16px",display:"flex",gap:6,overflowX:"auto",WebkitOverflowScrolling:"touch",background:BG,borderBottom:`1px solid ${BORDER}`}}>
+          {[
+            {id:"leads",label:"All"},
+            {id:"leads:Daniel",label:"Daniel"},
+            {id:"leads:Aron",label:"Aron"},
+            {id:"leads:Joseph",label:"Joseph"},
+          ].map(t=>(
+            <button key={t.id} onClick={()=>setView(t.id)} style={{padding:"6px 14px",borderRadius:20,border:`1.5px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:BG,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer",flexShrink:0,whiteSpace:"nowrap"}}>{t.label}</button>
+          ))}
+          <button onClick={pullRefresh} disabled={refreshing} style={{padding:"6px 12px",borderRadius:20,border:`1.5px solid ${BORDER}`,background:BG,color:MUTED,fontSize:12,cursor:"pointer",flexShrink:0}}>
+            {refreshing ? "..." : "↻"}
+          </button>
+        </div>
+      )}
+
+      {/* Mobile: contacts sub-tabs */}
+      {isMobile && mobileTab === "contacts" && (
+        <div style={{padding:"8px 16px",display:"flex",gap:6,background:BG,borderBottom:`1px solid ${BORDER}`}}>
+          {[
+            {id:"architects",label:"Architects"},
+            {id:"designers",label:"Designers"},
+            {id:"realtors",label:"Realtors"},
+          ].map(t=>(
+            <button key={t.id} onClick={()=>setView(t.id)} style={{flex:1,padding:"8px 0",borderRadius:20,border:`1.5px solid ${view===t.id?RED:BORDER}`,background:view===t.id?RED_DARK:BG,color:view===t.id?RED:MUTED,fontSize:12,fontWeight:600,cursor:"pointer"}}>{t.label}</button>
+          ))}
+        </div>
+      )}
 
       {/* ACTIVITY FEED VIEW */}
       {view === "activity" && (
@@ -746,6 +844,28 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
       {/* ADMIN VIEWS */}
       {view === "admin" && currentUser?.role === "admin" && <AdminUsers />}
       {view === "auditLog" && currentUser?.role === "admin" && <AuditLogView />}
+
+      {/* ── MOBILE BOTTOM TAB BAR ── */}
+      {isMobile && (
+        <div style={{position:"fixed",bottom:0,left:0,right:0,display:"flex",background:CARD,borderTop:`1px solid ${BORDER}`,zIndex:9996,paddingBottom:"env(safe-area-inset-bottom, 0px)"}}>
+          {[
+            {id:"leads",label:"Leads",icon:"📋",badge:overdueAll>0?overdueAll:null},
+            {id:"contacts",label:"Contacts",icon:"👥"},
+            {id:"activity",label:"Activity",icon:"⚡",badge:activityFeed.length>0?null:null},
+            {id:"dashboard",label:"Dashboard",icon:"📊"},
+            {id:"more",label:"More",icon:"•••"},
+          ].map(t=>{
+            const isActive = t.id === "more" ? false : mobileTab===t.id;
+            return (
+              <button key={t.id} onClick={()=>{if(t.id==="more"){setShowMoreMenu(true)}else{setMobileView(t.id)}}} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:2,padding:"8px 0 6px",background:"transparent",border:"none",color:isActive?RED:MUTED,fontSize:10,fontWeight:isActive?700:500,cursor:"pointer",position:"relative"}}>
+                <span style={{fontSize:18}}>{t.icon}</span>
+                <span>{t.label}</span>
+                {t.badge&&<span style={{position:"absolute",top:4,right:"50%",transform:"translateX(12px)",width:16,height:16,borderRadius:8,background:RED,color:"#fff",fontSize:9,fontWeight:700,display:"flex",alignItems:"center",justifyContent:"center"}}>{t.badge}</span>}
+              </button>
+            );
+          })}
+        </div>
+      )}
     </div>
     </AuthWrapper>
   );
