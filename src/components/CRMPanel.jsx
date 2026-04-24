@@ -14,6 +14,14 @@ const TEAM = ["Daniel", "Aron", "Joseph"];
 const STATUSES = ["New", "Contacted", "Meeting Set", "Proposal Sent", "Won", "Lost", "Archived"];
 const INTERACTION_TYPES = ["Call", "Meeting", "Coffee", "Lunch/Dinner", "Email", "Text", "Note"];
 const TYPE_COLORS = { Call: "#60a5fa", Meeting: "#4ade80", Coffee: "#fbbf24", "Lunch/Dinner": "#fb923c", Email: "#a78bfa", Text: "#94a3b8", Note: "#737373" };
+const QUICK_NOTES = [
+  { text: "Called, no answer", type: "Call" },
+  { text: "Left voicemail", type: "Call" },
+  { text: "Met on-site", type: "Meeting" },
+  { text: "Sent proposal", type: "Email" },
+  { text: "Coffee", type: "Coffee" },
+  { text: "Lunch/Dinner", type: "Lunch/Dinner" },
+];
 const STATUS_COLORS = {
   New: { bg: "#1c1c1c", fg: MUTED },
   Contacted: { bg: "#172554", fg: "#60a5fa" },
@@ -76,6 +84,8 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
     setSaving(false);
   };
 
+  const [quickFlash, setQuickFlash] = useState(null);
+
   const addNote = async () => {
     if (!noteText.trim()) return;
     setSaving(true);
@@ -89,6 +99,23 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
       if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }
       if (data.notes) setNotes(data.notes);
       setNoteText("");
+    } catch {}
+    setSaving(false);
+  };
+
+  const quickLog = async (text, type) => {
+    setSaving(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ leadId, action: "addNote", note: text, author: noteAuthor, type, contactDate: noteDate }),
+      });
+      const data = await res.json();
+      if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }
+      if (data.notes) setNotes(data.notes);
+      setQuickFlash(text);
+      setTimeout(() => setQuickFlash(null), 800);
     } catch {}
     setSaving(false);
   };
@@ -252,6 +279,27 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
           Last contact: <strong style={{ color: TEXT }}>{lead.lastContactBy}</strong> on {new Date(lead.lastContactAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" })}
         </div>
       )}
+
+      {/* Quick-log templates */}
+      <div style={{ display: "flex", gap: 4, marginBottom: 8, flexWrap: "wrap" }}>
+        {QUICK_NOTES.map(q => (
+          <button
+            key={q.text}
+            onClick={() => quickLog(q.text, q.type)}
+            disabled={saving}
+            style={{
+              padding: "5px 10px", borderRadius: 5,
+              border: `1px solid ${quickFlash === q.text ? "#4ade80" : BORDER}`,
+              background: quickFlash === q.text ? "#052e16" : BG,
+              color: quickFlash === q.text ? "#4ade80" : MUTED,
+              fontSize: 11, fontWeight: 500, cursor: "pointer",
+              transition: "all 0.3s",
+            }}
+          >
+            {quickFlash === q.text ? "✓ Logged" : q.text}
+          </button>
+        ))}
+      </div>
 
       {/* Add note */}
       <div style={{ display: "flex", gap: 6, marginBottom: 8, alignItems: "flex-start" }}>
