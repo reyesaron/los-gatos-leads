@@ -1,75 +1,6 @@
 {
   "projects": [
     {
-      "address": "on the map.",
-      "appNumber": "",
-      "appType": "",
-      "description": "",
-      "overview": "Residential addition/alteration project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "",
-      "status": "Pending",
-      "planner": "",
-      "category": "Addition",
-      "scope": "General",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://www.losgatosca.gov/2216/Pending-Planning-Projects",
-      "docs": [],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
-      "address": "117 Alerche Drive",
-      "appNumber": "MR-25-009",
-      "appType": "Minor Residential Development Application",
-      "description": "Consider a Request for Approval of a Second Story Addition Exceeding 100 Square Feet on Property Zoned HR-1. APN 567-19-031. Categorically Exempt Pursuant to CEQA Guidelines Section 15301: Existing Facilities.",
-      "overview": "Second-story addition to existing home.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2025-06-27",
-      "status": "It is the intent of the Town to approve this proposal on April 6, 2026.",
-      "planner": "Ryan Safty",
-      "category": "Addition",
-      "scope": "Second-Story Addition",
-      "zoning": "HR-1",
-      "apn": "567-19-031",
-      "pageUrl": "https://www.losgatosca.gov/2216/Pending-Planning-Projects",
-      "docs": [
-        {
-          "name": "Consulting Architect Review - 117 Alerche Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44443/Consulting-Architect-Review---117-Alerche-Dr-PDF"
-        },
-        {
-          "name": "Draft Conditions of Approval - 117 Alerche Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45204/Draft-Conditions-of-Approval---117-Alerche-Dr-PDF"
-        },
-        {
-          "name": "Letter of Justification and Project Description - 117 Alerche Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43912/Letter-of-Justification-and-Project-Description---117-Alerche-Drive-PDF"
-        },
-        {
-          "name": "Neighborhood and Property Pictures - 117 Alerche Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43913/Neighborhood-and-Property-Pictures---117-Alerche-Drive-PDF"
-        },
-        {
-          "name": "Neighborhood Outreach Summary - 117 Alerche Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43914/Neighborhood-Outreach-Summary---117-Alerche-Dr-PDF"
-        },
-        {
-          "name": "Project Plans - 117 Alerche Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43916/Project-Plans---117-Alerche-Dr-PDF"
-        },
-        {
-          "name": "Response to Consulting Architect Review - 117 Alerche Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44442/Response-to-Consulting-Architect-Review---117-Alerche-Dr-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
       "address": "52 Ashler Avenue",
       "appNumber": "MR-24-009",
       "appType": "Minor Residential Development Application",
@@ -125,20 +56,24 @@
       "pageUrl": "https://www.losgatosca.gov/2370/B",
       "docs": [
         {
+          "name": "Development Plans - 321 Bachman Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/43887/Development-Plans---321-Bachman-Ave-PDF"
+        },
+        {
+          "name": "Draft Conditions of Approval - 321 Bachman Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45594/Draft-Conditions-of-Approval---321-Bachman-Ave-PDF"
+        },
+        {
+          "name": "Draft Findings for Approval - 321 Bachman Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45595/Draft-Findings-for-Approval---321-Bachman-Ave-PDF"
+        },
+        {
           "name": "Letter of Justification - 321 Bachman Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45225/Letter-of-Justification---321-Bachman-Ave-PDF"
         },
         {
           "name": "Photos  - 321 Bachman Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/43885/Photos----321-Bachman-Ave-PDF"
-        },
-        {
-          "name": "Project Description Letter - 321 Bachman Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43886/Project-Description-Letter---321-Bachman-Ave-PDF"
-        },
-        {
-          "name": "Project Plans - 321 Bachman Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43887/Project-Plans---321-Bachman-Ave-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -618,7 +553,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-01-14",
-      "status": "Planning Commission - 4/8/2026",
+      "status": "Approved by Planning Commission on 4/8/2026. Appeal period ends on 4/20/2026 at 5:00 PM.",
       "planner": "Erin Walters",
       "category": "New Construction",
       "scope": "Custom Home (Demo + New Build)",
@@ -707,6 +642,31 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
+      "address": "16080 Camino Del Cerro",
+      "appNumber": "",
+      "appType": "Two Unit Housing Development Application TUD26-003",
+      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Two Unit Housing Development to Construct One New Unit on Property Zoned R-1D. APN 510-45-049. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
+      "overview": "Two new units under SB 9 — ministerial project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-04-16",
+      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
+      "planner": "Ryan Safty",
+      "category": "New Construction",
+      "scope": "Two-Unit Development (SB 9)",
+      "zoning": "R-1D",
+      "apn": "510-45-049",
+      "pageUrl": "https://www.losgatosca.gov/2371/C",
+      "docs": [
+        {
+          "name": "Project Plans - 33 Clifton Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45702/Project-Plans---33-Clifton-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-04-24T22:27:14.612Z"
+    },
+    {
       "address": "121 College Avenue",
       "appNumber": "MR-25-017",
       "appType": "Minor Residential Application",
@@ -731,6 +691,10 @@
         {
           "name": "Project Plans - 121 College Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44034/Project-Plans---121-College-Ave-PDF"
+        },
+        {
+          "name": "Response to Comments - 121 College Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45519/Response-to-Comments---121-College-Ave-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -993,7 +957,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2024-09-03",
-      "status": "This item went to Planning Commission on 3/25/2026 and was continued to the special meeting on March 31, 2026. At this meeting, the item was continued to a date certain of April 22, 2026 at 7:00 p.m.",
+      "status": "This item went to Planning Commission on April 22, 2026. At this meeting, the item was continued to a date certain of May 13, 2026 at 7:00 PM.",
       "planner": "Jocelyn Shoopman",
       "category": "Addition",
       "scope": "Commercial CUP",
@@ -1128,6 +1092,39 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
+      "address": "15675 Gum Tree Lane",
+      "appNumber": "S-26-011",
+      "appType": "Architecture and Site Application",
+      "description": "Consider a Request for Approval for Site Improvements Requiring a Grading Permit on Property Zoned HR-2½:PD. APN 527-09-033. Exempt Pursuant to the CEQA Section 15303(a): New Construction or Conversion of Small Structures.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-04-08",
+      "status": "Pending",
+      "planner": "Ryan Safty",
+      "category": "Addition",
+      "scope": "General",
+      "zoning": "HR-2½:PD",
+      "apn": "527-09-033",
+      "pageUrl": "https://www.losgatosca.gov/2373/G",
+      "docs": [
+        {
+          "name": "Letter of Justification - 15675 Gum Tree Ln(PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45452/Letter-of-Justification---15675-Gum-Tree-LnPDF"
+        },
+        {
+          "name": "Project Plans - 15675 Gum Tree Ln(PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45453/Project-Plans---15675-Gum-Tree-LnPDF"
+        },
+        {
+          "name": "Renderings - 15675 Gum Tree Ln(PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45454/Renderings---15675-Gum-Tree-LnPDF"
+        }
+      ],
+      "firstSeen": "2026-04-24T22:27:14.612Z"
+    },
+    {
       "address": "200 Happy Acres Road",
       "appNumber": "S-24-039",
       "appType": "Architecture and Site Application",
@@ -1220,16 +1217,12 @@
       "pageUrl": "https://www.losgatosca.gov/2374/H",
       "docs": [
         {
-          "name": "Development Plans - 69 Hernandez Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44506/Development-Plans---69-Hernandez-Ave-PDF"
+          "name": "Revised Development Plans - 69 Hernandez Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/44506/Revised-Development-Plans---69-Hernandez-Ave-PDF"
         },
         {
-          "name": "Justification Letter - 69 Hernandez Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44714/Justification-Letter---69-Hernandez-Ave-PDF"
-        },
-        {
-          "name": "Letter of Description - 69 Hernandez Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44507/Letter-of-Description---69-Hernandez-Ave-PDF"
+          "name": "Revised Justification Letter - 69 Hernandez Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/44714/Revised-Justification-Letter---69-Hernandez-Ave-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -1273,8 +1266,8 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-09-11",
-      "status": "Pending",
-      "planner": "Samina Merchant",
+      "status": "Development Review Committee - 05/05/2026",
+      "planner": "Ryan Safty",
       "category": "Addition",
       "scope": "Accessory Structure",
       "zoning": "HR-1",
@@ -1375,24 +1368,41 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "There are currently no projects on a street that starts with J.",
-      "appNumber": "",
-      "appType": "",
-      "description": "",
+      "address": "100 Jamie Court",
+      "appNumber": "MR-26-007",
+      "appType": "Minor Residential Application",
+      "description": "Consider a Request for Approval to Remove a Pre-1941 Property from the Historic Resources Inventory for Property Zoned R-1D. Located at. APN 529-24-025. Exempt Pursuant to CEQA Guidelines, Section 15061 (b)(3).",
       "overview": "Residential addition/alteration project.",
       "existingSF": null,
       "proposedSF": null,
       "sfNote": "",
-      "dateFiled": "",
-      "status": "Pending",
-      "planner": "",
+      "dateFiled": "2026-03-10",
+      "status": "Consider a Request for Approval to Construct a New Second-Story Addition to an Existing Single-Family Residence on Property Zoned R-1:8. APN 527-32-038.  Categorically Exempt Pursuant to the California Environmental Quality Act, Section 15303: New Construction or Conversion of Small Structures.",
+      "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "General",
-      "zoning": "",
-      "apn": "",
+      "zoning": "R-1D",
+      "apn": "529-24-025",
       "pageUrl": "https://www.losgatosca.gov/2376/J",
-      "docs": [],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
+      "docs": [
+        {
+          "name": "Development Plans - 100 Jamie Court (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45532/Development-Plans---100-Jamie-Court-PDF"
+        },
+        {
+          "name": "How to Read Your Neighborhood - 100 Jamie Court (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45533/How-to-Read-Your-Neighborhood---100-Jamie-Court-PDF"
+        },
+        {
+          "name": "Photos - 100 Jamie Court (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45534/Photos---100-Jamie-Court-PDF"
+        },
+        {
+          "name": "Structural Calculations - 100 Jamie Court (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45535/Structural-Calculations---100-Jamie-Court-PDF"
+        }
+      ],
+      "firstSeen": "2026-04-24T22:27:14.612Z"
     },
     {
       "address": "15315 Kennedy Road",
@@ -1500,6 +1510,10 @@
       "pageUrl": "https://www.losgatosca.gov/2377/K",
       "docs": [
         {
+          "name": "Arborist Report - 16484 S Kennedy Road - Parcel 1",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45629/Arborist-Report---16484-S-Kennedy-Road---Parcel-1"
+        },
+        {
           "name": "Colors and Materials Board - 16484 S Kennedy Road - Parcel 1",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44482/Colors-and-Materials-Board---16484-S-Kennedy-Road---Parcel-1"
         },
@@ -1540,6 +1554,14 @@
       "apn": "532-20-012",
       "pageUrl": "https://www.losgatosca.gov/2377/K",
       "docs": [
+        {
+          "name": "Arborist Report - 16484 S Kennedy Road - Parcel 2",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45665/Arborist-Report---16484-S-Kennedy-Road---Parcel-2"
+        },
+        {
+          "name": "Color and Materials Board - 16484 S Kennedy Road - Parcel 2",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45666/Color-and-Materials-Board---16484-S-Kennedy-Road---Parcel-2"
+        },
         {
           "name": "Letter of Justification - 16484 S Kennedy Road - Parcel 2",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44487/Letter-of-Justification---16484-S-Kennedy-Road---Parcel-2"
@@ -2132,26 +2154,6 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "There are currently no projects on a street that starts with Q. There are currently no projects on a street that starts with Q. There are currently no projects on a street that starts with Q.",
-      "appNumber": "",
-      "appType": "",
-      "description": "",
-      "overview": "Residential addition/alteration project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "",
-      "status": "Pending",
-      "planner": "",
-      "category": "Addition",
-      "scope": "General",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://www.losgatosca.gov/2389/Q",
-      "docs": [],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
       "address": "10, 30, 50, and 70 Reservoir Road",
       "appNumber": "M-25-003",
       "appType": "Architecture and Site Application S-22-049                                          Subdivision Application",
@@ -2311,7 +2313,7 @@
       "address": "15880 Rose Avenue",
       "appNumber": "S-25-051",
       "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Approval to Demolish an Existing Single-Family Residence and Construct a New Single-Family Residence with Site Improvements Requiring a Grading Permit on Property Zoned R-1:8. APN 410-19-036. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction or Conversion of Small Structures.",
+      "description": "Consider a Request for Approval to Demolish an Existing Single-Family Residence and Construct a New Single-Family Residence Property Zoned R-1:8. APN 410-19-036. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction or Conversion of Small Structures.",
       "overview": "Custom home — full demo + new build. Ground-up construction opportunity.",
       "existingSF": null,
       "proposedSF": null,
@@ -2332,6 +2334,22 @@
         {
           "name": "Consulting Architect Report - 15880 Rose Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45310/Consulting-Architect-Report---15880-Rose-Ave-PDF"
+        },
+        {
+          "name": "Letter of Justification - 15880 Rose Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45598/Letter-of-Justification---15880-Rose-Ave-PDF"
+        },
+        {
+          "name": "Neighbor Outreach Summary - 15880 Rose Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45599/Neighbor-Outreach-Summary---15880-Rose-Ave-PDF"
+        },
+        {
+          "name": "Neighborhood Compatibility Statement - 15880 Rose Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45600/Neighborhood-Compatibility-Statement---15880-Rose-Ave-PDF"
+        },
+        {
+          "name": "Project Description - 15880 Rose Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45601/Project-Description---15880-Rose-Ave-PDF"
         },
         {
           "name": "Project Plan Set - 15880 Rose Avenue",
@@ -2834,7 +2852,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-10-27",
-      "status": "Pending",
+      "status": "Planning Commission - 5/13/2026",
       "planner": "Ryan Safty",
       "category": "New Construction",
       "scope": "Custom Home (Vacant Lot)",
@@ -2872,7 +2890,7 @@
         },
         {
           "name": "Response to Consulting Architect Report - 116 Vallecitos Way (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44449/Response-to-Consulting-Architect-Report---116-Vallecitos-Way-PDF"
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45566/Response-to-Consulting-Architect-Report---116-Vallecitos-Way-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -2940,7 +2958,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-10-06",
-      "status": "Planning Commission - 4/22/2026",
+      "status": "Approved by Planning Commission on 4/22/2026. Appeal period ends on 5/4/2026 at 5:00 PM.",
       "planner": "Ryan Safty",
       "category": "New Construction",
       "scope": "Institutional",
@@ -3016,6 +3034,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-04-15T22:28:10.745Z",
+  "scrapedAt": "2026-04-24T22:27:14.612Z",
   "errors": []
 }
