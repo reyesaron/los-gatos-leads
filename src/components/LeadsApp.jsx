@@ -213,6 +213,8 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   const [catFilter, setCatFilter] = useState("All");
   const [cityFilter, setCityFilter] = useState("All");
   const [sortBy, setSortBy] = useState("score");
+  const [showMobileSearch, setShowMobileSearch] = useState(false);
+  const [showMobileFilters, setShowMobileFilters] = useState(false);
   const [expandedId, setExpandedId] = useState(null);
   const [minScore, setMinScore] = useState(0);
   const [hoodFilter, setHoodFilter] = useState("All");
@@ -259,6 +261,10 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   const viewAssignee = view.startsWith("leads:") ? view.split(":")[1] : null;
 
   const archiveCount = useMemo(() => scored.filter(p => p._crmStatus === "Archived").length, [scored]);
+
+  // Count active filters for mobile badge
+  const activeFilterCount = [cityFilter !== "All", hoodFilter !== "All", catFilter !== "All", pipelineFilter !== "All", minScore > 0, sortBy !== "score"].filter(Boolean).length;
+  const clearAllFilters = () => { setCityFilter("All"); setHoodFilter("All"); setCatFilter("All"); setPipelineFilter("All"); setMinScore(0); setSortBy("score"); setSearch(""); };
 
   const [confirmDialog, setConfirmDialog] = useState(null);
 
@@ -557,17 +563,130 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
 
       {/* FILTERS + CARDS */}
       {(isLeadsView || isArchiveView) && <>
-      <div style={{background:CARD,borderBottom:`1px solid ${BORDER}`,padding:"10px 20px",position:"sticky",top:0,zIndex:10}}>
-        <div className="apex-filters" style={{maxWidth:980,margin:"0 auto",display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
-          <input type="text" placeholder="Search address, APN, planner, zoning, description..." value={search} onChange={e=>setSearch(e.target.value)} style={{...iS,flex:"1 1 200px",minWidth:160}} />
-          <select value={cityFilter} onChange={e=>{setCityFilter(e.target.value);setHoodFilter("All")}} style={{...iS,cursor:"pointer"}}>{cities.map(c=><option key={c} value={c}>{c==="All"?"City: All":c}</option>)}</select>
-          {neighborhoods.length>0&&<select value={hoodFilter} onChange={e=>setHoodFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{neighborhoods.map(n=><option key={n} value={n}>{n==="All"?"Neighborhood: All":n}</option>)}</select>}
-          <select value={catFilter} onChange={e=>setCatFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{categories.map(c=><option key={c}>{c}</option>)}</select>
-          <select value={sortBy} onChange={e=>setSortBy(e.target.value)} style={{...iS,cursor:"pointer"}}><option value="score">Sort: Lead Score</option><option value="date">Sort: Newest</option><option value="address">Sort: Address</option></select>
-          <select value={pipelineFilter} onChange={e=>setPipelineFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{PIPELINE_STAGES.map(s=><option key={s} value={s}>{s==="All"?"Pipeline: All":s}</option>)}</select>
-          <select value={minScore} onChange={e=>setMinScore(+e.target.value)} style={{...iS,cursor:"pointer"}}><option value={0}>Min: Any</option><option value={4}>Min: 4+</option><option value={7}>Min: 7+</option></select>
+
+      {/* Mobile search modal */}
+      {isMobile && showMobileSearch && (
+        <div style={{position:"fixed",inset:0,background:BG,zIndex:9997,display:"flex",flexDirection:"column"}}>
+          <div style={{padding:"12px 16px",display:"flex",gap:10,alignItems:"center",borderBottom:`1px solid ${BORDER}`}}>
+            <button onClick={()=>setShowMobileSearch(false)} style={{background:"none",border:"none",color:MUTED,fontSize:18,cursor:"pointer",padding:"4px"}}>←</button>
+            <input type="text" placeholder="Search address, APN, planner..." value={search} onChange={e=>setSearch(e.target.value)} autoFocus style={{...iS,flex:1,fontSize:16,padding:"12px 14px"}} />
+            {search && <button onClick={()=>setSearch("")} style={{background:"none",border:"none",color:DIM,fontSize:14,cursor:"pointer"}}>✕</button>}
+          </div>
+          <div style={{padding:"10px 16px",display:"flex",gap:8,alignItems:"center"}}>
+            <button onClick={()=>{setShowMobileSearch(false);setShowMobileFilters(true)}} style={{display:"flex",alignItems:"center",gap:6,padding:"10px 16px",borderRadius:8,border:`1px solid ${activeFilterCount>0?RED:BORDER}`,background:activeFilterCount>0?RED_DARK:CARD,color:activeFilterCount>0?RED:MUTED,fontSize:14,fontWeight:600,cursor:"pointer"}}>
+              ⚙ Filters{activeFilterCount>0?` (${activeFilterCount})`:""}
+            </button>
+            {activeFilterCount>0 && <button onClick={clearAllFilters} style={{padding:"10px 14px",borderRadius:8,border:`1px solid ${BORDER}`,background:CARD,color:MUTED,fontSize:13,cursor:"pointer"}}>Clear All</button>}
+            <span style={{marginLeft:"auto",fontSize:13,color:MUTED}}>{filtered.length} results</span>
+          </div>
+          <div style={{flex:1,overflowY:"auto",padding:"0 16px 20px"}}>
+            {filtered.length===0&&<div style={{textAlign:"center",padding:40,color:MUTED}}>No matches</div>}
+            {filtered.slice(0,20).map((p)=>{const cc=catC[p.category]||{bg:"#1c1c1c",fg:MUTED};return(
+              <div key={p.address+p.appNumber} onClick={()=>{setShowMobileSearch(false);setMobileActionLead(p)}} style={{background:CARD,borderRadius:8,border:`1px solid ${p.score>=7?RED_MID:BORDER}`,marginBottom:6,padding:"12px 14px",cursor:"pointer"}}>
+                <div style={{display:"flex",alignItems:"center",gap:10}}>
+                  <span style={{display:"inline-flex",alignItems:"center",background:p.score>=7?RED_DARK:p.score>=4?"#1c1c1c":"#171717",color:p.score>=7?RED:p.score>=4?TEXT:MUTED,fontWeight:700,fontSize:13,padding:"3px 8px",borderRadius:5,fontFamily:"'JetBrains Mono',monospace"}}>{p.score}</span>
+                  <div style={{flex:1,minWidth:0}}>
+                    <div style={{fontWeight:700,fontSize:14,color:"#fff",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{p.address}</div>
+                    <div style={{fontSize:12,color:MUTED,marginTop:2}}>{p.scope} · {p.city||"Los Gatos"}</div>
+                  </div>
+                </div>
+              </div>
+            )})}
+            {filtered.length>20&&<div style={{textAlign:"center",padding:16,color:DIM,fontSize:12}}>Showing first 20 of {filtered.length} results. Refine your search.</div>}
+          </div>
         </div>
+      )}
+
+      {/* Mobile filter modal */}
+      {isMobile && showMobileFilters && (
+        <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.85)",zIndex:9997,display:"flex",alignItems:"flex-end",justifyContent:"center"}} onClick={e=>{if(e.target===e.currentTarget)setShowMobileFilters(false)}}>
+          <div style={{background:CARD,width:"100%",maxWidth:500,borderRadius:"16px 16px 0 0",maxHeight:"80vh",overflowY:"auto"}} onClick={e=>e.stopPropagation()}>
+            <div style={{display:"flex",justifyContent:"center",padding:"10px 0 6px"}}><div style={{width:40,height:4,borderRadius:2,background:DIM}}/></div>
+            <div style={{padding:"4px 20px 8px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+              <span style={{fontSize:16,fontWeight:700,color:"#fff"}}>Filters</span>
+              {activeFilterCount>0&&<button onClick={()=>{clearAllFilters()}} style={{background:"none",border:"none",color:RED,fontSize:13,fontWeight:600,cursor:"pointer"}}>Clear All</button>}
+            </div>
+            <div style={{padding:"0 20px 24px",display:"flex",flexDirection:"column",gap:16}}>
+              <div>
+                <div style={{fontSize:12,color:MUTED,fontWeight:600,marginBottom:6}}>City</div>
+                <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+                  {cities.map(c=><button key={c} onClick={()=>{setCityFilter(c);setHoodFilter("All")}} style={{padding:"10px 14px",borderRadius:8,border:`1px solid ${cityFilter===c?RED:BORDER}`,background:cityFilter===c?RED_DARK:BG,color:cityFilter===c?RED:TEXT,fontSize:13,fontWeight:cityFilter===c?700:400,cursor:"pointer"}}>{c==="All"?"All Cities":c}</button>)}
+                </div>
+              </div>
+              {neighborhoods.length>0&&<div>
+                <div style={{fontSize:12,color:MUTED,fontWeight:600,marginBottom:6}}>Neighborhood</div>
+                <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+                  {neighborhoods.map(n=><button key={n} onClick={()=>setHoodFilter(n)} style={{padding:"10px 14px",borderRadius:8,border:`1px solid ${hoodFilter===n?RED:BORDER}`,background:hoodFilter===n?RED_DARK:BG,color:hoodFilter===n?RED:TEXT,fontSize:13,fontWeight:hoodFilter===n?700:400,cursor:"pointer"}}>{n==="All"?"All":n}</button>)}
+                </div>
+              </div>}
+              <div>
+                <div style={{fontSize:12,color:MUTED,fontWeight:600,marginBottom:6}}>Category</div>
+                <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+                  {categories.map(c=><button key={c} onClick={()=>setCatFilter(c)} style={{padding:"10px 14px",borderRadius:8,border:`1px solid ${catFilter===c?RED:BORDER}`,background:catFilter===c?RED_DARK:BG,color:catFilter===c?RED:TEXT,fontSize:13,fontWeight:catFilter===c?700:400,cursor:"pointer"}}>{c}</button>)}
+                </div>
+              </div>
+              <div>
+                <div style={{fontSize:12,color:MUTED,fontWeight:600,marginBottom:6}}>Pipeline Stage</div>
+                <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+                  {PIPELINE_STAGES.map(s=><button key={s} onClick={()=>setPipelineFilter(s)} style={{padding:"10px 14px",borderRadius:8,border:`1px solid ${pipelineFilter===s?RED:BORDER}`,background:pipelineFilter===s?RED_DARK:BG,color:pipelineFilter===s?RED:TEXT,fontSize:13,fontWeight:pipelineFilter===s?700:400,cursor:"pointer"}}>{s}</button>)}
+                </div>
+              </div>
+              <div>
+                <div style={{fontSize:12,color:MUTED,fontWeight:600,marginBottom:6}}>Min Score</div>
+                <div style={{display:"flex",gap:6}}>
+                  {[{v:0,l:"Any"},{v:4,l:"4+"},{v:7,l:"7+"}].map(({v,l})=><button key={v} onClick={()=>setMinScore(v)} style={{padding:"10px 14px",borderRadius:8,border:`1px solid ${minScore===v?RED:BORDER}`,background:minScore===v?RED_DARK:BG,color:minScore===v?RED:TEXT,fontSize:13,fontWeight:minScore===v?700:400,cursor:"pointer",flex:1}}>{l}</button>)}
+                </div>
+              </div>
+              <div>
+                <div style={{fontSize:12,color:MUTED,fontWeight:600,marginBottom:6}}>Sort By</div>
+                <div style={{display:"flex",gap:6}}>
+                  {[{v:"score",l:"Lead Score"},{v:"date",l:"Newest"},{v:"address",l:"Address"}].map(({v,l})=><button key={v} onClick={()=>setSortBy(v)} style={{padding:"10px 14px",borderRadius:8,border:`1px solid ${sortBy===v?RED:BORDER}`,background:sortBy===v?RED_DARK:BG,color:sortBy===v?RED:TEXT,fontSize:13,fontWeight:sortBy===v?700:400,cursor:"pointer",flex:1}}>{l}</button>)}
+                </div>
+              </div>
+              <button onClick={()=>setShowMobileFilters(false)} style={{width:"100%",padding:"14px 0",borderRadius:8,border:"none",background:RED,color:"#fff",fontSize:15,fontWeight:600,cursor:"pointer",marginTop:4}}>
+                Show {filtered.length} Results
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Desktop: full inline filters | Mobile: compact search bar */}
+      <div style={{background:CARD,borderBottom:`1px solid ${BORDER}`,padding:isMobile?"8px 16px":"10px 20px",position:"sticky",top:0,zIndex:10}}>
+        {isMobile ? (
+          <div style={{maxWidth:980,margin:"0 auto",display:"flex",gap:8,alignItems:"center"}}>
+            <button onClick={()=>setShowMobileSearch(true)} style={{flex:1,display:"flex",alignItems:"center",gap:8,padding:"10px 14px",borderRadius:8,border:`1px solid ${BORDER}`,background:"#111",color:search?TEXT:MUTED,fontSize:14,cursor:"pointer",textAlign:"left"}}>
+              🔍 {search||"Search leads..."}
+            </button>
+            <button onClick={()=>setShowMobileFilters(true)} style={{position:"relative",display:"flex",alignItems:"center",gap:4,padding:"10px 14px",borderRadius:8,border:`1px solid ${activeFilterCount>0?RED:BORDER}`,background:activeFilterCount>0?RED_DARK:CARD,color:activeFilterCount>0?RED:MUTED,fontSize:14,fontWeight:600,cursor:"pointer"}}>
+              ⚙{activeFilterCount>0&&<span style={{position:"absolute",top:-4,right:-4,width:18,height:18,borderRadius:9,background:RED,color:"#fff",fontSize:10,fontWeight:700,display:"flex",alignItems:"center",justifyContent:"center"}}>{activeFilterCount}</span>}
+            </button>
+            <span style={{fontSize:12,color:DIM,flexShrink:0}}>{filtered.length}</span>
+          </div>
+        ) : (
+          <div className="apex-filters" style={{maxWidth:980,margin:"0 auto",display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
+            <input type="text" placeholder="Search address, APN, planner, zoning, description..." value={search} onChange={e=>setSearch(e.target.value)} style={{...iS,flex:"1 1 200px",minWidth:160}} />
+            <select value={cityFilter} onChange={e=>{setCityFilter(e.target.value);setHoodFilter("All")}} style={{...iS,cursor:"pointer"}}>{cities.map(c=><option key={c} value={c}>{c==="All"?"City: All":c}</option>)}</select>
+            {neighborhoods.length>0&&<select value={hoodFilter} onChange={e=>setHoodFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{neighborhoods.map(n=><option key={n} value={n}>{n==="All"?"Neighborhood: All":n}</option>)}</select>}
+            <select value={catFilter} onChange={e=>setCatFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{categories.map(c=><option key={c}>{c}</option>)}</select>
+            <select value={sortBy} onChange={e=>setSortBy(e.target.value)} style={{...iS,cursor:"pointer"}}><option value="score">Sort: Lead Score</option><option value="date">Sort: Newest</option><option value="address">Sort: Address</option></select>
+            <select value={pipelineFilter} onChange={e=>setPipelineFilter(e.target.value)} style={{...iS,cursor:"pointer"}}>{PIPELINE_STAGES.map(s=><option key={s} value={s}>{s==="All"?"Pipeline: All":s}</option>)}</select>
+            <select value={minScore} onChange={e=>setMinScore(+e.target.value)} style={{...iS,cursor:"pointer"}}><option value={0}>Min: Any</option><option value={4}>Min: 4+</option><option value={7}>Min: 7+</option></select>
+          </div>
+        )}
       </div>
+
+      {/* Mobile: active filter chips */}
+      {isMobile && activeFilterCount > 0 && (
+        <div style={{padding:"6px 16px",display:"flex",gap:6,flexWrap:"wrap",background:BG}}>
+          {cityFilter!=="All"&&<span onClick={()=>{setCityFilter("All");setHoodFilter("All")}} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 10px",borderRadius:6,background:RED_DARK,color:RED,fontSize:11,fontWeight:600,cursor:"pointer"}}>{cityFilter} ✕</span>}
+          {hoodFilter!=="All"&&<span onClick={()=>setHoodFilter("All")} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 10px",borderRadius:6,background:RED_DARK,color:RED,fontSize:11,fontWeight:600,cursor:"pointer"}}>{hoodFilter} ✕</span>}
+          {catFilter!=="All"&&<span onClick={()=>setCatFilter("All")} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 10px",borderRadius:6,background:RED_DARK,color:RED,fontSize:11,fontWeight:600,cursor:"pointer"}}>{catFilter} ✕</span>}
+          {pipelineFilter!=="All"&&<span onClick={()=>setPipelineFilter("All")} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 10px",borderRadius:6,background:RED_DARK,color:RED,fontSize:11,fontWeight:600,cursor:"pointer"}}>{pipelineFilter} ✕</span>}
+          {minScore>0&&<span onClick={()=>setMinScore(0)} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 10px",borderRadius:6,background:RED_DARK,color:RED,fontSize:11,fontWeight:600,cursor:"pointer"}}>Min {minScore}+ ✕</span>}
+          {sortBy!=="score"&&<span onClick={()=>setSortBy("score")} style={{display:"flex",alignItems:"center",gap:4,padding:"4px 10px",borderRadius:6,background:RED_DARK,color:RED,fontSize:11,fontWeight:600,cursor:"pointer"}}>{sortBy==="date"?"Newest":"A-Z"} ✕</span>}
+        </div>
+      )}
 
       {/* PROJECT CARDS */}
       <div style={{maxWidth:980,margin:"0 auto",padding:"10px 20px 40px"}}>

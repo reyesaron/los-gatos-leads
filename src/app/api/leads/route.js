@@ -75,6 +75,7 @@ export async function POST(request) {
     entry.notes.unshift({
       text: note,
       author,
+      type: body.type || "Note",
       timestamp: new Date().toISOString(),
     });
     entry.lastContactBy = author;
@@ -173,7 +174,7 @@ export async function POST(request) {
     targetType: "lead",
     targetId: leadId,
     details: action === "updateStatus" ? `Status → ${body.status || ""}, Assignee → ${body.assignee || ""}` :
-             action === "addNote" ? `Note by ${body.author}: ${(body.note || "").slice(0, 80)}` :
+             action === "addNote" ? `${body.type || "Note"} by ${body.author}: ${(body.note || "").slice(0, 80)}` :
              action === "setFollowUp" ? `Follow-up: ${body.followUpDate || "cleared"}` :
              action === "setEstValue" ? `Est. value: $${body.estValue || 0}` :
              action === "setSource" ? `Source: ${body.source || ""}` :

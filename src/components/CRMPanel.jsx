@@ -12,6 +12,8 @@ const DIM = "#404040";
 
 const TEAM = ["Daniel", "Aron", "Joseph"];
 const STATUSES = ["New", "Contacted", "Meeting Set", "Proposal Sent", "Won", "Lost", "Archived"];
+const INTERACTION_TYPES = ["Call", "Meeting", "Coffee", "Lunch/Dinner", "Email", "Text", "Note"];
+const TYPE_COLORS = { Call: "#60a5fa", Meeting: "#4ade80", Coffee: "#fbbf24", "Lunch/Dinner": "#fb923c", Email: "#a78bfa", Text: "#94a3b8", Note: "#737373" };
 const STATUS_COLORS = {
   New: { bg: "#1c1c1c", fg: MUTED },
   Contacted: { bg: "#172554", fg: "#60a5fa" },
@@ -30,6 +32,7 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
   const [loading, setLoading] = useState(true);
   const [noteText, setNoteText] = useState("");
   const [noteAuthor, setNoteAuthor] = useState(TEAM[0]);
+  const [noteType, setNoteType] = useState("Note");
   const [saving, setSaving] = useState(false);
   // showContact state removed — contact info is now always visible
   const [hasFetched, setHasFetched] = useState(false);
@@ -79,7 +82,7 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
       const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ leadId, action: "addNote", note: noteText.trim(), author: noteAuthor }),
+        body: JSON.stringify({ leadId, action: "addNote", note: noteText.trim(), author: noteAuthor, type: noteType }),
       });
       const data = await res.json();
       if (data.lead) { setLead(data.lead); onUpdate?.(leadId, data.lead); }
@@ -254,6 +257,9 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
         <select value={noteAuthor} onChange={e => setNoteAuthor(e.target.value)} style={{ ...iS, width: 90, flexShrink: 0 }}>
           {TEAM.map(t => <option key={t} value={t}>{t}</option>)}
         </select>
+        <select value={noteType} onChange={e => setNoteType(e.target.value)} style={{ ...iS, width: 75, flexShrink: 0, color: TYPE_COLORS[noteType] || MUTED, fontWeight: 600 }}>
+          {INTERACTION_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
+        </select>
         <textarea value={noteText} onChange={e => setNoteText(e.target.value)} placeholder="Add a note about this lead..." rows={2} style={{ ...iS, flex: 1, resize: "vertical", fontFamily: "inherit", minHeight: 36 }} onKeyDown={e => { if (e.key === "Enter" && e.metaKey) addNote(); }} />
         <button onClick={addNote} disabled={!noteText.trim() || saving} style={{ ...iS, background: noteText.trim() ? RED : "#1c1c1c", color: "#fff", cursor: noteText.trim() ? "pointer" : "default", fontWeight: 600, flexShrink: 0, opacity: noteText.trim() ? 1 : 0.4, border: "none", padding: "6px 14px" }}>
           Log
@@ -264,12 +270,15 @@ export default function CRMPanel({ leadId, onUpdate, leadAddress, leadScope }) {
       {notes.length > 0 && (
         <div style={{ maxHeight: 200, overflowY: "auto", borderTop: `1px solid ${BORDER}`, paddingTop: 8 }}>
           {notes.map((n, i) => (
-            <div key={i} style={{ marginBottom: 6, fontSize: 12, lineHeight: 1.4 }}>
-              <span style={{ color: TEXT, fontWeight: 600 }}>{n.author}</span>
-              <span style={{ color: DIM, marginLeft: 6, fontSize: 10 }}>
-                {new Date(n.timestamp).toLocaleDateString("en-US", { month: "short", day: "numeric" })} {new Date(n.timestamp).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}
-              </span>
-              <div style={{ color: MUTED, marginTop: 2 }}>{n.text}</div>
+            <div key={i} style={{ marginBottom: 6, fontSize: 12, lineHeight: 1.4, display: "flex", gap: 6, alignItems: "flex-start" }}>
+              {n.type && n.type !== "Note" && <span style={{ fontSize: 9, fontWeight: 700, padding: "1px 4px", borderRadius: 3, background: `${TYPE_COLORS[n.type] || MUTED}22`, color: TYPE_COLORS[n.type] || MUTED, whiteSpace: "nowrap", marginTop: 1 }}>{n.type}</span>}
+              <div>
+                <span style={{ color: TEXT, fontWeight: 600 }}>{n.author}</span>
+                <span style={{ color: DIM, marginLeft: 6, fontSize: 10 }}>
+                  {new Date(n.timestamp).toLocaleDateString("en-US", { month: "short", day: "numeric" })} {new Date(n.timestamp).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}
+                </span>
+                <div style={{ color: MUTED, marginTop: 2 }}>{n.text}</div>
+              </div>
             </div>
           ))}
         </div>
