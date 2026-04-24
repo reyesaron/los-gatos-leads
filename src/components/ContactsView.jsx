@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect, useMemo } from "react";
 import DatePicker from "@/components/DatePicker";
-import MobileContactActions from "@/components/MobileContactActions";
+import { MobileContactView } from "@/components/MobileRecordView";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -457,9 +457,9 @@ export default function ContactsView({ role, apiPath, crmData, scored, currentUs
         </div>
       )}
 
-      {/* Mobile action sheet for contacts */}
+      {/* Mobile full-screen view for contacts */}
       {mobileContact && (
-        <MobileContactActions
+        <MobileContactView
           contact={mobileContact}
           apiPath={apiPath}
           currentUser={currentUser}

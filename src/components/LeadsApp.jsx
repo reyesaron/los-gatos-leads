@@ -9,7 +9,7 @@ import ProfileMenu from "@/components/ProfileMenu";
 import AdminUsers from "@/components/AdminUsers";
 import AuditLogView from "@/components/AuditLogView";
 import IdleTimeout from "@/components/IdleTimeout";
-import MobileActions from "@/components/MobileActions";
+import { MobileLeadView } from "@/components/MobileRecordView";
 
 const RED = "#dc2626";
 const RED_DARK = "#450a0a";
@@ -376,7 +376,7 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
   return (
     <AuthWrapper onUser={(u) => { setCurrentUser(u); if (u) setLoggedOut(false); }} loggedOut={loggedOut}>
     <IdleTimeout onLogout={() => { setCurrentUser(null); setLoggedOut(true); }} />
-    {mobileActionLead && <MobileActions lead={mobileActionLead} leadId={mobileActionLead._leadId} currentUser={currentUser} onUpdate={handleCRMUpdate} onClose={() => setMobileActionLead(null)} />}
+    {mobileActionLead && <MobileLeadView lead={mobileActionLead} leadId={mobileActionLead._leadId} currentUser={currentUser} onUpdate={handleCRMUpdate} onClose={() => setMobileActionLead(null)} />}
     {confirmDialog && (
       <div style={{position:"fixed",top:0,left:0,right:0,bottom:0,background:"rgba(0,0,0,0.7)",zIndex:9999,display:"flex",alignItems:"center",justifyContent:"center"}}>
         <div style={{background:"#141414",border:"1px solid #262626",borderRadius:10,padding:"24px 28px",maxWidth:400,width:"90%",textAlign:"center"}}>
@@ -696,14 +696,19 @@ export default function App({ projects: PROJECTS, scrapedAt }) {
             <div className="apex-card-header" onClick={()=>{if(isMobile){setMobileActionLead(p)}else{setExpandedId(open?null:p._leadId)}}} style={{padding:"12px 14px",cursor:"pointer",display:"flex",alignItems:"flex-start",gap:12,transition:"background 0.15s"}} onMouseEnter={e=>e.currentTarget.style.background="#1a1a1a"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
               <div style={{flexShrink:0,paddingTop:1}}><Badge score={p.score}/></div>
               <div style={{flex:1,minWidth:0}}>
-                <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#fff"}}>{p.address}</span>{p._overdue&&<OverdueBadge/>}{p._followUpSoon&&<SoonBadge/>}{p.isNew&&<NewBadge/>}<Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag>{p._crmStatus && p._crmStatus!=="New"&&<Tag bg={p._crmStatus==="Won"?"#052e16":p._crmStatus==="Lost"?"#1c1c1c":"#172554"} fg={p._crmStatus==="Won"?"#4ade80":p._crmStatus==="Lost"?"#525252":"#60a5fa"}>{p._crmStatus}</Tag>}{p._crmAssignee&&<span style={{fontSize:10,color:DIM}}>{p._crmAssignee}</span>}</div>
-                <div style={{fontSize:13,color:"#d4d4d4",lineHeight:1.35,marginBottom:3}}>{p.overview}</div>
-                <div style={{fontSize:11,color:MUTED}}>{p.city || "Los Gatos"}{p.neighborhood && ` · ${p.neighborhood}`}{p.zoning && ` · ${p.zoning}`}{p.apn && p.apn !== "TBD" && ` · APN ${p.apn}`}{p.dateFiled && ` · Filed ${new Date(p.dateFiled).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}`} · {p.planner}</div>
+                {isMobile ? (<>
+                  <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:2}}><span style={{fontWeight:700,fontSize:14,color:"#fff",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",maxWidth:"60vw"}}>{p.address}</span>{p._overdue&&<OverdueBadge/>}{p._followUpSoon&&<SoonBadge/>}{p.isNew&&<NewBadge/>}</div>
+                  <div style={{display:"flex",alignItems:"center",gap:6,fontSize:12,color:MUTED}}><span>{p.city||"Los Gatos"}</span>{p._crmStatus&&p._crmStatus!=="New"&&<Tag bg={p._crmStatus==="Won"?"#052e16":p._crmStatus==="Lost"?"#1c1c1c":"#172554"} fg={p._crmStatus==="Won"?"#4ade80":p._crmStatus==="Lost"?"#525252":"#60a5fa"}>{p._crmStatus}</Tag>}{p._crmAssignee&&<span style={{color:DIM}}>{p._crmAssignee}</span>}</div>
+                </>) : (<>
+                  <div style={{display:"flex",alignItems:"center",gap:7,flexWrap:"wrap",marginBottom:3}}><span style={{fontWeight:700,fontSize:14,color:"#fff"}}>{p.address}</span>{p._overdue&&<OverdueBadge/>}{p._followUpSoon&&<SoonBadge/>}{p.isNew&&<NewBadge/>}<Tag bg={cc.bg} fg={cc.fg}>{p.category}</Tag>{p._crmStatus && p._crmStatus!=="New"&&<Tag bg={p._crmStatus==="Won"?"#052e16":p._crmStatus==="Lost"?"#1c1c1c":"#172554"} fg={p._crmStatus==="Won"?"#4ade80":p._crmStatus==="Lost"?"#525252":"#60a5fa"}>{p._crmStatus}</Tag>}{p._crmAssignee&&<span style={{fontSize:10,color:DIM}}>{p._crmAssignee}</span>}</div>
+                  <div style={{fontSize:13,color:"#d4d4d4",lineHeight:1.35,marginBottom:3}}>{p.overview}</div>
+                  <div style={{fontSize:11,color:MUTED}}>{p.city || "Los Gatos"}{p.neighborhood && ` · ${p.neighborhood}`}{p.zoning && ` · ${p.zoning}`}{p.apn && p.apn !== "TBD" && ` · APN ${p.apn}`}{p.dateFiled && ` · Filed ${new Date(p.dateFiled).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}`} · {p.planner}</div>
+                </>)}
               </div>
-              <div style={{display:"flex",gap:4,alignItems:"center",flexShrink:0}}>
+              {!isMobile && <div style={{display:"flex",gap:4,alignItems:"center",flexShrink:0}}>
                 {!isArchiveView && p._crmStatus !== "Archived" && <button onClick={e=>{e.stopPropagation();archiveLead(p._leadId)}} title="Archive this lead" style={{background:"none",border:"none",cursor:"pointer",fontSize:12,color:DIM,padding:"2px 4px",borderRadius:3,transition:"color 0.15s"}} onMouseEnter={e=>e.target.style.color="#fb923c"} onMouseLeave={e=>e.target.style.color=DIM}>✕</button>}
                 <div style={{fontSize:14,color:DIM,transform:open?"rotate(180deg)":"none",transition:"transform 0.2s"}}>▾</div>
-              </div>
+              </div>}
             </div>
             {open&&(<div className="apex-card-body" style={{padding:"0 14px 14px",borderTop:`1px solid ${BORDER}`,paddingTop:12}}>
               <CRMPanel key={p._leadId} leadId={p._leadId} onUpdate={handleCRMUpdate} leadAddress={p.address} leadScope={p.scope} />
