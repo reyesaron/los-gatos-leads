@@ -47,7 +47,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-11-06",
-      "status": "Development Review Committee - 4/28/2026",
+      "status": "Approved by the Development Review Committee on 4/28/2026. Appeal period ends on 5/8/2026 at 1:00 PM.",
       "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "Residential Addition",
@@ -356,6 +356,31 @@
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
+    },
+    {
+      "address": "16460 Bonnie Lane",
+      "appNumber": "",
+      "appType": "Two-Unit Housing Development TUD26-004",
+      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Permit for a Two-Unit Housing Development (One New Unit) on a Vacant Property Zoned R-1:20. APN 532-02-079. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
+      "overview": "Custom home on vacant lot — ground-up build.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-04-27",
+      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
+      "planner": "Maria Chavarin",
+      "category": "New Construction",
+      "scope": "Custom Home (Vacant Lot)",
+      "zoning": "R-1:20",
+      "apn": "532-02-079",
+      "pageUrl": "https://www.losgatosca.gov/2370/B",
+      "docs": [
+        {
+          "name": "Development Plans - 16460 Bonnie Lane (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45741/Development-Plans---16460-Bonnie-Lane-PDF"
+        }
+      ],
+      "firstSeen": "2026-04-28T23:14:11.637Z"
     },
     {
       "address": "16080 Camino Del Cerro",
@@ -1552,43 +1577,6 @@
         {
           "name": "Summary of Neighborhood Outreach - 16484 S Kennedy Road - Parcel 2",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44490/Summary-of-Neighborhood-Outreach---16484-S-Kennedy-Road---Parcel-2"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
-      "address": "16680 Kennedy Road",
-      "appNumber": "S-25-047",
-      "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Approval to Demolish an Existing Single-Family Residence and to Construct a New Two-Story Single-Family Residence and Site Work Requiring a Grading Permit on Property Zoned R-1:8. APN 532-33-069. Exempt Pursuant to the CEQA Section 15303(a): New Construction or Conversion of Small Structures.",
-      "overview": "Custom home — full demo + new build. Ground-up construction opportunity.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2025-10-15",
-      "status": "Approved by Development Review Committee on 4/14/2026. Appeal Period ends on 4/24/2026 at 1:00 PM.",
-      "planner": "Suray Nathan",
-      "category": "New Construction",
-      "scope": "Custom Home (Demo + New Build)",
-      "zoning": "R-1:8",
-      "apn": "532-33-069",
-      "pageUrl": "https://www.losgatosca.gov/2377/K",
-      "docs": [
-        {
-          "name": "Draft Conditions of Approval - 16680 Kennedy Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45347/Draft-Conditions-of-Approval---16680-Kennedy-Rd-PDF"
-        },
-        {
-          "name": "Draft Findings for Approval - 16680 Kennedy Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45348/Draft-Findings-for-Approval---16680-Kennedy-Rd-PDF"
-        },
-        {
-          "name": "Project Description - 16680 Kennedy Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44136/Project-Description---16680-Kennedy-Rd-PDF"
-        },
-        {
-          "name": "Project Plans - 16680 Kennedy Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43684/Project-Plans---16680-Kennedy-Rd-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -3009,6 +2997,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-04-28T16:19:17.923Z",
+  "scrapedAt": "2026-04-28T23:14:11.637Z",
   "errors": []
 }
