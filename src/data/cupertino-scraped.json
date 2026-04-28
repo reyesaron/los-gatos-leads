@@ -1,18 +1,96 @@
 {
   "projects": [
     {
+      "address": "18621 MEDICUS CT, Cupertino, CA 95014-3821",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2026-0920",
+      "appType": "Residential New",
+      "description": "BUILD NEW ATTACHED ADU (765 SF) SHARES PLANS WITH MAIN HOUSE (BLD-2026-0919)",
+      "overview": "ADU / Accessory Dwelling (765 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 765,
+      "sfNote": "SF per permit",
+      "dateFiled": "2026-04-23",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "ADU / Accessory Dwelling (765 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2026-0920",
+      "firstSeen": "2026-04-28T07:45:00.501Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "18621 MEDICUS CT, Cupertino, CA 95014-3821",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2026-0919",
+      "appType": "Residential New",
+      "description": "BUILD NEW 2-STORY SINGLE FAMILY DWELLING INCLUDING (4) BEDROOMS, (3 1/2) BATHROOMS (1864 SF) ; ONE COVERED PORCH (617 SF) ATTACHE GARAGE (431 SF); ATTACHED ADU SHARED PLANS ON (BLD-2026-0920 )",
+      "overview": "New SFR (1864 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 1864,
+      "sfNote": "SF per permit",
+      "dateFiled": "2026-04-23",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "New SFR (1864 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2026-0919",
+      "firstSeen": "2026-04-28T07:45:00.501Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "6701 JOHN DR, Cupertino, CA 95014-4564",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2026-0878",
+      "appType": "Residential New",
+      "description": "BUILD NEW SINGLE-STORY HOME (2500 SF); GARAGE (425 SF);; REPLACE SEWER LINE AND CLEAN OUT; REPLACE THE (E) WATER LINE; ADD FIRE SPRINKLERS.",
+      "overview": "Garage in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 2500,
+      "sfNote": "SF per permit",
+      "dateFiled": "2026-04-20",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "Garage",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2026-0878",
+      "firstSeen": "2026-04-28T07:45:00.501Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "permitStage": "Planning Review"
+    },
+    {
       "address": "18891 TILSON AVE, Cupertino, CA 95014-3640",
       "city": "Cupertino",
       "neighborhood": "",
       "appNumber": "BLD-2026-0851",
       "appType": "Residential New",
       "description": "(N) ATTACHED ADU (625 SF) - MAIN HOUSE PERMIT UNDER BLD-2026-0850",
-      "overview": "ADU / Accessory Dwelling (625 SF) in Cupertino. Submitted.",
+      "overview": "ADU / Accessory Dwelling (625 SF) in Cupertino. Plan Review.",
       "existingSF": 0,
       "proposedSF": 625,
       "sfNote": "SF per permit",
       "dateFiled": "2026-04-15",
-      "status": "Submitted",
+      "status": "Plan Review",
       "planner": "City of Cupertino",
       "category": "New Construction",
       "scope": "ADU / Accessory Dwelling (625 SF)",
@@ -23,7 +101,7 @@
       "permitNumber": "BLD-2026-0851",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -49,7 +127,7 @@
       "permitNumber": "BLD-2026-0830",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -75,7 +153,7 @@
       "permitNumber": "BLD-2026-0796",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -101,7 +179,7 @@
       "permitNumber": "BLD-2026-0792",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -127,7 +205,7 @@
       "permitNumber": "BLD-2026-0767",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -153,7 +231,7 @@
       "permitNumber": "BLD-2026-0763",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -179,7 +257,7 @@
       "permitNumber": "BLD-2026-0762",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -205,7 +283,7 @@
       "permitNumber": "BLD-2026-0752",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -231,7 +309,7 @@
       "permitNumber": "BLD-2026-0751",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -257,7 +335,7 @@
       "permitNumber": "BLD-2026-0604",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -283,7 +361,7 @@
       "permitNumber": "BLD-2026-0603",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -309,7 +387,7 @@
       "permitNumber": "BLD-2026-0559",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -335,7 +413,7 @@
       "permitNumber": "BLD-2026-0496",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -361,11 +439,11 @@
       "permitNumber": "BLD-2026-0495",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
-      "address": "10153 S PORTAL AVE, Cupertino, CA 95014-3348",
+      "address": "10155 S PORTAL, Cupertino, CA 95014-3348",
       "city": "Cupertino",
       "neighborhood": "",
       "appNumber": "BLD-2026-0381",
@@ -387,7 +465,7 @@
       "permitNumber": "BLD-2026-0381",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -413,7 +491,7 @@
       "permitNumber": "BLD-2026-0360",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -439,7 +517,7 @@
       "permitNumber": "BLD-2026-0313",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -465,7 +543,7 @@
       "permitNumber": "BLD-2026-0251",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -491,7 +569,7 @@
       "permitNumber": "BLD-2026-0250",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -517,7 +595,7 @@
       "permitNumber": "BLD-2025-3319",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -543,7 +621,7 @@
       "permitNumber": "BLD-2025-3284",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -569,7 +647,7 @@
       "permitNumber": "BLD-2025-3283",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -595,7 +673,7 @@
       "permitNumber": "BLD-2025-3282",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -621,7 +699,7 @@
       "permitNumber": "BLD-2025-3278",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -647,7 +725,7 @@
       "permitNumber": "BLD-2025-3268",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -673,7 +751,7 @@
       "permitNumber": "BLD-2025-3265",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -699,7 +777,7 @@
       "permitNumber": "BLD-2025-3263",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -725,7 +803,7 @@
       "permitNumber": "BLD-2025-3261",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -751,7 +829,7 @@
       "permitNumber": "BLD-2025-3254",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -777,7 +855,7 @@
       "permitNumber": "BLD-2025-3207",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -803,7 +881,7 @@
       "permitNumber": "BLD-2025-3189",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -829,7 +907,7 @@
       "permitNumber": "BLD-2025-3188",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -855,7 +933,7 @@
       "permitNumber": "BLD-2025-3185",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -881,7 +959,7 @@
       "permitNumber": "BLD-2025-3179",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -907,7 +985,7 @@
       "permitNumber": "BLD-2025-3178",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -933,7 +1011,7 @@
       "permitNumber": "BLD-2025-3085",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -959,7 +1037,7 @@
       "permitNumber": "BLD-2025-3024",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -985,7 +1063,7 @@
       "permitNumber": "BLD-2025-2835",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1011,7 +1089,7 @@
       "permitNumber": "BLD-2025-2797",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1037,11 +1115,11 @@
       "permitNumber": "BLD-2025-2796",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
-      "address": "10415 DEMPSTER AVE, Cupertino, CA 95014-1224",
+      "address": "10419 DEMPSTER, Cupertino, CA 95014-1224",
       "city": "Cupertino",
       "neighborhood": "",
       "appNumber": "BLD-2025-2668",
@@ -1063,7 +1141,7 @@
       "permitNumber": "BLD-2025-2668",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1089,7 +1167,7 @@
       "permitNumber": "BLD-2025-2663",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1115,59 +1193,7 @@
       "permitNumber": "BLD-2025-2621",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "19133 ANNE LN, Cupertino, CA 95014-3537",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2025-2566",
-      "appType": "Residential New",
-      "description": "NEW DETACHED ADU (490 SF) - FIRST ADU UNDER BLD-2025-2565",
-      "overview": "ADU / Accessory Dwelling (490 SF) in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 490,
-      "sfNote": "SF per permit",
-      "dateFiled": "2025-10-08",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (490 SF)",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2025-2566",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "19133 ANNE LN, Cupertino, CA 95014-3537",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2025-2565",
-      "appType": "Residential New",
-      "description": "NEW DETACHED ADU (702 SF) - SECOND ADU UNDER BLD-2025-2566",
-      "overview": "ADU / Accessory Dwelling (702 SF) in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 702,
-      "sfNote": "SF per permit",
-      "dateFiled": "2025-10-08",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (702 SF)",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2025-2565",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1193,7 +1219,7 @@
       "permitNumber": "BLD-2025-2465",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1219,7 +1245,7 @@
       "permitNumber": "BLD-2025-2464",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1245,7 +1271,7 @@
       "permitNumber": "BLD-2025-2352",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1254,16 +1280,16 @@
       "neighborhood": "",
       "appNumber": "BLD-2025-2291",
       "appType": "Residential New",
-      "description": "ATTACHED ADU (800 SF) (MAIN HOUSE PERMIT BLD-2025-2290)",
-      "overview": "ADU / Accessory Dwelling (800 SF) in Cupertino. Plan Review.",
+      "description": "ATTACHED ADU (790 SF) (MAIN HOUSE PERMIT BLD-2025-2290)",
+      "overview": "ADU / Accessory Dwelling (790 SF) in Cupertino. Plan Review.",
       "existingSF": 0,
-      "proposedSF": 800,
+      "proposedSF": 790,
       "sfNote": "SF per permit",
       "dateFiled": "2025-09-18",
       "status": "Plan Review",
       "planner": "City of Cupertino",
       "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (800 SF)",
+      "scope": "ADU / Accessory Dwelling (790 SF)",
       "zoning": "",
       "apn": "",
       "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
@@ -1271,7 +1297,7 @@
       "permitNumber": "BLD-2025-2291",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1297,7 +1323,7 @@
       "permitNumber": "BLD-2025-2290",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1323,7 +1349,7 @@
       "permitNumber": "BLD-2025-2220",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1349,7 +1375,7 @@
       "permitNumber": "BLD-2025-2204",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1375,7 +1401,7 @@
       "permitNumber": "BLD-2025-2202",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1401,7 +1427,7 @@
       "permitNumber": "BLD-2025-2143",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1427,7 +1453,7 @@
       "permitNumber": "BLD-2025-2117",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1453,7 +1479,7 @@
       "permitNumber": "BLD-2025-2116",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1479,7 +1505,7 @@
       "permitNumber": "BLD-2025-2011",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1505,7 +1531,7 @@
       "permitNumber": "BLD-2025-2009",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1531,7 +1557,7 @@
       "permitNumber": "BLD-2025-1981",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1557,7 +1583,7 @@
       "permitNumber": "BLD-2025-1953",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1583,7 +1609,7 @@
       "permitNumber": "BLD-2025-1730",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1609,7 +1635,7 @@
       "permitNumber": "BLD-2025-1729",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1635,7 +1661,7 @@
       "permitNumber": "BLD-2025-1629",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1661,7 +1687,7 @@
       "permitNumber": "BLD-2025-1628",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1687,7 +1713,7 @@
       "permitNumber": "BLD-2025-1351",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1713,7 +1739,7 @@
       "permitNumber": "BLD-2025-1168",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1739,7 +1765,7 @@
       "permitNumber": "BLD-2025-1044",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1765,7 +1791,7 @@
       "permitNumber": "BLD-2025-0811",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1791,7 +1817,7 @@
       "permitNumber": "BLD-2025-0800",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1817,7 +1843,7 @@
       "permitNumber": "BLD-2025-0736",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1843,7 +1869,7 @@
       "permitNumber": "BLD-2025-0405",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1869,7 +1895,7 @@
       "permitNumber": "BLD-2025-0182",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1895,7 +1921,7 @@
       "permitNumber": "BLD-2024-2903",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1921,7 +1947,7 @@
       "permitNumber": "BLD-2024-2807",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1947,7 +1973,7 @@
       "permitNumber": "BLD-2024-2801",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1973,7 +1999,7 @@
       "permitNumber": "BLD-2024-2618",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1999,7 +2025,7 @@
       "permitNumber": "BLD-2024-2344",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2025,7 +2051,7 @@
       "permitNumber": "BLD-2024-1697",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2051,7 +2077,7 @@
       "permitNumber": "BLD-2024-1403",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2077,7 +2103,7 @@
       "permitNumber": "BLD-2024-1204",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2103,7 +2129,7 @@
       "permitNumber": "BLD-2024-1071",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2129,7 +2155,7 @@
       "permitNumber": "BLD-2026-0858",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2155,7 +2181,7 @@
       "permitNumber": "BLD-2026-0825",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2181,7 +2207,7 @@
       "permitNumber": "BLD-2026-0813",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2207,7 +2233,7 @@
       "permitNumber": "BLD-2026-0618",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2233,7 +2259,7 @@
       "permitNumber": "BLD-2026-0565",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2259,7 +2285,7 @@
       "permitNumber": "BLD-2026-0549",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2285,7 +2311,7 @@
       "permitNumber": "BLD-2026-0502",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2311,7 +2337,7 @@
       "permitNumber": "BLD-2026-0485",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2337,7 +2363,7 @@
       "permitNumber": "BLD-2026-0430",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2363,7 +2389,7 @@
       "permitNumber": "BLD-2026-0426",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2389,7 +2415,7 @@
       "permitNumber": "BLD-2026-0406",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2415,7 +2441,7 @@
       "permitNumber": "BLD-2026-0393",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2441,7 +2467,7 @@
       "permitNumber": "BLD-2026-0368",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2467,7 +2493,7 @@
       "permitNumber": "BLD-2026-0213",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2493,7 +2519,7 @@
       "permitNumber": "BLD-2026-0082",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2519,7 +2545,7 @@
       "permitNumber": "BLD-2026-0040",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2545,7 +2571,7 @@
       "permitNumber": "BLD-2026-0021",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2571,7 +2597,7 @@
       "permitNumber": "BLD-2025-3316",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2597,7 +2623,7 @@
       "permitNumber": "BLD-2025-3312",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2623,7 +2649,7 @@
       "permitNumber": "BLD-2025-3271",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2649,7 +2675,7 @@
       "permitNumber": "BLD-2025-3203",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2675,7 +2701,7 @@
       "permitNumber": "BLD-2025-3245",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2701,7 +2727,7 @@
       "permitNumber": "BLD-2025-3042",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2727,7 +2753,7 @@
       "permitNumber": "BLD-2025-2978",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2753,7 +2779,7 @@
       "permitNumber": "BLD-2025-2961",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2779,7 +2805,7 @@
       "permitNumber": "BLD-2025-2928",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2805,7 +2831,7 @@
       "permitNumber": "BLD-2025-2915",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2831,7 +2857,7 @@
       "permitNumber": "BLD-2025-2344",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2857,7 +2883,7 @@
       "permitNumber": "BLD-2025-2178",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2883,7 +2909,7 @@
       "permitNumber": "BLD-2025-2177",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2909,7 +2935,7 @@
       "permitNumber": "BLD-2025-2120",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2935,7 +2961,7 @@
       "permitNumber": "BLD-2025-1825",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2961,7 +2987,7 @@
       "permitNumber": "BLD-2025-1779",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2987,7 +3013,7 @@
       "permitNumber": "BLD-2025-1620",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3013,7 +3039,7 @@
       "permitNumber": "BLD-2025-1394",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3039,7 +3065,7 @@
       "permitNumber": "BLD-2025-1323",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3065,7 +3091,7 @@
       "permitNumber": "BLD-2025-1266",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3091,7 +3117,7 @@
       "permitNumber": "BLD-2025-0994",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3117,7 +3143,7 @@
       "permitNumber": "BLD-2025-0986",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3143,7 +3169,7 @@
       "permitNumber": "BLD-2025-0942",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3169,7 +3195,7 @@
       "permitNumber": "BLD-2025-0770",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3195,7 +3221,7 @@
       "permitNumber": "BLD-2025-0761",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3221,7 +3247,7 @@
       "permitNumber": "BLD-2025-0390",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3247,7 +3273,7 @@
       "permitNumber": "BLD-2025-0310",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3273,7 +3299,7 @@
       "permitNumber": "BLD-2025-0228",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3299,7 +3325,7 @@
       "permitNumber": "BLD-2024-2227",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3325,7 +3351,7 @@
       "permitNumber": "BLD-2024-1985",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3351,7 +3377,7 @@
       "permitNumber": "BLD-2024-1630",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3377,7 +3403,7 @@
       "permitNumber": "BLD-2024-1355",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3403,7 +3429,7 @@
       "permitNumber": "BLD-2024-1212",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3429,7 +3455,59 @@
       "permitNumber": "BLD-2024-1006",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "21851 ALMADEN AVE, Cupertino, CA 95014-2803",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2026-0905",
+      "appType": "Residential Demolition",
+      "description": "DEMO SINGLE FAMILY DWELLING (1109 SF)",
+      "overview": "Demolition / Rebuild in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 1109,
+      "sfNote": "SF per permit",
+      "dateFiled": "2026-04-22",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "Demolition / Rebuild",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2026-0905",
+      "firstSeen": "2026-04-28T07:45:00.501Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "10524 S TANTAU AVE, Cupertino, CA 95014-3535",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2026-0864",
+      "appType": "Residential Demolition",
+      "description": "DEMOLISH EXISTING 1-STORY SFD (934 SF)",
+      "overview": "Demolition / Rebuild in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 934,
+      "sfNote": "SF per permit",
+      "dateFiled": "2026-04-16",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "Demolition / Rebuild",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2026-0864",
+      "firstSeen": "2026-04-28T07:45:00.501Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3455,59 +3533,7 @@
       "permitNumber": "BLD-2026-0576",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "18620 RALYA CT, Cupertino, CA 95014-3824",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2026-0333",
-      "appType": "Residential Demolition",
-      "description": "DEMOLISH EXISTING 1-STORY SFD (895 SF), PORCH (50 SF), AND DETACHED GARAGE (345 SF)",
-      "overview": "Demolition / Rebuild in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 895,
-      "sfNote": "SF per permit",
-      "dateFiled": "2026-02-10",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "Demolition / Rebuild",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2026-0333",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "20730 DUNBAR DR, Cupertino, CA 95014-1902",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2026-0222",
-      "appType": "Residential Demolition",
-      "description": "TO CLEAR CODE CASE ENF-2025-0088 - DEMO 1-STORY SFD (3141 SF) AND UNPERMITTED DETACHED GARAGE CONVERTED TO ADU (650 SF)",
-      "overview": "ADU / Accessory Dwelling (3141 SF) in Cupertino. Plan Review.",
-      "existingSF": null,
-      "proposedSF": 3141,
-      "sfNote": "SF per permit",
-      "dateFiled": "2026-01-28",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "Addition",
-      "scope": "ADU / Accessory Dwelling (3141 SF)",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2026-0222",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3533,7 +3559,7 @@
       "permitNumber": "BLD-2026-0152",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3559,7 +3585,7 @@
       "permitNumber": "BLD-2026-0099",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3585,7 +3611,7 @@
       "permitNumber": "BLD-2026-0065",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3611,7 +3637,7 @@
       "permitNumber": "BLD-2025-3216",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3637,7 +3663,7 @@
       "permitNumber": "BLD-2025-3193",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3663,7 +3689,7 @@
       "permitNumber": "BLD-2025-3015",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3689,7 +3715,7 @@
       "permitNumber": "BLD-2025-1982",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3715,7 +3741,7 @@
       "permitNumber": "BLD-2025-0200",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3741,7 +3767,7 @@
       "permitNumber": "BLD-2025-0185",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3767,7 +3793,7 @@
       "permitNumber": "BLD-2025-0150",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3793,7 +3819,7 @@
       "permitNumber": "BLD-2025-0003",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3819,10 +3845,10 @@
       "permitNumber": "BLD-2024-1699",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-16T02:06:15.592Z",
+      "lastVerified": "2026-04-28T07:45:00.501Z",
       "permitStage": "Planning Review"
     }
   ],
-  "scrapedAt": "2026-04-16T02:06:15.592Z",
+  "scrapedAt": "2026-04-28T07:45:00.501Z",
   "source": "Cupertino Accela Citizen Access (public search)"
 }
