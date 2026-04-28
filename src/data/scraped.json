@@ -886,31 +886,6 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "32 Euclid Avenue",
-      "appNumber": "",
-      "appType": "Two Unit Housing Development Application TUD26-001",
-      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Permit for a Two-Unit Housing Development (Two New Units) on Property Zoned R-1:8. APN 529-30-064. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
-      "overview": "Two new units under SB 9 — ministerial project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-01-22",
-      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
-      "planner": "Maria Chavarin",
-      "category": "New Construction",
-      "scope": "Two-Unit Development (SB 9)",
-      "zoning": "R-1:8",
-      "apn": "529-30-064",
-      "pageUrl": "https://www.losgatosca.gov/2372/E",
-      "docs": [
-        {
-          "name": "Development Plans - 32 Euclid Avenue (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44342/Development-Plans---32-Euclid-Avenue-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
       "address": "64 Fairview Plaza",
       "appNumber": "S-24-004",
       "appType": "Architecture and Site Application",
@@ -3034,6 +3009,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-04-28T07:57:39.795Z",
+  "scrapedAt": "2026-04-28T16:19:17.923Z",
   "errors": []
 }
