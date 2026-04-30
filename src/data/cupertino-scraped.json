@@ -1,6 +1,58 @@
 {
   "projects": [
     {
+      "address": "10218 MIRA VISTA RD, Cupertino, CA 95014-2705",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2026-0976",
+      "appType": "Residential New",
+      "description": "NEW 2-STORY SINGLE FAMILY DWELLING (3318 S.F.); ATTACHED 2-CAR GARAGE (430 S.F.); FRONT PORCH /PATIO (380 S.F);",
+      "overview": "New SFR (3318 SF) in Cupertino. Submitted.",
+      "existingSF": 0,
+      "proposedSF": 3318,
+      "sfNote": "SF per permit",
+      "dateFiled": "2026-04-30",
+      "status": "Submitted",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "New SFR (3318 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2026-0976",
+      "firstSeen": "2026-04-30T20:43:16.960Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "18761 HANNA DR, Cupertino, CA 95014-3852",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2026-0968",
+      "appType": "Residential New",
+      "description": "NEW ATTACHED ADU (741 SF) - *MAIN HOUSE PERMIT UNDER PERMIT BLD-2026-0762*",
+      "overview": "ADU / Accessory Dwelling (741 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 741,
+      "sfNote": "SF per permit",
+      "dateFiled": "2026-04-29",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "ADU / Accessory Dwelling (741 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2026-0968",
+      "firstSeen": "2026-04-30T20:43:16.960Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
       "address": "18621 MEDICUS CT, Cupertino, CA 95014-3821",
       "city": "Cupertino",
       "neighborhood": "",
@@ -23,7 +75,7 @@
       "permitNumber": "BLD-2026-0920",
       "firstSeen": "2026-04-28T07:45:00.501Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -49,7 +101,7 @@
       "permitNumber": "BLD-2026-0919",
       "firstSeen": "2026-04-28T07:45:00.501Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -75,7 +127,7 @@
       "permitNumber": "BLD-2026-0878",
       "firstSeen": "2026-04-28T07:45:00.501Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -101,7 +153,7 @@
       "permitNumber": "BLD-2026-0851",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -127,33 +179,7 @@
       "permitNumber": "BLD-2026-0830",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "21130 GRENOLA DR, Cupertino, CA 95014-1626",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2026-0796",
-      "appType": "Residential New",
-      "description": "NEW 2-STORY SINGLE FAMILY DWELLING (2,653 S.F.); ATTACHED 2-CAR GARAGE (535 S.F.); FRONT PORCH (43 S.F.); DECK (338 S.F.)",
-      "overview": "New SFR (2,653 SF) in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 2653,
-      "sfNote": "SF per permit",
-      "dateFiled": "2026-04-07",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "New SFR (2,653 SF)",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2026-0796",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -179,33 +205,59 @@
       "permitNumber": "BLD-2026-0792",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
-      "address": "21370 VAI AVE, Cupertino, CA 95014-4986",
+      "address": "21130 GRENOLA DR, Cupertino, CA 95014-1626",
       "city": "Cupertino",
       "neighborhood": "",
-      "appNumber": "BLD-2026-0767",
+      "appNumber": "BLD-2026-0796",
       "appType": "Residential New",
-      "description": "CONVERT (E) DETACHED GARAGE TO DETACHED ADU (748 SF)",
-      "overview": "ADU / Accessory Dwelling (748 SF) in Cupertino. Plan Review.",
+      "description": "NEW 2-STORY SINGLE FAMILY DWELLING (2,653 S.F.); ATTACHED 2-CAR GARAGE (535 S.F.); FRONT PORCH (43 S.F.); DECK (338 S.F.)",
+      "overview": "New SFR (2,653 SF) in Cupertino. Plan Review.",
       "existingSF": 0,
-      "proposedSF": 748,
+      "proposedSF": 2653,
+      "sfNote": "SF per permit",
+      "dateFiled": "2026-04-07",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "New SFR (2,653 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2026-0796",
+      "firstSeen": "2026-04-16T02:06:15.592Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "18761 HANNA DR, Cupertino, CA 95014-3852",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2026-0762",
+      "appType": "Residential New",
+      "description": "NEW 2-STORY SINGLE FAMILY DWELLING (2,247 SF); ATTACHED GARAGE (451 SF); FRONT PORCH (65 SF); PATIO (285 SF) - *ATTACHED ADU UNDER PERMIT BLD-2026-0968*",
+      "overview": "New SFR (2,247 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 2247,
       "sfNote": "SF per permit",
       "dateFiled": "2026-04-06",
       "status": "Plan Review",
       "planner": "City of Cupertino",
       "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (748 SF)",
+      "scope": "New SFR (2,247 SF)",
       "zoning": "",
       "apn": "",
       "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
       "docs": [],
-      "permitNumber": "BLD-2026-0767",
+      "permitNumber": "BLD-2026-0762",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -231,59 +283,33 @@
       "permitNumber": "BLD-2026-0763",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
-      "address": "18761 HANNA DR, Cupertino, CA 95014-3852",
+      "address": "21370 VAI AVE, Cupertino, CA 95014-4986",
       "city": "Cupertino",
       "neighborhood": "",
-      "appNumber": "BLD-2026-0762",
+      "appNumber": "BLD-2026-0767",
       "appType": "Residential New",
-      "description": "NEW 2-STORY SINGLE FAMILY DWELLING (3,000 SF)",
-      "overview": "New SFR (3,000 SF) in Cupertino. Plan Review.",
+      "description": "(N) DETACHED ADU (749 SF); UPGRADE MAIN HOUSE'S MAIN ELECTRICAL PANEL (325 AMPS); DEMO GARAGE UNDER SEPARATE PERMIT",
+      "overview": "ADU / Accessory Dwelling (749 SF) in Cupertino. Plan Review.",
       "existingSF": 0,
-      "proposedSF": 3000,
+      "proposedSF": 749,
       "sfNote": "SF per permit",
       "dateFiled": "2026-04-06",
       "status": "Plan Review",
       "planner": "City of Cupertino",
       "category": "New Construction",
-      "scope": "New SFR (3,000 SF)",
+      "scope": "ADU / Accessory Dwelling (749 SF)",
       "zoning": "",
       "apn": "",
       "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
       "docs": [],
-      "permitNumber": "BLD-2026-0762",
+      "permitNumber": "BLD-2026-0767",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "19251 PHIL LN, Cupertino, CA 95014-3528",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2026-0752",
-      "appType": "Residential New",
-      "description": "(N) ATTACHED ADU (533 SF) - MAIN HOUSE PERMIT UNDER BLD-2026-0751",
-      "overview": "ADU / Accessory Dwelling (533 SF) in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 533,
-      "sfNote": "SF per permit",
-      "dateFiled": "2026-04-03",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (533 SF)",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2026-0752",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -309,33 +335,33 @@
       "permitNumber": "BLD-2026-0751",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
-      "address": "10692 SANTA LUCIA RD, Cupertino, CA 95014-3975",
+      "address": "19251 PHIL LN, Cupertino, CA 95014-3528",
       "city": "Cupertino",
       "neighborhood": "",
-      "appNumber": "BLD-2026-0604",
+      "appNumber": "BLD-2026-0752",
       "appType": "Residential New",
-      "description": "NEW 2-STORY DETACHED ADU (1,143 SF) - SECOND ADU PERMIT UNDER BLD-2026-0603",
-      "overview": "ADU / Accessory Dwelling (1,143 SF) in Cupertino. Plan Review.",
+      "description": "(N) ATTACHED ADU (533 SF) - MAIN HOUSE PERMIT UNDER BLD-2026-0751",
+      "overview": "ADU / Accessory Dwelling (533 SF) in Cupertino. Plan Review.",
       "existingSF": 0,
-      "proposedSF": 1143,
+      "proposedSF": 533,
       "sfNote": "SF per permit",
-      "dateFiled": "2026-03-24",
+      "dateFiled": "2026-04-03",
       "status": "Plan Review",
       "planner": "City of Cupertino",
       "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (1,143 SF)",
+      "scope": "ADU / Accessory Dwelling (533 SF)",
       "zoning": "",
       "apn": "",
       "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
       "docs": [],
-      "permitNumber": "BLD-2026-0604",
+      "permitNumber": "BLD-2026-0752",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -361,7 +387,33 @@
       "permitNumber": "BLD-2026-0603",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "10692 SANTA LUCIA RD, Cupertino, CA 95014-3975",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2026-0604",
+      "appType": "Residential New",
+      "description": "NEW 2-STORY DETACHED ADU (1,143 SF) - SECOND ADU PERMIT UNDER BLD-2026-0603",
+      "overview": "ADU / Accessory Dwelling (1,143 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 1143,
+      "sfNote": "SF per permit",
+      "dateFiled": "2026-03-24",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "ADU / Accessory Dwelling (1,143 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2026-0604",
+      "firstSeen": "2026-04-16T02:06:15.592Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -387,7 +439,7 @@
       "permitNumber": "BLD-2026-0559",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -413,7 +465,7 @@
       "permitNumber": "BLD-2026-0496",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -439,7 +491,7 @@
       "permitNumber": "BLD-2026-0495",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -465,7 +517,7 @@
       "permitNumber": "BLD-2026-0381",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -491,7 +543,7 @@
       "permitNumber": "BLD-2026-0360",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -517,7 +569,7 @@
       "permitNumber": "BLD-2026-0313",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -543,7 +595,7 @@
       "permitNumber": "BLD-2026-0251",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -569,7 +621,7 @@
       "permitNumber": "BLD-2026-0250",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -595,7 +647,7 @@
       "permitNumber": "BLD-2025-3319",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -621,7 +673,7 @@
       "permitNumber": "BLD-2025-3284",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -647,59 +699,7 @@
       "permitNumber": "BLD-2025-3283",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "10248 SCENIC, Cupertino, CA 95014-2726",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2025-3282",
-      "appType": "Residential New",
-      "description": "NEW 2-STORY SFD (3,742SF); ATTACHED GARAGE (495 SF) - LOT 1",
-      "overview": "Garage in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 3742,
-      "sfNote": "SF per permit",
-      "dateFiled": "2025-12-19",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "Garage",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2025-3282",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "18641 BARNHART AVE, Cupertino, CA 95014-3801",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2025-3278",
-      "appType": "Residential New",
-      "description": "NEW 2-STORY SINGLE FAMILY DWELLING (1,922 SF); ATTACHED GARAGE (460 SF); NEW FRONT PORCH (34 SF); NEW COVERED PATIO (322 SF)",
-      "overview": "New SFR (1,922 SF) in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 1922,
-      "sfNote": "SF per permit",
-      "dateFiled": "2025-12-19",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "New SFR (1,922 SF)",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2025-3278",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -725,85 +725,59 @@
       "permitNumber": "BLD-2025-3268",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
-      "address": "22490 SANTA PAULA AVE, Cupertino, CA 95014-2757",
+      "address": "18641 BARNHART AVE, Cupertino, CA 95014-3801",
       "city": "Cupertino",
       "neighborhood": "",
-      "appNumber": "BLD-2025-3265",
+      "appNumber": "BLD-2025-3278",
       "appType": "Residential New",
-      "description": "CONSTRUCT 2-STORY ATTACHED ADU (800 SF)",
-      "overview": "ADU / Accessory Dwelling (800 SF) in Cupertino. Plan Review.",
+      "description": "NEW 2-STORY SINGLE FAMILY DWELLING (1,922 SF); ATTACHED GARAGE (460 SF); NEW FRONT PORCH (34 SF); NEW COVERED PATIO (322 SF)",
+      "overview": "New SFR (1,922 SF) in Cupertino. Plan Review.",
       "existingSF": 0,
-      "proposedSF": 800,
+      "proposedSF": 1922,
       "sfNote": "SF per permit",
-      "dateFiled": "2025-12-18",
+      "dateFiled": "2025-12-19",
       "status": "Plan Review",
       "planner": "City of Cupertino",
       "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (800 SF)",
+      "scope": "New SFR (1,922 SF)",
       "zoning": "",
       "apn": "",
       "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
       "docs": [],
-      "permitNumber": "BLD-2025-3265",
+      "permitNumber": "BLD-2025-3278",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
-      "address": "10672 CULBERTSON DR, Cupertino, CA 95014-3555",
+      "address": "10248 SCENIC, Cupertino, CA 95014-2726",
       "city": "Cupertino",
       "neighborhood": "",
-      "appNumber": "BLD-2025-3263",
+      "appNumber": "BLD-2025-3282",
       "appType": "Residential New",
-      "description": "ATTACHED ADU (749 sf) - (MAIN HOUSE UNDER PERMIT BLD-2025-3261)",
-      "overview": "ADU / Accessory Dwelling (749 SF) in Cupertino. Plan Review.",
+      "description": "NEW 2-STORY SFD (3,742SF); ATTACHED GARAGE (495 SF) - LOT 1",
+      "overview": "Garage in Cupertino. Plan Review.",
       "existingSF": 0,
-      "proposedSF": 749,
+      "proposedSF": 3742,
       "sfNote": "SF per permit",
-      "dateFiled": "2025-12-18",
+      "dateFiled": "2025-12-19",
       "status": "Plan Review",
       "planner": "City of Cupertino",
       "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (749 SF)",
+      "scope": "Garage",
       "zoning": "",
       "apn": "",
       "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
       "docs": [],
-      "permitNumber": "BLD-2025-3263",
+      "permitNumber": "BLD-2025-3282",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "10672 CULBERTSON DR, Cupertino, CA 95014-3555",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2025-3261",
-      "appType": "Residential New",
-      "description": "NEW 2-STORY SFD (2,408 SF); ATTACHED GARAGE (430 SF); REAR COVERED PORCH (319 SF) - (ATTACHED ADU UNDER PERMIT BLD-2025-3263)",
-      "overview": "ADU / Accessory Dwelling (2,408 SF) in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 2408,
-      "sfNote": "SF per permit",
-      "dateFiled": "2025-12-18",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (2,408 SF)",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2025-3261",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -829,7 +803,85 @@
       "permitNumber": "BLD-2025-3254",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "10672 CULBERTSON DR, Cupertino, CA 95014-3555",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2025-3261",
+      "appType": "Residential New",
+      "description": "NEW 2-STORY SFD (2,408 SF); ATTACHED GARAGE (430 SF); REAR COVERED PORCH (319 SF) - (ATTACHED ADU UNDER PERMIT BLD-2025-3263)",
+      "overview": "ADU / Accessory Dwelling (2,408 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 2408,
+      "sfNote": "SF per permit",
+      "dateFiled": "2025-12-18",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "ADU / Accessory Dwelling (2,408 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2025-3261",
+      "firstSeen": "2026-04-16T02:06:15.592Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "22490 SANTA PAULA AVE, Cupertino, CA 95014-2757",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2025-3265",
+      "appType": "Residential New",
+      "description": "CONSTRUCT 2-STORY ATTACHED ADU (800 SF)",
+      "overview": "ADU / Accessory Dwelling (800 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 800,
+      "sfNote": "SF per permit",
+      "dateFiled": "2025-12-18",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "ADU / Accessory Dwelling (800 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2025-3265",
+      "firstSeen": "2026-04-16T02:06:15.592Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "10672 CULBERTSON DR, Cupertino, CA 95014-3555",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2025-3263",
+      "appType": "Residential New",
+      "description": "ATTACHED ADU (749 sf) - (MAIN HOUSE UNDER PERMIT BLD-2025-3261)",
+      "overview": "ADU / Accessory Dwelling (749 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 749,
+      "sfNote": "SF per permit",
+      "dateFiled": "2025-12-18",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "ADU / Accessory Dwelling (749 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2025-3263",
+      "firstSeen": "2026-04-16T02:06:15.592Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -855,33 +907,7 @@
       "permitNumber": "BLD-2025-3207",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "10300 MENHART, Cupertino, CA 95014-3631",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2025-3189",
-      "appType": "Residential New",
-      "description": "DETACHED ADU (634 SF) (MAIN HOUSE PERMIT BLD-2025-3188)",
-      "overview": "ADU / Accessory Dwelling (634 SF) in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 634,
-      "sfNote": "SF per permit",
-      "dateFiled": "2025-12-15",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (634 SF)",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2025-3189",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -907,7 +933,7 @@
       "permitNumber": "BLD-2025-3188",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -933,33 +959,33 @@
       "permitNumber": "BLD-2025-3185",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
-      "address": "10691 JOHNSON AVE, Cupertino, CA 95014-3878",
+      "address": "10300 MENHART, Cupertino, CA 95014-3631",
       "city": "Cupertino",
       "neighborhood": "",
-      "appNumber": "BLD-2025-3179",
+      "appNumber": "BLD-2025-3189",
       "appType": "Residential New",
-      "description": "ATTACHED ADU (749 SF) (MAIN HOUSE PERMIT BLD-2025-3178)",
-      "overview": "ADU / Accessory Dwelling (749 SF) in Cupertino. Plan Review.",
+      "description": "DETACHED ADU (634 SF) (MAIN HOUSE PERMIT BLD-2025-3188)",
+      "overview": "ADU / Accessory Dwelling (634 SF) in Cupertino. Plan Review.",
       "existingSF": 0,
-      "proposedSF": 749,
+      "proposedSF": 634,
       "sfNote": "SF per permit",
-      "dateFiled": "2025-12-12",
+      "dateFiled": "2025-12-15",
       "status": "Plan Review",
       "planner": "City of Cupertino",
       "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (749 SF)",
+      "scope": "ADU / Accessory Dwelling (634 SF)",
       "zoning": "",
       "apn": "",
       "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
       "docs": [],
-      "permitNumber": "BLD-2025-3179",
+      "permitNumber": "BLD-2025-3189",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -985,7 +1011,33 @@
       "permitNumber": "BLD-2025-3178",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "10691 JOHNSON AVE, Cupertino, CA 95014-3878",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2025-3179",
+      "appType": "Residential New",
+      "description": "ATTACHED ADU (749 SF) (MAIN HOUSE PERMIT BLD-2025-3178)",
+      "overview": "ADU / Accessory Dwelling (749 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 749,
+      "sfNote": "SF per permit",
+      "dateFiled": "2025-12-12",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "ADU / Accessory Dwelling (749 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2025-3179",
+      "firstSeen": "2026-04-16T02:06:15.592Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1011,7 +1063,7 @@
       "permitNumber": "BLD-2025-3085",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1037,7 +1089,7 @@
       "permitNumber": "BLD-2025-3024",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1063,7 +1115,7 @@
       "permitNumber": "BLD-2025-2835",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1089,7 +1141,7 @@
       "permitNumber": "BLD-2025-2797",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1115,7 +1167,7 @@
       "permitNumber": "BLD-2025-2796",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1141,7 +1193,7 @@
       "permitNumber": "BLD-2025-2668",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1167,7 +1219,7 @@
       "permitNumber": "BLD-2025-2663",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1193,7 +1245,7 @@
       "permitNumber": "BLD-2025-2621",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1219,7 +1271,7 @@
       "permitNumber": "BLD-2025-2465",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1245,7 +1297,7 @@
       "permitNumber": "BLD-2025-2464",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1271,33 +1323,7 @@
       "permitNumber": "BLD-2025-2352",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "18620 RALYA CT, Cupertino, CA 95014-3824",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2025-2291",
-      "appType": "Residential New",
-      "description": "ATTACHED ADU (790 SF) (MAIN HOUSE PERMIT BLD-2025-2290)",
-      "overview": "ADU / Accessory Dwelling (790 SF) in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 790,
-      "sfNote": "SF per permit",
-      "dateFiled": "2025-09-18",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (790 SF)",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2025-2291",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1323,7 +1349,33 @@
       "permitNumber": "BLD-2025-2290",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "18620 RALYA CT, Cupertino, CA 95014-3824",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2025-2291",
+      "appType": "Residential New",
+      "description": "ATTACHED ADU (790 SF) (MAIN HOUSE PERMIT BLD-2025-2290)",
+      "overview": "ADU / Accessory Dwelling (790 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 790,
+      "sfNote": "SF per permit",
+      "dateFiled": "2025-09-18",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "ADU / Accessory Dwelling (790 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2025-2291",
+      "firstSeen": "2026-04-16T02:06:15.592Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1349,33 +1401,7 @@
       "permitNumber": "BLD-2025-2220",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "10394 JUDY AVE, Cupertino, CA 95014-3525",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2025-2204",
-      "appType": "Residential New",
-      "description": "(N) DETACHED ADU (799 SF) - (MAIN HOUSE PERMIT BLD-2024-0844)",
-      "overview": "ADU / Accessory Dwelling (799 SF) in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 799,
-      "sfNote": "SF per permit",
-      "dateFiled": "2025-09-10",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (799 SF)",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2025-2204",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1401,7 +1427,33 @@
       "permitNumber": "BLD-2025-2202",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "10394 JUDY AVE, Cupertino, CA 95014-3525",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2025-2204",
+      "appType": "Residential New",
+      "description": "(N) DETACHED ADU (799 SF) - (MAIN HOUSE PERMIT BLD-2024-0844)",
+      "overview": "ADU / Accessory Dwelling (799 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 799,
+      "sfNote": "SF per permit",
+      "dateFiled": "2025-09-10",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "ADU / Accessory Dwelling (799 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2025-2204",
+      "firstSeen": "2026-04-16T02:06:15.592Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1427,33 +1479,7 @@
       "permitNumber": "BLD-2025-2143",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "10211 SANTA CLARA AVE, Cupertino, CA 95014-1216",
-      "city": "Cupertino",
-      "neighborhood": "",
-      "appNumber": "BLD-2025-2117",
-      "appType": "Residential New",
-      "description": "NEW DETACHED ADU (599 SF) – (SEE MAIN HOUSE PERMIT #BLD-2025-2116)",
-      "overview": "ADU / Accessory Dwelling (599 SF) in Cupertino. Plan Review.",
-      "existingSF": 0,
-      "proposedSF": 599,
-      "sfNote": "SF per permit",
-      "dateFiled": "2025-09-02",
-      "status": "Plan Review",
-      "planner": "City of Cupertino",
-      "category": "New Construction",
-      "scope": "ADU / Accessory Dwelling (599 SF)",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
-      "docs": [],
-      "permitNumber": "BLD-2025-2117",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
-      "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1479,21 +1505,21 @@
       "permitNumber": "BLD-2025-2116",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
-      "address": "10215 SANTA CLARA AVE, Cupertino, CA 95014-1216",
+      "address": "10211 SANTA CLARA AVE, Cupertino, CA 95014-1216",
       "city": "Cupertino",
       "neighborhood": "",
-      "appNumber": "BLD-2025-2011",
+      "appNumber": "BLD-2025-2117",
       "appType": "Residential New",
-      "description": "(N) DETACHED ADU (599 SF) (MAIN HOUSE PERMIT BLD-2025-2009)",
+      "description": "NEW DETACHED ADU (599 SF) – (SEE MAIN HOUSE PERMIT #BLD-2025-2116)",
       "overview": "ADU / Accessory Dwelling (599 SF) in Cupertino. Plan Review.",
       "existingSF": 0,
       "proposedSF": 599,
       "sfNote": "SF per permit",
-      "dateFiled": "2025-08-19",
+      "dateFiled": "2025-09-02",
       "status": "Plan Review",
       "planner": "City of Cupertino",
       "category": "New Construction",
@@ -1502,10 +1528,10 @@
       "apn": "",
       "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
       "docs": [],
-      "permitNumber": "BLD-2025-2011",
+      "permitNumber": "BLD-2025-2117",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1531,7 +1557,33 @@
       "permitNumber": "BLD-2025-2009",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "10215 SANTA CLARA AVE, Cupertino, CA 95014-1216",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2025-2011",
+      "appType": "Residential New",
+      "description": "(N) DETACHED ADU (599 SF) (MAIN HOUSE PERMIT BLD-2025-2009)",
+      "overview": "ADU / Accessory Dwelling (599 SF) in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 599,
+      "sfNote": "SF per permit",
+      "dateFiled": "2025-08-19",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "ADU / Accessory Dwelling (599 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2025-2011",
+      "firstSeen": "2026-04-16T02:06:15.592Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1557,7 +1609,7 @@
       "permitNumber": "BLD-2025-1981",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1583,7 +1635,7 @@
       "permitNumber": "BLD-2025-1953",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1609,7 +1661,7 @@
       "permitNumber": "BLD-2025-1730",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1635,7 +1687,7 @@
       "permitNumber": "BLD-2025-1729",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1661,7 +1713,7 @@
       "permitNumber": "BLD-2025-1629",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1687,7 +1739,7 @@
       "permitNumber": "BLD-2025-1628",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1713,7 +1765,7 @@
       "permitNumber": "BLD-2025-1351",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1739,7 +1791,7 @@
       "permitNumber": "BLD-2025-1168",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1765,7 +1817,7 @@
       "permitNumber": "BLD-2025-1044",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1791,7 +1843,7 @@
       "permitNumber": "BLD-2025-0811",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1817,7 +1869,7 @@
       "permitNumber": "BLD-2025-0800",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1843,7 +1895,7 @@
       "permitNumber": "BLD-2025-0736",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1869,7 +1921,7 @@
       "permitNumber": "BLD-2025-0405",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1895,7 +1947,7 @@
       "permitNumber": "BLD-2025-0182",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1921,7 +1973,7 @@
       "permitNumber": "BLD-2024-2903",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1947,7 +1999,7 @@
       "permitNumber": "BLD-2024-2807",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1973,7 +2025,7 @@
       "permitNumber": "BLD-2024-2801",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -1999,7 +2051,7 @@
       "permitNumber": "BLD-2024-2618",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2025,7 +2077,7 @@
       "permitNumber": "BLD-2024-2344",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2051,7 +2103,7 @@
       "permitNumber": "BLD-2024-1697",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2077,7 +2129,7 @@
       "permitNumber": "BLD-2024-1403",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2103,7 +2155,7 @@
       "permitNumber": "BLD-2024-1204",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2129,7 +2181,33 @@
       "permitNumber": "BLD-2024-1071",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "818 ALDERBROOK LN, Cupertino, CA 95014-4614",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2026-0964",
+      "appType": "Residential Addition",
+      "description": "FRONT ADDITION (736 SF); KITCHEN REMODEL (32 SF)",
+      "overview": "Residential Addition (736 SF) in Cupertino. Plan Review.",
+      "existingSF": null,
+      "proposedSF": 736,
+      "sfNote": "SF per permit",
+      "dateFiled": "2026-04-29",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "Addition",
+      "scope": "Residential Addition (736 SF)",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2026-0964",
+      "firstSeen": "2026-04-30T20:43:16.960Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2155,7 +2233,7 @@
       "permitNumber": "BLD-2026-0858",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2181,7 +2259,7 @@
       "permitNumber": "BLD-2026-0825",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2207,7 +2285,7 @@
       "permitNumber": "BLD-2026-0813",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2233,7 +2311,7 @@
       "permitNumber": "BLD-2026-0618",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2259,7 +2337,7 @@
       "permitNumber": "BLD-2026-0565",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2285,7 +2363,7 @@
       "permitNumber": "BLD-2026-0549",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2311,7 +2389,7 @@
       "permitNumber": "BLD-2026-0502",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2337,7 +2415,7 @@
       "permitNumber": "BLD-2026-0485",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2363,7 +2441,7 @@
       "permitNumber": "BLD-2026-0430",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2389,7 +2467,7 @@
       "permitNumber": "BLD-2026-0426",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2415,7 +2493,7 @@
       "permitNumber": "BLD-2026-0406",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2441,7 +2519,7 @@
       "permitNumber": "BLD-2026-0393",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2467,7 +2545,7 @@
       "permitNumber": "BLD-2026-0368",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2493,7 +2571,7 @@
       "permitNumber": "BLD-2026-0213",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2519,7 +2597,7 @@
       "permitNumber": "BLD-2026-0082",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2545,7 +2623,7 @@
       "permitNumber": "BLD-2026-0040",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2571,7 +2649,7 @@
       "permitNumber": "BLD-2026-0021",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2597,7 +2675,7 @@
       "permitNumber": "BLD-2025-3316",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2623,7 +2701,7 @@
       "permitNumber": "BLD-2025-3312",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2649,7 +2727,7 @@
       "permitNumber": "BLD-2025-3271",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2675,7 +2753,7 @@
       "permitNumber": "BLD-2025-3203",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2701,33 +2779,33 @@
       "permitNumber": "BLD-2025-3245",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
-      "address": "7961 WOODLARK WAY, Cupertino, CA 95014-4936",
+      "address": "10751 MARTINWOOD WAY, Cupertino, CA 95014-4421",
       "city": "Cupertino",
       "neighborhood": "",
-      "appNumber": "BLD-2025-3042",
+      "appNumber": "BLD-2025-3161",
       "appType": "Residential Addition",
-      "description": "(N) ATTACHED ADU (407 SF)",
-      "overview": "ADU / Accessory Dwelling (407 SF) in Cupertino. Plan Review.",
+      "description": "FRONT ADDITION (870 SF) FOR MASTER SUITE AND LIVING ROOM; WHOLE HOUSE REMODEL (1,540 SF); NEW COVERED PORCH (39 SF); NEW SKYLIGHTS (8 TOTAL, 64 SF); UPGRADE MAIN ELECTRICAL PANEL (200 AMPS); NEW SUB-PANEL (100 AMPS); NEW OUTDOOR AC/CONDENSER UNIT; REMOVE WOOD BURNING FIRE PLACE AND INSTALL FIRE PLACE; FULLY SPRINKLER BUILDING",
+      "overview": "Residential Addition (870 SF) in Cupertino. Plan Review.",
       "existingSF": null,
-      "proposedSF": 407,
+      "proposedSF": 870,
       "sfNote": "SF per permit",
-      "dateFiled": "2025-11-25",
+      "dateFiled": "2025-12-10",
       "status": "Plan Review",
       "planner": "City of Cupertino",
       "category": "Addition",
-      "scope": "ADU / Accessory Dwelling (407 SF)",
+      "scope": "Residential Addition (870 SF)",
       "zoning": "",
       "apn": "",
       "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
       "docs": [],
-      "permitNumber": "BLD-2025-3042",
-      "firstSeen": "2026-04-16T02:06:15.592Z",
+      "permitNumber": "BLD-2025-3161",
+      "firstSeen": "2026-04-30T20:43:16.960Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2753,7 +2831,7 @@
       "permitNumber": "BLD-2025-2978",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2779,7 +2857,7 @@
       "permitNumber": "BLD-2025-2961",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2805,7 +2883,7 @@
       "permitNumber": "BLD-2025-2928",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2831,7 +2909,7 @@
       "permitNumber": "BLD-2025-2915",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2857,7 +2935,7 @@
       "permitNumber": "BLD-2025-2344",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2883,7 +2961,7 @@
       "permitNumber": "BLD-2025-2178",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2909,7 +2987,7 @@
       "permitNumber": "BLD-2025-2177",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2935,7 +3013,7 @@
       "permitNumber": "BLD-2025-2120",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2961,7 +3039,7 @@
       "permitNumber": "BLD-2025-1825",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -2987,7 +3065,7 @@
       "permitNumber": "BLD-2025-1779",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3013,7 +3091,7 @@
       "permitNumber": "BLD-2025-1620",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3039,7 +3117,7 @@
       "permitNumber": "BLD-2025-1394",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3065,7 +3143,7 @@
       "permitNumber": "BLD-2025-1323",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3091,7 +3169,7 @@
       "permitNumber": "BLD-2025-1266",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3117,7 +3195,7 @@
       "permitNumber": "BLD-2025-0994",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3143,7 +3221,7 @@
       "permitNumber": "BLD-2025-0986",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3169,7 +3247,7 @@
       "permitNumber": "BLD-2025-0942",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3195,7 +3273,7 @@
       "permitNumber": "BLD-2025-0770",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3221,7 +3299,7 @@
       "permitNumber": "BLD-2025-0761",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3247,7 +3325,7 @@
       "permitNumber": "BLD-2025-0390",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3273,7 +3351,7 @@
       "permitNumber": "BLD-2025-0310",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3299,7 +3377,7 @@
       "permitNumber": "BLD-2025-0228",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3325,7 +3403,7 @@
       "permitNumber": "BLD-2024-2227",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3351,7 +3429,7 @@
       "permitNumber": "BLD-2024-1985",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3377,7 +3455,7 @@
       "permitNumber": "BLD-2024-1630",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3403,7 +3481,7 @@
       "permitNumber": "BLD-2024-1355",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3429,7 +3507,7 @@
       "permitNumber": "BLD-2024-1212",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3455,7 +3533,33 @@
       "permitNumber": "BLD-2024-1006",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
+      "permitStage": "Planning Review"
+    },
+    {
+      "address": "21491 VAI AVE, Cupertino, CA 95014-4934",
+      "city": "Cupertino",
+      "neighborhood": "",
+      "appNumber": "BLD-2026-0965",
+      "appType": "Residential Demolition",
+      "description": "DEMOLISH (E) STORAGE ROOM (180 SF)",
+      "overview": "Demolition / Rebuild in Cupertino. Plan Review.",
+      "existingSF": 0,
+      "proposedSF": 180,
+      "sfNote": "SF per permit",
+      "dateFiled": "2026-04-29",
+      "status": "Plan Review",
+      "planner": "City of Cupertino",
+      "category": "New Construction",
+      "scope": "Demolition / Rebuild",
+      "zoning": "",
+      "apn": "",
+      "pageUrl": "https://aca-prod.accela.com/CUPERTINO/Cap/CapHome.aspx?module=Building",
+      "docs": [],
+      "permitNumber": "BLD-2026-0965",
+      "firstSeen": "2026-04-30T20:43:16.960Z",
+      "dataSource": "cupertino-accela",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3481,7 +3585,7 @@
       "permitNumber": "BLD-2026-0905",
       "firstSeen": "2026-04-28T07:45:00.501Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3507,7 +3611,7 @@
       "permitNumber": "BLD-2026-0864",
       "firstSeen": "2026-04-28T07:45:00.501Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3533,7 +3637,7 @@
       "permitNumber": "BLD-2026-0576",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3542,7 +3646,7 @@
       "neighborhood": "",
       "appNumber": "BLD-2026-0152",
       "appType": "Residential Demolition",
-      "description": "DEMOLISH 1 STORY SFD (1,249 SF)",
+      "description": "DEMOLISH 1 STORY SFD (1,249 SF); DETACHED GARAGE (420SF)",
       "overview": "Demolition / Rebuild in Cupertino. Plan Review.",
       "existingSF": 0,
       "proposedSF": 1249,
@@ -3559,7 +3663,7 @@
       "permitNumber": "BLD-2026-0152",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3585,7 +3689,7 @@
       "permitNumber": "BLD-2026-0099",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3611,7 +3715,7 @@
       "permitNumber": "BLD-2026-0065",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3637,7 +3741,7 @@
       "permitNumber": "BLD-2025-3216",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3663,7 +3767,7 @@
       "permitNumber": "BLD-2025-3193",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3689,7 +3793,7 @@
       "permitNumber": "BLD-2025-3015",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3715,7 +3819,7 @@
       "permitNumber": "BLD-2025-1982",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3741,7 +3845,7 @@
       "permitNumber": "BLD-2025-0200",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3767,7 +3871,7 @@
       "permitNumber": "BLD-2025-0185",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3793,7 +3897,7 @@
       "permitNumber": "BLD-2025-0150",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3819,7 +3923,7 @@
       "permitNumber": "BLD-2025-0003",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     },
     {
@@ -3845,10 +3949,10 @@
       "permitNumber": "BLD-2024-1699",
       "firstSeen": "2026-04-16T02:06:15.592Z",
       "dataSource": "cupertino-accela",
-      "lastVerified": "2026-04-28T07:45:00.501Z",
+      "lastVerified": "2026-04-30T20:43:16.960Z",
       "permitStage": "Planning Review"
     }
   ],
-  "scrapedAt": "2026-04-28T07:45:00.501Z",
+  "scrapedAt": "2026-04-30T20:43:16.960Z",
   "source": "Cupertino Accela Citizen Access (public search)"
 }
