@@ -1257,6 +1257,35 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
+      "address": "16765 Hicks Road",
+      "appNumber": "S-26-012",
+      "appType": "Architecture and Site Application",
+      "description": "Consider a Request for Approval to Construct a New Single-Family Residence and Site Improvements Requiring a Grading Permit on a Vacant Property Zoned HR-1. APN 567-23-048. CEQA Review is Pending.",
+      "overview": "Custom home on vacant lot — ground-up build.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-04-23",
+      "status": "Pending",
+      "planner": "Ryan Safty",
+      "category": "New Construction",
+      "scope": "Custom Home (Vacant Lot)",
+      "zoning": "HR-1",
+      "apn": "567-23-048",
+      "pageUrl": "https://www.losgatosca.gov/2374/H",
+      "docs": [
+        {
+          "name": "Project Description Letter - 16765 Hicks Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45787/Project-Description-Letter---16765-Hicks-Rd-PDF"
+        },
+        {
+          "name": "Project Plans - 16765 Hicks Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45788/Project-Plans---16765-Hicks-Rd-PDF"
+        }
+      ],
+      "firstSeen": "2026-04-30T20:17:52.761Z"
+    },
+    {
       "address": "16845 Hicks Road",
       "appNumber": "S-25-039",
       "appType": "Architecture and Site Application",
@@ -1644,24 +1673,29 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "La Rinconada Golf Course Project - See 17445 Zena Avenue",
-      "appNumber": "",
-      "appType": "",
-      "description": "",
-      "overview": "Residential addition/alteration project.",
+      "address": "16601-16605  Lark Avenue",
+      "appNumber": "CD-26-002",
+      "appType": "Conceptual Development Advisory Committee Application",
+      "description": "Consider a Request for Preliminary Review of a Proposal for Construction of a 100 Percent Affordable Multi-Family Residential Development (100 Units) on Property Zoned R-M:5-12. APN 424-08-018.",
+      "overview": "100-unit multi-family development. New construction.",
       "existingSF": null,
       "proposedSF": null,
       "sfNote": "",
-      "dateFiled": "",
-      "status": "Pending",
-      "planner": "",
-      "category": "Addition",
-      "scope": "General",
-      "zoning": "",
-      "apn": "",
+      "dateFiled": "2026-03-09",
+      "status": "Conceptual Development Advisory Committee Meeting - 5/13/2026",
+      "planner": "Sean Mullin",
+      "category": "New Construction",
+      "scope": "Multi-Family (100 Units)",
+      "zoning": "R-M:5-12",
+      "apn": "424-08-018",
       "pageUrl": "https://www.losgatosca.gov/2378/L",
-      "docs": [],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
+      "docs": [
+        {
+          "name": "Conceptual Development Plans - 16601-16605 Lark Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45786/Conceptual-Development-Plans---16601-16605-Lark-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-04-30T20:17:52.761Z"
     },
     {
       "address": "230 La Terra Court",
@@ -3042,6 +3076,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-04-30T13:10:12.608Z",
+  "scrapedAt": "2026-04-30T20:17:52.761Z",
   "errors": []
 }
