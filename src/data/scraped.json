@@ -578,7 +578,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-01-14",
-      "status": "Approved by Planning Commission on 4/8/2026. Appeal period ends on 4/20/2026 at 5:00 PM.",
+      "status": "Planning Commission heard this item on 4/8/2026. It was continued to a date certain of June 24, 2026 at 7:00 PM.",
       "planner": "Erin Walters",
       "category": "New Construction",
       "scope": "Custom Home (Demo + New Build)",
@@ -1308,6 +1308,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/43538/Arborist-Report---16845-Hicks-Road"
         },
         {
+          "name": "Draft Conditions of Approval - 16845 Hicks Road",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45796/Draft-Conditions-of-Approval---16845-Hicks-Road"
+        },
+        {
           "name": "Letter of Justification - 16845 Hicks Road",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/43539/Letter-of-Justification---16845-Hicks-Road"
         },
@@ -1318,6 +1322,10 @@
         {
           "name": "Project Description - 16845 Hicks Road",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/43541/Project-Description---16845-Hicks-Road"
+        },
+        {
+          "name": "Required Findings and Considerations - 16845 Hicks Road",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45797/Required-Findings-and-Considerations---16845-Hicks-Road"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -1345,6 +1353,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44409/Arborist-Report---16845-Hicks-Rd-PDF"
         },
         {
+          "name": "Draft Conditions of Approval - 16845 Hicks Road",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45796/Draft-Conditions-of-Approval---16845-Hicks-Road"
+        },
+        {
           "name": "Letter of Justification - 16845 Hicks Rd (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44410/Letter-of-Justification---16845-Hicks-Rd-PDF"
         },
@@ -1359,6 +1371,10 @@
         {
           "name": "Project Plans - 16845 Hicks Rd (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44413/Project-Plans---16845-Hicks-Rd-PDF"
+        },
+        {
+          "name": "Required Findings and Considerations - 16845 Hicks Road",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45797/Required-Findings-and-Considerations---16845-Hicks-Road"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -2528,6 +2544,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/40023/Site-Images---101-S-Santa-Cruz-Ave-PDF"
         },
         {
+          "name": "Visual Simulations - 101 S. Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45794/Visual-Simulations---101-S-Santa-Cruz-Ave-PDF"
+        },
+        {
           "name": "Project Description - 15710 Shady Ln (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45234/Project-Description---15710-Shady-Ln-PDF"
         },
@@ -3076,6 +3096,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-04T17:18:15.088Z",
+  "scrapedAt": "2026-05-04T23:13:44.763Z",
   "errors": []
 }
