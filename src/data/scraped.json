@@ -1295,7 +1295,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-09-11",
-      "status": "Development Review Committee - 05/05/2026",
+      "status": "Approved by Development Review Committee on 5/5/2026. Appeal Period ends on 5/15/2026 at 1:00 PM.",
       "planner": "Ryan Safty",
       "category": "Addition",
       "scope": "Accessory Structure",
@@ -2038,7 +2038,7 @@
     {
       "address": "235 Oak Meadow Drive",
       "appNumber": "PD-25-003",
-      "appType": "Architecture and Site Application",
+      "appType": "Planned Development Application",
       "description": "Consider a Request for Approval to Modify Planned Development Ordinance 2371 to Allow for Construction of a Multi-Family Residential Development (12 Units) on Property Zoned O:PD. APN 529-10-132. CEQA Review is Pending.",
       "overview": "12-unit multi-family development. New construction.",
       "existingSF": null,
@@ -3096,6 +3096,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-05T17:08:50.522Z",
+  "scrapedAt": "2026-05-05T23:15:05.657Z",
   "errors": []
 }
