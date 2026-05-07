@@ -227,8 +227,8 @@
       "pageUrl": "https://www.losgatosca.gov/2370/B",
       "docs": [
         {
-          "name": "Project Plans - 127 Belhaven Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44708/Project-Plans---127-Belhaven-Drive-PDF"
+          "name": "Revised Development Plans - 127 Belhaven Drive (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/44708/Revised-Development-Plans---127-Belhaven-Drive-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -714,12 +714,12 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45100/Project-Description----121-College-Ave-PDF"
         },
         {
-          "name": "Project Plans - 121 College Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44034/Project-Plans---121-College-Ave-PDF"
-        },
-        {
           "name": "Response to Comments - 121 College Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45519/Response-to-Comments---121-College-Ave-PDF"
+        },
+        {
+          "name": "Revised Development Plans - 121 College Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/44034/Revised-Development-Plans---121-College-Ave-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -1870,7 +1870,7 @@
       "address": "0 Mireval Road",
       "appNumber": "M-26-004",
       "appType": "Certificate of Compliance",
-      "description": "Consider a Request of Issuance of a Certificate of Compliance on Property Zoned HR-5. APN 532-25-027. Certificate of Compliance is Categorically Exempt from CEQA, Section 15305: Minor Alterations in Land Use Limitations",
+      "description": "Consider a Request of Issuance of a Certificate of Compliance on Property Zoned HR-5. APN 532-25-027. Issuance of a Certificate of Compliance is Statutorily Exempt from CEQA as a Ministerial Approval in Accordance with Public Resources Code Section 21080 (b)(1) (CEQA Statute) and CEQA Guidelines Section 15268.",
       "overview": "Residential addition/alteration project.",
       "existingSF": null,
       "proposedSF": null,
@@ -2417,31 +2417,6 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "415 San Benito Avenue",
-      "appNumber": "",
-      "appType": "Urban Lot Split ULS26-001",
-      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) permit for an Urban Lot Split of One Lot into Two Lots on Property Zoned R-1D Located at 415 San Benito Avenue, APN 410-17-057. Categorically Exempt pursuant to CEQA Guidelines Section 15315: Minor Land Divisions.",
-      "overview": "Lot split — watch for future development.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-03-09",
-      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
-      "planner": "Maria Chavarin",
-      "category": "Subdivision",
-      "scope": "Urban Lot Split (SB 9)",
-      "zoning": "R-1D Located at 415 San Benito Avenue",
-      "apn": "410-17-057",
-      "pageUrl": "https://www.losgatosca.gov/2383/S",
-      "docs": [
-        {
-          "name": "Development Plans - 415 San Benito Avenue (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44676/Development-Plans---415-San-Benito-Avenue-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
       "address": "647 N. Santa Cruz Avenue",
       "appNumber": "M-24-020",
       "appType": "Architecture and Site Application S-24-060                                               Conditional Use Permit U-24-018                                                               Subdivision Application",
@@ -2659,43 +2634,6 @@
         {
           "name": "Subdivision Plans - 401 Surmont Dr (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42504/Subdivision-Plans---401-Surmont-Dr-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
-      "address": "310 Tait Avenue",
-      "appNumber": "MR-25-016",
-      "appType": "Minor Residential Application",
-      "description": "Consider a Request of Approval to Construct a New Second-Story to an Existing Pre-1941 Single-Family Residence on Property Zoned R-1D:LHP. APN 510-14-058. Exempt Pursuant to CEQA Guidelines, Section 15301: Existing Facilities.",
-      "overview": "Second-story addition to existing home.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2025-12-11",
-      "status": "Pending",
-      "planner": "Erin Walters",
-      "category": "Addition",
-      "scope": "Second-Story Addition",
-      "zoning": "R-1D:LHP",
-      "apn": "510-14-058",
-      "pageUrl": "https://www.losgatosca.gov/2390/T",
-      "docs": [
-        {
-          "name": "Development Plans - 310 Tait Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44434/Development-Plans---310-Tait-Ave-PDF"
-        },
-        {
-          "name": "Letter of Justification - 310 Tait Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44435/Letter-of-Justification---310-Tait-Ave-PDF"
-        },
-        {
-          "name": "Photographs - 310 Tait Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44436/Photographs---310-Tait-Ave-PDF"
-        },
-        {
-          "name": "Project Description - 310 Tait Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44437/Project-Description---310-Tait-Ave-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -3096,6 +3034,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-07T09:45:58.906Z",
+  "scrapedAt": "2026-05-07T18:09:23.665Z",
   "errors": []
 }
