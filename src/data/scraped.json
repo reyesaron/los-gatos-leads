@@ -647,26 +647,6 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "14595 Clearview Drive: La Rinconada Golf Course Project - See 17445 Zena Avenue",
-      "appNumber": "",
-      "appType": "",
-      "description": "",
-      "overview": "Residential addition/alteration project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "",
-      "status": "Pending",
-      "planner": "",
-      "category": "Addition",
-      "scope": "General",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://www.losgatosca.gov/2371/C",
-      "docs": [],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
       "address": "16080 Camino Del Cerro",
       "appNumber": "",
       "appType": "Two Unit Housing Development Application TUD26-003",
@@ -2947,63 +2927,6 @@
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
-      "address": "17445 Zena Avenue",
-      "appNumber": "S-25-005",
-      "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Construction of New Maintenance Buildings and Site Work Requiring a Grading Permit for the La Rinconada Golf Course on Property Zoned RC. APN 409-310-01.  Categorically Exempt Pursuant to the California Environmental Quality Act (CEQA) Guidelines, Section 15303: New Construction.",
-      "overview": "Institutional build — non-residential.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2025-10-06",
-      "status": "Approved by Planning Commission on 4/22/2026. Appeal period ends on 5/4/2026 at 5:00 PM.",
-      "planner": "Ryan Safty",
-      "category": "New Construction",
-      "scope": "Institutional",
-      "zoning": "RC",
-      "apn": "409-310-01",
-      "pageUrl": "https://www.losgatosca.gov/2396/Z",
-      "docs": [
-        {
-          "name": "Applicant Arborist Report - 17445 Zena Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44183/Applicant-Arborist-Report---17445-Zena-Ave-PDF"
-        },
-        {
-          "name": "Applicant Response to Consulting Architect Report - 17445 Zena Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44543/Applicant-Response-to-Consulting-Architect-Report---17445-Zena-Ave-PDF"
-        },
-        {
-          "name": "Consulting Arborist Peer Review - 17445 Zena Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44716/Consulting-Arborist-Peer-Review---17445-Zena-Ave-PDF"
-        },
-        {
-          "name": "Consulting Architect Report - 17445 Zena Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44469/Consulting-Architect-Report---17445-Zena-Ave-PDF"
-        },
-        {
-          "name": "Letter of Justification - 17445 Zena Ave - La Rinconada Golf Course (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43670/Letter-of-Justification---17445-Zena-Ave---La-Rinconada-Golf-Course-PDF"
-        },
-        {
-          "name": "Neighborhood Outreach Summary - 17445 Zena Ave - La Rinconada Golf Course (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44059/Neighborhood-Outreach-Summary---17445-Zena-Ave---La-Rinconada-Golf-Course-PDF"
-        },
-        {
-          "name": "Project Description - 17445 Zena Ave - La Rinconada Golf Course (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43671/Project-Description---17445-Zena-Ave---La-Rinconada-Golf-Course-PDF"
-        },
-        {
-          "name": "Project Plans - 17445 Zena Ave - La Rinconada Golf Course (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43672/Project-Plans---17445-Zena-Ave---La-Rinconada-Golf-Course-PDF"
-        },
-        {
-          "name": "Tree Inventory and Appraisal - 17445 Zena Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44503/Tree-Inventory-and-Appraisal---17445-Zena-Ave-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
     }
   ],
   "scrapedLetters": [
@@ -3034,6 +2957,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-08T12:17:08.186Z",
+  "scrapedAt": "2026-05-08T20:14:18.340Z",
   "errors": []
 }
