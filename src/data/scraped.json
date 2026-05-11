@@ -2419,6 +2419,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/41391/Applicant-Arborist-Report---647-N-Santa-Cruz-Ave-PDF"
         },
         {
+          "name": "CEQA AB 130 Letter - 647 N Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45838/CEQA-AB-130-Letter---647-N-Santa-Cruz-Ave-PDF"
+        },
+        {
           "name": "Consulting Arborist Review - 647 N. Santa Cruz Avenue (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/43561/Consulting-Arborist-Review---647-N-Santa-Cruz-Avenue-PDF"
         },
@@ -2439,10 +2443,6 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/41392/Notice-of-Development-Sign---647-N-Santa-Cruz-Ave-PDF"
         },
         {
-          "name": "Project Description - 647 N Santa Cruz Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/40311/Project-Description---647-N-Santa-Cruz-Ave-PDF"
-        },
-        {
           "name": "Revised Development Plans - 647 N Santa Cruz Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/40309/Revised-Development-Plans---647-N-Santa-Cruz-Ave-PDF"
         },
@@ -2453,6 +2453,10 @@
         {
           "name": "Revised Objective Design Standards Checklist - 647 N Santa Cruz Ave (PDF",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/41394/Revised-Objective-Design-Standards-Checklist---647-N-Santa-Cruz-Ave-PDF"
+        },
+        {
+          "name": "Revised Project Description - 647 N Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/40311/Revised-Project-Description---647-N-Santa-Cruz-Ave-PDF"
         },
         {
           "name": "Revised Site Photos - 647 N Santa Cruz Ave (PDF)",
@@ -2957,6 +2961,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-11T15:31:15.906Z",
+  "scrapedAt": "2026-05-11T18:00:39.927Z",
   "errors": []
 }
