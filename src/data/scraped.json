@@ -647,6 +647,31 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
+      "address": "33 Clifton Avenue",
+      "appNumber": "",
+      "appType": "Two Unit Housing Development Application TUD25-008 and TUD26-003",
+      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Two Unit Housing Development to Construct One New Unit on Property Zoned R-1D. APN 510-45-049. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
+      "overview": "Two new units under SB 9 — ministerial project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-04-16",
+      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
+      "planner": "Ryan Safty",
+      "category": "New Construction",
+      "scope": "Two-Unit Development (SB 9)",
+      "zoning": "R-1D",
+      "apn": "510-45-049",
+      "pageUrl": "https://www.losgatosca.gov/2371/C",
+      "docs": [
+        {
+          "name": "Project Plans - 33 Clifton Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45702/Project-Plans---33-Clifton-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-05-12T03:57:58.368Z"
+    },
+    {
       "address": "16080 Camino Del Cerro",
       "appNumber": "",
       "appType": "Two Unit Housing Development Application TUD26-003",
@@ -2961,6 +2986,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-11T21:24:17.132Z",
+  "scrapedAt": "2026-05-12T03:57:58.368Z",
   "errors": []
 }
