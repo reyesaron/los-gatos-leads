@@ -1394,7 +1394,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-09-11",
-      "status": "Pending",
+      "status": "Planning Commission - 6/10/2026",
       "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "Second-Story Addition",
@@ -1852,7 +1852,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-02-21",
-      "status": "Pending",
+      "status": "Development Review Committee - 5/26/2026",
       "planner": "Erin Walters",
       "category": "New Construction",
       "scope": "General",
@@ -2750,7 +2750,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-03-31",
-      "status": "Pending",
+      "status": "Planning Commission - 5/13/2026",
       "planner": "Erin Walters",
       "category": "Addition",
       "scope": "Commercial CUP",
@@ -2986,6 +2986,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-12T18:07:39.353Z",
+  "scrapedAt": "2026-05-12T21:25:23.751Z",
   "errors": []
 }
