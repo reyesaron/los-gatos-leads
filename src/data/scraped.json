@@ -1852,7 +1852,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-02-21",
-      "status": "Development Review Committee - 5/26/2026",
+      "status": "Pending",
       "planner": "Erin Walters",
       "category": "New Construction",
       "scope": "General",
@@ -1881,7 +1881,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-03-06",
-      "status": "Development Review Committee - 03/24/2026",
+      "status": "Development Review Committee - 05/19/2026",
       "planner": "Erin Walters",
       "category": "Addition",
       "scope": "General",
@@ -2986,6 +2986,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-13T14:53:38.438Z",
+  "scrapedAt": "2026-05-13T18:08:04.140Z",
   "errors": []
 }
