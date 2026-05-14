@@ -962,7 +962,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2024-09-03",
-      "status": "This item went to Planning Commission on April 22, 2026. At this meeting, the item was continued to a date certain of May 13, 2026 at 7:00 PM.",
+      "status": "This item went to Planning Commission on May 13, 2026. At this meeting, the item was continued to a date certain of May 21, 2026 at 7:00 PM at a special meeting.",
       "planner": "Jocelyn Shoopman",
       "category": "Addition",
       "scope": "Commercial CUP",
@@ -2750,7 +2750,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-03-31",
-      "status": "Planning Commission - 5/13/2026",
+      "status": "Approved by Planning Commission on 5/13/2026. Appeal period ends on 5/26/2026 at 5:00 PM.",
       "planner": "Erin Walters",
       "category": "Addition",
       "scope": "Commercial CUP",
@@ -2861,7 +2861,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-10-27",
-      "status": "Planning Commission - 5/13/2026",
+      "status": "Item heard by Planning Commission on 5/13/2026. Continued to a date certain of 6/24/2026 at 7:00 PM.",
       "planner": "Ryan Safty",
       "category": "New Construction",
       "scope": "Custom Home (Vacant Lot)",
@@ -2986,6 +2986,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-14T18:03:48.835Z",
+  "scrapedAt": "2026-05-14T21:17:13.771Z",
   "errors": []
 }
