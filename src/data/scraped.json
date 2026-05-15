@@ -2626,6 +2626,14 @@
         {
           "name": "Project Plans -17489 Shelburne Way (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44208/Project-Plans--17489-Shelburne-Way-PDF"
+        },
+        {
+          "name": "Development Plans - 16171 Sunray Dr. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45878/Development-Plans---16171-Sunray-Dr-PDF"
+        },
+        {
+          "name": "Project Description - 16171 Sunray Dr. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45879/Project-Description---16171-Sunray-Dr-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -2998,6 +3006,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-15T17:49:10.511Z",
+  "scrapedAt": "2026-05-15T21:15:29.575Z",
   "errors": []
 }
