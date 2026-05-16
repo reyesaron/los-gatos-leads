@@ -2103,7 +2103,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2024-09-13",
-      "status": "Planning Commission - 05/28/2026",
+      "status": "Planning Commission - 05/27/2026",
       "planner": "Erin Walters",
       "category": "New Construction",
       "scope": "Multi-Family (138 Units)",
@@ -2238,7 +2238,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2022-12-05",
-      "status": "Pending",
+      "status": "Development Review Committee - 05/26/2026",
       "planner": "Erin Walters",
       "category": "New Construction",
       "scope": "Lot Merger",
@@ -3006,6 +3006,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-15T21:15:29.575Z",
+  "scrapedAt": "2026-05-16T03:52:25.174Z",
   "errors": []
 }
