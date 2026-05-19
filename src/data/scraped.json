@@ -806,16 +806,12 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42570/Letter-of-Justification---15575-El-Gato-Ln"
         },
         {
-          "name": "Project Description Letter - 15575 El Gato Ln (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45183/Project-Description-Letter---15575-El-Gato-Ln-PDF"
+          "name": "Revised Project Description Letter - 15575 El Gato Ln (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45183/Revised-Project-Description-Letter---15575-El-Gato-Ln-PDF"
         },
         {
-          "name": "Project Plans - 15575 El Gato Ln",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42571/Project-Plans---15575-El-Gato-Ln"
-        },
-        {
-          "name": "Structure Report - 15575 El Gato Ln",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42572/Structure-Report---15575-El-Gato-Ln"
+          "name": "Revised Project Plans - 15575 El Gato Ln",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/42571/Revised-Project-Plans---15575-El-Gato-Ln"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -2920,6 +2916,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-19T18:11:53.000Z",
+  "scrapedAt": "2026-05-19T21:40:09.154Z",
   "errors": []
 }
