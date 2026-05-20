@@ -342,6 +342,39 @@
       "firstSeen": "2026-04-28T23:14:11.637Z"
     },
     {
+      "address": "16245 Burton Road and Assessor Parcel Number 424-06-116",
+      "appNumber": "A-26-002",
+      "appType": "North Forty Specific Plan Amendment Application",
+      "description": "Consider a Request for Approval to Amend the North Forty Specific Plan to Allow for a Senior Living Facility to be Authorized as a Permitted Use in the Northern District on Properties Zoned North Forty Specific Plan:Housing Element Overlay Zone. APNs 424-06-115 and 424-06-116.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-05-19",
+      "status": "Pending",
+      "planner": "Jocelyn Shoopman",
+      "category": "Addition",
+      "scope": "General",
+      "zoning": "North Forty Specific Plan:Housing Element Overlay Zone",
+      "apn": "",
+      "pageUrl": "https://www.losgatosca.gov/2370/B",
+      "docs": [
+        {
+          "name": "Conceptual Drawings - 16245 Burton Road and APN 424-06-116 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45953/Conceptual-Drawings---16245-Burton-Road-and-APN-424-06-116-PDF"
+        },
+        {
+          "name": "Letter of Justification - 16245 Burton Road and APN 424-06-116 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45954/Letter-of-Justification---16245-Burton-Road-and-APN-424-06-116-PDF"
+        },
+        {
+          "name": "Project Description - 16245 Burton Road and APN 424-06-116 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45955/Project-Description---16245-Burton-Road-and-APN-424-06-116-PDF"
+        }
+      ],
+      "firstSeen": "2026-05-20T22:02:58.087Z"
+    },
+    {
       "address": "16080 Camino Del Cerro",
       "appNumber": "MR-25-015",
       "appType": "Minor Residential Application",
@@ -1782,51 +1815,6 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "0 Mireval Road",
-      "appNumber": "M-26-004",
-      "appType": "Certificate of Compliance",
-      "description": "Consider a Request of Issuance of a Certificate of Compliance on Property Zoned HR-5. APN 532-25-027. Issuance of a Certificate of Compliance is Statutorily Exempt from CEQA as a Ministerial Approval in Accordance with Public Resources Code Section 21080 (b)(1) (CEQA Statute) and CEQA Guidelines Section 15268.",
-      "overview": "Residential addition/alteration project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-03-06",
-      "status": "Approved by the Development Review Committee on 05/19/2026. Appeal period ends on 5/29/2026 at 1:00 PM.",
-      "planner": "Erin Walters",
-      "category": "Addition",
-      "scope": "General",
-      "zoning": "HR-5",
-      "apn": "532-25-027",
-      "pageUrl": "https://www.losgatosca.gov/2379/M",
-      "docs": [
-        {
-          "name": "Draft Conditions of Approval - 0 Mireval Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45873/Draft-Conditions-of-Approval---0-Mireval-Rd-PDF"
-        },
-        {
-          "name": "Draft Findings - 0 Mireval Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45872/Draft-Findings---0-Mireval-Rd-PDF"
-        },
-        {
-          "name": "Legal Description - 0 Mireval Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45876/Legal-Description---0-Mireval-Rd-PDF"
-        },
-        {
-          "name": "Letter of Justification - 0 Mireval Rd  - M-26-004 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44672/Letter-of-Justification---0-Mireval-Rd----M-26-004-PDF"
-        },
-        {
-          "name": "Project Description - 0 Mireval Rd  - M-26-004 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44673/Project-Description---0-Mireval-Rd----M-26-004-PDF"
-        },
-        {
-          "name": "Town Surveyors Statement - 0 Mireval Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45874/Town-Surveyors-Statement---0-Mireval-Rd-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
       "address": "17560 Mireval Road",
       "appNumber": "S-24-067",
       "appType": "Architecture and Site Application",
@@ -2916,6 +2904,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-20T18:26:28.734Z",
+  "scrapedAt": "2026-05-20T22:02:58.087Z",
   "errors": []
 }
