@@ -2169,6 +2169,14 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42713/Development-Plans---10-30-50-and-70-Reservoir-Rd-PDF"
         },
         {
+          "name": "Draft Conditions of Approval - 70 Reservoir Rd  (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45967/Draft-Conditions-of-Approval---70-Reservoir-Rd--PDF"
+        },
+        {
+          "name": "Draft Findings - 70 Reservoir Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45968/Draft-Findings---70-Reservoir-Rd-PDF"
+        },
+        {
           "name": "Letter of Justification - 10, 30, 50 and 70 Reservoir Road (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42715/Letter-of-Justification---10-30-50-and-70-Reservoir-Road-PDF"
         },
@@ -2924,6 +2932,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-22T17:58:50.091Z",
+  "scrapedAt": "2026-05-22T21:18:21.824Z",
   "errors": []
 }
