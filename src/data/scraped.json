@@ -2130,7 +2130,7 @@
       "address": "10, 30, 50, and 70 Reservoir Road",
       "appNumber": "M-25-003",
       "appType": "Architecture and Site Application S-22-049                                          Subdivision Application",
-      "description": "Consider a Request for Approval for the Lot Merger of Four Parcels into Two Parcels, Demolition of Two Accessory Dwelling Units and Construction of a New Single-Family Residence Site Improvements Requiring a Grading Permit, and Removal of Large Protected Trees at 70 Reservoir Road, on Property Zoned R-1:20. CEQA Pending. APN 529-29-063, -064, -065 and -066.",
+      "description": "Consider a Request for Approval for the Lot Merger of Three Parcels (30, 50 and 70 Reservoir Road) into One Parcel, Demolition of Two Accessory Dwelling Units (70 Reservoir Road),Construction of a New Single-Family Residence (70 Reservoir Road), Site Improvements Requiring a Grading Permit, and Removal of Large Protected Trees on Properties Zoned R-1:20. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction or Conversion of Small Structures. APN 529-29-063, -064, -065 and -066.",
       "overview": "Planning project at 10, 30, 50, and 70 Reservoir Road.",
       "existingSF": null,
       "proposedSF": null,
@@ -2145,6 +2145,22 @@
       "pageUrl": "https://www.losgatosca.gov/2382/R",
       "docs": [
         {
+          "name": "Applicants Outreach - 10, 30, 50 and 70 Reservoir Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45966/Applicants-Outreach---10-30-50-and-70-Reservoir-Rd-PDF"
+        },
+        {
+          "name": "Approved AMMR Letter from Fire - 70 Reservoir Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/42714/Approved-AMMR-Letter-from-Fire---70-Reservoir-Rd-PDF"
+        },
+        {
+          "name": "Arborist Report - 70 Reservoir Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45964/Arborist-Report---70-Reservoir-Rd-PDF"
+        },
+        {
+          "name": "Consulting Architect Report - 70 Reservoir Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45965/Consulting-Architect-Report---70-Reservoir-Rd-PDF"
+        },
+        {
           "name": "Demolition Letter - 70 Reservoir Rd (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42712/Demolition-Letter---70-Reservoir-Rd-PDF"
         },
@@ -2153,16 +2169,16 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42713/Development-Plans---10-30-50-and-70-Reservoir-Rd-PDF"
         },
         {
-          "name": "Fire Exhibit - 70 Reservoir Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42714/Fire-Exhibit---70-Reservoir-Rd-PDF"
-        },
-        {
           "name": "Letter of Justification - 10, 30, 50 and 70 Reservoir Road (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42715/Letter-of-Justification---10-30-50-and-70-Reservoir-Road-PDF"
         },
         {
           "name": "Materials and Color Board - 70 Reservoir Rd (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42716/Materials-and-Color-Board---70-Reservoir-Rd-PDF"
+        },
+        {
+          "name": "Response to Architect - 70 Reservoir Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45963/Response-to-Architect---70-Reservoir-Rd-PDF"
         },
         {
           "name": "Site Photos - 70 Reservoir Rd (PDF)",
@@ -2352,6 +2368,10 @@
         {
           "name": "Applicant Arborist Report - 647 N. Santa Cruz Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/41391/Applicant-Arborist-Report---647-N-Santa-Cruz-Ave-PDF"
+        },
+        {
+          "name": "Applicant Response to Consulting Arborist Report - 647 N. Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45958/Applicant-Response-to-Consulting-Arborist-Report---647-N-Santa-Cruz-Ave-PDF"
         },
         {
           "name": "CEQA AB 130 Letter - 647 N Santa Cruz Ave (PDF)",
@@ -2904,6 +2924,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-21T21:43:24.548Z",
+  "scrapedAt": "2026-05-22T04:22:23.667Z",
   "errors": []
 }
