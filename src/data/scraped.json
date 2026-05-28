@@ -550,12 +550,16 @@
       "pageUrl": "https://www.losgatosca.gov/2371/C",
       "docs": [
         {
-          "name": "Development Plans - 16717 Chirco Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/40824/Development-Plans---16717-Chirco-Drive-PDF"
+          "name": "Response to Architect Recommendations, 4-29-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45985/Response-to-Architect-Recommendations-4-29-26-PDF"
         },
         {
-          "name": "Project Identification Sign - 16717 Chirco Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42879/Project-Identification-Sign---16717-Chirco-Drive-PDF"
+          "name": "Response to Planning Comments, 4-29-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45986/Response-to-Planning-Comments-4-29-26-PDF"
+        },
+        {
+          "name": "Revised Development Plans - 16717 Chirco Drive (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/40824/Revised-Development-Plans---16717-Chirco-Drive-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -2932,6 +2936,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-28T16:20:02.207Z",
+  "scrapedAt": "2026-05-28T22:01:51.960Z",
   "errors": []
 }
