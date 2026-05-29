@@ -1285,7 +1285,7 @@
     {
       "address": "16845 Hicks Road",
       "appNumber": "U-26-001",
-      "appType": "Architecture and Site Application S-26-001                                     Variance Application V-26-001                                                                          Conditional Use Permit Application",
+      "appType": "Architecture and Site Application S-26-001                                     Variance Application V-26-001                                                                          Conditional Use Permit Application",
       "description": "Consider a Request for Approval to Construct a New Gymnasium and Sports Field, Variance to Maximum Allowed Height, Modification to an Existing Conditional Use Permit, and Site Improvements Requiring a Grading Permit on Property Zoned HR-1. APN(s) 567-23-040, 567-23-043, and 567-23-044. CEQA Review is Pending.",
       "overview": "Institutional build — non-residential.",
       "existingSF": null,
@@ -2005,7 +2005,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2024-09-13",
-      "status": "Planning Commission - 05/27/2026",
+      "status": "Planning Commission recommended approval to the Town Council on 05/27/2026. This item will be going to a Town Council Special meeting on 6/16/2026 at 5:00 PM.",
       "planner": "Erin Walters",
       "category": "New Construction",
       "scope": "Multi-Family (138 Units)",
@@ -2936,6 +2936,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-05-29T16:03:09.530Z",
+  "scrapedAt": "2026-05-29T21:58:59.329Z",
   "errors": []
 }
