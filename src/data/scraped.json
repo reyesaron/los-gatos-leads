@@ -2360,6 +2360,35 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
+      "address": "233 N. Santa Cruz Avenue and APN 510-17-040",
+      "appNumber": "CD-26-003",
+      "appType": "Conceptual Development Advisory Committee Application",
+      "description": "Consider a Request for Preliminary Review of a Proposal for Construction of a Mixed-Use Development (4 Units) on Properties Zoned C-2. APNs 510-17-086 and 510-17-040.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-06-10",
+      "status": "Conceptual Development Advisory Committee - 06/10/2026",
+      "planner": "Jocelyn Shoopman",
+      "category": "Addition",
+      "scope": "Small Multi-Unit (4 Units)",
+      "zoning": "C-2",
+      "apn": "",
+      "pageUrl": "https://www.losgatosca.gov/2383/S",
+      "docs": [
+        {
+          "name": "Conceptual Development Plans - 233 N. Santa Cruz Ave. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46034/Conceptual-Development-Plans---233-N-Santa-Cruz-Ave-PDF"
+        },
+        {
+          "name": "Project Description - 233 N. Santa Cruz Ave. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46035/Project-Description---233-N-Santa-Cruz-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-06-02T19:49:42.775Z"
+    },
+    {
       "address": "647 N. Santa Cruz Avenue",
       "appNumber": "M-24-020",
       "appType": "Architecture and Site Application S-24-060                                               Conditional Use Permit U-24-018                                                               Subdivision Application",
@@ -2936,6 +2965,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-02T12:13:25.539Z",
+  "scrapedAt": "2026-06-02T19:49:42.775Z",
   "errors": []
 }
