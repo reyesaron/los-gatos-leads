@@ -1661,6 +1661,14 @@
         {
           "name": "Conceptual Development Plans - 16601-16605 Lark Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45786/Conceptual-Development-Plans---16601-16605-Lark-Ave-PDF"
+        },
+        {
+          "name": "Lot Line Adjustment Plan - 14761 La Rinconada Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46056/Lot-Line-Adjustment-Plan---14761-La-Rinconada-Dr-PDF"
+        },
+        {
+          "name": "Project Description and Letter of Justification - 14761 La Rinconada Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46057/Project-Description-and-Letter-of-Justification---14761-La-Rinconada-Dr-PDF"
         }
       ],
       "firstSeen": "2026-04-30T20:17:52.761Z"
@@ -2965,6 +2973,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-03T12:48:25.819Z",
+  "scrapedAt": "2026-06-03T19:55:11.348Z",
   "errors": []
 }
