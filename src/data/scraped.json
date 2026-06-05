@@ -236,8 +236,16 @@
       "pageUrl": "https://www.losgatosca.gov/2370/B",
       "docs": [
         {
+          "name": "Letter of Justification - 695 Bicknell Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46080/Letter-of-Justification---695-Bicknell-Rd-PDF"
+        },
+        {
           "name": "Project Plans - 695_Bicknell Road",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44367/Project-Plans---695_Bicknell-Road"
+        },
+        {
+          "name": "Response to Consulting Architect - 695 Bicknell Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46081/Response-to-Consulting-Architect---695-Bicknell-Rd-PDF"
         },
         {
           "name": "Town Consulting Architect Report - 695 Bicknell Road",
@@ -2973,6 +2981,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-05T15:23:13.907Z",
+  "scrapedAt": "2026-06-05T18:02:53.317Z",
   "errors": []
 }
