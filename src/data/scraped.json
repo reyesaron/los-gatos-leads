@@ -515,31 +515,6 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "15975 Cerro Vista Drive",
-      "appNumber": "",
-      "appType": "Two Unit Housing Development Application TUD25-010",
-      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) permit for an Urban Lot Split on Property Zoned HR-1. APN 537-30-007. Categorically Exempt pursuant to CEQA Guidelines Section 15315: Minor Land Divisions.",
-      "overview": "Two new units under SB 9 — ministerial project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2025-09-03",
-      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights. These application materials are for informational purposes only.",
-      "planner": "Sean Mullin",
-      "category": "Subdivision",
-      "scope": "Two-Unit Development (SB 9)",
-      "zoning": "HR-1",
-      "apn": "537-30-007",
-      "pageUrl": "https://www.losgatosca.gov/2371/C",
-      "docs": [
-        {
-          "name": "Development Plans - 15975 Cerro Vista Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43563/Development-Plans---15975-Cerro-Vista-Dr-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
       "address": "16717 Chirco Drive",
       "appNumber": "MR-24-018",
       "appType": "Minor Residential Application",
@@ -653,31 +628,6 @@
     {
       "address": "33 Clifton Avenue",
       "appNumber": "",
-      "appType": "Two Unit Housing Development Application TUD25-008 and TUD26-003",
-      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Two Unit Housing Development to Construct One New Unit on Property Zoned R-1D. APN 510-45-049. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
-      "overview": "Two new units under SB 9 — ministerial project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-04-16",
-      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
-      "planner": "Ryan Safty",
-      "category": "New Construction",
-      "scope": "Two-Unit Development (SB 9)",
-      "zoning": "R-1D",
-      "apn": "510-45-049",
-      "pageUrl": "https://www.losgatosca.gov/2371/C",
-      "docs": [
-        {
-          "name": "Project Plans - 33 Clifton Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45702/Project-Plans---33-Clifton-Ave-PDF"
-        }
-      ],
-      "firstSeen": "2026-05-12T03:57:58.368Z"
-    },
-    {
-      "address": "16080 Camino Del Cerro",
-      "appNumber": "",
       "appType": "Two Unit Housing Development Application TUD26-003",
       "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Two Unit Housing Development to Construct One New Unit on Property Zoned R-1D. APN 510-45-049. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
       "overview": "Two new units under SB 9 — ministerial project.",
@@ -698,7 +648,7 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45702/Project-Plans---33-Clifton-Ave-PDF"
         }
       ],
-      "firstSeen": "2026-04-24T22:27:14.612Z"
+      "firstSeen": "2026-05-12T03:57:58.368Z"
     },
     {
       "address": "121 College Avenue",
@@ -1140,7 +1090,7 @@
       "sfNote": "",
       "dateFiled": "2024-07-19",
       "status": "Pending",
-      "planner": "Sean Mullin",
+      "planner": "Jocelyn Shoopman",
       "category": "New Construction",
       "scope": "General",
       "zoning": "HR-2½",
@@ -1243,7 +1193,7 @@
       "sfNote": "",
       "dateFiled": "2022-06-29",
       "status": "Pending",
-      "planner": "Sean Mullin",
+      "planner": "Jocelyn Shoopman",
       "category": "New Construction",
       "scope": "General",
       "zoning": "R-1:8",
@@ -1376,18 +1326,18 @@
       "address": "100 Jamie Court",
       "appNumber": "MR-26-007",
       "appType": "Minor Residential Application",
-      "description": "Consider a Request for Approval to Remove a Pre-1941 Property from the Historic Resources Inventory for Property Zoned R-1D. Located at. APN 529-24-025. Exempt Pursuant to CEQA Guidelines, Section 15061 (b)(3).",
-      "overview": "Residential addition/alteration project.",
+      "description": "Consider a Request for Approval to Construct a New Second-Story Addition to an Existing Single-Family Residence on Property Zoned R-1:8. APN 527-32-038. Categorically Exempt Pursuant to the California Environmental Quality Act, Section 15303: New Construction or Conversion of Small Structures.",
+      "overview": "Second-story addition to existing home.",
       "existingSF": null,
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-03-10",
-      "status": "Consider a Request for Approval to Construct a New Second-Story Addition to an Existing Single-Family Residence on Property Zoned R-1:8. APN 527-32-038.  Categorically Exempt Pursuant to the California Environmental Quality Act, Section 15303: New Construction or Conversion of Small Structures.",
+      "status": "Pending",
       "planner": "Suray Nathan",
       "category": "Addition",
-      "scope": "General",
-      "zoning": "R-1D",
-      "apn": "529-24-025",
+      "scope": "Second-Story Addition",
+      "zoning": "R-1:8",
+      "apn": "527-32-038",
       "pageUrl": "https://www.losgatosca.gov/2376/J",
       "docs": [
         {
@@ -1477,7 +1427,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-02-10",
-      "status": "Pending",
+      "status": "Development Review Committee - 6/23/2026",
       "planner": "Samina Merchant",
       "category": "Subdivision",
       "scope": "Lot Line Adjustment",
@@ -1506,7 +1456,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-02-10",
-      "status": "Pending",
+      "status": "Development Review Committee - 6/23/2026",
       "planner": "Samina Merchant",
       "category": "New Construction",
       "scope": "Custom Home (Demo + New Build)",
@@ -1551,7 +1501,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-02-10",
-      "status": "Pending",
+      "status": "Development Review Committee - 6/23/2026",
       "planner": "Samina Merchant",
       "category": "New Construction",
       "scope": "Custom Home (Demo + New Build)",
@@ -1582,31 +1532,6 @@
         {
           "name": "Summary of Neighborhood Outreach - 16484 S Kennedy Road - Parcel 2",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44490/Summary-of-Neighborhood-Outreach---16484-S-Kennedy-Road---Parcel-2"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
-      "address": "16880 Kennedy Road",
-      "appNumber": "",
-      "appType": "Two Unit Housing Development Application TUD26-002",
-      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Permit for a Two-Unit Housing Development (Two New Units) on a Developed Property Zoned R-1:8. APN 532-35-067. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
-      "overview": "Two new units under SB 9 — ministerial project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-02-25",
-      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights. These application materials are for informational purposes only.",
-      "planner": "Samina Merchant",
-      "category": "New Construction",
-      "scope": "Two-Unit Development (SB 9)",
-      "zoning": "R-1:8",
-      "apn": "532-35-067",
-      "pageUrl": "https://www.losgatosca.gov/2377/K",
-      "docs": [
-        {
-          "name": "Project Plan Set Two Unit Development - 16880 Kennedy Road",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44596/Project-Plan-Set-Two-Unit-Development---16880-Kennedy-Road"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -1649,27 +1574,23 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "16601-16605  Lark Avenue",
-      "appNumber": "CD-26-002",
-      "appType": "Conceptual Development Advisory Committee Application",
-      "description": "Consider a Request for Preliminary Review of a Proposal for Construction of a 100 Percent Affordable Multi-Family Residential Development (100 Units) on Property Zoned R-M:5-12. APN 424-08-018.",
-      "overview": "100-unit multi-family development. New construction.",
+      "address": "14761 La Rinconada Drive and 17445 Zena Avenue",
+      "appNumber": "M-26-005",
+      "appType": "Lot Line Adjustment Application",
+      "description": "Consider a Request for Approval for a Lot Line Adjustment Between Two Adjacent Lots on Property Zoned R-1:12 and RC. APN 409-30-036 and APN 409-31-001. Statutorily Exempt from CEQA as Ministerial Approval in Accordance with Public Resources Code Section 21080(b)(1) (CEQA Statute) and CEQA Guidelines Section 15268. Application is Only for Ministerial Approval of a Lot Line Adjustment Pursuant to Section 66412(d) of the Subdivision Map Act.",
+      "overview": "Planning project at 14761 La Rinconada Drive and 17445 Zena Avenue.",
       "existingSF": null,
       "proposedSF": null,
       "sfNote": "",
-      "dateFiled": "2026-03-09",
-      "status": "Conceptual Development Advisory Committee Meeting - 5/13/2026",
-      "planner": "Sean Mullin",
-      "category": "New Construction",
-      "scope": "Multi-Family (100 Units)",
-      "zoning": "R-M:5-12",
-      "apn": "424-08-018",
+      "dateFiled": "2026-06-02",
+      "status": "Pending",
+      "planner": "Suray Nathan",
+      "category": "Subdivision",
+      "scope": "Lot Line Adjustment",
+      "zoning": "R-1:12 and RC",
+      "apn": "409-30-036",
       "pageUrl": "https://www.losgatosca.gov/2378/L",
       "docs": [
-        {
-          "name": "Conceptual Development Plans - 16601-16605 Lark Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45786/Conceptual-Development-Plans---16601-16605-Lark-Ave-PDF"
-        },
         {
           "name": "Lot Line Adjustment Plan - 14761 La Rinconada Dr (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46056/Lot-Line-Adjustment-Plan---14761-La-Rinconada-Dr-PDF"
@@ -1679,7 +1600,7 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46057/Project-Description-and-Letter-of-Justification---14761-La-Rinconada-Dr-PDF"
         }
       ],
-      "firstSeen": "2026-04-30T20:17:52.761Z"
+      "firstSeen": "2026-06-05T21:40:35.746Z"
     },
     {
       "address": "230 La Terra Court",
@@ -1781,7 +1702,7 @@
       "existingSF": null,
       "proposedSF": null,
       "sfNote": "",
-      "dateFiled": "2025-02-26",
+      "dateFiled": "2026-02-26",
       "status": "Pending",
       "planner": "Samina Merchant",
       "category": "Addition",
@@ -2736,35 +2657,6 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "15521 Union Avenue",
-      "appNumber": "U-26-005",
-      "appType": "Conditional Use Permit Application",
-      "description": "Consider a Request for Approval for a Conditional Use Permit Application for a Bank on Property Zoned C-1. APN 523-41-035. Categorically Exempt Pursuant to CEQA Guidelines Section 15301: Existing Facilities.",
-      "overview": "Commercial conditional use permit — minimal construction scope.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-03-31",
-      "status": "Approved by Planning Commission on 5/13/2026. Appeal period ends on 5/26/2026 at 5:00 PM.",
-      "planner": "Erin Walters",
-      "category": "Addition",
-      "scope": "Commercial CUP",
-      "zoning": "C-1",
-      "apn": "523-41-035",
-      "pageUrl": "https://www.losgatosca.gov/2391/U",
-      "docs": [
-        {
-          "name": "Development Plans - 15521 Union Ave. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45241/Development-Plans---15521-Union-Ave-PDF"
-        },
-        {
-          "name": "Letter of Justification - 15521 Union Ave. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45242/Letter-of-Justification---15521-Union-Ave-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
       "address": "575 University Avenue",
       "appNumber": "U-24-003",
       "appType": "Conditional Use Permit Application",
@@ -2808,7 +2700,7 @@
       "sfNote": "",
       "dateFiled": "2024-09-23",
       "status": "Pending",
-      "planner": "Sean Mullin",
+      "planner": "Jocelyn Shoopman",
       "category": "New Construction",
       "scope": "Multi-Family (68 Units)",
       "zoning": "CM",
@@ -2900,26 +2792,6 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "17400 Wedgewood Avenue: La Rinconada Golf Course Project - See 17445 Zena Avenue",
-      "appNumber": "",
-      "appType": "",
-      "description": "",
-      "overview": "Residential addition/alteration project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "",
-      "status": "Pending",
-      "planner": "",
-      "category": "Addition",
-      "scope": "General",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://www.losgatosca.gov/2393/W",
-      "docs": [],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
       "address": "141 Wheeler Avenue",
       "appNumber": "M-24-018",
       "appType": "Subdivision Application",
@@ -2981,6 +2853,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-05T18:02:53.317Z",
+  "scrapedAt": "2026-06-05T21:40:35.746Z",
   "errors": []
 }
