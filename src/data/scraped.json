@@ -2068,75 +2068,6 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "10, 30, 50, and 70 Reservoir Road",
-      "appNumber": "M-25-003",
-      "appType": "Architecture and Site Application S-22-049                                          Subdivision Application",
-      "description": "Consider a Request for Approval for the Lot Merger of Three Parcels (30, 50 and 70 Reservoir Road) into One Parcel, Demolition of Two Accessory Dwelling Units (70 Reservoir Road),Construction of a New Single-Family Residence (70 Reservoir Road), Site Improvements Requiring a Grading Permit, and Removal of Large Protected Trees on Properties Zoned R-1:20. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction or Conversion of Small Structures. APN 529-29-063, -064, -065 and -066.",
-      "overview": "Planning project at 10, 30, 50, and 70 Reservoir Road.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2022-12-05",
-      "status": "Approved by Development Review Committee on 05/26/2026. Appeal Period ends on 6/5/2026 at 1:00 PM.",
-      "planner": "Erin Walters",
-      "category": "New Construction",
-      "scope": "Lot Merger",
-      "zoning": "R-1:20",
-      "apn": "529-29-063, -064, -065",
-      "pageUrl": "https://www.losgatosca.gov/2382/R",
-      "docs": [
-        {
-          "name": "Applicants Outreach - 10, 30, 50 and 70 Reservoir Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45966/Applicants-Outreach---10-30-50-and-70-Reservoir-Rd-PDF"
-        },
-        {
-          "name": "Approved AMMR Letter from Fire - 70 Reservoir Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42714/Approved-AMMR-Letter-from-Fire---70-Reservoir-Rd-PDF"
-        },
-        {
-          "name": "Arborist Report - 70 Reservoir Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45964/Arborist-Report---70-Reservoir-Rd-PDF"
-        },
-        {
-          "name": "Consulting Architect Report - 70 Reservoir Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45965/Consulting-Architect-Report---70-Reservoir-Rd-PDF"
-        },
-        {
-          "name": "Demolition Letter - 70 Reservoir Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42712/Demolition-Letter---70-Reservoir-Rd-PDF"
-        },
-        {
-          "name": "Development Plans - 10, 30, 50 and 70 Reservoir Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42713/Development-Plans---10-30-50-and-70-Reservoir-Rd-PDF"
-        },
-        {
-          "name": "Draft Conditions of Approval - 70 Reservoir Rd  (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45967/Draft-Conditions-of-Approval---70-Reservoir-Rd--PDF"
-        },
-        {
-          "name": "Draft Findings - 70 Reservoir Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45968/Draft-Findings---70-Reservoir-Rd-PDF"
-        },
-        {
-          "name": "Letter of Justification - 10, 30, 50 and 70 Reservoir Road (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42715/Letter-of-Justification---10-30-50-and-70-Reservoir-Road-PDF"
-        },
-        {
-          "name": "Materials and Color Board - 70 Reservoir Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42716/Materials-and-Color-Board---70-Reservoir-Rd-PDF"
-        },
-        {
-          "name": "Response to Architect - 70 Reservoir Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45963/Response-to-Architect---70-Reservoir-Rd-PDF"
-        },
-        {
-          "name": "Site Photos - 70 Reservoir Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42717/Site-Photos---70-Reservoir-Rd-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
       "address": "39 Reservoir Road",
       "appNumber": "S-24-010",
       "appType": "Architecture and Site Application",
@@ -2853,6 +2784,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-05T21:40:35.746Z",
+  "scrapedAt": "2026-06-06T04:13:27.171Z",
   "errors": []
 }
