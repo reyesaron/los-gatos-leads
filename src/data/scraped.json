@@ -1,76 +1,6 @@
 {
   "projects": [
     {
-      "address": "52 Ashler Avenue",
-      "appNumber": "MR-24-009",
-      "appType": "Minor Residential Development Application",
-      "description": "Consider a Request for Approval for Construction of a Second-Story Addition Exceeding 100 Square Feet and Exterior Alterations to an Existing Pre-1941 Single-Family Residence on Property Zoned R-1D. APN 410-14-048. Categorically Exempt Pursuant to the California Environmental Quality Act (CEQA) Guidelines, Section 15301: Existing Facilities.",
-      "overview": "Second-story addition to existing home.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2024-05-02",
-      "status": "Pending",
-      "planner": "Maria Chavarin",
-      "category": "Addition",
-      "scope": "Second-Story Addition",
-      "zoning": "R-1D",
-      "apn": "410-14-048",
-      "pageUrl": "https://www.losgatosca.gov/2216/Pending-Planning-Projects",
-      "docs": [
-        {
-          "name": "Consulting Architect Report - 52 Ashler Avenue (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/39649/Consulting-Architect-Report---52-Ashler-Avenue-PDF"
-        },
-        {
-          "name": "Development Plans - 52 Ashler Avenue (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/38629/Development-Plans---52-Ashler-Avenue-PDF"
-        },
-        {
-          "name": "Response Letter to the Direction of the Historic Preservation Committee - 52 Ashler Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/38719/Response-Letter-to-the-Direction-of-the-Historic-Preservation-Committee---52-Ashler-Ave-PDF"
-        },
-        {
-          "name": "Response Letter to the Recommendations of the Consulting Architect - 52 Ashler Avenue (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/40114/Response-Letter-to-the-Recommendations-of-the-Consulting-Architect---52-Ashler-Avenue-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
-      "address": "185 Bacigalupi Drive",
-      "appNumber": "",
-      "appType": "Two-Unit Housing Development TUD24-003",
-      "description": "Consider a Request for Approval for a Two-Unit Housing Development on Property Zoned R-1:10. APN: 527-31-029. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
-      "overview": "Two new units under SB 9 — ministerial project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2024-05-23",
-      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
-      "planner": "Maria Chavarin",
-      "category": "New Construction",
-      "scope": "Two-Unit Development (SB 9)",
-      "zoning": "R-1:10",
-      "apn": "527-31-029",
-      "pageUrl": "https://www.losgatosca.gov/2370/B",
-      "docs": [
-        {
-          "name": "Development Plans - 185 Bacigalupi Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/38742/Development-Plans---185-Bacigalupi-Drive-PDF"
-        },
-        {
-          "name": "Project Description - 185 Bacigalupi Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/38743/Project-Description---185-Bacigalupi-Drive-PDF"
-        },
-        {
-          "name": "Site Photos - 185 Bacigalupi Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/38744/Site-Photos---185-Bacigalupi-Drive-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
       "address": "220 Belgatos Road",
       "appNumber": "S-25-012 through -024, Subdivision Application M-25-002, and General Plan Amendment Application GP-24-002",
       "appType": "Architecture and Site Applications",
@@ -679,31 +609,6 @@
         {
           "name": "Revised Development Plans - 121 College Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44034/Revised-Development-Plans---121-College-Ave-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
-      "address": "17140 Crescent Drive",
-      "appNumber": "S-24-035",
-      "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Approval for Construction of a Detached Accessory Building Not Exceeding 1,000 Square Feet, and Site Improvements Requiring a Grading Permit on property zoned HR-1. APN 532-39-012.  Categorically Exempt Pursuant to CEQA Guidelines, Section 15303: New Construction or Conversion of Small Structures..",
-      "overview": "Residential addition/alteration project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2024-07-01",
-      "status": "Pending",
-      "planner": "Maria Chavarin",
-      "category": "Addition",
-      "scope": "Accessory Structures (>1,000 SF)",
-      "zoning": "HR-1",
-      "apn": "532-39-012",
-      "pageUrl": "https://www.losgatosca.gov/2371/C",
-      "docs": [
-        {
-          "name": "Development Plans - 17140 Crescent Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/39083/Development-Plans---17140-Crescent-Drive-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -1532,43 +1437,6 @@
         {
           "name": "Summary of Neighborhood Outreach - 16484 S Kennedy Road - Parcel 2",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44490/Summary-of-Neighborhood-Outreach---16484-S-Kennedy-Road---Parcel-2"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
-      "address": "16837 Kennedy Road",
-      "appNumber": "",
-      "appType": "Urban Lot Split Application ULS25-006",
-      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) permit for an Urban Lot Split of One Lot into Two Lots on Property Zoned R-1:8. APN 532-07-083. Categorically Exempt pursuant to CEQA Guidelines Section 15315: Minor Land Divisions.",
-      "overview": "Lot split — watch for future development.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2025-07-22",
-      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
-      "planner": "Maria Chavarin",
-      "category": "Subdivision",
-      "scope": "Urban Lot Split (SB 9)",
-      "zoning": "R-1:8",
-      "apn": "532-07-083",
-      "pageUrl": "https://www.losgatosca.gov/2377/K",
-      "docs": [
-        {
-          "name": "Photos - 16837 Kennedy Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42963/Photos---16837-Kennedy-Rd-PDF"
-        },
-        {
-          "name": "Plans - 16837 Kennedy Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42964/Plans---16837-Kennedy-Rd-PDF"
-        },
-        {
-          "name": "Project Description - 16837 Kennedy Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43544/Project-Description---16837-Kennedy-Rd-PDF"
-        },
-        {
-          "name": "Topogrophic Map - 16837 Kennedy Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43545/Topogrophic-Map---16837-Kennedy-Rd-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -2784,6 +2652,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-08T12:40:47.543Z",
+  "scrapedAt": "2026-06-08T18:30:38.719Z",
   "errors": []
 }
