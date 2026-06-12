@@ -79,8 +79,16 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42062/Lot-9-Development-Plans---220-Belgatos-Road-PDF"
         },
         {
+          "name": "Objective Standard Compliance and Waiver Request - 220 Belgatos Road (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46170/Objective-Standard-Compliance-and-Waiver-Request---220-Belgatos-Road-PDF"
+        },
+        {
           "name": "Project Description - 220 Belgatos Road (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42067/Project-Description---220-Belgatos-Road-PDF"
+        },
+        {
+          "name": "Response Letter - 220 Belgatos Road (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46169/Response-Letter---220-Belgatos-Road-PDF"
         },
         {
           "name": "Site Photos - 220 Belgatos Road (PDF)",
@@ -828,6 +836,14 @@
         {
           "name": "Additional Educational Background - 16769 Farley Rd. (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/39578/Additional-Educational-Background---16769-Farley-Rd-PDF"
+        },
+        {
+          "name": "Appeal 1 - 16769 Farley Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46166/Appeal-1---16769-Farley-Rd-PDF"
+        },
+        {
+          "name": "Appeal 2 - 16769 Farley Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46167/Appeal-2---16769-Farley-Rd-PDF"
         },
         {
           "name": "Neighborhood Outreach - 16769 Farley Rd. (PDF)",
@@ -2623,6 +2639,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-12T18:14:08.874Z",
+  "scrapedAt": "2026-06-12T21:57:14.507Z",
   "errors": []
 }
