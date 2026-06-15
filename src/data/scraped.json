@@ -1553,6 +1553,43 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
+      "address": "53 Los Gatos-Saratoga Road",
+      "appNumber": "PD-26-001",
+      "appType": "Planned Development Application",
+      "description": "Consider a Request for Approval to Modify Planned Development Ordinance 2158 to add a secondary ground sign on Property Zoned CH:PD. Located at 53 Los Gatos-Saratoga Rd. APN 529-23-007. This Request for Modification of a Planned Development Ordinance is not Considered a Project Pursuant to the California Environmental Quality Act.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-06-11",
+      "status": "Pending",
+      "planner": "Maria Chavarin",
+      "category": "Addition",
+      "scope": "General",
+      "zoning": "CH:PD",
+      "apn": "529-23-007",
+      "pageUrl": "https://www.losgatosca.gov/2378/L",
+      "docs": [
+        {
+          "name": "Development Plans - 53 Los Gatos-Saratoga Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46195/Development-Plans---53-Los-Gatos-Saratoga-Rd-PDF"
+        },
+        {
+          "name": "Letter of Justification - 53 Los Gatos-Saratoga Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46196/Letter-of-Justification---53-Los-Gatos-Saratoga-Rd-PDF"
+        },
+        {
+          "name": "Ordinance 2158 - 53 Los Gatos-Saratoga Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46197/Ordinance-2158---53-Los-Gatos-Saratoga-Rd-PDF"
+        },
+        {
+          "name": "Project Description - 53 Los Gatos-Saratoga Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46198/Project-Description---53-Los-Gatos-Saratoga-Rd-PDF"
+        }
+      ],
+      "firstSeen": "2026-06-15T19:52:51.953Z"
+    },
+    {
       "address": "16619 Marchmont Drive",
       "appNumber": "",
       "appType": "Two-Unit Housing Development TUD25-002",
@@ -2639,6 +2676,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-15T14:30:59.625Z",
+  "scrapedAt": "2026-06-15T19:52:51.953Z",
   "errors": []
 }
