@@ -1863,7 +1863,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2024-09-13",
-      "status": "Planning Commission recommended approval to the Town Council on 05/27/2026. This item will be going to a Town Council Special meeting on 6/16/2026 at 5:00 PM.",
+      "status": "Planning Commission recommended approval to the Town Council on 05/27/2026. This item was scheduled for a Special Meeting on 6/16/2026, but has been CANCELLED. New meeting date TBD.",
       "planner": "Erin Walters",
       "category": "New Construction",
       "scope": "Multi-Family (138 Units)",
@@ -2676,6 +2676,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-15T19:52:51.953Z",
+  "scrapedAt": "2026-06-15T22:24:25.459Z",
   "errors": []
 }
