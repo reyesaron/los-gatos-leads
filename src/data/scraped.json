@@ -124,6 +124,10 @@
       "pageUrl": "https://www.losgatosca.gov/2370/B",
       "docs": [
         {
+          "name": "Appeal - 127 Belhaven Drive",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46224/Appeal---127-Belhaven-Drive"
+        },
+        {
           "name": "Revised Development Plans - 127 Belhaven Drive (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44708/Revised-Development-Plans---127-Belhaven-Drive-PDF"
         }
@@ -319,6 +323,39 @@
         }
       ],
       "firstSeen": "2026-05-20T22:02:58.087Z"
+    },
+    {
+      "address": "226 Caldwell Avenue",
+      "appNumber": "PHST-26-014",
+      "appType": "Property Historic Study Application",
+      "description": "Consider an Appeal of a Community Development Director Decision to Deny a Request to Remove a Pre-1941 Property from the Historic Resources Inventory for Property Zoned R-1D. APN 529-20-031. Exempt Pursuant to CEQA Guidelines, Section 15061 (b)(3).",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-06-08",
+      "status": "An appeal was received on 6/8/2026. This project will be reviewed by the Planning Commission on a date yet to be determined.",
+      "planner": "Suray Nathan",
+      "category": "Addition",
+      "scope": "General",
+      "zoning": "R-1D",
+      "apn": "529-20-031",
+      "pageUrl": "https://www.losgatosca.gov/2371/C",
+      "docs": [
+        {
+          "name": "Appeal - 226 Caldwell Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46232/Appeal---226-Caldwell-Ave-PDF"
+        },
+        {
+          "name": "Historic Report - 226 Caldwell Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46230/Historic-Report---226-Caldwell-Ave-PDF"
+        },
+        {
+          "name": "Photos  - 226 Caldwell Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46231/Photos----226-Caldwell-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-06-17T18:27:27.698Z"
     },
     {
       "address": "16080 Camino Del Cerro",
@@ -829,7 +866,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2024-09-03",
-      "status": "Appeals were received on June 1, 2026. This item is scheduled for Town Council on June 16, 2026, at 7:00 PM.",
+      "status": "Appeals were received on June 1, 2026. This item went to Town Council on 6/16/2026 and a request to continue to a date certain was granted. This item will be heard by the Council on 8/18/2026 at 7:00 PM.",
       "planner": "Jocelyn Shoopman",
       "category": "Addition",
       "scope": "Commercial CUP",
@@ -1908,6 +1945,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/39824/Site-Photographs---14789-Oka-Rd-PDF"
         },
         {
+          "name": "Verbatim Minutes - May 27, 2026, Planning Commission",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46225/Verbatim-Minutes---May-27-2026-Planning-Commission"
+        },
+        {
           "name": "Visual Simulations - 14789 Oka Rd (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/43336/Visual-Simulations---14789-Oka-Rd-PDF"
         }
@@ -2687,6 +2728,43 @@
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
+    },
+    {
+      "address": "142 Wheeler Avenue",
+      "appNumber": "PHST-26-011",
+      "appType": "Request for Review Application",
+      "description": "Consider a Request to Remove a Pre-1941 Property from the Historic Resources Inventory for Property Zoned R-1:10. APN 532-37-034. Exempt Pursuant to CEQA Guidelines, Section 15061 (b)(3).",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-03-31",
+      "status": "An appeal of the Community Development Director was received on 6/2/2026. This project will be heard by the Planning Commission on 6/24/2026.",
+      "planner": "Erin Walters",
+      "category": "Addition",
+      "scope": "General",
+      "zoning": "R-1:10",
+      "apn": "532-37-034",
+      "pageUrl": "https://www.losgatosca.gov/2393/W",
+      "docs": [
+        {
+          "name": "Applicant Appeal - 142 Wheeler Ave. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46229/Applicant-Appeal---142-Wheeler-Ave-PDF"
+        },
+        {
+          "name": "HPC Action Letter, April 22, 2026 - 142 Wheeler Ave. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46226/HPC-Action-Letter-April-22-2026---142-Wheeler-Ave-PDF"
+        },
+        {
+          "name": "HPC Action Letter, May 27, 2026 - 142 Wheeler Ave. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46227/HPC-Action-Letter-May-27-2026---142-Wheeler-Ave-PDF"
+        },
+        {
+          "name": "Supplemental information from appellant - 142 Wheeler Ave. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46228/Supplemental-information-from-appellant---142-Wheeler-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-06-17T18:27:27.698Z"
     }
   ],
   "scrapedLetters": [
@@ -2717,6 +2795,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-17T12:23:02.643Z",
+  "scrapedAt": "2026-06-17T18:27:27.698Z",
   "errors": []
 }
