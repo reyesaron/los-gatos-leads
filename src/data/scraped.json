@@ -706,12 +706,24 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45182/Applicant-Response-to-Consulting-Architect-Report---15575-El-Gato-Ln-PDF"
         },
         {
+          "name": "Consulting Arborist Letter - 15575 El Gato Lane",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46272/Consulting-Arborist-Letter---15575-El-Gato-Lane"
+        },
+        {
           "name": "Consulting Architect Letter - 15575 El Gato Lane",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42762/Consulting-Architect-Letter---15575-El-Gato-Lane"
         },
         {
           "name": "Letter of Justification - 15575 El Gato Ln",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/42570/Letter-of-Justification---15575-El-Gato-Ln"
+        },
+        {
+          "name": "Parking Exception Request - 15575 El Gato Ln (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46256/Parking-Exception-Request---15575-El-Gato-Ln-PDF"
+        },
+        {
+          "name": "Response to Consulting Arborist Report - 15575 El Gato Ln (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46255/Response-to-Consulting-Arborist-Report---15575-El-Gato-Ln-PDF"
         },
         {
           "name": "Revised Project Description Letter - 15575 El Gato Ln (PDF)",
@@ -1534,20 +1546,20 @@
       "pageUrl": "https://www.losgatosca.gov/2378/L",
       "docs": [
         {
-          "name": "Response to Engineering Comments, 4-27-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45761/Response-to-Engineering-Comments-4-27-26-PDF"
+          "name": "Response to Engineering Comments, 6/17-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45761/Response-to-Engineering-Comments-617-26-PDF"
         },
         {
-          "name": "Response to Fire Comments, 4-27-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45762/Response-to-Fire-Comments-4-27-26-PDF"
+          "name": "Response to Fire Comments, 6-17-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45762/Response-to-Fire-Comments-6-17-26-PDF"
         },
         {
-          "name": "Response to Planning Comments, 4-27-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45763/Response-to-Planning-Comments-4-27-26-PDF"
+          "name": "Response to Planning Comments, 6-17-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45763/Response-to-Planning-Comments-6-17-26-PDF"
         },
         {
-          "name": "Revised Plans, 4-27-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45764/Revised-Plans-4-27-26-PDF"
+          "name": "Revised Plans, 06-17-2026 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45764/Revised-Plans-06-17-2026-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -2754,6 +2766,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-18T22:21:38.058Z",
+  "scrapedAt": "2026-06-19T05:12:32.625Z",
   "errors": []
 }
