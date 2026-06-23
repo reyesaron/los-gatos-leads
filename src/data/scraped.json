@@ -1360,7 +1360,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-02-10",
-      "status": "Development Review Committee - 6/23/2026",
+      "status": "Approved by Development Review Committee on 6/23/2026. Appeal Period ends on 7/6/2026 at 4:00 PM.",
       "planner": "Samina Merchant",
       "category": "Subdivision",
       "scope": "Lot Line Adjustment",
@@ -1389,7 +1389,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-02-10",
-      "status": "Development Review Committee - 6/23/2026",
+      "status": "Approved by Development Review Committee on 6/23/2026. Appeal Period ends on 7/6/2026 at 4:00 PM.",
       "planner": "Samina Merchant",
       "category": "New Construction",
       "scope": "Custom Home (Demo + New Build)",
@@ -1434,7 +1434,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-02-10",
-      "status": "Development Review Committee - 6/23/2026",
+      "status": "Approved by Development Review Committee on 6/23/2026. Appeal Period ends on 7/6/2026 at 4:00 PM.",
       "planner": "Samina Merchant",
       "category": "New Construction",
       "scope": "Custom Home (Demo + New Build)",
@@ -1508,7 +1508,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-12-22",
-      "status": "Pending",
+      "status": "Development Review Committee - 6/30/2026.",
       "planner": "Jocelyn Shoopman",
       "category": "New Construction",
       "scope": "Custom Home (Vacant Lot)",
@@ -2766,6 +2766,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-23T15:18:42.598Z",
+  "scrapedAt": "2026-06-23T18:06:28.400Z",
   "errors": []
 }
