@@ -536,7 +536,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-01-14",
-      "status": "Planning Commission heard this item on 4/8/2026. It was continued to a date certain of June 24, 2026 at 7:00 PM.",
+      "status": "Approved by the Planning Commission on 6/24/2026. Appeal period ends on 7/6/2026 at 4:00 PM.",
       "planner": "Erin Walters",
       "category": "New Construction",
       "scope": "Custom Home (Demo + New Build)",
@@ -2624,7 +2624,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-10-27",
-      "status": "Item heard by Planning Commission on 5/13/2026. Continued to a date certain of 6/24/2026 at 7:00 PM.",
+      "status": "Approved by the Planning Commission on 6/24/2026. Appeal period ends on 7/6/2026 at 4:00 PM.",
       "planner": "Ryan Safty",
       "category": "New Construction",
       "scope": "Custom Home (Vacant Lot)",
@@ -2710,7 +2710,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-03-31",
-      "status": "An appeal of the Community Development Director was received on 6/2/2026. This project will be heard by the Planning Commission on 6/24/2026.",
+      "status": "Approved by the Planning Commission on 6/24/2026. Appeal period ends on 7/6/2026 at 4:00 PM.",
       "planner": "Erin Walters",
       "category": "Addition",
       "scope": "General",
@@ -2766,6 +2766,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-25T14:49:19.799Z",
+  "scrapedAt": "2026-06-25T18:19:49.674Z",
   "errors": []
 }
