@@ -1140,6 +1140,10 @@
         {
           "name": "Project Description - 94 Hernandez Avenue (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/35722/Project-Description---94-Hernandez-Avenue-PDF"
+        },
+        {
+          "name": "Town Consulting Architect Report - 94 Hernandez (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46310/Town-Consulting-Architect-Report---94-Hernandez-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -1508,7 +1512,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-12-22",
-      "status": "Development Review Committee - 6/30/2026.",
+      "status": "Approved by Development Review Committee on 6/30/2026. Appeal Period ends on 7/10/2026 at 1:00 PM.",
       "planner": "Jocelyn Shoopman",
       "category": "New Construction",
       "scope": "Custom Home (Vacant Lot)",
@@ -2782,6 +2786,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-30T14:38:16.381Z",
+  "scrapedAt": "2026-06-30T18:05:43.993Z",
   "errors": []
 }
