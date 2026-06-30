@@ -2324,6 +2324,14 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45794/Visual-Simulations---101-S-Santa-Cruz-Ave-PDF"
         },
         {
+          "name": "Development Plans - 15470 Santella Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46307/Development-Plans---15470-Santella-Dr-PDF"
+        },
+        {
+          "name": "Letter of Justification - 15470 Santella Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46308/Letter-of-Justification---15470-Santella-Dr-PDF"
+        },
+        {
           "name": "Project Description - 15710 Shady Ln (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45234/Project-Description---15710-Shady-Ln-PDF"
         },
@@ -2774,6 +2782,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-30T11:16:30.180Z",
+  "scrapedAt": "2026-06-30T14:38:16.381Z",
   "errors": []
 }
