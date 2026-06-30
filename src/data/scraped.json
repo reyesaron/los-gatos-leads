@@ -190,6 +190,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46081/Response-to-Consulting-Architect---695-Bicknell-Rd-PDF"
         },
         {
+          "name": "Town Arborist Feedback (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46312/Town-Arborist-Feedback-PDF"
+        },
+        {
           "name": "Town Consulting Architect Report - 695 Bicknell Road",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44476/Town-Consulting-Architect-Report---695-Bicknell-Road"
         }
@@ -2786,6 +2790,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-06-30T18:05:43.993Z",
+  "scrapedAt": "2026-06-30T21:43:19.760Z",
   "errors": []
 }
