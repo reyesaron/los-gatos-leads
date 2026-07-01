@@ -169,7 +169,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-01-27",
-      "status": "Project is approved. Appeal period ends on 7/6/2026 at 4:00 PM.",
+      "status": "An appeal was received on 7/1/2026. The period ends on 7/6/2026 at 4:00 PM. This item will be scheduled for a future Planning Commission Meeting.",
       "planner": "Samina Merchant",
       "category": "Addition",
       "scope": "Second-Story Addition",
@@ -177,6 +177,10 @@
       "apn": "407-03-006",
       "pageUrl": "https://www.losgatosca.gov/2370/B",
       "docs": [
+        {
+          "name": "Appeal - 695 Bicknell - 07-01-26_Redacted",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46394/Appeal---695-Bicknell---07-01-26_Redacted"
+        },
         {
           "name": "Draft Conditions of Approval - 695 Bicknell (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46316/Draft-Conditions-of-Approval---695-Bicknell-PDF"
@@ -2827,6 +2831,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-01T18:05:19.926Z",
+  "scrapedAt": "2026-07-01T21:43:16.612Z",
   "errors": []
 }
