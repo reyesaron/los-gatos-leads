@@ -519,7 +519,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2024-12-09",
-      "status": "Pending",
+      "status": "An appeal was received on 7/1/2026. Appeal period ends on 7/9/2026 at 4:00 PM. This will be scheduled for a future Planning Commission meeting.",
       "planner": "Maria Chavarin",
       "category": "Addition",
       "scope": "Second-Story Addition",
@@ -527,6 +527,10 @@
       "apn": "424-20-014",
       "pageUrl": "https://www.losgatosca.gov/2371/C",
       "docs": [
+        {
+          "name": "Appeal - 16717 Chirco Drive - Received 07-01-26_Redacted",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46397/Appeal---16717-Chirco-Drive---Received-07-01-26_Redacted"
+        },
         {
           "name": "Response to Architect Recommendations, 4-29-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45985/Response-to-Architect-Recommendations-4-29-26-PDF"
@@ -2831,6 +2835,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-01T21:43:16.612Z",
+  "scrapedAt": "2026-07-02T04:13:48.206Z",
   "errors": []
 }
