@@ -510,6 +510,31 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
+      "address": "66 Chester Street",
+      "appNumber": "MR-26-008",
+      "appType": "Minor Residential Application",
+      "description": "Consider a Request for Approval to Construct a Second-Story Addition Exceeding 100 Square Feet on Property Zoned R-1D. APN 529-08-013. Categorically Exempt pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
+      "overview": "Second-story addition to existing home.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-06-18",
+      "status": "Pending",
+      "planner": "Maria Chavarin",
+      "category": "Addition",
+      "scope": "Second-Story Addition",
+      "zoning": "R-1D",
+      "apn": "529-08-013",
+      "pageUrl": "https://www.losgatosca.gov/2371/C",
+      "docs": [
+        {
+          "name": "Development Plans - 66 Chester Street (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46400/Development-Plans---66-Chester-Street-PDF"
+        }
+      ],
+      "firstSeen": "2026-07-03T04:00:20.163Z"
+    },
+    {
       "address": "16717 Chirco Drive",
       "appNumber": "MR-24-018",
       "appType": "Minor Residential Application",
@@ -2835,6 +2860,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-02T21:17:49.319Z",
+  "scrapedAt": "2026-07-03T04:00:20.163Z",
   "errors": []
 }
