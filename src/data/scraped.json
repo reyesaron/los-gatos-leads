@@ -513,7 +513,7 @@
       "address": "66 Chester Street",
       "appNumber": "MR-26-008",
       "appType": "Minor Residential Application",
-      "description": "Consider a Request for Approval to Construct a Second-Story Addition Exceeding 100 Square Feet on Property Zoned R-1D. APN 529-08-013. Categorically Exempt pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
+      "description": "Consider a Request for Approval to Construct a New Second-Story Addition on Property Zoned R-1D. APN 529-08-013. Categorically Exempt pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
       "overview": "Second-story addition to existing home.",
       "existingSF": null,
       "proposedSF": null,
@@ -1323,20 +1323,16 @@
       "pageUrl": "https://www.losgatosca.gov/2376/J",
       "docs": [
         {
-          "name": "Development Plans - 100 Jamie Court (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45532/Development-Plans---100-Jamie-Court-PDF"
+          "name": "Letter of Justification - 100 Jamie Court (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46403/Letter-of-Justification---100-Jamie-Court-PDF"
         },
         {
-          "name": "How to Read Your Neighborhood - 100 Jamie Court (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45533/How-to-Read-Your-Neighborhood---100-Jamie-Court-PDF"
+          "name": "Response to Comments - 100 Jamie Court (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46404/Response-to-Comments---100-Jamie-Court-PDF"
         },
         {
-          "name": "Photos - 100 Jamie Court (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45534/Photos---100-Jamie-Court-PDF"
-        },
-        {
-          "name": "Structural Calculations - 100 Jamie Court (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45535/Structural-Calculations---100-Jamie-Court-PDF"
+          "name": "Revised Development Plans - 100 Jamie Court (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45532/Revised-Development-Plans---100-Jamie-Court-PDF"
         }
       ],
       "firstSeen": "2026-04-24T22:27:14.612Z"
@@ -2860,6 +2856,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-06T12:11:35.837Z",
+  "scrapedAt": "2026-07-06T18:16:47.072Z",
   "errors": []
 }
