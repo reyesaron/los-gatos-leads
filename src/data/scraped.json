@@ -2714,7 +2714,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-10-27",
-      "status": "Approved by the Planning Commission on 6/24/2026. Appeal period ends on 7/6/2026 at 4:00 PM.",
+      "status": "Approved by Planning Commission on 6/24/2026. Appeal period ends on 7/6/2026 at 4:00 PM.",
       "planner": "Ryan Safty",
       "category": "New Construction",
       "scope": "Custom Home (Vacant Lot)",
@@ -2856,6 +2856,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-06T18:16:47.072Z",
+  "scrapedAt": "2026-07-06T21:43:00.187Z",
   "errors": []
 }
