@@ -128,6 +128,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46224/Appeal---127-Belhaven-Drive"
         },
         {
+          "name": "Letter of Justification - 127 Belhaven Drive (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46521/Letter-of-Justification---127-Belhaven-Drive-PDF"
+        },
+        {
           "name": "Revised Development Plans - 127 Belhaven Drive (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44708/Revised-Development-Plans---127-Belhaven-Drive-PDF"
         }
@@ -2643,6 +2647,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-08T17:46:54.916Z",
+  "scrapedAt": "2026-07-08T21:17:28.994Z",
   "errors": []
 }
