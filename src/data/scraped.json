@@ -215,7 +215,7 @@
     {
       "address": "101 Blossom Hill Road",
       "appNumber": "M-24-019",
-      "appType": "Architecture and Site Application S-23-064                                   Conditional Use Permit Application U-24-021                                                 Subdivision Application",
+      "appType": "Architecture and Site Application S-23-064                                   Conditional Use Permit Application U-24-021                                               Subdivision Application",
       "description": "Consider a Request for Approval for Demolition of Existing Commercial Structures, Construction of a Multi-Family Development (63 Units), a Conditional Use Permit for a Mixed Used Development, a Condominium Vesting Tentative Map, Site Improvements Requiring a Grading Permit, and Removal of Large Protected Trees, Under Senate Bill 330 (SB 330) on Property Zoned O. APN 529-11-036. CEQA Review is Pending.",
       "overview": "63-unit multi-family development. New construction.",
       "existingSF": null,
@@ -544,7 +544,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2024-12-09",
-      "status": "An appeal was received on 7/1/2026. Appeal period ends on 7/9/2026 at 4:00 PM. This will be scheduled for a future Planning Commission meeting.",
+      "status": "An appeal was received on 7/1/2026. Appeal period ends on 7/9/2026 at 4:00 PM. This project will go to Planning Commission on 8/12/2026.",
       "planner": "Maria Chavarin",
       "category": "Addition",
       "scope": "Second-Story Addition",
@@ -1612,8 +1612,8 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/41484/Development-Plans---0-Mireval-Rd-532-25-027"
         },
         {
-          "name": "Project Description and Letter of Justification - 0 Mireval Rd (532-25-027)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/41485/Project-Description-and-Letter-of-Justification---0-Mireval-Rd-532-25-027"
+          "name": "Letter of Justification - 0 Mireval Rd (532-25-027)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/41485/Letter-of-Justification---0-Mireval-Rd-532-25-027"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -2643,6 +2643,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-08T14:33:28.084Z",
+  "scrapedAt": "2026-07-08T17:46:54.916Z",
   "errors": []
 }
