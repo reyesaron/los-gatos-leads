@@ -1986,12 +1986,32 @@
       "pageUrl": "https://www.losgatosca.gov/2381/P",
       "docs": [
         {
+          "name": "Applicants Arborist Report - 815 Pollard Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46532/Applicants-Arborist-Report---815-Pollard-Rd-PDF"
+        },
+        {
+          "name": "Building Comment Letter - 815 Pollard Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46533/Building-Comment-Letter---815-Pollard-Rd-PDF"
+        },
+        {
           "name": "Development Plans, Part 1 - 815 Pollard Rd. (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46219/Development-Plans-Part-1---815-Pollard-Rd-PDF"
         },
         {
           "name": "Development Plans, Part 2 - 815 Pollard Rd. (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46220/Development-Plans-Part-2---815-Pollard-Rd-PDF"
+        },
+        {
+          "name": "Engineering Comment Letter - 815 Pollard Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46534/Engineering-Comment-Letter---815-Pollard-Rd-PDF"
+        },
+        {
+          "name": "Fire Comment Letter - 815 Pollard Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46535/Fire-Comment-Letter---815-Pollard-Rd-PDF"
+        },
+        {
+          "name": "Planning Comment Letter - 815 Pollard Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46536/Planning-Comment-Letter---815-Pollard-Rd-PDF"
         },
         {
           "name": "Project Description and Letter of Justification - 815 Pollard Rd. (PDF)",
@@ -2647,6 +2667,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-15T17:25:22.688Z",
+  "scrapedAt": "2026-07-15T21:09:50.181Z",
   "errors": []
 }
