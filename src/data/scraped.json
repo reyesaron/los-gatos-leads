@@ -1392,6 +1392,39 @@
       "firstSeen": "2026-06-05T21:40:35.746Z"
     },
     {
+      "address": "14761 La Rinconada Drive",
+      "appNumber": "S-26-018",
+      "appType": "Architecture and Site Application",
+      "description": "Consider a Request for Approval to Demolish an Existing Single-Family Residence and Construct a New Single-Family Residence on Property Zoned R-1:12. APN 409-30-036. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction or Conversion of Small Structures.",
+      "overview": "Custom home — full demo + new build. Ground-up construction opportunity.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-07-15",
+      "status": "Pending",
+      "planner": "Samina Merchant",
+      "category": "New Construction",
+      "scope": "Custom Home (Demo + New Build)",
+      "zoning": "R-1:12",
+      "apn": "409-30-036",
+      "pageUrl": "https://www.losgatosca.gov/2378/L",
+      "docs": [
+        {
+          "name": "Development Plans, 07-15-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46577/Development-Plans-07-15-26-PDF"
+        },
+        {
+          "name": "Existing Site Photos, 07-15-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46578/Existing-Site-Photos-07-15-26-PDF"
+        },
+        {
+          "name": "Letter of Justification, 07-15-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46579/Letter-of-Justification-07-15-26-PDF"
+        }
+      ],
+      "firstSeen": "2026-07-16T03:26:16.428Z"
+    },
+    {
       "address": "14777 La Rinconada Drive and 17445 Zena Avenue",
       "appNumber": "M-26-006",
       "appType": "Lot Line Adjustment Application",
@@ -1579,6 +1612,18 @@
       "pageUrl": "https://www.losgatosca.gov/2379/M",
       "docs": [
         {
+          "name": "Bella Vista Alternative Site Analysis 02-26-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46541/Bella-Vista-Alternative-Site-Analysis-02-26-26-PDF"
+        },
+        {
+          "name": "Bella Vista Coverage Maps 02-26-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46542/Bella-Vista-Coverage-Maps-02-26-26-PDF"
+        },
+        {
+          "name": "Development Plans_42 Miles Avenue",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/44591/Development-Plans_42-Miles-Avenue"
+        },
+        {
           "name": "Letter of Justification_42 Miles Avenue",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44589/Letter-of-Justification_42-Miles-Avenue"
         },
@@ -1587,8 +1632,8 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44590/Photo-Simulations_42-Miles-Avenue"
         },
         {
-          "name": "Project Plans_42 Miles Avenue",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44591/Project-Plans_42-Miles-Avenue"
+          "name": "Project Description 02-26-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46543/Project-Description-02-26-26-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -1987,39 +2032,23 @@
       "docs": [
         {
           "name": "Applicants Arborist Report - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46532/Applicants-Arborist-Report---815-Pollard-Rd-PDF"
-        },
-        {
-          "name": "Building Comment Letter - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46533/Building-Comment-Letter---815-Pollard-Rd-PDF"
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46568/Applicants-Arborist-Report---815-Pollard-Rd-PDF"
         },
         {
           "name": "Development Plans, Part 1 - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46219/Development-Plans-Part-1---815-Pollard-Rd-PDF"
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46569/Development-Plans-Part-1---815-Pollard-Rd-PDF"
         },
         {
           "name": "Development Plans, Part 2 - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46220/Development-Plans-Part-2---815-Pollard-Rd-PDF"
-        },
-        {
-          "name": "Engineering Comment Letter - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46534/Engineering-Comment-Letter---815-Pollard-Rd-PDF"
-        },
-        {
-          "name": "Fire Comment Letter - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46535/Fire-Comment-Letter---815-Pollard-Rd-PDF"
-        },
-        {
-          "name": "Planning Comment Letter - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46536/Planning-Comment-Letter---815-Pollard-Rd-PDF"
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46570/Development-Plans-Part-2---815-Pollard-Rd-PDF"
         },
         {
           "name": "Project Description and Letter of Justification - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46221/Project-Description-and-Letter-of-Justification---815-Pollard-Rd-PDF"
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46571/Project-Description-and-Letter-of-Justification---815-Pollard-Rd-PDF"
         },
         {
           "name": "Tentative Map - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46222/Tentative-Map---815-Pollard-Rd-PDF"
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46572/Tentative-Map---815-Pollard-Rd-PDF"
         }
       ],
       "firstSeen": "2026-06-16T19:43:51.210Z"
@@ -2667,6 +2696,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-15T21:09:50.181Z",
+  "scrapedAt": "2026-07-16T03:26:16.428Z",
   "errors": []
 }
