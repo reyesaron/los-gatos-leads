@@ -1381,12 +1381,20 @@
       "pageUrl": "https://www.losgatosca.gov/2378/L",
       "docs": [
         {
+          "name": "Letter of Justification - 14761 La Rinconada Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46611/Letter-of-Justification---14761-La-Rinconada-Dr-PDF"
+        },
+        {
           "name": "Lot Line Adjustment Plan - 14761 La Rinconada Dr (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46056/Lot-Line-Adjustment-Plan---14761-La-Rinconada-Dr-PDF"
         },
         {
-          "name": "Project Description and Letter of Justification - 14761 La Rinconada Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46057/Project-Description-and-Letter-of-Justification---14761-La-Rinconada-Dr-PDF"
+          "name": "Photos - 14761 La Rinconada Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46612/Photos---14761-La-Rinconada-Dr-PDF"
+        },
+        {
+          "name": "Project Description - 14761 La Rinconada Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46057/Project-Description---14761-La-Rinconada-Dr-PDF"
         }
       ],
       "firstSeen": "2026-06-05T21:40:35.746Z"
@@ -1456,43 +1464,6 @@
         }
       ],
       "firstSeen": "2026-07-07T18:08:06.220Z"
-    },
-    {
-      "address": "230 La Terra Court",
-      "appNumber": "S-25-053",
-      "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Approval for Construction of a New Single-Family Residence, Removal of Large Protected Trees, and Site Improvements Requiring a Grading Permit on Vacant Property Zoned HR-2 ½:PD. APN 527-12-006. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction or Conversion of Small Structures.",
-      "overview": "Custom home on vacant lot — ground-up build.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2025-12-22",
-      "status": "Approved by Development Review Committee on 6/30/2026. Appeal Period ends on 7/10/2026 at 1:00 PM.",
-      "planner": "Jocelyn Shoopman",
-      "category": "New Construction",
-      "scope": "Custom Home (Vacant Lot)",
-      "zoning": "HR-2 ½:PD",
-      "apn": "527-12-006",
-      "pageUrl": "https://www.losgatosca.gov/2378/L",
-      "docs": [
-        {
-          "name": "Development Plans - 230 La Terra Ct. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44148/Development-Plans---230-La-Terra-Ct-PDF"
-        },
-        {
-          "name": "Draft Conditions of Approval - 230 La Terra Ct. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46298/Draft-Conditions-of-Approval---230-La-Terra-Ct-PDF"
-        },
-        {
-          "name": "Draft Findings - 230 La Terra Ct. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46299/Draft-Findings---230-La-Terra-Ct-PDF"
-        },
-        {
-          "name": "Project Description - 230 La Terra Ct. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44149/Project-Description---230-La-Terra-Ct-PDF"
-        }
-      ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
       "address": "16706 Littlefield Lane",
@@ -2696,6 +2667,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-20T14:25:44.088Z",
+  "scrapedAt": "2026-07-20T18:11:13.375Z",
   "errors": []
 }
