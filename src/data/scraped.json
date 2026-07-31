@@ -378,6 +378,35 @@
       "firstSeen": "2026-06-17T18:27:27.698Z"
     },
     {
+      "address": "130 Calle Marguerita",
+      "appNumber": "MR-26-010",
+      "appType": "Minor Residential Application,",
+      "description": "Consider a Request for Approval to Construct a New Second-Story Addition on Property Zoned R-1:8. APN 409-03-027. Categorically Exempt pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
+      "overview": "Second-story addition to existing home.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-07-30",
+      "status": "Pending",
+      "planner": "Samina Merchant",
+      "category": "Addition",
+      "scope": "Second-Story Addition",
+      "zoning": "R-1:8",
+      "apn": "409-03-027",
+      "pageUrl": "https://www.losgatosca.gov/2371/C",
+      "docs": [
+        {
+          "name": "Development Plans - 130 Calle Marguerita 07-30-26",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46746/Development-Plans---130-Calle-Marguerita-07-30-26"
+        },
+        {
+          "name": "Letter of Justification- 130 Calle Marguerita 07-30-26",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46747/Letter-of-Justification--130-Calle-Marguerita-07-30-26"
+        }
+      ],
+      "firstSeen": "2026-07-31T03:41:14.364Z"
+    },
+    {
       "address": "16080 Camino Del Cerro",
       "appNumber": "MR-25-015",
       "appType": "Minor Residential Application",
@@ -2432,6 +2461,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44208/Project-Plans--17489-Shelburne-Way-PDF"
         },
         {
+          "name": "Project Plans - 16009 Stepenie Lane (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46745/Project-Plans---16009-Stepenie-Lane-PDF"
+        },
+        {
           "name": "Development Plans - 16171 Sunray Dr. (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45878/Development-Plans---16171-Sunray-Dr-PDF"
         },
@@ -2716,6 +2749,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-30T21:18:20.802Z",
+  "scrapedAt": "2026-07-31T03:41:14.364Z",
   "errors": []
 }
