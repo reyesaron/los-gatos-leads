@@ -1269,9 +1269,9 @@
     },
     {
       "address": "193 Howes Drive",
-      "appNumber": "MR-25-012",
-      "appType": "Minor Residential Application",
-      "description": "Consider a Request for Approval for Construction of a Second-Story Addition Exceeding 100 Square Feet on Property Zoned R-1:8. APN 527-43-021. Categorically Exempt pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
+      "appNumber": "S-26-007",
+      "appType": "Architecture and Site Application",
+      "description": "Consider a Request for Approval to Construct a New Second-Story Addition to an Existing Single-Family Residence on Property Zoned R-1:8. APN 527-43-021. Categorically Exempt pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
       "overview": "Second-story addition to existing home.",
       "existingSF": null,
       "proposedSF": null,
@@ -1290,15 +1290,15 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44035/Consulting-Architect-Review---193-Howes-Dr-PDF"
         },
         {
-          "name": "Development Plans - 193 Howes Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43531/Development-Plans---193-Howes-Dr-PDF"
+          "name": "Letter of Justification - 193 Howes Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/44492/Letter-of-Justification---193-Howes-Dr-PDF"
         },
         {
-          "name": "Project Description Letter- 193 Howes Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44492/Project-Description-Letter--193-Howes-Dr-PDF"
+          "name": "Revised Development Plans - 193 Howes Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/43531/Revised-Development-Plans---193-Howes-Dr-PDF"
         }
       ],
-      "firstSeen": "2026-04-11T03:27:51.841Z"
+      "firstSeen": "2026-07-31T21:14:37.891Z"
     },
     {
       "address": "100 Jamie Court",
@@ -2749,6 +2749,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-31T17:47:11.531Z",
+  "scrapedAt": "2026-07-31T21:14:37.891Z",
   "errors": []
 }
