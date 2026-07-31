@@ -173,8 +173,8 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-01-27",
-      "status": "An appeal was received on 7/1/2026. The period ends on 7/6/2026 at 4:00 PM. This item will be scheduled for a future Planning Commission Meeting.",
-      "planner": "Samina Merchant",
+      "status": "An appeal was received on 7/1/2026. The period ends on 7/6/2026 at 4:00 PM. This item will be heard at the 8/26/2026 Planning Commission Meeting.",
+      "planner": "Sean Mullin",
       "category": "Addition",
       "scope": "Second-Story Addition",
       "zoning": "R-1:20:PD",
@@ -2749,6 +2749,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-07-31T14:26:29.042Z",
+  "scrapedAt": "2026-07-31T17:47:11.531Z",
   "errors": []
 }
