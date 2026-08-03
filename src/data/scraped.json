@@ -1480,16 +1480,16 @@
       "pageUrl": "https://www.losgatosca.gov/2378/L",
       "docs": [
         {
-          "name": "Lot Line Adjustment Plan - 14777 La Rinconada Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46513/Lot-Line-Adjustment-Plan---14777-La-Rinconada-Dr-PDF"
-        },
-        {
           "name": "Photos - 14777 La Rinconada Dr (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46514/Photos---14777-La-Rinconada-Dr-PDF"
         },
         {
           "name": "Project Description and Letter of Justification - 14777 La Rinconada Dr (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46515/Project-Description-and-Letter-of-Justification---14777-La-Rinconada-Dr-PDF"
+        },
+        {
+          "name": "Revised Plans - 14777 La Rinconada Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46513/Revised-Plans---14777-La-Rinconada-Dr-PDF"
         }
       ],
       "firstSeen": "2026-07-07T18:08:06.220Z"
@@ -2778,6 +2778,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-03T17:59:04.611Z",
+  "scrapedAt": "2026-08-03T21:13:13.914Z",
   "errors": []
 }
