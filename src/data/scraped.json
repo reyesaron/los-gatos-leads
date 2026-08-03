@@ -1935,6 +1935,35 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
+      "address": "17115 Phillips Avenue",
+      "appNumber": "",
+      "appType": "Urban Lot Split Application ULS26-007",
+      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) permit for an Urban Lot Split of One Lot into Two Lots on Property Zoned HR-1 located at 17115 Phillips Ave. APN 532-20-010. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
+      "overview": "Lot split — watch for future development.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-07-31",
+      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights. These application materials are for informational purposes only.",
+      "planner": "Samina Merchant",
+      "category": "Subdivision",
+      "scope": "Urban Lot Split (SB 9)",
+      "zoning": "HR-1 located at 17115 Phillips Ave",
+      "apn": "532-20-010",
+      "pageUrl": "https://www.losgatosca.gov/2381/P",
+      "docs": [
+        {
+          "name": "Development Plans - 17115 Phillips Avenue 07-31-26",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46761/Development-Plans---17115-Phillips-Avenue-07-31-26"
+        },
+        {
+          "name": "Letter of Justification-17115 Phillips Avenue  07-31-26",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46762/Letter-of-Justification-17115-Phillips-Avenue--07-31-26"
+        }
+      ],
+      "firstSeen": "2026-08-03T15:08:14.825Z"
+    },
+    {
       "address": "16951 Placer Oaks Road",
       "appNumber": "MR-23-003",
       "appType": "Minor Residential Development",
@@ -2749,6 +2778,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-03T11:35:59.052Z",
+  "scrapedAt": "2026-08-03T15:08:14.825Z",
   "errors": []
 }
