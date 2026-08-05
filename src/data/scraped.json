@@ -312,7 +312,7 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "0 Bonnie Lane",
+      "address": "0 Bonnie Lane and APN 532-02-079 – Parcel 2",
       "appNumber": "",
       "appType": "Two-Unit Housing Development TUD26-004",
       "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Permit for a Two-Unit Housing Development (One New Unit) on a Vacant Property Zoned R-1:20. APN 532-02-079. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
@@ -336,9 +336,13 @@
         {
           "name": "Revised Development Plans 8-4-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46813/Revised-Development-Plans-8-4-26-PDF"
+        },
+        {
+          "name": "USFWS Ross Creek Letter (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46833/USFWS-Ross-Creek-Letter-PDF"
         }
       ],
-      "firstSeen": "2026-08-05T03:22:17.141Z"
+      "firstSeen": "2026-08-05T17:49:03.199Z"
     },
     {
       "address": "16245 Burton Road and Assessor Parcel Number 424-06-116",
@@ -2836,6 +2840,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-05T14:26:40.790Z",
+  "scrapedAt": "2026-08-05T17:49:03.199Z",
   "errors": []
 }
