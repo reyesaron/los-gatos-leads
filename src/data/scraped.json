@@ -139,6 +139,31 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
+      "address": "339 Bella Vista Avenue - Parcels A and B",
+      "appNumber": "",
+      "appType": "Two-Unit Housing Development Application TUD26-005",
+      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Permit for a Two-Unit Housing Development (Two New Units) on Both Parcels A and B of a Previously Approved Urban Lot Split On Vacant Property Zoned R-1:8. APN 529-23-015. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
+      "overview": "Custom home on vacant lot — ground-up build.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-07-09",
+      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
+      "planner": "Ryan Safty",
+      "category": "Subdivision",
+      "scope": "Custom Home (Vacant Lot)",
+      "zoning": "R-1:8",
+      "apn": "529-23-015",
+      "pageUrl": "https://www.losgatosca.gov/2370/B",
+      "docs": [
+        {
+          "name": "Project Plans - 339 Bella Vista Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46827/Project-Plans---339-Bella-Vista-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-08-05T03:22:17.141Z"
+    },
+    {
       "address": "350 Bella Vista Avenue",
       "appNumber": "S-26-008",
       "appType": "Architecture and Site application",
@@ -287,7 +312,7 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
-      "address": "16460 Bonnie Lane",
+      "address": "0 Bonnie Lane",
       "appNumber": "",
       "appType": "Two-Unit Housing Development TUD26-004",
       "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Permit for a Two-Unit Housing Development (One New Unit) on a Vacant Property Zoned R-1:20. APN 532-02-079. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
@@ -305,11 +330,15 @@
       "pageUrl": "https://www.losgatosca.gov/2370/B",
       "docs": [
         {
-          "name": "Development Plans - 16460 Bonnie Lane (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45741/Development-Plans---16460-Bonnie-Lane-PDF"
+          "name": "Applicant Response Letter 8-4-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46812/Applicant-Response-Letter-8-4-26-PDF"
+        },
+        {
+          "name": "Revised Development Plans 8-4-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46813/Revised-Development-Plans-8-4-26-PDF"
         }
       ],
-      "firstSeen": "2026-04-28T23:14:11.637Z"
+      "firstSeen": "2026-08-05T03:22:17.141Z"
     },
     {
       "address": "16245 Burton Road and Assessor Parcel Number 424-06-116",
@@ -2807,6 +2836,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-04T21:20:17.275Z",
+  "scrapedAt": "2026-08-05T03:22:17.141Z",
   "errors": []
 }
