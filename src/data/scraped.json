@@ -1821,6 +1821,35 @@
       "firstSeen": "2026-04-11T03:27:51.841Z"
     },
     {
+      "address": "14251 Mulberry Drive",
+      "appNumber": "MR-26-009",
+      "appType": "Minor Residential Application",
+      "description": "Consider a Request to Construct a New Detached Accessory Building Exceeding Four Hundred Fifty (450) Square Feet on Property Zoned R-1:8. APN 409-15-013. Categorically Exempt Pursuant to the California Environmental Quality Act (CEQA) Guidelines, Section 15303: New Construction or Conversion of Small Structures.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-07-09",
+      "status": "Pending",
+      "planner": "Ryan Safty",
+      "category": "Addition",
+      "scope": "Accessory Structure",
+      "zoning": "R-1:8",
+      "apn": "409-15-013",
+      "pageUrl": "https://www.losgatosca.gov/2379/M",
+      "docs": [
+        {
+          "name": "Project Plans - 14251 Mulberry Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46851/Project-Plans---14251-Mulberry-Dr-PDF"
+        },
+        {
+          "name": "Property Pictures - 14251 Mulberry Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46852/Property-Pictures---14251-Mulberry-Dr-PDF"
+        }
+      ],
+      "firstSeen": "2026-08-05T21:20:09.858Z"
+    },
+    {
       "address": "18 Oak Hill Way",
       "appNumber": "S-26-009",
       "appType": "Architecture and Site Application",
@@ -2840,6 +2869,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-05T17:49:03.199Z",
+  "scrapedAt": "2026-08-05T21:20:09.858Z",
   "errors": []
 }
