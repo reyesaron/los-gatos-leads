@@ -1752,12 +1752,12 @@
       "pageUrl": "https://www.losgatosca.gov/2379/M",
       "docs": [
         {
-          "name": "Development Plans - 403 Montclair Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46314/Development-Plans---403-Montclair-Rd-PDF"
-        },
-        {
           "name": "Project Description - 403 Montclair Rd (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46315/Project-Description---403-Montclair-Rd-PDF"
+        },
+        {
+          "name": "Revised Development Plans - 403 Montclair Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46314/Revised-Development-Plans---403-Montclair-Rd-PDF"
         }
       ],
       "firstSeen": "2026-07-01T14:53:12.753Z"
@@ -2869,6 +2869,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-07T20:50:39.492Z",
+  "scrapedAt": "2026-08-08T02:07:46.497Z",
   "errors": []
 }
