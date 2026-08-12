@@ -2201,6 +2201,10 @@
         {
           "name": "Project Description - 07-23-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46637/Project-Description---07-23-26-PDF"
+        },
+        {
+          "name": "Town Consulting Architect Letter - 08-11-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46898/Town-Consulting-Architect-Letter---08-11-26-PDF"
         }
       ],
       "firstSeen": "2026-07-23T17:39:42.534Z"
@@ -2889,6 +2893,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-11T20:56:10.435Z",
+  "scrapedAt": "2026-08-12T02:33:44.844Z",
   "errors": []
 }
