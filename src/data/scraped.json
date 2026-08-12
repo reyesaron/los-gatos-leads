@@ -970,6 +970,10 @@
         {
           "name": "Site Map - 16769 Farley Rd. (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/39577/Site-Map---16769-Farley-Rd-PDF"
+        },
+        {
+          "name": "Additional Information from Appellant 2 - 16769 Farley Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46907/Additional-Information-from-Appellant-2---16769-Farley-Rd-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -2834,35 +2838,6 @@
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
-    },
-    {
-      "address": "110 Wood Road",
-      "appNumber": "M-26-008",
-      "appType": "Lot Merger Application",
-      "description": "Consider a Request for Approval for the Lot Merger of Two Parcels into One Parcel on Properties Zoned R:PD. CEQA Review is Pending. APN 510-18-046.",
-      "overview": "Planning project at 110 Wood Road.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-07-30",
-      "status": "Pending",
-      "planner": "Sean Mullin",
-      "category": "Subdivision",
-      "scope": "Lot Merger",
-      "zoning": "R:PD",
-      "apn": "510-18-046",
-      "pageUrl": "https://www.losgatosca.gov/2393/W",
-      "docs": [
-        {
-          "name": "Merger Submital - 110 Wood Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46772/Merger-Submital---110-Wood-Rd-PDF"
-        },
-        {
-          "name": "Record of Survey - 110 Wood Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46773/Record-of-Survey---110-Wood-Rd-PDF"
-        }
-      ],
-      "firstSeen": "2026-08-04T03:27:29.953Z"
     }
   ],
   "scrapedLetters": [
@@ -2893,6 +2868,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-12T17:04:03.520Z",
+  "scrapedAt": "2026-08-12T20:54:58.461Z",
   "errors": []
 }
