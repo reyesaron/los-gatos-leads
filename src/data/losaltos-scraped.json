@@ -23,7 +23,7 @@
       "permitNumber": "CEQA26-0001",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -49,7 +49,7 @@
       "permitNumber": "CEQA26-0002",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -75,7 +75,7 @@
       "permitNumber": "DR26-0001",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -101,7 +101,7 @@
       "permitNumber": "DR26-0002",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -127,7 +127,7 @@
       "permitNumber": "DR26-0003",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -153,7 +153,7 @@
       "permitNumber": "DR26-0004",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -179,7 +179,7 @@
       "permitNumber": "DR26-0005",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -205,7 +205,7 @@
       "permitNumber": "DR26-0006",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -231,7 +231,7 @@
       "permitNumber": "DR26-0007",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -257,7 +257,7 @@
       "permitNumber": "DR26-0008",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -283,7 +283,7 @@
       "permitNumber": "DR26-0009",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -309,33 +309,7 @@
       "permitNumber": "DR26-0010",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
-      "permitStage": "Planning Review"
-    },
-    {
-      "address": "239 FRANCES DR, Los Altos, CA",
-      "city": "Los Altos",
-      "neighborhood": "",
-      "appNumber": "DR26-0011",
-      "appType": "Planning Application",
-      "description": "DR26-0011 at 239 FRANCES DR",
-      "overview": "Design Review — Residential in Los Altos. In Review. Pre-construction — no contractor.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "Check plans for SF",
-      "dateFiled": "",
-      "status": "In Review",
-      "planner": "City of Los Altos",
-      "category": "Addition",
-      "scope": "Design Review — Residential",
-      "zoning": "",
-      "apn": "",
-      "pageUrl": "https://trakit.losaltosca.gov/etrakit/",
-      "docs": [],
-      "permitNumber": "DR26-0011",
-      "firstSeen": "2026-04-16T03:48:20.564Z",
-      "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -361,7 +335,7 @@
       "permitNumber": "APPL25-0001",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -387,7 +361,7 @@
       "permitNumber": "APPL25-0002",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -413,7 +387,7 @@
       "permitNumber": "APPL25-0003",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -439,7 +413,7 @@
       "permitNumber": "APPL25-0004",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -465,7 +439,7 @@
       "permitNumber": "APPL25-0005",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -491,7 +465,7 @@
       "permitNumber": "APPL25-0006",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -517,7 +491,7 @@
       "permitNumber": "DR25-0001",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -543,7 +517,7 @@
       "permitNumber": "DR25-0002",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     },
     {
@@ -569,10 +543,10 @@
       "permitNumber": "DR25-0003",
       "firstSeen": "2026-04-16T03:48:20.564Z",
       "dataSource": "losaltos-etrakit-planning",
-      "lastVerified": "2026-08-10T23:44:49.525Z",
+      "lastVerified": "2026-08-13T18:02:45.014Z",
       "permitStage": "Planning Review"
     }
   ],
-  "scrapedAt": "2026-08-10T23:44:49.525Z",
+  "scrapedAt": "2026-08-13T18:02:45.014Z",
   "source": "Los Altos eTRAKiT (planning projects)"
 }
