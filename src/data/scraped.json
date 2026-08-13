@@ -115,7 +115,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-03-06",
-      "status": "An appeal was received on May 29, 2026. Planning Commission Date TBD.",
+      "status": "An appeal was received on May 29, 2026. Planning Commission - 8/12/2026",
       "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "Second-Story Addition",
@@ -1574,20 +1574,20 @@
       "pageUrl": "https://www.losgatosca.gov/2378/L",
       "docs": [
         {
-          "name": "Response to Engineering Comments, 6/17-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45761/Response-to-Engineering-Comments-617-26-PDF"
+          "name": "Development Plans - 16706 Littlefield Lane (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46916/Development-Plans---16706-Littlefield-Lane-PDF"
         },
         {
-          "name": "Response to Fire Comments, 6-17-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45762/Response-to-Fire-Comments-6-17-26-PDF"
+          "name": "Letter of Justification - 16706 Littlefield Lane (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46917/Letter-of-Justification---16706-Littlefield-Lane-PDF"
         },
         {
-          "name": "Response to Planning Comments, 6-17-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45763/Response-to-Planning-Comments-6-17-26-PDF"
+          "name": "Photos - 16706 Littlefield Lane (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46918/Photos---16706-Littlefield-Lane-PDF"
         },
         {
-          "name": "Revised Plans, 06-17-2026 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45764/Revised-Plans-06-17-2026-PDF"
+          "name": "Project Description - 16706 Littlefield Lane (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46919/Project-Description---16706-Littlefield-Lane-PDF"
         }
       ],
       "firstSeen": "2026-04-11T03:27:51.841Z"
@@ -2868,6 +2868,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-12T20:54:58.461Z",
+  "scrapedAt": "2026-08-13T02:35:10.600Z",
   "errors": []
 }
