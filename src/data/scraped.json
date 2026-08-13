@@ -115,7 +115,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-03-06",
-      "status": "An appeal was received on May 29, 2026. Planning Commission - 8/12/2026",
+      "status": "Denied by Planning Commission on 8/12/2026. Appeal period ends on August 21, 2026 at 1:00 PM.",
       "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "Second-Story Addition",
@@ -610,7 +610,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2024-12-09",
-      "status": "An appeal was received on 7/1/2026. Appeal period ends on 7/9/2026 at 4:00 PM. This project will go to Planning Commission on 8/12/2026.",
+      "status": "An appeal was received on 7/1/2026. Continued from Planning Commission on 8/12/26 to 9/9/26.",
       "planner": "Maria Chavarin",
       "category": "Addition",
       "scope": "Second-Story Addition",
@@ -2868,6 +2868,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-13T17:03:43.728Z",
+  "scrapedAt": "2026-08-13T20:53:30.857Z",
   "errors": []
 }
