@@ -2668,6 +2668,35 @@
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
+      "address": "569 University Avenue",
+      "appNumber": "S-26-020",
+      "appType": "Architecture and Site Application",
+      "description": "Consider a Request for Approval for Construction of Accessory Structure on Property Zoned LM. APN 529-07-073. Exempt Pursuant to CEQA Section 15303(a): New Construction or Conversion of Small Structures.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-08-20",
+      "status": "Pending",
+      "planner": "Suray Nathan",
+      "category": "Addition",
+      "scope": "Accessory Structure",
+      "zoning": "LM",
+      "apn": "529-07-073",
+      "pageUrl": "https://www.losgatosca.gov/2391/U",
+      "docs": [
+        {
+          "name": "Development Plans - 569 University Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47004/Development-Plans---569-University-Ave-PDF"
+        },
+        {
+          "name": "Structural Calculations - 569 University Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47005/Structural-Calculations---569-University-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-08-20T20:36:56.246Z"
+    },
+    {
       "address": "575 University Avenue",
       "appNumber": "U-24-003",
       "appType": "Conditional Use Permit Application",
@@ -2811,6 +2840,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-20T16:42:18.690Z",
+  "scrapedAt": "2026-08-20T20:36:56.246Z",
   "errors": []
 }
