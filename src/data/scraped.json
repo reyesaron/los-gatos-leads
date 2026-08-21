@@ -2,6 +2,71 @@
   "projects": [
     {
       "address": "220 Belgatos Road",
+      "appNumber": "U-26-007",
+      "appType": "Architecture and Site Applications S-26-021                                 Subdivision Application M-26-010                                                                Conditional Use Permit Application",
+      "description": "Consider a Request for Approval to Construct Multi-Family Residential Development (55 Units), a Condominium Vesting Tentative Map, a Conditional Use Permit, Remove Large-Protected Trees, and Site Improvements Requiring a Grading Permit Under Senate Bill 330 (SB 330) on Property Zoned CH:PD:HEOZ. APN 529-23-018. CEQA Review is Pending.",
+      "overview": "55-unit multi-family development. New construction.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-08-14",
+      "status": "Pending",
+      "planner": "Erin Walters",
+      "category": "New Construction",
+      "scope": "Multi-Family (55 Units)",
+      "zoning": "CH:PD:HEOZ",
+      "apn": "529-23-018",
+      "pageUrl": "https://www.losgatosca.gov/2216/Pending-Planning-Projects",
+      "docs": [
+        {
+          "name": "AB 130 Checklist - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47018/AB-130-Checklist---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "AB 130 Memo - 401-409 Alberto Way (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47019/AB-130-Memo---401-409-Alberto-Way-PDF"
+        },
+        {
+          "name": "Development Plans - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47020/Development-Plans---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "Geotechnical Report from Applicant - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47021/Geotechnical-Report-from-Applicant---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "Letter of Justification - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47022/Letter-of-Justification---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "Neighborhood Photos - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47023/Neighborhood-Photos---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "Objective Design Standards Checklist - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47024/Objective-Design-Standards-Checklist---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "Project Description - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47025/Project-Description---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "Property Photos - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47026/Property-Photos---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "State Density Bonus Law Memo - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47027/State-Density-Bonus-Law-Memo---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "Traffic Information Questionnaire - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47028/Traffic-Information-Questionnaire---401-409-Alberto-Wy-PDF"
+        }
+      ],
+      "firstSeen": "2026-08-21T01:48:51.270Z"
+    },
+    {
+      "address": "220 Belgatos Road",
       "appNumber": "S-25-012 through -024, Subdivision Application M-25-002, and General Plan Amendment Application GP-24-002",
       "appType": "Architecture and Site Applications",
       "description": "Consider a Request for Approval for the Subdivision of One Lot into Fourteen Lots, Construction of a New Single-Family Residence on Thirteen Lots, Site Work Requiring a Grading Permit, Removal of Large Protected Trees, and a General Plan Amendment to Change the Land Use Designation from Public to Low Density Residential for the Thirteen Residential Lots on Property Zoned R-1:10. APN 527-25-005. CEQA Review is Pending.",
@@ -1100,16 +1165,16 @@
       "pageUrl": "https://www.losgatosca.gov/2373/G",
       "docs": [
         {
-          "name": "Letter of Justification - 15675 Gum Tree Ln(PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45452/Letter-of-Justification---15675-Gum-Tree-LnPDF"
-        },
-        {
-          "name": "Project Plans - 15675 Gum Tree Ln(PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45453/Project-Plans---15675-Gum-Tree-LnPDF"
-        },
-        {
           "name": "Renderings - 15675 Gum Tree Ln(PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45454/Renderings---15675-Gum-Tree-LnPDF"
+        },
+        {
+          "name": "Revised Letter of Justification - 15675 Gum Tree Ln (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45452/Revised-Letter-of-Justification---15675-Gum-Tree-Ln-PDF"
+        },
+        {
+          "name": "Revised Project Plans - 15675 Gum Tree Ln(PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45453/Revised-Project-Plans---15675-Gum-Tree-LnPDF"
         }
       ],
       "firstSeen": "2026-08-16T12:53:29.654Z"
@@ -2343,10 +2408,6 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45958/Applicant-Response-to-Consulting-Arborist-Report---647-N-Santa-Cruz-Ave-PDF"
         },
         {
-          "name": "CEQA AB 130 Letter - 647 N Santa Cruz Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45838/CEQA-AB-130-Letter---647-N-Santa-Cruz-Ave-PDF"
-        },
-        {
           "name": "Consulting Arborist Review - 647 N. Santa Cruz Avenue (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/43561/Consulting-Arborist-Review---647-N-Santa-Cruz-Avenue-PDF"
         },
@@ -2365,6 +2426,14 @@
         {
           "name": "Notice of Development Sign - 647 N. Santa Cruz Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/41392/Notice-of-Development-Sign---647-N-Santa-Cruz-Ave-PDF"
+        },
+        {
+          "name": "Response to Consulting Architect Report - 647 N Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47030/Response-to-Consulting-Architect-Report---647-N-Santa-Cruz-Ave-PDF"
+        },
+        {
+          "name": "Revised CEQA AB 130 Letter - 647 N Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45838/Revised-CEQA-AB-130-Letter---647-N-Santa-Cruz-Ave-PDF"
         },
         {
           "name": "Revised Development Plans - 647 N Santa Cruz Ave (PDF)",
@@ -2840,6 +2909,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-20T20:36:56.246Z",
+  "scrapedAt": "2026-08-21T01:48:51.270Z",
   "errors": []
 }
