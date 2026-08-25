@@ -1573,16 +1573,36 @@
       "pageUrl": "https://www.losgatosca.gov/2378/L",
       "docs": [
         {
-          "name": "Development Plans, 07-15-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46577/Development-Plans-07-15-26-PDF"
-        },
-        {
           "name": "Existing Site Photos, 07-15-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46578/Existing-Site-Photos-07-15-26-PDF"
         },
         {
-          "name": "Letter of Justification, 07-15-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46579/Letter-of-Justification-07-15-26-PDF"
+          "name": "GreenPoint Checklist, 08-24-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47074/GreenPoint-Checklist-08-24-26-PDF"
+        },
+        {
+          "name": "Neighborhood Outreach Summary, 08-24-2026 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47075/Neighborhood-Outreach-Summary-08-24-2026-PDF"
+        },
+        {
+          "name": "Response to Planning Comment Letter 1, 08-24-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47076/Response-to-Planning-Comment-Letter-1-08-24-26-PDF"
+        },
+        {
+          "name": "Response to Town Consulting Architect Letter, 08-24-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47077/Response-to-Town-Consulting-Architect-Letter-08-24-26-PDF"
+        },
+        {
+          "name": "Revised Development Plans (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46577/Revised-Development-Plans-PDF"
+        },
+        {
+          "name": "Revised Letter of Justification (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46579/Revised-Letter-of-Justification-PDF"
+        },
+        {
+          "name": "San Jose Water Letter, 08-24-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47078/San-Jose-Water-Letter-08-24-26-PDF"
         },
         {
           "name": "Town Architect Review, 07-28-26 (PDF)",
@@ -2909,6 +2929,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-25T13:01:35.561Z",
+  "scrapedAt": "2026-08-25T16:46:54.125Z",
   "errors": []
 }
