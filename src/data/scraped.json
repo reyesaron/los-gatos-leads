@@ -2402,6 +2402,35 @@
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
+      "address": "536 N. Santa Cruz Avenue",
+      "appNumber": "SN-26-024",
+      "appType": "Sign Permit Application",
+      "description": "Consider a Request for Approval of an Exception to the Town’s Commercial Design Guidelines to Exceed the Maximum Letter Height for a Wall Sign (ROEM) on Property Zoned C-1. APN 529-07-090. Categorically Exempt Pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-08-10",
+      "status": "Planning Commission 9/23/2026",
+      "planner": "Suray Nathan",
+      "category": "Addition",
+      "scope": "General",
+      "zoning": "C-1",
+      "apn": "529-07-090",
+      "pageUrl": "https://www.losgatosca.gov/2383/S",
+      "docs": [
+        {
+          "name": "Development Plans - 536 N Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47093/Development-Plans---536-N-Santa-Cruz-Ave-PDF"
+        },
+        {
+          "name": "Letter of Justification - 536 N Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47094/Letter-of-Justification---536-N-Santa-Cruz-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-08-25T20:37:25.199Z"
+    },
+    {
       "address": "647 N. Santa Cruz Avenue",
       "appNumber": "M-24-020",
       "appType": "Architecture and Site Application S-24-060                                               Conditional Use Permit U-24-018                                                               Subdivision Application",
@@ -2929,6 +2958,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-25T16:46:54.125Z",
+  "scrapedAt": "2026-08-25T20:37:25.199Z",
   "errors": []
 }
