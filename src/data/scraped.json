@@ -1041,6 +1041,14 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/39577/Site-Map---16769-Farley-Rd-PDF"
         },
         {
+          "name": "Santa Clara County Fire Email Regarding Occupancy, July 2026 - 16769 Farley Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47123/Santa-Clara-County-Fire-Email-Regarding-Occupancy-July-2026---16769-Farley-Rd-PDF"
+        },
+        {
+          "name": "Santa Clara County Fire Email Regarding Occupancy, March 2025 - 16769 Farley Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47124/Santa-Clara-County-Fire-Email-Regarding-Occupancy-March-2025---16769-Farley-Rd-PDF"
+        },
+        {
           "name": "Additional Information from Appellant 2 - 16769 Farley Rd. (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46907/Additional-Information-from-Appellant-2---16769-Farley-Rd-PDF"
         }
@@ -1334,12 +1342,16 @@
       "pageUrl": "https://www.losgatosca.gov/2374/H",
       "docs": [
         {
+          "name": "Consulting Architect Report - 16765 Hicks Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47110/Consulting-Architect-Report---16765-Hicks-Rd-PDF"
+        },
+        {
           "name": "Project Description Letter - 16765 Hicks Rd (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45787/Project-Description-Letter---16765-Hicks-Rd-PDF"
         },
         {
-          "name": "Project Plans - 16765 Hicks Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45788/Project-Plans---16765-Hicks-Rd-PDF"
+          "name": "Revised Project Plans - 16765 Hicks Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45788/Revised-Project-Plans---16765-Hicks-Rd-PDF"
         }
       ],
       "firstSeen": "2026-08-16T12:53:29.654Z"
@@ -2958,6 +2970,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-26T16:52:38.892Z",
+  "scrapedAt": "2026-08-26T23:18:30.151Z",
   "errors": []
 }
