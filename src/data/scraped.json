@@ -1,9 +1,9 @@
 {
   "projects": [
     {
-      "address": "220 Belgatos Road",
+      "address": "401-409 Alberto Way",
       "appNumber": "U-26-007",
-      "appType": "Architecture and Site Applications S-26-021                                 Subdivision Application M-26-010                                                                Conditional Use Permit Application",
+      "appType": "Architecture and Site Applications S-26-021                                 Subdivision Application M-26-010                                                                Conditional Use Permit Application",
       "description": "Consider a Request for Approval to Construct Multi-Family Residential Development (55 Units), a Condominium Vesting Tentative Map, a Conditional Use Permit, Remove Large-Protected Trees, and Site Improvements Requiring a Grading Permit Under Senate Bill 330 (SB 330) on Property Zoned CH:PD:HEOZ. APN 529-23-018. CEQA Review is Pending.",
       "overview": "55-unit multi-family development. New construction.",
       "existingSF": null,
@@ -63,7 +63,7 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47028/Traffic-Information-Questionnaire---401-409-Alberto-Wy-PDF"
         }
       ],
-      "firstSeen": "2026-08-21T01:48:51.270Z"
+      "firstSeen": "2026-08-26T01:49:25.161Z"
     },
     {
       "address": "220 Belgatos Road",
@@ -2411,7 +2411,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-08-10",
-      "status": "Planning Commission 9/23/2026",
+      "status": "Tentatively scheduled for Planning Commission on 9/23/2026",
       "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "General",
@@ -2958,6 +2958,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-25T20:37:25.199Z",
+  "scrapedAt": "2026-08-26T01:49:25.161Z",
   "errors": []
 }
