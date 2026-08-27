@@ -171,39 +171,6 @@
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
-      "address": "127 Belhaven Drive",
-      "appNumber": "MR-26-005",
-      "appType": "Minor Residential Application",
-      "description": "Consider a Request for Approval for Construction of a Second-Story Addition Exceeding 100 Square Feet on Property Zoned R-1:10. APN 527-29-031. Categorically Exempt pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
-      "overview": "Second-story addition to existing home.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-03-06",
-      "status": "Denied by Planning Commission on 8/12/2026. Appeal period ends on August 21, 2026 at 1:00 PM.",
-      "planner": "Suray Nathan",
-      "category": "Addition",
-      "scope": "Second-Story Addition",
-      "zoning": "R-1:10",
-      "apn": "527-29-031",
-      "pageUrl": "https://www.losgatosca.gov/2370/B",
-      "docs": [
-        {
-          "name": "Appeal - 127 Belhaven Drive",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46224/Appeal---127-Belhaven-Drive"
-        },
-        {
-          "name": "Letter of Justification - 127 Belhaven Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46521/Letter-of-Justification---127-Belhaven-Drive-PDF"
-        },
-        {
-          "name": "Revised Development Plans - 127 Belhaven Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44708/Revised-Development-Plans---127-Belhaven-Drive-PDF"
-        }
-      ],
-      "firstSeen": "2026-08-16T12:53:29.654Z"
-    },
-    {
       "address": "339 Bella Vista Avenue - Parcels A and B",
       "appNumber": "",
       "appType": "Two-Unit Housing Development Application TUD26-005",
@@ -239,7 +206,7 @@
       "sfNote": "",
       "dateFiled": "2026-03-27",
       "status": "Pending",
-      "planner": "Maria Chavarin",
+      "planner": "Samina Merchant",
       "category": "Addition",
       "scope": "Accessory Structure",
       "zoning": "R-1:8",
@@ -249,6 +216,18 @@
         {
           "name": "Development Plans - 350 Bella Vista Avenue (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45238/Development-Plans---350-Bella-Vista-Avenue-PDF"
+        },
+        {
+          "name": "Justification Letter 08-11-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47141/Justification-Letter-08-11-26-PDF"
+        },
+        {
+          "name": "Neighborhood Outreach 08-11-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47142/Neighborhood-Outreach-08-11-26-PDF"
+        },
+        {
+          "name": "Response Letter 08-11-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47143/Response-Letter-08-11-26-PDF"
         }
       ],
       "firstSeen": "2026-08-16T12:53:29.654Z"
@@ -263,7 +242,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-01-27",
-      "status": "An appeal was received on 7/1/2026. The period ends on 7/6/2026 at 4:00 PM. This item will be heard at the 8/26/2026 Planning Commission Meeting.",
+      "status": "Appeal denied by the Planning Commission on 8/26/2026. Appeal period ends on 9/8/2026 at 4:00 PM.",
       "planner": "Sean Mullin",
       "category": "Addition",
       "scope": "Second-Story Addition",
@@ -1415,7 +1394,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-09-11",
-      "status": "Heard by Planning Commission on 6/10/2026. Continued to a date certain of 8/26/2026.",
+      "status": "Approved by the Planning Commission on 8/26/2026. Appeal period ends on 9/8/2026 at 4:00 PM.",
       "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "Second-Story Addition",
@@ -2970,6 +2949,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-27T09:20:56.883Z",
+  "scrapedAt": "2026-08-27T22:11:20.043Z",
   "errors": []
 }
