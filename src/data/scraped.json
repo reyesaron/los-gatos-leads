@@ -1028,6 +1028,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47124/Santa-Clara-County-Fire-Email-Regarding-Occupancy-March-2025---16769-Farley-Rd-PDF"
         },
         {
+          "name": "Existing Occupancy Load - 16769 Farley Road (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47148/Existing-Occupancy-Load---16769-Farley-Road-PDF"
+        },
+        {
           "name": "Additional Information from Appellant 2 - 16769 Farley Rd. (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46907/Additional-Information-from-Appellant-2---16769-Farley-Rd-PDF"
         }
@@ -2949,6 +2953,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-28T11:10:11.942Z",
+  "scrapedAt": "2026-08-28T22:11:40.289Z",
   "errors": []
 }
