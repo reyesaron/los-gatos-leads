@@ -642,8 +642,20 @@
       "pageUrl": "https://www.losgatosca.gov/2371/C",
       "docs": [
         {
-          "name": "Development Plans - 66 Chester Street (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46400/Development-Plans---66-Chester-Street-PDF"
+          "name": "How To Read Your Neighborhood Workbook, 08-07-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47162/How-To-Read-Your-Neighborhood-Workbook-08-07-26-PDF"
+        },
+        {
+          "name": "Response to Architect Recommendations, 08-07-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47163/Response-to-Architect-Recommendations-08-07-26-PDF"
+        },
+        {
+          "name": "Response to Planning Comments, 08-07-026 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47164/Response-to-Planning-Comments-08-07-026-PDF"
+        },
+        {
+          "name": "Revised Development Plans - 66 Chester Street (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46400/Revised-Development-Plans---66-Chester-Street-PDF"
         }
       ],
       "firstSeen": "2026-08-16T12:53:29.654Z"
@@ -762,12 +774,16 @@
       "pageUrl": "https://www.losgatosca.gov/2371/C",
       "docs": [
         {
-          "name": "Development Plans - 16660 Cypress Way (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/27798/Development-Plans---16660-Cypress-Way-PDF"
+          "name": "Arborist Sheet - 16660 Cypress Way (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47153/Arborist-Sheet---16660-Cypress-Way-PDF"
         },
         {
-          "name": "Letter of Justification - 16660 Cypress Way (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/27796/Letter-of-Justification---16660-Cypress-Way-PDF"
+          "name": "Revised Development Plans - 16660 Cypress Way (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/27798/Revised-Development-Plans---16660-Cypress-Way-PDF"
+        },
+        {
+          "name": "Revised Letter of Justification - 16660 Cypress Way (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/27796/Revised-Letter-of-Justification---16660-Cypress-Way-PDF"
         },
         {
           "name": "Site Photos - 16660 Cypress Way (PDF)",
@@ -2953,6 +2969,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-31T05:17:37.270Z",
+  "scrapedAt": "2026-08-31T16:06:17.146Z",
   "errors": []
 }
