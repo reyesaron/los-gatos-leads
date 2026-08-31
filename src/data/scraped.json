@@ -1678,6 +1678,14 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46916/Development-Plans---16706-Littlefield-Lane-PDF"
         },
         {
+          "name": "Draft Conditions of Approval - 16706 Littlefield Lane (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47177/Draft-Conditions-of-Approval---16706-Littlefield-Lane-PDF"
+        },
+        {
+          "name": "Draft Findings - 16706 Littlefield Lane (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47178/Draft-Findings---16706-Littlefield-Lane-PDF"
+        },
+        {
           "name": "Letter of Justification - 16706 Littlefield Lane (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46917/Letter-of-Justification---16706-Littlefield-Lane-PDF"
         },
@@ -2969,6 +2977,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-08-31T16:06:17.146Z",
+  "scrapedAt": "2026-08-31T23:43:20.655Z",
   "errors": []
 }
