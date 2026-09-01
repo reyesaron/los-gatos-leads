@@ -402,7 +402,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-05-19",
-      "status": "Pending",
+      "status": "Planning Commission - 9/23/2026",
       "planner": "Jocelyn Shoopman",
       "category": "Addition",
       "scope": "General",
@@ -2446,7 +2446,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-08-10",
-      "status": "Tentatively scheduled for Planning Commission on 9/23/2026",
+      "status": "Planning Commission - 9/23/2026",
       "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "General",
@@ -2993,6 +2993,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-01T19:20:31.110Z",
+  "scrapedAt": "2026-09-01T22:31:39.685Z",
   "errors": []
 }
