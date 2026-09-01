@@ -435,7 +435,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-06-08",
-      "status": "An appeal was received on 6/8/2026. This project will be reviewed by the Planning Commission on a date yet to be determined.",
+      "status": "An appeal was received on 6/8/2026. This project will be reviewed by the Planning Commission on 9/23/2026.",
       "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "General",
@@ -1064,7 +1064,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-04-03",
-      "status": "Pending",
+      "status": "Planning Commission - 9/23/2026",
       "planner": "Jocelyn Shoopman",
       "category": "New Construction",
       "scope": "Custom Home (Vacant Lot)",
@@ -1073,12 +1073,20 @@
       "pageUrl": "https://www.losgatosca.gov/2386/F",
       "docs": [
         {
+          "name": "Consulting Arborist Report - 233 Forrester Road (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47194/Consulting-Arborist-Report---233-Forrester-Road-PDF"
+        },
+        {
+          "name": "Consulting Architect Report - 233 Forrester Road (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47195/Consulting-Architect-Report---233-Forrester-Road-PDF"
+        },
+        {
           "name": "Development Plans - 233 Forrester Road (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45271/Development-Plans---233-Forrester-Road-PDF"
         },
         {
-          "name": "Project Description - 233 Forrester Road (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45272/Project-Description---233-Forrester-Road-PDF"
+          "name": "Letter of Justification - 233 Forrester Road (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45272/Letter-of-Justification---233-Forrester-Road-PDF"
         },
         {
           "name": "Site Photos- 233 Forrester Road (PDF)",
@@ -1645,8 +1653,8 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46514/Photos---14777-La-Rinconada-Dr-PDF"
         },
         {
-          "name": "Project Description and Letter of Justification - 14777 La Rinconada Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46515/Project-Description-and-Letter-of-Justification---14777-La-Rinconada-Dr-PDF"
+          "name": "Revised Letter of Justification and Project Description - 14777 La Rinconada Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46515/Revised-Letter-of-Justification-and-Project-Description---14777-La-Rinconada-Dr-PDF"
         },
         {
           "name": "Revised Plans - 14777 La Rinconada Dr (PDF)",
@@ -1665,7 +1673,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2025-09-22",
-      "status": "Development Review Committee - 9/1/2026",
+      "status": "Approved by Development Review Committee on 9/1/2026. Appeal Period ends on 9/14/2026 at 4:00 PM.",
       "planner": "Maria Chavarin",
       "category": "New Construction",
       "scope": "Custom Home (Demo + New Build)",
@@ -1673,6 +1681,14 @@
       "apn": "532-08-048",
       "pageUrl": "https://www.losgatosca.gov/2378/L",
       "docs": [
+        {
+          "name": "Consulting Arborist Report -16706 Littlefield Lane -(PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47182/Consulting-Arborist-Report--16706-Littlefield-Lane--PDF"
+        },
+        {
+          "name": "Consulting Architect Report - 16706 Littlefield Lane (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47183/Consulting-Architect-Report---16706-Littlefield-Lane-PDF"
+        },
         {
           "name": "Development Plans - 16706 Littlefield Lane (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46916/Development-Plans---16706-Littlefield-Lane-PDF"
@@ -2977,6 +2993,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-01T13:25:58.785Z",
+  "scrapedAt": "2026-09-01T19:20:31.110Z",
   "errors": []
 }
