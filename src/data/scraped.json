@@ -1316,12 +1316,16 @@
       "pageUrl": "https://www.losgatosca.gov/2374/H",
       "docs": [
         {
-          "name": "Plans - 94 Hernandez Avenue (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/30983/Plans---94-Hernandez-Avenue-PDF"
+          "name": "Development Plans - 94 Hernandez Avenue (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/30983/Development-Plans---94-Hernandez-Avenue-PDF"
         },
         {
           "name": "Project Description - 94 Hernandez Avenue (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/35722/Project-Description---94-Hernandez-Avenue-PDF"
+        },
+        {
+          "name": "Town Consulting Arborist Report - 94 Hernandez (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47200/Town-Consulting-Arborist-Report---94-Hernandez-PDF"
         },
         {
           "name": "Town Consulting Architect Report - 94 Hernandez (PDF)",
@@ -1559,16 +1563,16 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46611/Letter-of-Justification---14761-La-Rinconada-Dr-PDF"
         },
         {
-          "name": "Lot Line Adjustment Plan - 14761 La Rinconada Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46056/Lot-Line-Adjustment-Plan---14761-La-Rinconada-Dr-PDF"
-        },
-        {
           "name": "Photos - 14761 La Rinconada Dr (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46612/Photos---14761-La-Rinconada-Dr-PDF"
         },
         {
           "name": "Project Description - 14761 La Rinconada Dr (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46057/Project-Description---14761-La-Rinconada-Dr-PDF"
+        },
+        {
+          "name": "Revised Lot Line Adjustment Plan - 14761 La Rinconada Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46056/Revised-Lot-Line-Adjustment-Plan---14761-La-Rinconada-Dr-PDF"
         }
       ],
       "firstSeen": "2026-08-16T12:53:29.654Z"
@@ -2993,6 +2997,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-02T12:43:17.110Z",
+  "scrapedAt": "2026-09-02T19:20:32.898Z",
   "errors": []
 }
