@@ -683,6 +683,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46397/Appeal---16717-Chirco-Drive---Received-07-01-26_Redacted"
         },
         {
+          "name": "Consulting Architect Review - 16717 Chirco Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47201/Consulting-Architect-Review---16717-Chirco-Dr-PDF"
+        },
+        {
           "name": "Response to Architect Recommendations, 4-29-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45985/Response-to-Architect-Recommendations-4-29-26-PDF"
         },
@@ -2997,6 +3001,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-02T19:20:32.898Z",
+  "scrapedAt": "2026-09-02T22:31:17.038Z",
   "errors": []
 }
