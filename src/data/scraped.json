@@ -2728,6 +2728,39 @@
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
+      "address": "4 Tait Avenue",
+      "appNumber": "M-26-009",
+      "appType": "Subdivision Application",
+      "description": "Consider a Request for Issuance of a Certificate of Compliance on Property Zoned R-1D:LHP. APN 210-44-054. Not Subject to CEQA Review Pursuant to CEQA Guidelines Section 15061 (b)(3) Because it can be seen with Certainty that there is No Possibility that Issuance of a Certificate of Compliance that Confirms the Legal Status of Existing Parcels and Does Not Authorize or Approve Physical Development Would Have a Significant Effect on the Environment. Any Future Development Projects will Undergo Separate CEQA Review and Approval.",
+      "overview": "Planning project at 4 Tait Avenue.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-08-17",
+      "status": "Pending",
+      "planner": "Sean Mullin",
+      "category": "Subdivision",
+      "scope": "Subdivision",
+      "zoning": "R-1D:LHP",
+      "apn": "210-44-054",
+      "pageUrl": "https://www.losgatosca.gov/2390/T",
+      "docs": [
+        {
+          "name": "Letter of Justification - 4 Tait Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47212/Letter-of-Justification---4-Tait-Ave-PDF"
+        },
+        {
+          "name": "Plat Map - 4 Tait Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47213/Plat-Map---4-Tait-Ave-PDF"
+        },
+        {
+          "name": "Property Survey - 4 Tait Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47214/Property-Survey---4-Tait-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-09-04T22:18:00.471Z"
+    },
+    {
       "address": "178 Twin Oaks Drive",
       "appNumber": "S-24-023",
       "appType": "Architecture and Site Applications  through -032. and Subdivision Application M-24-013 -- Incompleteness Determination",
@@ -3001,6 +3034,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-04T18:57:03.326Z",
+  "scrapedAt": "2026-09-04T22:18:00.471Z",
   "errors": []
 }
