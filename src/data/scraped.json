@@ -411,16 +411,16 @@
       "pageUrl": "https://www.losgatosca.gov/2370/B",
       "docs": [
         {
-          "name": "Conceptual Drawings - 16245 Burton Road and APN 424-06-116 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45953/Conceptual-Drawings---16245-Burton-Road-and-APN-424-06-116-PDF"
-        },
-        {
           "name": "Letter of Justification - 16245 Burton Road and APN 424-06-116 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45954/Letter-of-Justification---16245-Burton-Road-and-APN-424-06-116-PDF"
         },
         {
           "name": "Project Description - 16245 Burton Road and APN 424-06-116 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45955/Project-Description---16245-Burton-Road-and-APN-424-06-116-PDF"
+        },
+        {
+          "name": "Property Photos - 16245 Burton Road and APN 424-06-116 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47246/Property-Photos---16245-Burton-Road-and-APN-424-06-116-PDF"
         }
       ],
       "firstSeen": "2026-08-16T12:53:29.654Z"
@@ -3034,6 +3034,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-08T19:23:18.992Z",
+  "scrapedAt": "2026-09-08T22:32:15.460Z",
   "errors": []
 }
