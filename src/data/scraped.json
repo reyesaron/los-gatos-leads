@@ -2552,6 +2552,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/43084/Applicants-Attorney--Letter---101-S-Santa-Cruz-Ave-PDF"
         },
         {
+          "name": "Applicants Draft Noise Study - 101 S. Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47255/Applicants-Draft-Noise-Study---101-S-Santa-Cruz-Ave-PDF"
+        },
+        {
           "name": "Commerical Design Guidelines Response Letter - 101 S. Santa Cruz Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/43082/Commerical-Design-Guidelines-Response-Letter---101-S-Santa-Cruz-Ave-PDF"
         },
@@ -2566,6 +2570,10 @@
         {
           "name": "Consulting Architects  Report - 101 S. Santa Cruz Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/43086/Consulting-Architects--Report---101-S-Santa-Cruz-Ave-PDF"
+        },
+        {
+          "name": "Peer Review Noise Study - 101 S. Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47256/Peer-Review-Noise-Study---101-S-Santa-Cruz-Ave-PDF"
         },
         {
           "name": "Revised Arborist Report - 101 S Santa Cruz Ave (PDF)",
@@ -2586,6 +2594,10 @@
         {
           "name": "Site Images - 101 S. Santa Cruz Ave. (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/40023/Site-Images---101-S-Santa-Cruz-Ave-PDF"
+        },
+        {
+          "name": "Transportation Analysis - 101 S. Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47257/Transportation-Analysis---101-S-Santa-Cruz-Ave-PDF"
         },
         {
           "name": "Visual Simulations - 101 S. Santa Cruz Ave (PDF)",
@@ -3034,6 +3046,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-09T22:26:41.751Z",
+  "scrapedAt": "2026-09-10T04:23:12.764Z",
   "errors": []
 }
