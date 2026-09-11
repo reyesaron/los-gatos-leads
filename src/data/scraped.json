@@ -670,7 +670,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2024-12-09",
-      "status": "An appeal was received on 7/1/2026. Continued from Planning Commission on 8/12/26 to 9/9/26.",
+      "status": "Appeal denied by the Planning Commission on 9/9/2026. Project approval upheld with an additional condition of approval. Appeal period ends on 9/21/2026 at 4:00 PM.",
       "planner": "Maria Chavarin",
       "category": "Addition",
       "scope": "Second-Story Addition",
@@ -1472,6 +1472,10 @@
       "pageUrl": "https://www.losgatosca.gov/2376/J",
       "docs": [
         {
+          "name": "Photos of Story Pole - 100 Jamie Court (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47263/Photos-of-Story-Pole---100-Jamie-Court-PDF"
+        },
+        {
           "name": "Response to Comments - 100 Jamie Court (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46404/Response-to-Comments---100-Jamie-Court-PDF"
         },
@@ -1482,6 +1486,10 @@
         {
           "name": "Revised Letter of Justification - 100 Jamie Court (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46403/Revised-Letter-of-Justification---100-Jamie-Court-PDF"
+        },
+        {
+          "name": "Story Pole Certification - 100 Jamie Court (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47264/Story-Pole-Certification---100-Jamie-Court-PDF"
         }
       ],
       "firstSeen": "2026-08-16T12:53:29.654Z"
@@ -2463,12 +2471,12 @@
       "pageUrl": "https://www.losgatosca.gov/2383/S",
       "docs": [
         {
-          "name": "Development Plans - 536 N Santa Cruz Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47093/Development-Plans---536-N-Santa-Cruz-Ave-PDF"
+          "name": "Revised Development Plans - 536 N Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47093/Revised-Development-Plans---536-N-Santa-Cruz-Ave-PDF"
         },
         {
-          "name": "Letter of Justification - 536 N Santa Cruz Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47094/Letter-of-Justification---536-N-Santa-Cruz-Ave-PDF"
+          "name": "Revised Letter of Justification - 536 N Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47094/Revised-Letter-of-Justification---536-N-Santa-Cruz-Ave-PDF"
         }
       ],
       "firstSeen": "2026-08-25T20:37:25.199Z"
@@ -3046,6 +3054,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-11T12:46:31.931Z",
+  "scrapedAt": "2026-09-11T19:06:25.798Z",
   "errors": []
 }
