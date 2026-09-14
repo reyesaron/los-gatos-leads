@@ -1,6 +1,7 @@
-import { loadUsers, saveUsers, verifyToken, sanitizeUser, getClientIP } from "@/lib/auth";
+import { loadUsers, saveUsers, verifyToken, sanitizeUser, getClientIP, hashPassword } from "@/lib/auth";
 import { logAudit } from "@/lib/audit";
 import { cookies } from "next/headers";
+import crypto from "crypto";
 
 // GET — list all users (admin only)
 export async function GET() {
@@ -40,7 +41,14 @@ export async function POST(request) {
     const idx = users.findIndex(u => u.id === userId);
     if (idx === -1) return Response.json({ error: "User not found" }, { status: 404 });
 
-    if (action === "approve") {
+    let tempPassword = null;
+    if (action === "resetPassword") {
+      // Temp password meets policy (8+ chars, has a number); shown once to the admin, never logged
+      tempPassword = "Temp-" + crypto.randomBytes(4).toString("hex") + "-" + Math.floor(100 + Math.random() * 900);
+      users[idx].passwordHash = await hashPassword(tempPassword);
+      users[idx].mustChangePassword = true;
+      users[idx].passwordChangedAt = new Date().toISOString();
+    } else if (action === "approve") {
       users[idx].status = "approved";
       users[idx].approvedAt = new Date().toISOString();
       users[idx].approvedBy = payload.name;
@@ -70,7 +78,7 @@ export async function POST(request) {
     const ip = getClientIP(request);
     await logAudit({ action: `admin_${action}`, userName: payload.name, userEmail: payload.email, userRole: "admin", ip, targetType: "user", targetId: targetUser, details: `Admin ${action}: ${targetUser}`, userAgent: request.headers.get("user-agent") || "" });
 
-    return Response.json({ ok: true, users: users.map(sanitizeUser) });
+    return Response.json({ ok: true, users: users.map(sanitizeUser), ...(tempPassword ? { tempPassword } : {}) });
   } catch (err) {
     return Response.json({ error: err.message }, { status: 500 });
   }

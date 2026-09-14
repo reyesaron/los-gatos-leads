@@ -164,8 +164,25 @@ export function getClientIP(request) {
 }
 
 export function sanitizeUser(user) {
-  const { passwordHash, googleTokens, ...safe } = user;
+  const { passwordHash, googleTokens, resetCodeHash, resetCodeExpiresAt, resetCodeIssuedAt, resetAttempts, ...safe } = user;
   return safe;
+}
+
+// --- Password Reset Rate Limiting ---
+
+const _resetRequests = new Map(); // key: email or IP → { count, resetAt }
+const MAX_RESET_PER_HOUR = 3;
+
+export function checkResetRateLimit(email, ip) {
+  const now = Date.now();
+  for (const key of [email.toLowerCase(), ip]) {
+    const entry = _resetRequests.get(key) || { count: 0, resetAt: now + 60 * 60 * 1000 };
+    if (now > entry.resetAt) { entry.count = 0; entry.resetAt = now + 60 * 60 * 1000; }
+    if (entry.count >= MAX_RESET_PER_HOUR) return { blocked: true };
+    entry.count++;
+    _resetRequests.set(key, entry);
+  }
+  return { blocked: false };
 }
 
 // --- Login Audit Log ---
