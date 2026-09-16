@@ -646,12 +646,20 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47162/How-To-Read-Your-Neighborhood-Workbook-08-07-26-PDF"
         },
         {
+          "name": "Neighbor Input for Balcony, 09-11-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47351/Neighbor-Input-for-Balcony-09-11-26-PDF"
+        },
+        {
+          "name": "Neighborhood Outreach Letter, 09-11-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47350/Neighborhood-Outreach-Letter-09-11-26-PDF"
+        },
+        {
           "name": "Response to Architect Recommendations, 08-07-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47163/Response-to-Architect-Recommendations-08-07-26-PDF"
         },
         {
-          "name": "Response to Planning Comments, 08-07-026 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47164/Response-to-Planning-Comments-08-07-026-PDF"
+          "name": "Response to Planning Comments, 09-11-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47349/Response-to-Planning-Comments-09-11-26-PDF"
         },
         {
           "name": "Revised Development Plans - 66 Chester Street (PDF)",
@@ -1579,6 +1587,14 @@
       "pageUrl": "https://www.losgatosca.gov/2378/L",
       "docs": [
         {
+          "name": "Draft Conditions of Approval - 14761 La Rinconada Drive (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47359/Draft-Conditions-of-Approval---14761-La-Rinconada-Drive-PDF"
+        },
+        {
+          "name": "Draft Findings for Approval - 14761 La Rinconada Drive (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47360/Draft-Findings-for-Approval---14761-La-Rinconada-Drive-PDF"
+        },
+        {
           "name": "Letter of Justification - 14761 La Rinconada Dr (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46611/Letter-of-Justification---14761-La-Rinconada-Dr-PDF"
         },
@@ -1672,6 +1688,14 @@
       "apn": "409-30-037",
       "pageUrl": "https://www.losgatosca.gov/2378/L",
       "docs": [
+        {
+          "name": "Draft Conditions of Approval - 14777 La Rinconada Drive (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47357/Draft-Conditions-of-Approval---14777-La-Rinconada-Drive-PDF"
+        },
+        {
+          "name": "Draft Findings for Approval - 14777 La Rinconada Drive (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47358/Draft-Findings-for-Approval---14777-La-Rinconada-Drive-PDF"
+        },
         {
           "name": "Photos - 14777 La Rinconada Dr (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46514/Photos---14777-La-Rinconada-Dr-PDF"
@@ -3009,6 +3033,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-16T13:24:32.681Z",
+  "scrapedAt": "2026-09-16T19:30:07.932Z",
   "errors": []
 }
