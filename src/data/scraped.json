@@ -1623,7 +1623,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-07-15",
-      "status": "Pending",
+      "status": "Development Review Committee - 10/6/2026",
       "planner": "Samina Merchant",
       "category": "New Construction",
       "scope": "Custom Home (Demo + New Build)",
@@ -3033,6 +3033,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-16T19:30:07.932Z",
+  "scrapedAt": "2026-09-16T22:50:11.057Z",
   "errors": []
 }
