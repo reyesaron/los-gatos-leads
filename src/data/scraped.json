@@ -2097,12 +2097,16 @@
       "pageUrl": "https://www.losgatosca.gov/2381/P",
       "docs": [
         {
-          "name": "Development Plans - 17115 Phillips Avenue 07-31-26",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46761/Development-Plans---17115-Phillips-Avenue-07-31-26"
-        },
-        {
           "name": "Letter of Justification-17115 Phillips Avenue  07-31-26",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46762/Letter-of-Justification-17115-Phillips-Avenue--07-31-26"
+        },
+        {
+          "name": "Response to Staff Comments -17115 Phillips Avenue  08-31-26",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47367/Response-to-Staff-Comments--17115-Phillips-Avenue--08-31-26"
+        },
+        {
+          "name": "Revised Development Plans - 17115 Phillips Avenue",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46761/Revised-Development-Plans---17115-Phillips-Avenue"
         }
       ],
       "firstSeen": "2026-08-16T12:53:29.654Z"
@@ -3033,6 +3037,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-16T22:50:11.057Z",
+  "scrapedAt": "2026-09-17T04:41:06.985Z",
   "errors": []
 }
