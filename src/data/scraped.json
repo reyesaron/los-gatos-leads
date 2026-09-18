@@ -171,31 +171,6 @@
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
-      "address": "339 Bella Vista Avenue - Parcels A and B",
-      "appNumber": "",
-      "appType": "Two-Unit Housing Development Application TUD26-005",
-      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Permit for a Two-Unit Housing Development (Two New Units) on Both Parcels A and B of a Previously Approved Urban Lot Split On Vacant Property Zoned R-1:8. APN 529-23-015. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
-      "overview": "Custom home on vacant lot — ground-up build.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-07-09",
-      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
-      "planner": "Ryan Safty",
-      "category": "Subdivision",
-      "scope": "Custom Home (Vacant Lot)",
-      "zoning": "R-1:8",
-      "apn": "529-23-015",
-      "pageUrl": "https://www.losgatosca.gov/2370/B",
-      "docs": [
-        {
-          "name": "Project Plans - 339 Bella Vista Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46827/Project-Plans---339-Bella-Vista-Ave-PDF"
-        }
-      ],
-      "firstSeen": "2026-08-16T12:53:29.654Z"
-    },
-    {
       "address": "350 Bella Vista Avenue",
       "appNumber": "S-26-008",
       "appType": "Architecture and Site application",
@@ -228,63 +203,6 @@
         {
           "name": "Response Letter 08-11-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47143/Response-Letter-08-11-26-PDF"
-        }
-      ],
-      "firstSeen": "2026-08-16T12:53:29.654Z"
-    },
-    {
-      "address": "695 Bicknell Road",
-      "appNumber": "MR-26-001",
-      "appType": "Minor Residential Application",
-      "description": "Consider a Request for Approval to Construct a Second-Story Addition Exceeding 100 Square Feet and Exterior Alterations to an Existing Single-Family Residence on Property Zoned R-1:20:PD. APN 407-03-006. Categorically Exempt Pursuant to the California Environmental Quality Act (CEQA) Guidelines, Section 15301: Existing Facilities.",
-      "overview": "Second-story addition to existing home.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-01-27",
-      "status": "Appeal denied by the Planning Commission on 8/26/2026. Appeal period ends on 9/8/2026 at 4:00 PM.",
-      "planner": "Sean Mullin",
-      "category": "Addition",
-      "scope": "Second-Story Addition",
-      "zoning": "R-1:20:PD",
-      "apn": "407-03-006",
-      "pageUrl": "https://www.losgatosca.gov/2370/B",
-      "docs": [
-        {
-          "name": "Appeal - 695 Bicknell - 07-01-26_Redacted",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46394/Appeal---695-Bicknell---07-01-26_Redacted"
-        },
-        {
-          "name": "Applicant Response to Appeal - 695 Bicknell Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46938/Applicant-Response-to-Appeal---695-Bicknell-Rd-PDF"
-        },
-        {
-          "name": "Draft Conditions of Approval - 695 Bicknell (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46316/Draft-Conditions-of-Approval---695-Bicknell-PDF"
-        },
-        {
-          "name": "Letter of Justification - 695 Bicknell Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46080/Letter-of-Justification---695-Bicknell-Rd-PDF"
-        },
-        {
-          "name": "Notice of Pending Approval - 695 Bicknell (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46317/Notice-of-Pending-Approval---695-Bicknell-PDF"
-        },
-        {
-          "name": "Project Plans - 695_Bicknell Road",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44367/Project-Plans---695_Bicknell-Road"
-        },
-        {
-          "name": "Response to Consulting Architect - 695 Bicknell Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46081/Response-to-Consulting-Architect---695-Bicknell-Rd-PDF"
-        },
-        {
-          "name": "Town Arborist Feedback (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46312/Town-Arborist-Feedback-PDF"
-        },
-        {
-          "name": "Town Consulting Architect Report - 695 Bicknell Road",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44476/Town-Consulting-Architect-Report---695-Bicknell-Road"
         }
       ],
       "firstSeen": "2026-08-16T12:53:29.654Z"
@@ -658,8 +576,8 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47163/Response-to-Architect-Recommendations-08-07-26-PDF"
         },
         {
-          "name": "Response to Planning Comments, 09-11-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47349/Response-to-Planning-Comments-09-11-26-PDF"
+          "name": "Response to Planning Comments, 09-17-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47349/Response-to-Planning-Comments-09-17-26-PDF"
         },
         {
           "name": "Revised Development Plans - 66 Chester Street (PDF)",
@@ -3037,6 +2955,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-18T12:54:45.251Z",
+  "scrapedAt": "2026-09-18T18:59:01.872Z",
   "errors": []
 }
