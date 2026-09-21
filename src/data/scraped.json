@@ -1355,39 +1355,6 @@
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
-      "address": "193 Howes Drive",
-      "appNumber": "S-26-007",
-      "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Approval to Construct a New Second-Story Addition to an Existing Single-Family Residence on Property Zoned R-1:8. APN 527-43-021. Categorically Exempt pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
-      "overview": "Second-story addition to existing home.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2025-09-11",
-      "status": "Approved by the Planning Commission on 8/26/2026. Appeal period ends on 9/8/2026 at 4:00 PM.",
-      "planner": "Suray Nathan",
-      "category": "Addition",
-      "scope": "Second-Story Addition",
-      "zoning": "R-1:8",
-      "apn": "527-43-021",
-      "pageUrl": "https://www.losgatosca.gov/2374/H",
-      "docs": [
-        {
-          "name": "Consulting Architect Review - 193 Howes Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44035/Consulting-Architect-Review---193-Howes-Dr-PDF"
-        },
-        {
-          "name": "Letter of Justification - 193 Howes Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44492/Letter-of-Justification---193-Howes-Dr-PDF"
-        },
-        {
-          "name": "Revised Development Plans - 193 Howes Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43531/Revised-Development-Plans---193-Howes-Dr-PDF"
-        }
-      ],
-      "firstSeen": "2026-08-16T12:53:29.654Z"
-    },
-    {
       "address": "100 Jamie Court",
       "appNumber": "MR-26-007",
       "appType": "Minor Residential Application",
@@ -2959,6 +2926,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-21T15:02:30.522Z",
+  "scrapedAt": "2026-09-21T20:22:57.323Z",
   "errors": []
 }
