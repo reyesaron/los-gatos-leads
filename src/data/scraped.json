@@ -1968,39 +1968,6 @@
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
-      "address": "17115 Phillips Avenue",
-      "appNumber": "",
-      "appType": "Urban Lot Split Application ULS26-007",
-      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) permit for an Urban Lot Split of One Lot into Two Lots on Property Zoned HR-1 located at 17115 Phillips Ave. APN 532-20-010. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
-      "overview": "Lot split — watch for future development.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-07-31",
-      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights. These application materials are for informational purposes only.",
-      "planner": "Samina Merchant",
-      "category": "Subdivision",
-      "scope": "Urban Lot Split (SB 9)",
-      "zoning": "HR-1 located at 17115 Phillips Ave",
-      "apn": "532-20-010",
-      "pageUrl": "https://www.losgatosca.gov/2381/P",
-      "docs": [
-        {
-          "name": "Letter of Justification-17115 Phillips Avenue  07-31-26",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46762/Letter-of-Justification-17115-Phillips-Avenue--07-31-26"
-        },
-        {
-          "name": "Response to Staff Comments -17115 Phillips Avenue  08-31-26",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47367/Response-to-Staff-Comments--17115-Phillips-Avenue--08-31-26"
-        },
-        {
-          "name": "Revised Development Plans - 17115 Phillips Avenue",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46761/Revised-Development-Plans---17115-Phillips-Avenue"
-        }
-      ],
-      "firstSeen": "2026-08-16T12:53:29.654Z"
-    },
-    {
       "address": "16951 Placer Oaks Road",
       "appNumber": "MR-23-003",
       "appType": "Minor Residential Development",
@@ -2926,6 +2893,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-21T20:22:57.323Z",
+  "scrapedAt": "2026-09-22T04:36:54.263Z",
   "errors": []
 }
