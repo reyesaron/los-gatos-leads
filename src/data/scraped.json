@@ -278,6 +278,35 @@
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
+      "address": "15116 Blossom Hill Road",
+      "appNumber": "MR-26-011",
+      "appType": "Minor Residential Application",
+      "description": "Consider a Request for Approval to Construct a Second-Story Addition Exceeding 100 Square Feet and Exterior Alterations to an Existing Single-Family Residence on Property Zoned HR-1. APN 527-16-001. Categorically Exempt Pursuant to the California Environmental Quality Act (CEQA) Guidelines, Section 15301: Existing Facilities.",
+      "overview": "Second-story addition to existing home.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-09-22",
+      "status": "Pending",
+      "planner": "Samina Merchant",
+      "category": "Addition",
+      "scope": "Second-Story Addition",
+      "zoning": "HR-1",
+      "apn": "527-16-001",
+      "pageUrl": "https://www.losgatosca.gov/2370/B",
+      "docs": [
+        {
+          "name": "Development Plans - 15116 Blossom Hill Rd 09-22-26",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47444/Development-Plans---15116-Blossom-Hill-Rd-09-22-26"
+        },
+        {
+          "name": "Project Description - 15116 Blossom Hill Rd 09-22-26",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47445/Project-Description---15116-Blossom-Hill-Rd-09-22-26"
+        }
+      ],
+      "firstSeen": "2026-09-24T19:56:11.512Z"
+    },
+    {
       "address": "0 Bonnie Lane and APN 532-02-079 – Parcel 2",
       "appNumber": "",
       "appType": "Two-Unit Housing Development TUD26-004",
@@ -353,7 +382,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-06-08",
-      "status": "An appeal was received on 6/8/2026. This project will be reviewed by the Planning Commission on 9/23/2026.",
+      "status": "Appeal was denied by Planning Commission on 9/23/2026. Appeal period ends on 10/5/2026 at 4:00 PM.",
       "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "General",
@@ -961,7 +990,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-04-03",
-      "status": "Planning Commission - 9/23/2026",
+      "status": "Approved by Planning Commission on 9/23/2026. Appeal period ends on 10/5/2026 at 4:00 PM.",
       "planner": "Jocelyn Shoopman",
       "category": "New Construction",
       "scope": "Custom Home (Vacant Lot)",
@@ -2260,7 +2289,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-08-10",
-      "status": "Planning Commission - 9/23/2026",
+      "status": "Approved by Planning Commission on 9/23/2026. Appeal period ends on 10/5/2026 at 4:00 PM.",
       "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "General",
@@ -2852,6 +2881,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-24T13:29:31.187Z",
+  "scrapedAt": "2026-09-24T19:56:11.512Z",
   "errors": []
 }
