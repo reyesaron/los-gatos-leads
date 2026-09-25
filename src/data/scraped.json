@@ -1365,6 +1365,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47263/Photos-of-Story-Pole---100-Jamie-Court-PDF"
         },
         {
+          "name": "Rendering 3D - 100 Jamie Court (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47448/Rendering-3D---100-Jamie-Court-PDF"
+        },
+        {
           "name": "Response to Comments - 100 Jamie Court (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46404/Response-to-Comments---100-Jamie-Court-PDF"
         },
@@ -1718,36 +1722,28 @@
     },
     {
       "address": "17560 Mireval Road",
-      "appNumber": "S-24-067",
-      "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Approval for an Additiona to an Existing Single-Family Residence, Site Improvements Requiring a Grading Permit, and Removal of Large Protected Trees on Property Zoned HR-2½. APN 532-25-025. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction or Conversion of Small Structures.",
-      "overview": "Residential addition/alteration project.",
+      "appNumber": "",
+      "appType": "Two Unit Housing Development Application TUD26-009",
+      "description": "Consider a Request for Approval for a Two-Unit Housing Development (One New Unit) on Developed Property Zoned HR-2½. APN 532-25-025. Statutorily Exempt from CEQA as a Ministerial Approval in Accordance with Public Resources Code Section 21080 (b)(1) (CEQA Statute) and CEQA Guidelines Section 15268. Application is only for Ministerial Approval of a Two-Unit Housing Development Pursuant to Section 65852.21 of the CA Government Code.",
+      "overview": "Two new units under SB 9 — ministerial project.",
       "existingSF": null,
       "proposedSF": null,
       "sfNote": "",
-      "dateFiled": "2025-04-02",
-      "status": "Pending",
+      "dateFiled": "2026-09-01",
+      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
       "planner": "Ryan Safty",
-      "category": "Addition",
-      "scope": "Residential Addition",
+      "category": "New Construction",
+      "scope": "Two-Unit Development (SB 9)",
       "zoning": "HR-2½",
       "apn": "532-25-025",
       "pageUrl": "https://www.losgatosca.gov/2379/M",
       "docs": [
         {
-          "name": "Applicant Arborist Report - 17560 Mireval Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/41808/Applicant-Arborist-Report---17560-Mireval-Rd-PDF"
-        },
-        {
-          "name": "Consulting Architect Review - 17560 Mireval Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42033/Consulting-Architect-Review---17560-Mireval-Rd-PDF"
-        },
-        {
           "name": "Project Plans - 17560 Mireval Rd (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/41807/Project-Plans---17560-Mireval-Rd-PDF"
         }
       ],
-      "firstSeen": "2026-08-16T12:53:29.654Z"
+      "firstSeen": "2026-09-25T19:58:09.547Z"
     },
     {
       "address": "403 Montclair Road",
@@ -2881,6 +2877,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-25T13:36:04.729Z",
+  "scrapedAt": "2026-09-25T19:58:09.547Z",
   "errors": []
 }
