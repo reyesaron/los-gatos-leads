@@ -1134,6 +1134,35 @@
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
+      "address": "57 Hernandez Avenue",
+      "appNumber": "S-26-025",
+      "appType": "Architecture and Site Application",
+      "description": "Consider onsider a Request for Approval to Demolish an Existing Single-Family Residence and Construct a New Single-Family Residence on Property Zoned R-1:8. APN 510-41-017. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction or Conversion of Small Structures.",
+      "overview": "Custom home — full demo + new build. Ground-up construction opportunity.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-09-29",
+      "status": "Pending",
+      "planner": "Erin Walters",
+      "category": "New Construction",
+      "scope": "Custom Home (Demo + New Build)",
+      "zoning": "R-1:8",
+      "apn": "510-41-017",
+      "pageUrl": "https://www.losgatosca.gov/2374/H",
+      "docs": [
+        {
+          "name": "Development Plans - 57 Hernandez Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47544/Development-Plans---57-Hernandez-Ave-PDF"
+        },
+        {
+          "name": "Project Description and Justification - 57 Hernandez Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47545/Project-Description-and-Justification---57-Hernandez-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-09-29T23:36:55.237Z"
+    },
+    {
       "address": "69 Hernandez Avenue",
       "appNumber": "MR-26-004",
       "appType": "Minor Residential Application",
@@ -1796,6 +1825,22 @@
       "apn": "409-15-013",
       "pageUrl": "https://www.losgatosca.gov/2379/M",
       "docs": [
+        {
+          "name": "Applicant Arborist Report - 14251 Mulberry Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47540/Applicant-Arborist-Report---14251-Mulberry-Dr-PDF"
+        },
+        {
+          "name": "Applicant Neighborhood Outreach Summary -  14251 Mulberry Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47541/Applicant-Neighborhood-Outreach-Summary----14251-Mulberry-Dr-PDF"
+        },
+        {
+          "name": "Neighborhood Survey -  14251 Mulberry Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47542/Neighborhood-Survey----14251-Mulberry-Dr-PDF"
+        },
+        {
+          "name": "Project Description and Letter of Justification - 14251 Mulberry Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47543/Project-Description-and-Letter-of-Justification---14251-Mulberry-Dr-PDF"
+        },
         {
           "name": "Project Plans - 14251 Mulberry Dr (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46851/Project-Plans---14251-Mulberry-Dr-PDF"
@@ -2819,6 +2864,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-29T18:00:55.826Z",
+  "scrapedAt": "2026-09-29T23:36:55.237Z",
   "errors": []
 }
