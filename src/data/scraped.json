@@ -740,67 +740,6 @@
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
-      "address": "15575 El Gato Lane",
-      "appNumber": "S-25-029",
-      "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Approval to Demolish an Existing Single-Family Residence and to Construct a New Single-Family Residence on Property Zoned R-1:8. APN 523-22-007. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction or Conversion of Small Structures.",
-      "overview": "Custom home — full demo + new build. Ground-up construction opportunity.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2025-05-30",
-      "status": "Approved by Development Review Committee on 9/15/2026. Appeal Period ends on 9/25/2026 at 1:00 PM.",
-      "planner": "Samina Merchant",
-      "category": "New Construction",
-      "scope": "Custom Home (Demo + New Build)",
-      "zoning": "R-1:8",
-      "apn": "523-22-007",
-      "pageUrl": "https://www.losgatosca.gov/2372/E",
-      "docs": [
-        {
-          "name": "Applicant Response to Consulting Architect Report - 15575 El Gato Ln (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45182/Applicant-Response-to-Consulting-Architect-Report---15575-El-Gato-Ln-PDF"
-        },
-        {
-          "name": "Consulting Arborist Letter - 15575 El Gato Lane",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46272/Consulting-Arborist-Letter---15575-El-Gato-Lane"
-        },
-        {
-          "name": "Consulting Architect Letter - 15575 El Gato Lane",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42762/Consulting-Architect-Letter---15575-El-Gato-Lane"
-        },
-        {
-          "name": "Draft Conditions - 15575 El Gato Lane",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47268/Draft-Conditions---15575-El-Gato-Lane"
-        },
-        {
-          "name": "Letter of Justification - 15575 El Gato Ln",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42570/Letter-of-Justification---15575-El-Gato-Ln"
-        },
-        {
-          "name": "Parking Exception Request - 15575 El Gato Ln (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46256/Parking-Exception-Request---15575-El-Gato-Ln-PDF"
-        },
-        {
-          "name": "Required Findings - 15775 El Gato Lane",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47267/Required-Findings---15775-El-Gato-Lane"
-        },
-        {
-          "name": "Response to Consulting Arborist Report - 15575 El Gato Ln (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46255/Response-to-Consulting-Arborist-Report---15575-El-Gato-Ln-PDF"
-        },
-        {
-          "name": "Revised Project Description Letter - 15575 El Gato Ln (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45183/Revised-Project-Description-Letter---15575-El-Gato-Ln-PDF"
-        },
-        {
-          "name": "Revised Project Plans - 15575 El Gato Ln",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/42571/Revised-Project-Plans---15575-El-Gato-Ln"
-        }
-      ],
-      "firstSeen": "2026-08-16T12:53:29.654Z"
-    },
-    {
       "address": "16316 Englewood Avenue",
       "appNumber": "MR-26-002",
       "appType": "Minor Residential Application",
@@ -1211,16 +1150,7 @@
       "zoning": "R-1:8",
       "apn": "510-41-015",
       "pageUrl": "https://www.losgatosca.gov/2374/H",
-      "docs": [
-        {
-          "name": "Revised Development Plans - 69 Hernandez Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44506/Revised-Development-Plans---69-Hernandez-Ave-PDF"
-        },
-        {
-          "name": "Revised Justification Letter - 69 Hernandez Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44714/Revised-Justification-Letter---69-Hernandez-Ave-PDF"
-        }
-      ],
+      "docs": [],
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
@@ -1654,7 +1584,7 @@
       "address": "42 Miles Avenue",
       "appNumber": "U-26-002",
       "appType": "Conditional Use Permit Application",
-      "description": "Consider a Request for Approval of a Conditional Use Permit to Install a New 70-Foot Tall Wireless Telecommunication Facility on Property Zoned R-M:5-12. APN 529-05-043. Categorically Exempt Pursuant to CEQA Guidelines 15303: New Construction or Conversion of Small Structures.",
+      "description": "Consider a Request for Approval of a Conditional Use Permit to Install a New 78-Foot Tall Wireless Telecommunication Facility on Property Zoned R-M:5-12. APN 529-05-043. Categorically Exempt Pursuant to CEQA Guidelines 15303: New Construction or Conversion of Small Structures.",
       "overview": "Commercial conditional use permit — minimal construction scope.",
       "existingSF": null,
       "proposedSF": null,
@@ -1669,6 +1599,10 @@
       "pageUrl": "https://www.losgatosca.gov/2379/M",
       "docs": [
         {
+          "name": "Alternative Site Analysis_42 Miles (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47466/Alternative-Site-Analysis_42-Miles-PDF"
+        },
+        {
           "name": "Bella Vista Alternative Site Analysis (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46541/Bella-Vista-Alternative-Site-Analysis-PDF"
         },
@@ -1677,16 +1611,24 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46542/Bella-Vista-Coverage-Maps-PDF"
         },
         {
-          "name": "Development Plans_42 Miles Avenue",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44591/Development-Plans_42-Miles-Avenue"
-        },
-        {
-          "name": "Letter of Justification_42 Miles Avenue",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/44589/Letter-of-Justification_42-Miles-Avenue"
-        },
-        {
           "name": "Photo Simulations_42 Miles Avenue",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44590/Photo-Simulations_42-Miles-Avenue"
+        },
+        {
+          "name": "Propagation Schematic_42 Miles (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47467/Propagation-Schematic_42-Miles-PDF"
+        },
+        {
+          "name": "Response Memo_42 Miles (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47468/Response-Memo_42-Miles-PDF"
+        },
+        {
+          "name": "Revised Development Plans_42 Miles Avenue",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/44591/Revised-Development-Plans_42-Miles-Avenue"
+        },
+        {
+          "name": "Revised Letter of Justification_42 Miles Avenue",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/44589/Revised-Letter-of-Justification_42-Miles-Avenue"
         }
       ],
       "firstSeen": "2026-08-16T12:53:29.654Z"
@@ -2877,6 +2819,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-09-29T10:35:16.021Z",
+  "scrapedAt": "2026-09-29T18:00:55.826Z",
   "errors": []
 }
