@@ -589,6 +589,10 @@
       "pageUrl": "https://www.losgatosca.gov/2371/C",
       "docs": [
         {
+          "name": "Consulting Architect Report - 66 Chester (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47593/Consulting-Architect-Report---66-Chester-PDF"
+        },
+        {
           "name": "How To Read Your Neighborhood Workbook, 08-07-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47162/How-To-Read-Your-Neighborhood-Workbook-08-07-26-PDF"
         },
@@ -1220,6 +1224,51 @@
       "firstSeen": "2026-08-16T12:53:29.654Z"
     },
     {
+      "address": "134 Hernandez Avenue",
+      "appNumber": "S-26-023",
+      "appType": "Architecture and Site Application",
+      "description": "Consider  a Request for Approval for Site Improvements Requiring a Grading Permit (Tennis Court) on Property Zoned R-1:12. APN 510-21-002. CEQA Review is Pending.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-09-29",
+      "status": "Pending",
+      "planner": "Suray Nathan",
+      "category": "Addition",
+      "scope": "General",
+      "zoning": "R-1:12",
+      "apn": "510-21-002",
+      "pageUrl": "https://www.losgatosca.gov/2374/H",
+      "docs": [
+        {
+          "name": "Data-Form - 134 Hernandez Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47587/Data-Form---134-Hernandez-Ave-PDF"
+        },
+        {
+          "name": "Developmet Plan - 134 Hernandez Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47588/Developmet-Plan---134-Hernandez-Ave-PDF"
+        },
+        {
+          "name": "Drainage Calculations - 134 Hernandez Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47589/Drainage-Calculations---134-Hernandez-Ave-PDF"
+        },
+        {
+          "name": "Geotech Report - 134 Hernandez Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47590/Geotech-Report---134-Hernandez-Ave-PDF"
+        },
+        {
+          "name": "Photos and Image Board - 134 Hernandez Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47591/Photos-and-Image-Board---134-Hernandez-Ave-PDF"
+        },
+        {
+          "name": "Project Description and Justification Letter - 134 Hernandez Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47592/Project-Description-and-Justification-Letter---134-Hernandez-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-10-01T20:57:51.912Z"
+    },
+    {
       "address": "16765 Hicks Road",
       "appNumber": "S-26-012",
       "appType": "Architecture and Site Application",
@@ -1311,7 +1360,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-03-10",
-      "status": "Pending",
+      "status": "An Appeal was received on 10/1/2026. This project is tentatively scheduled for Planning Commission on 11/12/2026.",
       "planner": "Suray Nathan",
       "category": "Addition",
       "scope": "Second-Story Addition",
@@ -2905,6 +2954,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-01T15:22:14.025Z",
+  "scrapedAt": "2026-10-01T20:57:51.912Z",
   "errors": []
 }
