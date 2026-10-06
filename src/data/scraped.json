@@ -1487,51 +1487,6 @@
       "firstSeen": "2026-10-04T05:37:52.831Z"
     },
     {
-      "address": "14761 La Rinconada Drive and 17445 Zena Avenue",
-      "appNumber": "M-26-005",
-      "appType": "Lot Line Adjustment Application",
-      "description": "Consider a Request for Approval for a Lot Line Adjustment Between Two Adjacent Lots on Property Zoned R-1:12 and RC. APN 409-30-036 and APN 409-31-001. Statutorily Exempt from CEQA as Ministerial Approval in Accordance with Public Resources Code Section 21080(b)(1) (CEQA Statute) and CEQA Guidelines Section 15268. Application is Only for Ministerial Approval of a Lot Line Adjustment Pursuant to Section 66412(d) of the Subdivision Map Act.",
-      "overview": "Planning project at 14761 La Rinconada Drive and 17445 Zena Avenue.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-06-02",
-      "status": "Approved by Development Review Committee on 09/22/2026. Appeal Period ends on 10/2/2026 at 1:00 PM.",
-      "planner": "Suray Nathan",
-      "category": "Subdivision",
-      "scope": "Lot Line Adjustment",
-      "zoning": "R-1:12 and RC",
-      "apn": "409-30-036",
-      "pageUrl": "https://www.losgatosca.gov/2378/L",
-      "docs": [
-        {
-          "name": "Draft Conditions of Approval - 14761 La Rinconada Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47359/Draft-Conditions-of-Approval---14761-La-Rinconada-Drive-PDF"
-        },
-        {
-          "name": "Draft Findings for Approval - 14761 La Rinconada Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47360/Draft-Findings-for-Approval---14761-La-Rinconada-Drive-PDF"
-        },
-        {
-          "name": "Letter of Justification - 14761 La Rinconada Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46611/Letter-of-Justification---14761-La-Rinconada-Dr-PDF"
-        },
-        {
-          "name": "Photos - 14761 La Rinconada Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46612/Photos---14761-La-Rinconada-Dr-PDF"
-        },
-        {
-          "name": "Project Description - 14761 La Rinconada Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46057/Project-Description---14761-La-Rinconada-Dr-PDF"
-        },
-        {
-          "name": "Revised Lot Line Adjustment Plan - 14761 La Rinconada Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46056/Revised-Lot-Line-Adjustment-Plan---14761-La-Rinconada-Dr-PDF"
-        }
-      ],
-      "firstSeen": "2026-10-04T05:37:52.831Z"
-    },
-    {
       "address": "14761 La Rinconada Drive",
       "appNumber": "S-26-018",
       "appType": "Architecture and Site Application",
@@ -1592,47 +1547,6 @@
         {
           "name": "Town Architect Review, 07-28-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46794/Town-Architect-Review-07-28-26-PDF"
-        }
-      ],
-      "firstSeen": "2026-10-04T05:37:52.831Z"
-    },
-    {
-      "address": "14777 La Rinconada Drive and 17445 Zena Avenue",
-      "appNumber": "M-26-006",
-      "appType": "Lot Line Adjustment Application",
-      "description": "Consider a Request for Approval for a Lot Line Adjustment Between Two Adjacent Lots on Property Zoned R-1:12 and RC. APN 409-30-037 and APN 409-31-001. Statutorily Exempt from CEQA as Ministerial Approval in Accordance with Public Resources Code Section 21080(b)(1) (CEQA Statute) and CEQA Guidelines Section 15268. Application is Only for Ministerial Approval of a Lot Line Adjustment Pursuant to Section 66412(d) of the Subdivision Map Act.",
-      "overview": "Planning project at 14777 La Rinconada Drive and 17445 Zena Avenue.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-07-06",
-      "status": "Approved by Development Review Committee on 09/22/2026. Appeal Period ends on 10/2/2026 at 1:00 PM.",
-      "planner": "Suray Nathan",
-      "category": "Subdivision",
-      "scope": "Lot Line Adjustment",
-      "zoning": "R-1:12 and RC",
-      "apn": "409-30-037",
-      "pageUrl": "https://www.losgatosca.gov/2378/L",
-      "docs": [
-        {
-          "name": "Draft Conditions of Approval - 14777 La Rinconada Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47357/Draft-Conditions-of-Approval---14777-La-Rinconada-Drive-PDF"
-        },
-        {
-          "name": "Draft Findings for Approval - 14777 La Rinconada Drive (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47358/Draft-Findings-for-Approval---14777-La-Rinconada-Drive-PDF"
-        },
-        {
-          "name": "Photos - 14777 La Rinconada Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46514/Photos---14777-La-Rinconada-Dr-PDF"
-        },
-        {
-          "name": "Revised Letter of Justification and Project Description - 14777 La Rinconada Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46515/Revised-Letter-of-Justification-and-Project-Description---14777-La-Rinconada-Dr-PDF"
-        },
-        {
-          "name": "Revised Lot Line Adjustment Plans - 14777 La Rinconada Dr (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46513/Revised-Lot-Line-Adjustment-Plans---14777-La-Rinconada-Dr-PDF"
         }
       ],
       "firstSeen": "2026-10-04T05:37:52.831Z"
@@ -2958,6 +2872,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-06T18:16:32.964Z",
+  "scrapedAt": "2026-10-06T23:43:44.974Z",
   "errors": []
 }
