@@ -1550,6 +1550,14 @@
       "pageUrl": "https://www.losgatosca.gov/2378/L",
       "docs": [
         {
+          "name": "Draft Conditions of Approval DRC 10-06-26",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47612/Draft-Conditions-of-Approval-DRC-10-06-26"
+        },
+        {
+          "name": "Draft Findings DRC 10-06-26",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47613/Draft-Findings-DRC-10-06-26"
+        },
+        {
           "name": "Existing Site Photos, 07-15-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46578/Existing-Site-Photos-07-15-26-PDF"
         },
@@ -2125,24 +2133,20 @@
       "pageUrl": "https://www.losgatosca.gov/2381/P",
       "docs": [
         {
-          "name": "Applicants Arborist Report - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46568/Applicants-Arborist-Report---815-Pollard-Rd-PDF"
+          "name": "Revised Applicants Arborist Report - 815 Pollard Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46568/Revised-Applicants-Arborist-Report---815-Pollard-Rd-PDF"
         },
         {
-          "name": "Development Plans, Part 1 - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46569/Development-Plans-Part-1---815-Pollard-Rd-PDF"
+          "name": "Revised Development Plans - 815 Pollard Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46569/Revised-Development-Plans---815-Pollard-Rd-PDF"
         },
         {
-          "name": "Development Plans, Part 2 - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46570/Development-Plans-Part-2---815-Pollard-Rd-PDF"
+          "name": "Revised Project Description and Letter of Justification - 815 Pollard Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46571/Revised-Project-Description-and-Letter-of-Justification---815-Pollard-Rd-PDF"
         },
         {
-          "name": "Project Description and Letter of Justification - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46571/Project-Description-and-Letter-of-Justification---815-Pollard-Rd-PDF"
-        },
-        {
-          "name": "Tentative Map - 815 Pollard Rd. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46572/Tentative-Map---815-Pollard-Rd-PDF"
+          "name": "Revised Tentative Map - 815 Pollard Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46572/Revised-Tentative-Map---815-Pollard-Rd-PDF"
         }
       ],
       "firstSeen": "2026-10-04T05:37:52.831Z"
@@ -2954,6 +2958,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-05T17:04:12.869Z",
+  "scrapedAt": "2026-10-06T01:15:40.476Z",
   "errors": []
 }
