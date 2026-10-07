@@ -453,16 +453,20 @@
       "pageUrl": "https://www.losgatosca.gov/2371/C",
       "docs": [
         {
+          "name": "Neighborhood Outreach Summary - 16080 Camino Del Cerro (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47671/Neighborhood-Outreach-Summary---16080-Camino-Del-Cerro-PDF"
+        },
+        {
           "name": "Project Description - 16080 Camino Del Cerro (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/43747/Project-Description---16080-Camino-Del-Cerro-PDF"
         },
         {
-          "name": "Project Plans - 16080 Camino Del Cerro (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/43748/Project-Plans---16080-Camino-Del-Cerro-PDF"
+          "name": "Response Letter to Consulting Architect - 16080 Camino Del Cerro (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/46212/Response-Letter-to-Consulting-Architect---16080-Camino-Del-Cerro-PDF"
         },
         {
-          "name": "Response to Comments - 16080 Camino Del Cerro (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46212/Response-to-Comments---16080-Camino-Del-Cerro-PDF"
+          "name": "Revised Development Plans - 16080 Camino Del Cerro (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/43748/Revised-Development-Plans---16080-Camino-Del-Cerro-PDF"
         }
       ],
       "firstSeen": "2026-10-04T05:37:52.831Z"
@@ -2872,6 +2876,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-07T05:40:23.516Z",
+  "scrapedAt": "2026-10-07T15:28:23.154Z",
   "errors": []
 }
