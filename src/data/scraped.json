@@ -249,6 +249,31 @@
       "firstSeen": "2026-10-04T05:37:52.831Z"
     },
     {
+      "address": "800 Blossom Hill Road",
+      "appNumber": "PD-26-003",
+      "appType": "Planned Development Application",
+      "description": "Consider a Request for Approval to Modify Planned Development Ordinance 2205 to Allow for an Increase to the Number of Living Units on Property Zoned R-M:12-20:PD. APN 523-05-001. Categorically Exempt Pursuant to CEQA Guidelines Sections 15301: Existing Facilities.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-10-08",
+      "status": "Pending",
+      "planner": "Jocelyn Shoopman",
+      "category": "Addition",
+      "scope": "General",
+      "zoning": "R-M:12-20:PD",
+      "apn": "523-05-001",
+      "pageUrl": "https://www.losgatosca.gov/2370/B",
+      "docs": [
+        {
+          "name": "Development Plans - 800 Blossom Hill Road (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47713/Development-Plans---800-Blossom-Hill-Road-PDF"
+        }
+      ],
+      "firstSeen": "2026-10-12T17:42:52.678Z"
+    },
+    {
       "address": "15055 Blossom Hill Road",
       "appNumber": "",
       "appType": "Urban Lot Split Application ULS25-008",
@@ -2559,6 +2584,14 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44208/Project-Plans--17489-Shelburne-Way-PDF"
         },
         {
+          "name": "Development Plans - 123 Smith Creek Dr",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47711/Development-Plans---123-Smith-Creek-Dr"
+        },
+        {
+          "name": "Project Description - 123 Smith Creek Dr",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47712/Project-Description---123-Smith-Creek-Dr"
+        },
+        {
           "name": "Project Plans - 16009 Stepenie Lane (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46745/Project-Plans---16009-Stepenie-Lane-PDF"
         },
@@ -2909,6 +2942,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-12T05:42:23.754Z",
+  "scrapedAt": "2026-10-12T17:42:52.678Z",
   "errors": []
 }
