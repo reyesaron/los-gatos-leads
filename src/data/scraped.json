@@ -990,47 +990,6 @@
       "firstSeen": "2026-10-04T05:37:52.831Z"
     },
     {
-      "address": "233 Forrester Road",
-      "appNumber": "S-26-010",
-      "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Approval to Construct a New Single-Family Residence and Site Improvements Requiring a Grading Permit on Vacant Property Zoned HR-2½. APN 537-21-010.",
-      "overview": "Custom home on vacant lot — ground-up build.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-04-03",
-      "status": "Approved by Planning Commission on 9/23/2026. Appeal period ends on 10/5/2026 at 4:00 PM.",
-      "planner": "Jocelyn Shoopman",
-      "category": "New Construction",
-      "scope": "Custom Home (Vacant Lot)",
-      "zoning": "HR-2½",
-      "apn": "537-21-010",
-      "pageUrl": "https://www.losgatosca.gov/2386/F",
-      "docs": [
-        {
-          "name": "Consulting Arborist Report - 233 Forrester Road (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47194/Consulting-Arborist-Report---233-Forrester-Road-PDF"
-        },
-        {
-          "name": "Consulting Architect Report - 233 Forrester Road (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47195/Consulting-Architect-Report---233-Forrester-Road-PDF"
-        },
-        {
-          "name": "Development Plans - 233 Forrester Road (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45271/Development-Plans---233-Forrester-Road-PDF"
-        },
-        {
-          "name": "Letter of Justification - 233 Forrester Road (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45272/Letter-of-Justification---233-Forrester-Road-PDF"
-        },
-        {
-          "name": "Site Photos- 233 Forrester Road (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45273/Site-Photos--233-Forrester-Road-PDF"
-        }
-      ],
-      "firstSeen": "2026-10-04T05:37:52.831Z"
-    },
-    {
       "address": "20101 Foster Road",
       "appNumber": "S-25-011",
       "appType": "Architecture and Site Application",
@@ -2979,6 +2938,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-14T13:34:48.372Z",
+  "scrapedAt": "2026-10-14T20:07:51.123Z",
   "errors": []
 }
