@@ -398,39 +398,6 @@
       "firstSeen": "2026-10-04T05:37:52.831Z"
     },
     {
-      "address": "226 Caldwell Avenue",
-      "appNumber": "PHST-26-014",
-      "appType": "Property Historic Study Application",
-      "description": "Consider an Appeal of a Community Development Director Decision to Deny a Request to Remove a Pre-1941 Property from the Historic Resources Inventory for Property Zoned R-1D. APN 529-20-031. Exempt Pursuant to CEQA Guidelines, Section 15061 (b)(3).",
-      "overview": "Residential addition/alteration project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-06-08",
-      "status": "Appeal was denied by Planning Commission on 9/23/2026. Appeal period ends on 10/5/2026 at 4:00 PM.",
-      "planner": "Suray Nathan",
-      "category": "Addition",
-      "scope": "General",
-      "zoning": "R-1D",
-      "apn": "529-20-031",
-      "pageUrl": "https://www.losgatosca.gov/2371/C",
-      "docs": [
-        {
-          "name": "Appeal - 226 Caldwell Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46232/Appeal---226-Caldwell-Ave-PDF"
-        },
-        {
-          "name": "Historic Report - 226 Caldwell Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46230/Historic-Report---226-Caldwell-Ave-PDF"
-        },
-        {
-          "name": "Photos  - 226 Caldwell Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46231/Photos----226-Caldwell-Ave-PDF"
-        }
-      ],
-      "firstSeen": "2026-10-04T05:37:52.831Z"
-    },
-    {
       "address": "130 Calle Marguerita",
       "appNumber": "MR-26-010",
       "appType": "Minor Residential Application,",
@@ -2329,35 +2296,6 @@
       "firstSeen": "2026-10-04T05:37:52.831Z"
     },
     {
-      "address": "536 N. Santa Cruz Avenue",
-      "appNumber": "SN-26-024",
-      "appType": "Sign Permit Application",
-      "description": "Consider a Request for Approval of an Exception to the Town’s Commercial Design Guidelines to Exceed the Maximum Letter Height for a Wall Sign (ROEM) on Property Zoned C-1. APN 529-07-090. Categorically Exempt Pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
-      "overview": "Residential addition/alteration project.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-08-10",
-      "status": "Approved by Planning Commission on 9/23/2026. Appeal period ends on 10/5/2026 at 4:00 PM.",
-      "planner": "Suray Nathan",
-      "category": "Addition",
-      "scope": "General",
-      "zoning": "C-1",
-      "apn": "529-07-090",
-      "pageUrl": "https://www.losgatosca.gov/2383/S",
-      "docs": [
-        {
-          "name": "Revised Development Plans - 536 N Santa Cruz Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47093/Revised-Development-Plans---536-N-Santa-Cruz-Ave-PDF"
-        },
-        {
-          "name": "Revised Letter of Justification - 536 N Santa Cruz Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47094/Revised-Letter-of-Justification---536-N-Santa-Cruz-Ave-PDF"
-        }
-      ],
-      "firstSeen": "2026-10-04T05:37:52.831Z"
-    },
-    {
       "address": "647 N. Santa Cruz Avenue",
       "appNumber": "M-24-020",
       "appType": "Architecture and Site Application S-24-060                                               Conditional Use Permit U-24-018                                                               Subdivision Application",
@@ -2665,6 +2603,39 @@
       "firstSeen": "2026-10-04T05:37:52.831Z"
     },
     {
+      "address": "0 Tourney Loop (APN: 529-39-047)",
+      "appNumber": "S-26-030",
+      "appType": "Architecture and Site Application",
+      "description": "Consider a Request for Approval to Construct a New Single-Family Residence and Site Improvements Requiring a Grading Permit on Vacant Property Zoned HR-1. APN 529-39-047. CEQA Review is Pending.",
+      "overview": "Custom home on vacant lot — ground-up build.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-10-14",
+      "status": "Pending",
+      "planner": "Erin Walters",
+      "category": "New Construction",
+      "scope": "Custom Home (Vacant Lot)",
+      "zoning": "HR-1",
+      "apn": "529-39-047",
+      "pageUrl": "https://www.losgatosca.gov/2390/T",
+      "docs": [
+        {
+          "name": "Applicants Arborist Report - 0 Tourney Loop (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47748/Applicants-Arborist-Report---0-Tourney-Loop-PDF"
+        },
+        {
+          "name": "Development Plans - 0 Tourney Loop (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47749/Development-Plans---0-Tourney-Loop-PDF"
+        },
+        {
+          "name": "Letter of Justification- 0 Tourney Loop (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47750/Letter-of-Justification--0-Tourney-Loop-PDF"
+        }
+      ],
+      "firstSeen": "2026-10-15T04:21:51.865Z"
+    },
+    {
       "address": "178 Twin Oaks Drive",
       "appNumber": "S-24-023",
       "appType": "Architecture and Site Applications  through -032. and Subdivision Application M-24-013 -- Incompleteness Determination",
@@ -2938,6 +2909,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-14T20:07:51.123Z",
+  "scrapedAt": "2026-10-15T04:21:51.865Z",
   "errors": []
 }
