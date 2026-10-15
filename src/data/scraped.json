@@ -1908,12 +1908,8 @@
       "pageUrl": "https://www.losgatosca.gov/2388/O",
       "docs": [
         {
-          "name": "Development Plans - 18 Oak Hill Way (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45768/Development-Plans---18-Oak-Hill-Way-PDF"
-        },
-        {
-          "name": "Letter of Justification - 18 Oak Hill Way (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45769/Letter-of-Justification---18-Oak-Hill-Way-PDF"
+          "name": "Consulting Architect Report, 10-14-26 (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47753/Consulting-Architect-Report-10-14-26-PDF"
         },
         {
           "name": "Neighborhood Workbook - 18 Oak Hill Way (PDF)",
@@ -1928,8 +1924,20 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45772/Project-Description---18-Oak-Hill-Way-PDF"
         },
         {
+          "name": "Revised Development Plans - 18 Oak Hill Way (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45768/Revised-Development-Plans---18-Oak-Hill-Way-PDF"
+        },
+        {
+          "name": "Revised Letter of Justification - 18 Oak Hill Way (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45769/Revised-Letter-of-Justification---18-Oak-Hill-Way-PDF"
+        },
+        {
           "name": "Structure Report - 18 Oak Hill Way (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45773/Structure-Report---18-Oak-Hill-Way-PDF"
+        },
+        {
+          "name": "Tree Survey Report - 18 Oak Hill Way(PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47754/Tree-Survey-Report---18-Oak-Hill-WayPDF"
         }
       ],
       "firstSeen": "2026-10-04T05:37:52.831Z"
@@ -2909,6 +2917,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-15T13:18:32.496Z",
+  "scrapedAt": "2026-10-15T19:49:18.213Z",
   "errors": []
 }
