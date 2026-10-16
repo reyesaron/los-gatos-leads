@@ -601,8 +601,12 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47350/Neighborhood-Outreach-Letter-09-11-26-PDF"
         },
         {
-          "name": "Response to Architect Recommendations, 08-07-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47163/Response-to-Architect-Recommendations-08-07-26-PDF"
+          "name": "Response to Architect Recommendations - 66 Chester (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47163/Response-to-Architect-Recommendations---66-Chester-PDF"
+        },
+        {
+          "name": "Response to Planning Comments 2 of 2 - 66 Chester (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47792/Response-to-Planning-Comments-2-of-2---66-Chester-PDF"
         },
         {
           "name": "Response to Planning Comments, 09-17-26 (PDF)",
@@ -1871,6 +1875,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47541/Applicant-Neighborhood-Outreach-Summary----14251-Mulberry-Dr-PDF"
         },
         {
+          "name": "Consulting Arborist Peer Review - 14251 Mulberry Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47800/Consulting-Arborist-Peer-Review---14251-Mulberry-Dr-PDF"
+        },
+        {
           "name": "Neighborhood Survey -  14251 Mulberry Dr (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47542/Neighborhood-Survey----14251-Mulberry-Dr-PDF"
         },
@@ -2917,6 +2925,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-16T13:10:22.587Z",
+  "scrapedAt": "2026-10-16T19:30:01.098Z",
   "errors": []
 }
