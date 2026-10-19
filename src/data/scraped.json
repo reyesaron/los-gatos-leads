@@ -23,28 +23,8 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47018/AB-130-Checklist---401-409-Alberto-Wy-PDF"
         },
         {
-          "name": "AB 130 Memo - 401-409 Alberto Way (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47019/AB-130-Memo---401-409-Alberto-Way-PDF"
-        },
-        {
-          "name": "Development Plans - 401-409 Alberto Wy (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47020/Development-Plans---401-409-Alberto-Wy-PDF"
-        },
-        {
-          "name": "Geotechnical Report from Applicant - 401-409 Alberto Wy (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47021/Geotechnical-Report-from-Applicant---401-409-Alberto-Wy-PDF"
-        },
-        {
-          "name": "Letter of Justification - 401-409 Alberto Wy (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47022/Letter-of-Justification---401-409-Alberto-Wy-PDF"
-        },
-        {
           "name": "Neighborhood Photos - 401-409 Alberto Wy (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47023/Neighborhood-Photos---401-409-Alberto-Wy-PDF"
-        },
-        {
-          "name": "Objective Design Standards Checklist - 401-409 Alberto Wy (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47024/Objective-Design-Standards-Checklist---401-409-Alberto-Wy-PDF"
         },
         {
           "name": "Project Description - 401-409 Alberto Wy (PDF)",
@@ -55,8 +35,28 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47026/Property-Photos---401-409-Alberto-Wy-PDF"
         },
         {
-          "name": "State Density Bonus Law Memo - 401-409 Alberto Wy (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47027/State-Density-Bonus-Law-Memo---401-409-Alberto-Wy-PDF"
+          "name": "Revised AB 130 Memo - 401-409 Alberto Way (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47019/Revised-AB-130-Memo---401-409-Alberto-Way-PDF"
+        },
+        {
+          "name": "Revised Development Plans - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47020/Revised-Development-Plans---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "Revised Geotechnical Report from Applicant - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47021/Revised-Geotechnical-Report-from-Applicant---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "Revised Letter of Justification - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47022/Revised-Letter-of-Justification---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "Revised Objective Design Standards Checklist - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47024/Revised-Objective-Design-Standards-Checklist---401-409-Alberto-Wy-PDF"
+        },
+        {
+          "name": "Revised State Density Bonus Law Memo - 401-409 Alberto Wy (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47027/Revised-State-Density-Bonus-Law-Memo---401-409-Alberto-Wy-PDF"
         },
         {
           "name": "Traffic Information Questionnaire - 401-409 Alberto Wy (PDF)",
@@ -2925,6 +2925,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-19T04:23:56.807Z",
+  "scrapedAt": "2026-10-19T15:30:13.587Z",
   "errors": []
 }
