@@ -1516,71 +1516,6 @@
       "firstSeen": "2026-10-04T05:37:52.831Z"
     },
     {
-      "address": "14761 La Rinconada Drive",
-      "appNumber": "S-26-018",
-      "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Approval to Demolish an Existing Single-Family Residence, Construct a New Single-Family Residence, and Site Improvements Requiring a Grading Permit on Property Zoned R-1:12. APN 409-30-036. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction or Conversion of Small Structures.",
-      "overview": "Custom home — full demo + new build. Ground-up construction opportunity.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-07-15",
-      "status": "Approved by Development Review Committee on  10/6/2026. Appeal Period ends on 10/16/2026 at 1:00 PM.",
-      "planner": "Samina Merchant",
-      "category": "New Construction",
-      "scope": "Custom Home (Demo + New Build)",
-      "zoning": "R-1:12",
-      "apn": "409-30-036",
-      "pageUrl": "https://www.losgatosca.gov/2378/L",
-      "docs": [
-        {
-          "name": "Draft Conditions of Approval DRC 10-06-26",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47612/Draft-Conditions-of-Approval-DRC-10-06-26"
-        },
-        {
-          "name": "Draft Findings DRC 10-06-26",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47613/Draft-Findings-DRC-10-06-26"
-        },
-        {
-          "name": "Existing Site Photos, 07-15-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46578/Existing-Site-Photos-07-15-26-PDF"
-        },
-        {
-          "name": "GreenPoint Checklist, 08-24-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47074/GreenPoint-Checklist-08-24-26-PDF"
-        },
-        {
-          "name": "Neighborhood Outreach Summary, 08-24-2026 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47075/Neighborhood-Outreach-Summary-08-24-2026-PDF"
-        },
-        {
-          "name": "Response to Planning Comment Letter 1, 08-24-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47076/Response-to-Planning-Comment-Letter-1-08-24-26-PDF"
-        },
-        {
-          "name": "Response to Town Consulting Architect Letter, 08-24-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47077/Response-to-Town-Consulting-Architect-Letter-08-24-26-PDF"
-        },
-        {
-          "name": "Revised Development Plans (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46577/Revised-Development-Plans-PDF"
-        },
-        {
-          "name": "Revised Letter of Justification (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46579/Revised-Letter-of-Justification-PDF"
-        },
-        {
-          "name": "San Jose Water Letter, 08-24-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47078/San-Jose-Water-Letter-08-24-26-PDF"
-        },
-        {
-          "name": "Town Architect Review, 07-28-26 (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46794/Town-Architect-Review-07-28-26-PDF"
-        }
-      ],
-      "firstSeen": "2026-10-04T05:37:52.831Z"
-    },
-    {
       "address": "53 Los Gatos-Saratoga Road",
       "appNumber": "PD-26-001",
       "appType": "Planned Development Application",
@@ -2925,6 +2860,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-20T13:30:17.844Z",
+  "scrapedAt": "2026-10-20T19:57:34.716Z",
   "errors": []
 }
