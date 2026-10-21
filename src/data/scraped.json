@@ -1347,6 +1347,35 @@
       "firstSeen": "2026-10-04T05:37:52.831Z"
     },
     {
+      "address": "63 Highland Avenue",
+      "appNumber": "",
+      "appType": "Two Unit Housing Development Application TUD26-010",
+      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Permit for a Two-Unit Housing Development on a Developed Property Zoned HR-2½. APN 529-36-044. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
+      "overview": "Two new units under SB 9 — ministerial project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-10-09",
+      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights. These application materials are for informational purposes only.",
+      "planner": "Samina Merchant",
+      "category": "New Construction",
+      "scope": "Two-Unit Development (SB 9)",
+      "zoning": "HR-2½",
+      "apn": "529-36-044",
+      "pageUrl": "https://www.losgatosca.gov/2374/H",
+      "docs": [
+        {
+          "name": "Development Plans - 63 Highland Ave 10-09-26",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47887/Development-Plans---63-Highland-Ave-10-09-26"
+        },
+        {
+          "name": "Project Description - 63 Highland Ave 10-09-26",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47888/Project-Description---63-Highland-Ave-10-09-26"
+        }
+      ],
+      "firstSeen": "2026-10-21T20:02:48.120Z"
+    },
+    {
       "address": "100 Jamie Court",
       "appNumber": "MR-26-007",
       "appType": "Minor Residential Application",
@@ -2860,6 +2889,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-21T13:40:22.116Z",
+  "scrapedAt": "2026-10-21T20:02:48.120Z",
   "errors": []
 }
