@@ -1732,10 +1732,6 @@
       "pageUrl": "https://www.losgatosca.gov/2379/M",
       "docs": [
         {
-          "name": "Draft Conditions of Approval - 403 Montclair Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47579/Draft-Conditions-of-Approval---403-Montclair-Rd-PDF"
-        },
-        {
           "name": "Draft Findings - 403 Montclair Rd (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47580/Draft-Findings---403-Montclair-Rd-PDF"
         },
@@ -1748,8 +1744,16 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46314/Revised-Development-Plans---403-Montclair-Rd-PDF"
         },
         {
+          "name": "Revised Draft Conditions of Approval - 403 Montclair Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47579/Revised-Draft-Conditions-of-Approval---403-Montclair-Rd-PDF"
+        },
+        {
           "name": "Revised Letter of Justification - 403 Montclair Rd (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46315/Revised-Letter-of-Justification---403-Montclair-Rd-PDF"
+        },
+        {
+          "name": "Screening Letter from Applicant - 403 Montclair Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47915/Screening-Letter-from-Applicant---403-Montclair-Rd-PDF"
         }
       ],
       "firstSeen": "2026-10-04T05:37:52.831Z"
@@ -1896,6 +1900,10 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45772/Project-Description---18-Oak-Hill-Way-PDF"
         },
         {
+          "name": "Response to Consulting Arborist Report - 18 Oak Hill Way (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47754/Response-to-Consulting-Arborist-Report---18-Oak-Hill-Way-PDF"
+        },
+        {
           "name": "Revised Development Plans - 18 Oak Hill Way (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45768/Revised-Development-Plans---18-Oak-Hill-Way-PDF"
         },
@@ -1906,10 +1914,6 @@
         {
           "name": "Structure Report - 18 Oak Hill Way (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45773/Structure-Report---18-Oak-Hill-Way-PDF"
-        },
-        {
-          "name": "Tree Survey Report - 18 Oak Hill Way(PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47754/Tree-Survey-Report---18-Oak-Hill-WayPDF"
         }
       ],
       "firstSeen": "2026-10-04T05:37:52.831Z"
@@ -1954,6 +1958,35 @@
         }
       ],
       "firstSeen": "2026-10-04T05:37:52.831Z"
+    },
+    {
+      "address": "323 Pennsylvania Avenue",
+      "appNumber": "S-26-028",
+      "appType": "Architecture and Site Application",
+      "description": "Consider a Request for Approval to Construct an Accessory Structure with Reduced Side Setbacks and Site Improvements Requiring a Grading Permit on Property Zoned R-1:8. APN 510-43-044. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-10-26",
+      "status": "Pending",
+      "planner": "Sean Mullin",
+      "category": "Addition",
+      "scope": "Accessory Structure",
+      "zoning": "R-1:8",
+      "apn": "510-43-044",
+      "pageUrl": "https://www.losgatosca.gov/2381/P",
+      "docs": [
+        {
+          "name": "Development Plans  - 323 Pennsylvania Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47918/Development-Plans----323-Pennsylvania-Ave-PDF"
+        },
+        {
+          "name": "Letter of Justification - 323 Pennsylvania Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47919/Letter-of-Justification---323-Pennsylvania-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-10-27T20:34:19.872Z"
     },
     {
       "address": "16951 Placer Oaks Road",
@@ -2889,6 +2922,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-27T14:20:21.268Z",
+  "scrapedAt": "2026-10-27T20:34:19.872Z",
   "errors": []
 }
