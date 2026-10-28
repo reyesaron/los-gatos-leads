@@ -2153,6 +2153,31 @@
       "firstSeen": "2026-10-04T05:37:52.831Z"
     },
     {
+      "address": "15941 Quail Hill Road",
+      "appNumber": "ULS-26-008",
+      "appType": "Urban Lot Split Application",
+      "description": "Consider a Request for Approval for an Urban Lot Split of One Lot into Two Lots on Property Zoned HR-1. APN 527-02-006. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
+      "overview": "Lot split — watch for future development.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-10-10",
+      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
+      "planner": "Ryan Safty",
+      "category": "Subdivision",
+      "scope": "Urban Lot Split (SB 9)",
+      "zoning": "HR-1",
+      "apn": "527-02-006",
+      "pageUrl": "https://www.losgatosca.gov/2389/Q",
+      "docs": [
+        {
+          "name": "Project Plans - 15941 Quail Hill Rd",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47923/Project-Plans---15941-Quail-Hill-Rd"
+        }
+      ],
+      "firstSeen": "2026-10-28T20:56:36.358Z"
+    },
+    {
       "address": "39 Reservoir Road",
       "appNumber": "S-24-010",
       "appType": "Architecture and Site Application",
@@ -2926,6 +2951,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-28T15:01:07.909Z",
+  "scrapedAt": "2026-10-28T20:56:36.358Z",
   "errors": []
 }
