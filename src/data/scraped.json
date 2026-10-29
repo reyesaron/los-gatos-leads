@@ -623,7 +623,7 @@
       "address": "33 Clifton Avenue",
       "appNumber": "",
       "appType": "Two Unit Housing Development Application TUD26-003",
-      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Two Unit Housing Development to Construct One New Unit on Property Zoned R-1D. APN 510-45-049. This Project is Exempt from the California Environmental Quality Act (CEQA) Pursuant to Senate Bill 9.",
+      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Two Unit Housing Development to Construct One New Unit on Property Zoned R-1D. APN 510-45-049. Statutorily Exempt from CEQA as a Ministerial Approval in Accordance with Public Resources Code Section 21080 (b)(1) (CEQA Statute) and CEQA Guidelines Section 15268. Application is only for Ministerial Approval of a Two-Unit Housing Development Pursuant to Section 65852.21 of the CA Government Code.",
       "overview": "Two new units under SB 9 — ministerial project.",
       "existingSF": null,
       "proposedSF": null,
@@ -638,8 +638,8 @@
       "pageUrl": "https://www.losgatosca.gov/2371/C",
       "docs": [
         {
-          "name": "Project Plans - 33 Clifton Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45702/Project-Plans---33-Clifton-Ave-PDF"
+          "name": "Revised Development Plans - 33 Clifton Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45702/Revised-Development-Plans---33-Clifton-Ave-PDF"
         }
       ],
       "firstSeen": "2026-10-04T05:37:52.831Z"
@@ -1582,6 +1582,35 @@
       "firstSeen": "2026-10-04T05:37:52.831Z"
     },
     {
+      "address": "16689 Magneson Loop",
+      "appNumber": "M-26-011",
+      "appType": "Certificate of Compliance",
+      "description": "Consider a Request for Issuance of a Certificate of Compliance on Property Zoned R-1:8. APN 523-06-024 and 523-06-025. Certificate of Compliance is Categorically Exempt from CEQA, Section 15305: Minor Alterations in Land Use Limitations.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-10-22",
+      "status": "Pending",
+      "planner": "Samina Merchant",
+      "category": "Addition",
+      "scope": "General",
+      "zoning": "R-1:8",
+      "apn": "523-06-024",
+      "pageUrl": "https://www.losgatosca.gov/2379/M",
+      "docs": [
+        {
+          "name": "Plat Map - 16689 Magneson Loop",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47926/Plat-Map---16689-Magneson-Loop"
+        },
+        {
+          "name": "Topographic Map - 16689 Magneson Loop",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47927/Topographic-Map---16689-Magneson-Loop"
+        }
+      ],
+      "firstSeen": "2026-10-29T05:31:22.600Z"
+    },
+    {
       "address": "16619 Marchmont Drive",
       "appNumber": "",
       "appType": "Two-Unit Housing Development TUD25-002",
@@ -1958,6 +1987,35 @@
         }
       ],
       "firstSeen": "2026-10-04T05:37:52.831Z"
+    },
+    {
+      "address": "111 Old Blossom Hill Road",
+      "appNumber": "",
+      "appType": "Two Unit Housing Development Application TUD26-011",
+      "description": "Consider a Request for Approval for a Senate Bill 9 (SB 9) Two Unit Housing Development to Construct One New Unit on Property Zoned R-1:8. APN 523-09-002. Statutorily Exempt from CEQA as a Ministerial Approval in Accordance with Public Resources Code Section 21080 (b)(1) (CEQA Statute) and CEQA Guidelines Section 15268. Application is only for Ministerial Approval of a Two-Unit Housing Development Pursuant to Section 65852.21 of the CA Government Code.",
+      "overview": "Two new units under SB 9 — ministerial project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-10-19",
+      "status": "This project requires ministerial approval, pursuant to State law, which means that there is no public noticing, public hearing, discretionary approval, or appeal rights.  These application materials are for informational purposes only.",
+      "planner": "Ryan Safty",
+      "category": "New Construction",
+      "scope": "Two-Unit Development (SB 9)",
+      "zoning": "R-1:8",
+      "apn": "523-09-002",
+      "pageUrl": "https://www.losgatosca.gov/2388/O",
+      "docs": [
+        {
+          "name": "Project Plans - 111 Old Blossom Hill Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47929/Project-Plans---111-Old-Blossom-Hill-Rd-PDF"
+        },
+        {
+          "name": "Property Pictures - 111 Old Blossom Hill Rd (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47930/Property-Pictures---111-Old-Blossom-Hill-Rd-PDF"
+        }
+      ],
+      "firstSeen": "2026-10-29T05:31:22.600Z"
     },
     {
       "address": "323 Pennsylvania Avenue",
@@ -2951,6 +3009,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-10-28T20:56:36.358Z",
+  "scrapedAt": "2026-10-29T05:31:22.600Z",
   "errors": []
 }
