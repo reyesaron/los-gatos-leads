@@ -1582,6 +1582,39 @@
       "firstSeen": "2026-11-01T14:56:38.897Z"
     },
     {
+      "address": "30 Lyndon Avenue",
+      "appNumber": "S-26-031",
+      "appType": "Architecture and Site Application",
+      "description": "Consider a Request for Approval for Site Improvements Requiring a Grading Permit (Athletic Field) on Property Zoned R-1D: PD. APN 510-44-095. Exempt Pursuant to CEQA Section 15304: Minor Alteration of Land.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-10-30",
+      "status": "Pending",
+      "planner": "Suray Nathan",
+      "category": "Addition",
+      "scope": "General",
+      "zoning": "R-1D: PD",
+      "apn": "510-44-095",
+      "pageUrl": "https://www.losgatosca.gov/2378/L",
+      "docs": [
+        {
+          "name": "Development Plans - 30 Lyndon Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47952/Development-Plans---30-Lyndon-Ave-PDF"
+        },
+        {
+          "name": "Project Description - 30 Lyndon Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47953/Project-Description---30-Lyndon-Ave-PDF"
+        },
+        {
+          "name": "Synthetic Turf Report - 30 Lyndon Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47954/Synthetic-Turf-Report---30-Lyndon-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-11-03T02:09:54.662Z"
+    },
+    {
       "address": "16689 Magneson Loop",
       "appNumber": "M-26-011",
       "appType": "Certificate of Compliance",
@@ -3009,6 +3042,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-11-02T18:09:44.724Z",
+  "scrapedAt": "2026-11-03T02:09:54.662Z",
   "errors": []
 }
