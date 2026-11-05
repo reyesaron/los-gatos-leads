@@ -1672,7 +1672,7 @@
       "address": "42 Miles Avenue",
       "appNumber": "U-26-002",
       "appType": "Conditional Use Permit Application",
-      "description": "Consider a Request for Approval of a Conditional Use Permit to Install a New 78-Foot Tall Wireless Telecommunication Facility on Property Zoned R-M:5-12. APN 529-05-043. Categorically Exempt Pursuant to CEQA Guidelines 15303: New Construction or Conversion of Small Structures.",
+      "description": "Consider a Request for Approval of a Conditional Use Permit to Install a New 76-Foot Tall Wireless Telecommunication Facility on Property Zoned R-M:5-12. APN 529-05-043. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction or Conversion of Small Structures.",
       "overview": "Commercial conditional use permit — minimal construction scope.",
       "existingSF": null,
       "proposedSF": null,
@@ -1687,8 +1687,8 @@
       "pageUrl": "https://www.losgatosca.gov/2379/M",
       "docs": [
         {
-          "name": "Alternative Site Analysis_42 Miles (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47466/Alternative-Site-Analysis_42-Miles-PDF"
+          "name": "Alternative Site Analysis and Propagation Schematic_42 Miles (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47466/Alternative-Site-Analysis-and-Propagation-Schematic_42-Miles-PDF"
         },
         {
           "name": "Bella Vista Alternative Site Analysis (PDF)",
@@ -3042,6 +3042,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-11-05T12:07:45.360Z",
+  "scrapedAt": "2026-11-05T21:54:06.998Z",
   "errors": []
 }
