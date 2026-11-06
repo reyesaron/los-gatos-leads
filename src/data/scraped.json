@@ -1618,16 +1618,16 @@
       "address": "16689 Magneson Loop",
       "appNumber": "M-26-011",
       "appType": "Certificate of Compliance",
-      "description": "Consider a Request for Issuance of a Certificate of Compliance on Property Zoned R-1:8. APN 523-06-024 and 523-06-025. Certificate of Compliance is Categorically Exempt from CEQA, Section 15305: Minor Alterations in Land Use Limitations.",
-      "overview": "Residential addition/alteration project.",
+      "description": "Consider a Request for Issuance of a Certificate of Compliance on Property Zoned R-1:8. APN 523-06-024 and 523-06-025. Certificate of Compliance is Categorically Exempt from CEQA as Ministerial Approval in Accordance with Public Resources Code Section 21080 (b)(1) (CEQA Statute) and CEQA Guidelines Section 15268 and 15369. Application is only for Ministerial Approval of a Certificate of Compliance Pursuant to Section 66499.35 of the Subdivision Map Act.",
+      "overview": "Planning project at 16689 Magneson Loop.",
       "existingSF": null,
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-10-22",
       "status": "Pending",
       "planner": "Samina Merchant",
-      "category": "Addition",
-      "scope": "General",
+      "category": "Subdivision",
+      "scope": "Subdivision",
       "zoning": "R-1:8",
       "apn": "523-06-024",
       "pageUrl": "https://www.losgatosca.gov/2379/M",
@@ -3042,6 +3042,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-11-05T21:54:06.998Z",
+  "scrapedAt": "2026-11-06T06:18:02.645Z",
   "errors": []
 }
