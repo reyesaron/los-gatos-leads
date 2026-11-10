@@ -956,6 +956,10 @@
         {
           "name": "Santa Clara County Fire Email Regarding Current Occupancy Load - 16769 Farley Road (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47204/Santa-Clara-County-Fire-Email-Regarding-Current-Occupancy-Load---16769-Farley-Road-PDF"
+        },
+        {
+          "name": "Approved Architectural Egress Analysis - 16769 Farley Rd. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47990/Approved-Architectural-Egress-Analysis---16769-Farley-Rd-PDF"
         }
       ],
       "firstSeen": "2026-11-07T20:07:07.438Z"
@@ -1678,7 +1682,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-02-26",
-      "status": "Pending",
+      "status": "Planning Commission - 11/12/2026",
       "planner": "Samina Merchant",
       "category": "Addition",
       "scope": "Commercial CUP",
@@ -3012,6 +3016,35 @@
         }
       ],
       "firstSeen": "2026-11-07T20:07:07.438Z"
+    },
+    {
+      "address": "54 Whitney Avenue",
+      "appNumber": "MR-26-013",
+      "appType": "Minor Residential Application",
+      "description": "Consider a Request for Approval for Construction of a Second-Story Addition Exceeding 100 Square Feet on Property Zoned R-1:8. APN 532-29-062. Categorically Exempt pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
+      "overview": "Second-story addition to existing home.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-11-10",
+      "status": "Pending",
+      "planner": "Erin Walters",
+      "category": "Addition",
+      "scope": "Second-Story Addition",
+      "zoning": "R-1:8",
+      "apn": "532-29-062",
+      "pageUrl": "https://www.losgatosca.gov/2393/W",
+      "docs": [
+        {
+          "name": "Development Plans - 54 Whitney Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/48001/Development-Plans---54-Whitney-Ave-PDF"
+        },
+        {
+          "name": "Photographs - 54 Whitney Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/48002/Photographs---54-Whitney-Ave-PDF"
+        }
+      ],
+      "firstSeen": "2026-11-10T21:45:18.562Z"
     }
   ],
   "scrapedLetters": [
@@ -3042,6 +3075,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-11-10T12:26:36.990Z",
+  "scrapedAt": "2026-11-10T21:45:18.562Z",
   "errors": []
 }
