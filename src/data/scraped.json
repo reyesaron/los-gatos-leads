@@ -374,7 +374,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2026-05-19",
-      "status": "Town Council - 10/20/2026",
+      "status": "Item went to Town Council on 10/20/2026. It was continued to a date uncertain. Item will be heard at the 12/1/2026 Town Council Meeting.",
       "planner": "Jocelyn Shoopman",
       "category": "Addition",
       "scope": "General",
@@ -455,6 +455,10 @@
         {
           "name": "Response Letter to Consulting Architect - 16080 Camino Del Cerro (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/46212/Response-Letter-to-Consulting-Architect---16080-Camino-Del-Cerro-PDF"
+        },
+        {
+          "name": "Response Letter to Consulting Architect - 16080 Camino Del Cerro (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/48026/Response-Letter-to-Consulting-Architect---16080-Camino-Del-Cerro-PDF"
         },
         {
           "name": "Revised Development Plans - 16080 Camino Del Cerro (PDF)",
@@ -881,7 +885,7 @@
       "proposedSF": null,
       "sfNote": "",
       "dateFiled": "2024-09-03",
-      "status": "Appeals were received on June 1, 2026. This item went to Town Council on 6/16/2026 and a request to continue to a date certain of 8/18/2026 was granted. Town Council has continued this item to a date uncertain.",
+      "status": "Appeals were received on June 1, 2026. This item went to Town Council on 6/16/2026 and a request to continue to a date certain of 8/18/2026 was granted. Town Council has continued this item to a date uncertain. This item is scheduled for the Town Council Special Meeting of 12/2/2026.",
       "planner": "Jocelyn Shoopman",
       "category": "Addition",
       "scope": "Commercial CUP",
@@ -1184,43 +1188,6 @@
       "apn": "510-41-015",
       "pageUrl": "https://www.losgatosca.gov/2374/H",
       "docs": [],
-      "firstSeen": "2026-11-16T06:05:55.286Z"
-    },
-    {
-      "address": "94 Hernandez Avenue",
-      "appNumber": "S-22-029",
-      "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Approval for Construction of a New Single-Family Residence on Property Zoned R-1:8. APN 510-20-024.",
-      "overview": "Planning project at 94 Hernandez Avenue.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2022-06-29",
-      "status": "Planning Commission - 10/28/2026",
-      "planner": "Jocelyn Shoopman",
-      "category": "New Construction",
-      "scope": "General",
-      "zoning": "R-1:8",
-      "apn": "510-20-024",
-      "pageUrl": "https://www.losgatosca.gov/2374/H",
-      "docs": [
-        {
-          "name": "Development Plans - 94 Hernandez Avenue (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/30983/Development-Plans---94-Hernandez-Avenue-PDF"
-        },
-        {
-          "name": "Project Description - 94 Hernandez Avenue (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/35722/Project-Description---94-Hernandez-Avenue-PDF"
-        },
-        {
-          "name": "Town Consulting Arborist Report - 94 Hernandez (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47200/Town-Consulting-Arborist-Report---94-Hernandez-PDF"
-        },
-        {
-          "name": "Town Consulting Architect Report - 94 Hernandez (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46310/Town-Consulting-Architect-Report---94-Hernandez-PDF"
-        }
-      ],
       "firstSeen": "2026-11-16T06:05:55.286Z"
     },
     {
@@ -1983,6 +1950,35 @@
         }
       ],
       "firstSeen": "2026-11-16T06:05:55.286Z"
+    },
+    {
+      "address": "225 Oak Meadow Drive",
+      "appNumber": "S-26-032",
+      "appType": "Architecture and Site Application",
+      "description": "Consider a Request for Approval of a One-Year Time Extension to Existing Architecture and Site Application (S-22-021) to Construct a Single-Family Residence and Site Work Requiring a Grading Permit on Property Zoned O:PD. Located at 225 Oak Meadow Drive. APN 529-10-131. Architecture and Site Application S-26-032. Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction.",
+      "overview": "Residential addition/alteration project.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-11-12",
+      "status": "Pending",
+      "planner": "Sean Mullin",
+      "category": "Addition",
+      "scope": "General",
+      "zoning": "O:PD",
+      "apn": "529-10-131",
+      "pageUrl": "https://www.losgatosca.gov/2388/O",
+      "docs": [
+        {
+          "name": "Development Plans - 225 Oak Meadow Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/48015/Development-Plans---225-Oak-Meadow-Dr-PDF"
+        },
+        {
+          "name": "Extension Request Letter - 225 Oak Meadow Dr (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/48016/Extension-Request-Letter---225-Oak-Meadow-Dr-PDF"
+        }
+      ],
+      "firstSeen": "2026-11-17T23:26:54.157Z"
     },
     {
       "address": "235 Oak Meadow Drive",
@@ -3075,6 +3071,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-11-17T13:03:05.904Z",
+  "scrapedAt": "2026-11-17T23:26:54.157Z",
   "errors": []
 }
