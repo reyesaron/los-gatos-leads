@@ -2365,16 +2365,16 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/40492/Consulting-Architect-Report---235-Rosalie-Ct-PDF"
         },
         {
-          "name": "Development Plans - 235 Rosalie Ct. (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/40360/Development-Plans---235-Rosalie-Ct-PDF"
-        },
-        {
           "name": "Justification Letter - 235 Rosalie Ct. (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/44042/Justification-Letter---235-Rosalie-Ct-PDF"
         },
         {
           "name": "Photos - 235 Rosalie Ct. (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/40361/Photos---235-Rosalie-Ct-PDF"
+        },
+        {
+          "name": "Revised Development Plans - 235 Rosalie Ct. (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/40360/Revised-Development-Plans---235-Rosalie-Ct-PDF"
         }
       ],
       "firstSeen": "2026-11-16T06:05:55.286Z"
@@ -3071,6 +3071,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-11-18T07:05:16.117Z",
+  "scrapedAt": "2026-11-18T17:08:54.155Z",
   "errors": []
 }
