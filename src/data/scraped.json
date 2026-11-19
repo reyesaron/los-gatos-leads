@@ -1747,51 +1747,6 @@
       "firstSeen": "2026-11-16T06:05:55.286Z"
     },
     {
-      "address": "403 Montclair Road",
-      "appNumber": "S-26-017",
-      "appType": "Architecture and Site Application",
-      "description": "Consider a Request for Approval to Construct a New Single-Family Residence, and Site Work Requiring a Grading Permit on Vacant Property Zoned R-1:20:PD. APN 407-06-007.  Categorically Exempt Pursuant to CEQA Guidelines Section 15303: New Construction.",
-      "overview": "Custom home on vacant lot — ground-up build.",
-      "existingSF": null,
-      "proposedSF": null,
-      "sfNote": "",
-      "dateFiled": "2026-06-30",
-      "status": "Approved  by the Development Review Committee meeting on 11/3/2026. Appeal Period ends on 11/13/2026 at 1:00 PM.",
-      "planner": "Erin Walters",
-      "category": "New Construction",
-      "scope": "Custom Home (Vacant Lot)",
-      "zoning": "R-1:20:PD",
-      "apn": "407-06-007",
-      "pageUrl": "https://www.losgatosca.gov/2379/M",
-      "docs": [
-        {
-          "name": "Draft Findings - 403 Montclair Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47580/Draft-Findings---403-Montclair-Rd-PDF"
-        },
-        {
-          "name": "Photographs - 403 Montclair Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47397/Photographs---403-Montclair-Rd-PDF"
-        },
-        {
-          "name": "Revised Development Plans - 403 Montclair Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46314/Revised-Development-Plans---403-Montclair-Rd-PDF"
-        },
-        {
-          "name": "Revised Draft Conditions of Approval - 403 Montclair Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47579/Revised-Draft-Conditions-of-Approval---403-Montclair-Rd-PDF"
-        },
-        {
-          "name": "Revised Letter of Justification - 403 Montclair Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/46315/Revised-Letter-of-Justification---403-Montclair-Rd-PDF"
-        },
-        {
-          "name": "Screening Letter from Applicant - 403 Montclair Rd (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47915/Screening-Letter-from-Applicant---403-Montclair-Rd-PDF"
-        }
-      ],
-      "firstSeen": "2026-11-16T06:05:55.286Z"
-    },
-    {
       "address": "300 Mountain Laurel Lane",
       "appNumber": "S-26-005",
       "appType": "Architecture and Site Application",
@@ -3071,6 +3026,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-11-18T17:08:54.155Z",
+  "scrapedAt": "2026-11-19T01:49:57.665Z",
   "errors": []
 }
