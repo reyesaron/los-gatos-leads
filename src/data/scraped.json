@@ -4,7 +4,7 @@
       "address": "401-409 Alberto Way",
       "appNumber": "U-26-007",
       "appType": "Architecture and Site Applications S-26-021                                 Subdivision Application M-26-010                                                                Conditional Use Permit Application",
-      "description": "Consider a Request for Approval to Construct Multi-Family Residential Development (55 Units), a Condominium Vesting Tentative Map, a Conditional Use Permit, Remove Large-Protected Trees, and Site Improvements Requiring a Grading Permit Under Senate Bill 330 (SB 330) on Property Zoned CH:PD:HEOZ. APN 529-23-018. CEQA Review is Pending.",
+      "description": "Consider a Request for Approval to Construct a Multi-Family Live/Work Development (55 Units), a Condominium Vesting Tentative Map, a Conditional Use Permit for a Live/Work Development, Remove Large-Protected Trees, and Site Improvements Requiring a Grading Permit Under Senate Bill 330 (SB 330) on Property Zoned CH:PD:HEOZ. APN 529-23-018. Statutorily Exempt from the California Environmental Quality Act Pursuant to Public Resources Code Section 21080.66.",
       "overview": "55-unit multi-family development. New construction.",
       "existingSF": null,
       "proposedSF": null,
@@ -2402,6 +2402,10 @@
       "pageUrl": "https://www.losgatosca.gov/2383/S",
       "docs": [
         {
+          "name": "AB 130 Eligibility Checklist - 647 N. Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/48087/AB-130-Eligibility-Checklist---647-N-Santa-Cruz-Ave-PDF"
+        },
+        {
           "name": "Applicant Arborist Report - 647 N. Santa Cruz Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/41391/Applicant-Arborist-Report---647-N-Santa-Cruz-Ave-PDF"
         },
@@ -2426,10 +2430,6 @@
           "url": "https://www.losgatosca.gov/DocumentCenter/View/41392/Notice-of-Development-Sign---647-N-Santa-Cruz-Ave-PDF"
         },
         {
-          "name": "Response to Consulting Architect Report - 647 N Santa Cruz Ave (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/47030/Response-to-Consulting-Architect-Report---647-N-Santa-Cruz-Ave-PDF"
-        },
-        {
           "name": "Revised CEQA AB 130 Letter - 647 N Santa Cruz Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/45838/Revised-CEQA-AB-130-Letter---647-N-Santa-Cruz-Ave-PDF"
         },
@@ -2452,6 +2452,10 @@
         {
           "name": "Revised Project Description - 647 N Santa Cruz Ave (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/40311/Revised-Project-Description---647-N-Santa-Cruz-Ave-PDF"
+        },
+        {
+          "name": "Revised Response to Consulting Architect Report - 647 N Santa Cruz Ave (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/47030/Revised-Response-to-Consulting-Architect-Report---647-N-Santa-Cruz-Ave-PDF"
         },
         {
           "name": "Revised Site Photos - 647 N Santa Cruz Ave (PDF)",
@@ -3026,6 +3030,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-11-23T14:20:07.484Z",
+  "scrapedAt": "2026-11-24T02:51:06.059Z",
   "errors": []
 }
