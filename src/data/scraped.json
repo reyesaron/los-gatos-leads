@@ -189,10 +189,6 @@
       "pageUrl": "https://www.losgatosca.gov/2370/B",
       "docs": [
         {
-          "name": "Development Plans - 350 Bella Vista Avenue (PDF)",
-          "url": "https://www.losgatosca.gov/DocumentCenter/View/45238/Development-Plans---350-Bella-Vista-Avenue-PDF"
-        },
-        {
           "name": "Justification Letter 08-11-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47141/Justification-Letter-08-11-26-PDF"
         },
@@ -203,6 +199,14 @@
         {
           "name": "Response Letter 08-11-26 (PDF)",
           "url": "https://www.losgatosca.gov/DocumentCenter/View/47143/Response-Letter-08-11-26-PDF"
+        },
+        {
+          "name": "Revised Development Plans - 350 Bella Vista Avenue (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/45238/Revised-Development-Plans---350-Bella-Vista-Avenue-PDF"
+        },
+        {
+          "name": "Structural Letter- 350 Bella Vista Av",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/48118/Structural-Letter--350-Bella-Vista-Av"
         }
       ],
       "firstSeen": "2026-11-16T06:05:55.286Z"
@@ -622,6 +626,35 @@
         }
       ],
       "firstSeen": "2026-11-16T06:05:55.286Z"
+    },
+    {
+      "address": "202 Chippendale Court",
+      "appNumber": "MR-26-014",
+      "appType": "Minor Residential Application,",
+      "description": "Consider a Request for Approval for Construction of a Second-Story Addition Exceeding 100 Square Feet on Property Zoned R-1:20:PD. APN 407-03-019. Categorically Exempt pursuant to the California Environmental Quality Act, Section 15301: Existing Facilities.",
+      "overview": "Second-story addition to existing home.",
+      "existingSF": null,
+      "proposedSF": null,
+      "sfNote": "",
+      "dateFiled": "2026-11-23",
+      "status": "Pending",
+      "planner": "Suray Nathan",
+      "category": "Addition",
+      "scope": "Second-Story Addition",
+      "zoning": "R-1:20:PD",
+      "apn": "407-03-019",
+      "pageUrl": "https://www.losgatosca.gov/2371/C",
+      "docs": [
+        {
+          "name": "Development Plans - 202 Chippendale Ct (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/48116/Development-Plans---202-Chippendale-Ct-PDF"
+        },
+        {
+          "name": "How to Read Your Neighborhood Workbook - 202 Chippendale Ct (PDF)",
+          "url": "https://www.losgatosca.gov/DocumentCenter/View/48115/How-to-Read-Your-Neighborhood-Workbook---202-Chippendale-Ct-PDF"
+        }
+      ],
+      "firstSeen": "2026-11-25T00:32:25.360Z"
     },
     {
       "address": "33 Clifton Avenue",
@@ -3030,6 +3063,6 @@
     "Y",
     "Z"
   ],
-  "scrapedAt": "2026-11-24T14:43:40.262Z",
+  "scrapedAt": "2026-11-25T00:32:25.360Z",
   "errors": []
 }
